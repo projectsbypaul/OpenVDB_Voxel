@@ -106,12 +106,14 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)src\openvdb\bin;$(SolutionDir)src\openvdb\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\openvdb_install\bin;C:\src\openvdb_install\include;C:\src\vcpkg\installed\x64-windows\include;C:\src\vcpkg\installed\x64-windows\bin</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)src\openvdb\lib\openvdb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\openvdb_install\lib\openvdb.lib;C:\src\vcpkg\installed\x64-windows\lib\mpfr.lib;C:\src\vcpkg\installed\x64-windows\lib\gmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerboseCLR</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,7 +135,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MeshDataHandling.cpp" />
     <ClCompile Include="OpenVDB_Voxel.cpp" />
+    <ClCompile Include="Scripts.cpp" />
+    <ClCompile Include="Tools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MeshDataHandling.h" />
+    <ClInclude Include="MyTypes.h" />
+    <ClInclude Include="Scripts.h" />
+    <ClInclude Include="Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,39 +1,62 @@
-#define OPENVDB_DLL
-#include <openvdb/openvdb.h>
+#include "Tools.h"
+#include <memory>
+#include "MeshDataHandling.h"
+#include "Scripts.h"
 
-#include <iostream>
 
-int main()
-{
-    // Initialize the OpenVDB library.  This must be called at least
-    // once per program and may safely be called multiple times.
-    openvdb::initialize();
-    // Create an empty floating-point grid with background value 0.
-    openvdb::FloatGrid::Ptr grid = openvdb::FloatGrid::create();
-    std::cout << "Testing random access:" << std::endl;
-    // Get an accessor for coordinate-based access to voxels.
-    openvdb::FloatGrid::Accessor accessor = grid->getAccessor();
-    // Define a coordinate with large signed indices.
-    openvdb::Coord xyz(1000, -200000000, 30000000);
-    // Set the voxel value at (1000, -200000000, 30000000) to 1.
-    accessor.setValue(xyz, 1.0);
-    // Verify that the voxel value at (1000, -200000000, 30000000) is 1.
-    std::cout << "Grid" << xyz << " = " << accessor.getValue(xyz) << std::endl;
-    // Reset the coordinates to those of a different voxel.
-    xyz.reset(1000, 200000000, -30000000);
-    // Verify that the voxel value at (1000, 200000000, -30000000) is
-    // the background value, 0.
-    std::cout << "Grid" << xyz << " = " << accessor.getValue(xyz) << std::endl;
-    // Set the voxel value at (1000, 200000000, -30000000) to 2.
-    accessor.setValue(xyz, 2.0);
-    // Set the voxels at the two extremes of the available coordinate space.
-    // For 32-bit signed coordinates these are (-2147483648, -2147483648  [Titel anhand dieser ISBN in Citavi-Projekt übernehmen] , -2147483648  [Titel anhand dieser ISBN in Citavi-Projekt übernehmen] )
-    // and (2147483647, 2147483647, 2147483647).
-    accessor.setValue(openvdb::Coord::min(), 3.0f);
-    accessor.setValue(openvdb::Coord::max(), 4.0f);
-    std::cout << "Testing sequential access:" << std::endl;
-    // Print all active ("on") voxels by means of an iterator.
-    for (openvdb::FloatGrid::ValueOnCIter iter = grid->cbeginValueOn(); iter; ++iter) {
-        std::cout << "Grid" << iter.getCoord() << " = " << *iter << std::endl;
+int main() {
+    //TO DO Add binary rep
+    std::string filename = "C:/Local_Data/CGAL-6.0.1_examples/data/meshes/bunny00.off";
+
+    std::string out_dir = "C:/Local_Data/ReadWriteTest";
+
+    Surface_mesh mesh;
+
+    if (!MDH::readMesh(&filename, &mesh)) {
+        std::cerr << "Cannot open file " << filename << std::endl;
+        return EXIT_FAILURE;
     }
+
+    auto [meshVertices, meshFaces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+
+    int voxel_count = 32;
+
+    // Define narrow-band widths
+    float exBandWidth = 5.0f;
+    float inBandWidth = 5.0f;
+
+    auto sdfGrid = Tools::OpenVDBbased::MeshToFloatGrid(meshVertices, meshFaces, voxel_count, exBandWidth, inBandWidth);
+
+    int test = Tools::OpenVDBbased::ActivateInsideValues(sdfGrid);
+
+    double voxelSize = sdfGrid->transform().voxelSize()[0];
+
+    double background = sdfGrid->tree().background();
+
+    Tools::LinearSDFMap map; 
+
+    map.create(-1, 1, background);
+
+    Tools::OpenVDBbased::RemapFloatGrid(sdfGrid, map);
+
+    Tools::Float3DArray floatArray = Tools::OpenVDBbased::Float3DArrayFromFloatGrid(sdfGrid, voxel_count);
+
+    //auto NewGrid = Tools::OpenVDBbased::FloatGridFromFloat3DArray(floatArray);
+
+    std::string fname = "floatArray.bin";
+
+    Tools::util::saveFloat3DGridPythonic(out_dir, fname, floatArray, voxelSize, background);
+
+    /*
+    NewGrid->setTransform(openvdb::math::Transform::createLinearTransform(voxelSize));
+
+    // Write the resulting grid to a file.
+    openvdb::io::File file("C:/Local_Data/ReadWriteTest/out_" + std::to_string(voxel_count) + ".vdb");
+    openvdb::GridPtrVec grids;
+    grids.push_back(NewGrid);
+    file.write(grids);
+    file.close();
+    */
+
+    return 0;
 }
