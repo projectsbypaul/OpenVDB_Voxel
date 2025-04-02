@@ -7,8 +7,89 @@
 #include <CGAL/Bbox_3.h>
 #include <CGAL/Polygon_mesh_processing/bbox.h>
 
+#include <filesystem>
+#include "DatasetToVoxel.h"
+
+
 namespace Scripts {
 
+    
+
+    int ParseModelNet() {
+
+        namespace fs = std::filesystem;
+
+        fs::path srcDir = "C:/Local_Data/DL_Datasets/ModelNet10_RAW/ModelNet10"; // Change this to your source directory
+        fs::path destDir = "C:/Local_Data/DL_Datasets/ModelNet10_SDF_32"; // Change this to your output directory
+        std::string newExtension = ".bin"; // Change to the desired new extension
+
+        ParseDataset(srcDir, destDir, newExtension);
+
+        srcDir = "C:/Local_Data/DL_Datasets/ModelNet40_RAW/ModelNet40"; // Change this to your source directory
+        destDir = "C:/Local_Data/DL_Datasets/ModelNet40_SDF_32"; // Change this to your output directory
+
+        ParseDataset(srcDir, destDir, newExtension);
+
+        
+        return 0;
+    }
+    int Output4Python() {
+        //TO DO Add binary rep
+        std::string filename = "C:/Local_Data/DL_Datasets/ModelNet10_RAW/ModelNet10/bed/train/bed_0040.off";
+
+        std::string out_dir = "C:/Local_Data/ReadWriteTest";
+
+        Surface_mesh mesh;
+
+        if (!MDH::readMesh(&filename, &mesh)) {
+            std::cerr << "Cannot open file " << filename << std::endl;
+            return EXIT_FAILURE;
+        }
+
+        auto [meshVertices, meshFaces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+
+        int voxel_count = 32;
+
+        // Define narrow-band widths
+        float exBandWidth = 5.0f;
+        float inBandWidth = 5.0f;
+
+        auto sdfGrid = Tools::OpenVDBbased::MeshToFloatGrid(meshVertices, meshFaces, voxel_count, exBandWidth, inBandWidth);
+
+        int test = Tools::OpenVDBbased::ActivateInsideValues(sdfGrid);
+
+        double voxelSize = sdfGrid->transform().voxelSize()[0];
+
+        double background = sdfGrid->tree().background();
+
+        bool grid_valid = Tools::OpenVDBbased::CheckIfGridHasValidInsideVoxel(sdfGrid);
+
+        Tools::Float3DArray floatArray = Tools::OpenVDBbased::Float3DArrayFromFloatGrid(sdfGrid, voxel_count);
+
+        Tools::LinearSDFMap map;
+
+        map.create(0, 1, background);
+
+        Tools::OpenVDBbased::RemapFloat3DArray(floatArray, map);
+
+        //auto NewGrid = Tools::OpenVDBbased::FloatGridFromFloat3DArray(floatArray);
+
+        std::string fname = "DebugfloatArray.bin";
+
+        Tools::util::saveFloat3DGridPythonic(out_dir, fname, floatArray, voxelSize, background);
+
+        /*
+        NewGrid->setTransform(openvdb::math::Transform::createLinearTransform(voxelSize));
+
+        // Write the resulting grid to a file.
+        openvdb::io::File file("C:/Local_Data/ReadWriteTest/out_" + std::to_string(voxel_count) + ".vdb");
+        openvdb::GridPtrVec grids;
+        grids.push_back(NewGrid);
+        file.write(grids);
+        file.close();
+        */
+        return 0;
+    }
     int TestFixedGridSize() {
 #pragma region IO
 
@@ -87,7 +168,6 @@ namespace Scripts {
         }
         return 0;
     }
-
     int WaveFunctionTest() {
 
         openvdb::initialize();

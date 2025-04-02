@@ -10,12 +10,18 @@
 #include <cmath>
 #pragma endregion
 
+#pragma region util
+#include <yaml-cpp/yaml.h>
+#pragma endregion
+
+
 #pragma region CGALbased
 #include <CGAL/Surface_mesh.h>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/boost/graph/iterator.h> // For vertices_around_face()
 #include <boost/graph/graph_traits.hpp>
 #include <boost/property_map/property_map.hpp>
+#include <CGAL/Polygon_mesh_processing/bbox.h>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
 typedef Kernel::Point_3 Point;
@@ -39,6 +45,9 @@ namespace Tools {
         char mapValueToChar(float value, float minVal, float maxVal);
         void saveFloat3DGridPythonic(std::string& filename, Float3DArray& array, double& voxelSize, double& background);
         void saveFloat3DGridPythonic(std::string& targetdir, std::string& filename, Float3DArray& array, double& voxelSize, double& background);
+        std::vector<ABC_Surface> ParseABCyml(std::string& file_name);
+        std::vector<std::vector<std::string>> GetVertexToSurfTypeMapYAML(std::string f_name, int n_vertices);
+        std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces);
     }
 
     namespace CGALbased {
@@ -47,6 +56,10 @@ namespace Tools {
         using Surface_mesh = CGAL::Surface_mesh<Point>;
 
         std::pair<std::vector<MyVertex>, std::vector<MyFace>> GetVerticesAndFaces(Surface_mesh mesh);
+
+        std::vector<int> GetBBoxMinMaxIndex(Surface_mesh& mesh);
+
+        std::vector<double> GetBBoxDimensions(Surface_mesh& mesh);
     }
 
     namespace OpenVDBbased {
@@ -67,9 +80,13 @@ namespace Tools {
             float interiorBandWidth
         );
 
-        void RemapFloatGrid(openvdb::FloatGrid::Ptr grid, LinearSDFMap& linear_map);
+        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map);
 
         int ActivateInsideValues(openvdb::FloatGrid::Ptr grid);
+
+        bool CheckIfGridHasValidInsideVoxel(openvdb::FloatGrid::Ptr grid);
+
+        int CountActiveValue(openvdb::FloatGrid::Ptr grid);
 
         Float3DArray Float3DArrayFromFloatGrid(
             openvdb::FloatGrid::Ptr Floatgrid
@@ -107,5 +124,7 @@ namespace Tools {
         );
 
         std::vector<double> DetermineBoundingBox(std::vector<openvdb::Vec3s> points);
+
+        std::vector<std::vector<float>> TransformWorldPointsToIndexFloatArray(openvdb::FloatGrid::Ptr& grid, std::vector<MyVertex>& vertex_list);
     }
 }

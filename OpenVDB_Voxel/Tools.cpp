@@ -35,6 +35,8 @@ namespace Tools {
 
             // Write metadata: dimension (as double) and sizes
             file.write(reinterpret_cast<const char*>(&voxelSize), sizeof(double));
+            file.write(reinterpret_cast<const char*>(&background), sizeof(double));
+
             file.write(reinterpret_cast<const char*>(&dim1), sizeof(size_t));
             file.write(reinterpret_cast<const char*>(&dim2), sizeof(size_t));
             file.write(reinterpret_cast<const char*>(&dim3), sizeof(size_t));
@@ -80,6 +82,119 @@ namespace Tools {
 
             file.close();
             std::cout << "Data saved to " << filename << std::endl;
+
+        }
+
+        void clean_obj_file(const std::string& in_path, const std::string& out_path) {
+            std::ifstream in(in_path);
+            std::ofstream out(out_path);
+
+            std::string line;
+            while (std::getline(in, line)) {
+                if (line.size() < 2 || line.substr(0, 2) != "vc") {
+                    out << line << '\n';
+                }
+            }
+        }
+
+        std::vector<ABC_Surface> ParseABCyml(std::string& file_name) {
+
+            std::vector<ABC_Surface> surfaces;
+
+            YAML::Node root = YAML::LoadFile(file_name);
+
+            for (const auto& node : root["surfaces"]) {
+                ABC_Surface s;
+
+                // Scalars
+                s.type = node["type"].as<std::string>();
+
+                // Vectors
+                s.face_indices = node["face_indices"].as<std::vector<int>>();
+                s.vert_indices = node["vert_indices"].as<std::vector<int>>();
+
+                surfaces.push_back(s);
+            }
+
+            return surfaces;
+        }
+
+        std::vector<std::vector<std::string>> GetVertexToSurfTypeMapYAML(std::string f_name, int n_vertices) {
+
+            std::vector<std::vector<std::string>> VertexToTypeMap(n_vertices);
+
+            std::vector<ABC_Surface> surfaces = util::ParseABCyml(f_name);
+
+            int write_counter = 0;
+
+            for (const auto& surf : surfaces) {
+                std::string surf_type = surf.type;
+
+                for (auto vert_id : surf.vert_indices) {
+
+                    if (vert_id >= 0) { //catch ABC file specific -1 indices 
+                        if (vert_id >= VertexToTypeMap.size()) {
+
+                            VertexToTypeMap.resize(vert_id + 1);  // Expand the outer vector to include vert_id
+                            std::cout << "Resized to accommodate vertex: " << vert_id << std::endl;
+                        }
+                        if (VertexToTypeMap[vert_id].size() == 0) {
+                            write_counter++;
+                        }
+
+                        VertexToTypeMap[vert_id].push_back(surf_type);
+                    }
+                    else {
+                        std::cout << "current " << surf_type << "contains vert_index = -1" << std::endl;
+                    }
+
+                    
+                }
+
+            }
+            std::cout << "Wrote " << write_counter << " vertices to array" << std::endl;
+
+            return VertexToTypeMap;
+
+        }
+
+        std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces) {
+
+            std::vector<std::vector<std::string>> FaceToTypeMap(n_faces);
+
+            std::vector<ABC_Surface> surfaces = util::ParseABCyml(f_name);
+
+            int write_counter = 0;
+
+            for (const auto& surf : surfaces) {
+
+                std::string surf_type = surf.type;
+
+                for (auto face_id : surf.face_indices) {
+
+                    if (face_id >= 0) { //catch ABC file specific -1 indices 
+                        if (face_id >= FaceToTypeMap.size()) {
+
+                            FaceToTypeMap.resize(face_id + 1);  // Expand the outer vector to include face_id
+                            std::cout << "Resized to accommodate face: " << face_id << std::endl;
+                        }
+
+
+                        if (FaceToTypeMap[face_id].size() == 0) {
+                            write_counter++;
+                        }
+
+                        FaceToTypeMap[face_id].push_back(surf_type);
+                    }
+                    else {
+                        std::cout << "current " << surf_type << "contains face_index = -1" << std::endl;
+                    }
+                    
+                }
+            }
+            std::cout << "Wrote " << write_counter << " faces to array" << std::endl;
+
+            return FaceToTypeMap;
 
         }
     }
@@ -173,6 +288,48 @@ namespace Tools {
 
             return{ meshVertices, meshFaces };
         }
+
+        std::vector<double> GetBBoxDimensions(Surface_mesh& mesh) {
+
+            std::vector<double> dimensions;
+
+            CGAL::Bbox_3 bbox = CGAL::Polygon_mesh_processing::bbox(mesh);
+
+            dimensions.push_back(bbox.x_span());
+            dimensions.push_back(bbox.y_span());
+            dimensions.push_back(bbox.z_span());
+
+            return dimensions;
+        }
+
+        std::vector<int> GetBBoxMinMaxIndex(Surface_mesh& mesh) {
+
+            std::vector<int> minmax_index;
+
+            CGAL::Bbox_3 bbox = CGAL::Polygon_mesh_processing::bbox(mesh);
+
+            std::initializer_list<double> values = { bbox.x_span(), bbox.y_span(), bbox.z_span() };
+
+            double min_val = *std::min_element(values.begin(), values.end());
+            double max_val = *std::max_element(values.begin(), values.end());
+
+            int min_index = -1;
+            int max_index = -1;
+
+            if (min_val == bbox.x_span()) min_index = 0;
+            if (min_val == bbox.y_span()) min_index = 1;
+            if (min_val == bbox.z_span()) min_index = 2;
+
+            if (max_val == bbox.x_span()) max_index = 0;
+            if (max_val == bbox.y_span()) max_index = 1;
+            if (max_val == bbox.z_span()) max_index = 2;
+
+            minmax_index.push_back(min_index);
+            minmax_index.push_back(max_index);
+
+            return minmax_index;
+        }
+
     }
 
     namespace OpenVDBbased {
@@ -282,9 +439,29 @@ namespace Tools {
             int count = 0;
 
             for (auto iter = grid->beginValueOff(); iter; ++iter) {
-                if (*iter == -background) iter.setActiveState(true);
+                if (*iter < 0) iter.setActiveState(true);
             }
             return count;
+        }
+
+        bool CheckIfGridHasValidInsideVoxel(openvdb::FloatGrid::Ptr grid) {
+            int count = 0;
+
+            for (auto iter = grid->beginValueOn(); iter; ++iter) {
+                if (*iter < 0) count++;
+            }
+            return (count > 0) ? true : false;
+        
+        }
+
+        int CountActiveValue(openvdb::FloatGrid::Ptr grid) {
+            int count = 0;
+
+            for (auto iter = grid->beginValueOn(); iter; ++iter) {
+                count++;
+            }
+            return count;
+
         }
 
         std::vector<double> DetermineBoundingBox(std::vector<openvdb::Vec3s> points) {
@@ -310,6 +487,7 @@ namespace Tools {
             int dimX = ActiveBBox.dim().x();
             int dimY = ActiveBBox.dim().y();
             int dimZ = ActiveBBox.dim().z();
+
 
             // Create a 3D array initialized with the grid's background value
             std::vector<std::vector<std::vector<float>>> denseArray(
@@ -356,13 +534,19 @@ namespace Tools {
                 openvdb::Coord Coord = iter.getCoord();
                 float value = *iter;
 
-                denseArray[Coord.x()-minCord.x()][Coord.y() - minCord.y()][Coord.z() - minCord.z()] = value;
+                int x = Coord.x() - minCord.x();
+                int y = Coord.y() - minCord.y();
+                int z = Coord.z() - minCord.z();
+
+                if (x < dim && y < dim && z < dim) {
+                    denseArray[x][y][z] = value;
+                }
+                else {
+                    std::cout << "unable to write Activevoxel to Array -> out off bounds" << std::endl;
+                }
+
 
             }
-
-          
-            
-
             return denseArray;
         }
 
@@ -389,13 +573,22 @@ namespace Tools {
             return grid;
         }
 
-        void RemapFloatGrid(openvdb::FloatGrid::Ptr grid, LinearSDFMap& linear_map) {
+        void RemapFloat3DArray(Float3DArray& array,  LinearSDFMap& linear_map) {
 
-            for (auto iter = grid->beginValueOff(); iter; ++iter) {
-                float current = iter.getValue();
-                iter.setValue(linear_map.mapping(current));
-                
+            int sizeX = array.size();
+            int sizeY = (sizeX > 0) ? array[0].size() : 0;
+            int sizeZ = (sizeY > 0) ? array[0][0].size() : 0;
+
+            for (int i = 0; i < sizeX; i++) {
+                for (int j = 0; j < sizeX; j++) {
+                    for (int k = 0; k < sizeX; k++) {
+                        array[i][j][k] = linear_map.mapping(array[i][j][k]);
+                    }
+                }
             }
+
+
+
         }
 
         void GridAddWaveFunction(openvdb::FloatGrid::Ptr Floatgrid, float amp, float n_period, float disp, float direction[3]) {
@@ -528,6 +721,27 @@ namespace Tools {
             maxCoord = bbox.max();
 
             return evenGrid;
+        }
+
+        std::vector<std::vector<float>> TransformWorldPointsToIndexFloatArray(openvdb::FloatGrid::Ptr& grid, std::vector<MyVertex>& vertex_list) {
+            
+            std::vector<std::vector<float>> transformed_point_array;
+
+            for (auto& vert : vertex_list) {
+                std::vector<float> transformed_point;
+        
+                openvdb::Vec3d word_point = openvdb::Vec3d(vert.x, vert.y, vert.z);
+                openvdb::Coord index_coord = grid->transform().worldToIndexCellCentered(word_point);
+
+                transformed_point.push_back(index_coord.x());
+                transformed_point.push_back(index_coord.y());
+                transformed_point.push_back(index_coord.z());
+
+                transformed_point_array.push_back(transformed_point);
+            }
+
+            return transformed_point_array;
+
         }
 
     }

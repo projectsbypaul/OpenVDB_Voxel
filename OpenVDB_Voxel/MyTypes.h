@@ -26,7 +26,7 @@ namespace Tools {
         float background;
 
         float mapping(float val){
-            return (minVal - maxVal) / (-2 * background) * val + maxVal + (minVal - maxVal) / 2;
+            return (this->maxVal - this->minVal) / this->background * val + this->minVal;
         }
 
         void create(float min, float max, float bg) {
@@ -34,6 +34,12 @@ namespace Tools {
             this->maxVal = max;
             this->background = bg;
         }
+    };
+
+    struct ABC_Surface {
+        std::string type;
+        std::vector<int> face_indices;
+        std::vector<int> vert_indices;
     };
 
     enum WaveType {
