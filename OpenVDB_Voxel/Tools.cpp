@@ -5,6 +5,31 @@ namespace Tools {
 
     namespace util {
 
+        void saveTypeMapToBinary(const std::vector<std::vector<std::string>>& data, const std::string& filename) {
+            std::ofstream out(filename, std::ios::binary);
+            for (const auto& row : data) {
+                uint32_t rowSize = static_cast<uint32_t>(row.size());
+                out.write(reinterpret_cast<char*>(&rowSize), sizeof(rowSize));
+                for (const auto& str : row) {
+                    uint32_t strSize = static_cast<uint32_t>(str.size());
+                    out.write(reinterpret_cast<char*>(&strSize), sizeof(strSize));
+                    out.write(str.data(), strSize);
+                }
+            }
+            out.close();
+        }
+
+        void saveFloatMatrix(const std::vector<std::vector<float>>& matrix, const std::string& filename) {
+            std::ofstream out(filename, std::ios::binary);
+            for (const auto& row : matrix) {
+                uint32_t rowSize = static_cast<uint32_t>(row.size());
+                out.write(reinterpret_cast<const char*>(&rowSize), sizeof(rowSize));
+                out.write(reinterpret_cast<const char*>(row.data()), rowSize * sizeof(float));
+            }
+            out.close();
+        }
+
+
         char mapValueToChar(float value, float minVal, float maxVal) {
             // Normalize the value to a [0, 1] range.
             float normalized = (value - minVal) / (maxVal - minVal);
@@ -96,6 +121,85 @@ namespace Tools {
                 }
             }
         }
+        // Helper function to check if line starts with any of the given prefixes
+        bool startsWithAny(const std::string& line, const std::vector<std::string>& prefixes) {
+            for (const auto& prefix : prefixes) {
+                if (line.rfind(prefix, 0) == 0) {  // Starts with prefix
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void filterObjFile(const std::string& filePath,const std::string& filter_string) {
+            std::ifstream inFile(filePath);
+            if (!inFile.is_open()) {
+                std::cerr << "Error: Cannot open " << filePath << " for reading.\n";
+                return;
+            }
+
+            std::vector<std::string> lines;
+            lines.reserve(10000);  // Reserve some space (optional optimization)
+
+            std::string line;
+            while (std::getline(inFile, line)) {
+                // Check if the line starts with "vc"
+                if (line.rfind(filter_string, 0) != 0) {
+                    // rfind returns 0 if "vc" is found at position 0 (start of string).
+                    // So != 0 means either not found at start or string shorter than 2 chars.
+                    lines.push_back(line);
+                }
+                // If line starts with "vc", do nothing (skip it).
+            }
+
+            inFile.close();  // Done reading the file
+
+            // Open the same file for writing, truncating the existing content
+            std::ofstream outFile(filePath, std::ios::trunc);
+            if (!outFile.is_open()) {
+                std::cerr << "Error: Cannot open " << filePath << " for writing.\n";
+                return;
+            }
+
+            // Write back all the lines except those starting with "vc"
+            for (const std::string& outLine : lines) {
+                outFile << outLine << '\n';
+            }
+
+            outFile.close();
+        }
+
+        void filterObjFile(const std::string& filePath, const std::vector<std::string>& filter_strings) {
+            std::ifstream inFile(filePath);
+            if (!inFile.is_open()) {
+                std::cerr << "Error: Cannot open " << filePath << " for reading.\n";
+                return;
+            }
+
+            std::vector<std::string> lines;
+            lines.reserve(10000);  // Optional optimization
+
+            std::string line;
+            while (std::getline(inFile, line)) {
+                if (!startsWithAny(line, filter_strings)) {
+                    lines.push_back(line);  // Keep the line if it doesn't match any filter
+                }
+            }
+
+            inFile.close();
+
+            std::ofstream outFile(filePath, std::ios::trunc);
+            if (!outFile.is_open()) {
+                std::cerr << "Error: Cannot open " << filePath << " for writing.\n";
+                return;
+            }
+
+            for (const auto& outLine : lines) {
+                outFile << outLine << '\n';
+            }
+
+            outFile.close();
+        }
 
         std::vector<ABC_Surface> ParseABCyml(std::string& file_name) {
 
@@ -145,7 +249,7 @@ namespace Tools {
                         VertexToTypeMap[vert_id].push_back(surf_type);
                     }
                     else {
-                        std::cout << "current " << surf_type << "contains vert_index = -1" << std::endl;
+                        std::cout << "current " << surf_type << " contains vert_index = -1, vertex ignored" << std::endl;
                     }
 
                     
@@ -333,6 +437,24 @@ namespace Tools {
     }
 
     namespace OpenVDBbased {
+
+        std::vector<std::vector<float>> CoordListToFloatMatrix(std::vector<openvdb::Coord>& coord_list) {
+            
+            std::vector<std::vector<float>> float_matrix;
+            
+
+            for (const auto& coord : coord_list) {
+                std::vector<float> temp_float_entry;
+
+                temp_float_entry.push_back(coord.x());
+                temp_float_entry.push_back(coord.y());
+                temp_float_entry.push_back(coord.z());
+
+                float_matrix.push_back(temp_float_entry);
+            }
+
+            return float_matrix;
+        }
 
         openvdb::FloatGrid::Ptr MeshToFloatGrid(
             const std::vector<MyVertex>& meshVertices,

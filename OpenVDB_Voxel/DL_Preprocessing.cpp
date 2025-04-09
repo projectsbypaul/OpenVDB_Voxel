@@ -3,6 +3,7 @@
 namespace DLPP {
 
 	namespace util {
+
 		int calculateMinCroppingStep(int n_voxel_dim, int kernel_size, int padding) {
 
 			double step_double = static_cast<double>(n_voxel_dim + padding) / (kernel_size - padding);

@@ -43,8 +43,12 @@ namespace Tools {
 
     namespace util {
         char mapValueToChar(float value, float minVal, float maxVal);
+        void saveTypeMapToBinary(const std::vector<std::vector<std::string>>& data, const std::string& filename);
+        void saveFloatMatrix(const std::vector<std::vector<float>>& matrix, const std::string& filename);
         void saveFloat3DGridPythonic(std::string& filename, Float3DArray& array, double& voxelSize, double& background);
         void saveFloat3DGridPythonic(std::string& targetdir, std::string& filename, Float3DArray& array, double& voxelSize, double& background);
+        void filterObjFile(const std::string& filePath, const std::string& filter_string);
+        void filterObjFile(const std::string& filePath, const std::vector<std::string>& filter_strings);
         std::vector<ABC_Surface> ParseABCyml(std::string& file_name);
         std::vector<std::vector<std::string>> GetVertexToSurfTypeMapYAML(std::string f_name, int n_vertices);
         std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces);
@@ -79,6 +83,8 @@ namespace Tools {
             float exteriorBandWidth,
             float interiorBandWidth
         );
+
+        std::vector<std::vector<float>> CoordListToFloatMatrix(std::vector<openvdb::Coord>& coord_list);
 
         void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map);
 
