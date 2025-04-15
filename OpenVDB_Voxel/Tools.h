@@ -67,6 +67,8 @@ namespace Tools {
     }
 
     namespace OpenVDBbased {
+        float getGridMinActiceValue(openvdb::FloatGrid::Ptr grid);
+
         openvdb::FloatGrid::Ptr MeshToFloatGrid(
             const std::vector<MyVertex>& meshVertices,
             const std::vector<MyFace>& meshFaces,

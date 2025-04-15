@@ -11,10 +11,84 @@
 #include "DatasetToVoxel.h"
 
 #include "DL_Preprocessing.h"
+#include "GetABCStatistics.h"
+#include "ABCProcessing.h"
 
 
 namespace Scripts {
 
+    int ABCtoDataset(){
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_32_pad_4_bw_5_vs_adaptive_n2)";
+
+        int kernel_size = 32;
+        int padding = 4;
+        int bandwidth = 5;
+        double voxel_size = 0.5;
+        int n_k_min = 2;
+
+        parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, 4);
+
+        return 0;
+    }
+
+    int stripLinesFormOBJ(){
+        std::vector<fs::path> found_files = Scripts::GetFilesOfType(R"(C:\Local_Data\ABC\ABC_parsed_files)", ".obj");
+        std::vector<std::string> filter = { "vc" };
+
+        //const unsigned int max_threads = std::thread::hardware_concurrency(); // or set manually, e.g., 4
+        const unsigned int max_threads = 10;
+        std::vector<std::thread> threads;
+
+        size_t index = 0;
+
+        while (index < found_files.size()) {
+            while (threads.size() < max_threads && index < found_files.size()) {
+                threads.emplace_back([file = found_files[index], &filter]() {
+                    Tools::util::filterObjFile(file.generic_string(), filter);
+                    std::cout << "Removed line containing " << filter[0] << " from " << file.filename() << std::endl;
+                    });
+                ++index;
+            }
+
+            // Join all running threads before starting new ones
+            for (auto& t : threads) {
+                if (t.joinable()) t.join();
+            }
+            threads.clear();
+        }
+
+        return 0;
+    }
+
+
+    int CopyAndRenameYMLandOBJ()
+    {
+        fs::path source_path = R"(C:\Local_Data\ABC\feat\abc_meta_files\abc_0000_feat_v00)";
+        fs::path target_path = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+
+        CopyAndRenameToParsedStructure(source_path, target_path);
+
+        return 0;
+
+    }
+    int StatisticsOnABC() {
+
+        int thread_count = 16;
+
+        std::string traget_dir = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+        std::string log_file = traget_dir + "/ABC_log.csv";
+        int kernel_size = 32;
+        int n_min_k = 2;
+        int padding = 4;
+        int bandwidth = 5;
+
+        auto counter = Scripts::AnalyzeABCDir(traget_dir, ".stl", kernel_size, n_min_k, bandwidth, padding, 16);
+
+        std::cout << "Filed sucessfully read " << counter;
+
+        return 0;
+    }
     int SdfToSegmentOnABC() {
 
         std::string yml_name = "C:/Local_Data/ABC/feat/abc_meta_files/abc_0000_feat_v00/00000002/00000002_1ffb81a71e5b402e966b9341_features_001.yml";
@@ -98,7 +172,6 @@ namespace Scripts {
 
         return 0;
     }
-
     int ParseModelNet() {
 
         namespace fs = std::filesystem;

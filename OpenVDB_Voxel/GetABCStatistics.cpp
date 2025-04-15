@@ -11,86 +11,126 @@
 
 namespace Scripts {
 
-
-    namespace fs = std::filesystem;
-    std::mutex csv_mutex;
-    std::mutex slot_mutex;
-    std::condition_variable slot_cv;
-    unsigned active_threads = 0;
-
-    void process_directory(const fs::path& entry, std::ofstream& csv, int k_size, int n_min_k, int padding, int bandwidth) {
-        for (const auto& file_entry : fs::directory_iterator(entry)) {
-
-            if (file_entry.is_regular_file()) {
-
-                std::string dir_name = entry.filename().string();
-                std::string file_name = file_entry.path().filename().string();
-                std::string full_path = file_entry.path().string();
-
-                std::vector<std::string> filter = { "vc", "vn" };
-
-                Tools::util::filterObjFile(full_path, filter);
-
-                std::cout << "Processing: " << full_path << std::endl;
-                Surface_mesh mesh;
-                MDH::readMesh(&full_path, &mesh);
-                auto dimension = Tools::CGALbased::GetBBoxDimensions(mesh);
-                auto rec_voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_k, bandwidth, padding, mesh);
-
-                {
-                    std::lock_guard<std::mutex> lock(csv_mutex);
-                    csv << dir_name << "," << rec_voxel_size << "," << dimension[0] << "," << dimension[1] << "," << dimension[2] << "\n";
-                }
-            }
-        }
-
-        {
-            std::lock_guard<std::mutex> lock(slot_mutex);
-            --active_threads;
-        }
-        slot_cv.notify_one();
+    std::tuple<double, std::vector<double>> analyzeMesh(Surface_mesh mesh, int&k_size, int& n_min_kernel, int& band_width, int& padding) {
+        
+        std::vector<double> dims = Tools::CGALbased::GetBBoxDimensions(mesh);
+        double rec_voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_kernel, band_width, padding, mesh);
+        
+        return std::make_tuple(rec_voxel_size, dims);
     }
 
-    int ProcessABCDir(std::string target_dir, std::string log_file, int& k_size, int& n_min_k, int& padding, int& bandwidth, unsigned max_threads ) {
-        if (max_threads == 0) {
-            max_threads = std::thread::hardware_concurrency();
-            if (max_threads == 0) max_threads = 1;
+
+    std::vector<fs::path> GetFilesOfType(const fs::path& rootDir, const std::string& extension) {
+        std::vector<fs::path> matchingFiles;
+
+        if (!fs::exists(rootDir) || !fs::is_directory(rootDir)) {
+            std::cerr << "Directory does not exist: " << rootDir << std::endl;
+            return matchingFiles;
         }
 
-        bool file_exists = fs::exists(log_file);
-        std::ofstream csv(log_file, std::ios::app);
-        if (!csv.is_open()) {
-            std::cerr << "Failed to open log file.\n";
-            return 1;
+        for (const auto& entry : fs::recursive_directory_iterator(rootDir)) {
+            if (entry.is_regular_file() && entry.path().extension() == extension) {
+                matchingFiles.push_back(entry.path());
+            }
         }
 
-        if (!file_exists) {
-            csv << "HEADER\n";
-            csv << "filename,k_size,n_min_k,padding,bandwidth\n";
-            csv << log_file << "," << k_size << "," << n_min_k << "," << padding << "," << bandwidth << "\n";
-            csv << "BODY\n";
-            csv << "dir_name,rec_voxelsize,dim_x,dim_y,dim_z\n";
-        }
+        return matchingFiles;
+    }
 
+    int AnalyzeABCDir(fs::path rootDir, std::string extension, int& k_size, int& n_min_kernel, int& band_width, int& padding, unsigned int max_threads)
+    {
+        auto files = GetFilesOfType(rootDir, extension);
+
+        std::atomic<int> success_counter{ 0 };
+        std::mutex cout_mutex;
+
+        const unsigned int thread_count = std::min(max_threads, std::thread::hardware_concurrency());
         std::vector<std::thread> threads;
 
-        for (const auto& entry : fs::directory_iterator(target_dir)) {
-            if (!entry.is_directory()) continue;
+        std::ofstream csv_log(rootDir.generic_string() + "/log.csv");
+        std::mutex csv_mutex;
 
-            {
-                std::unique_lock<std::mutex> lock(slot_mutex);
-                slot_cv.wait(lock, [&] { return active_threads < max_threads; });
-                ++active_threads;
+        // Write header
+        csv_log << "file_name,voxel_size,dimx,dimy,dimz,time_ms,file_size\n";
+        csv_log.close();
+
+        auto worker = [&](size_t start, size_t end) {
+            for (size_t i = start; i < end; ++i) {
+                const auto& file = files[i];
+                std::string path_string = file.generic_string();
+
+                {
+                    std::lock_guard<std::mutex> lock(cout_mutex);
+                    std::cout << file << std::endl;
+                }
+
+                Surface_mesh mesh;
+
+                auto start_time = std::chrono::steady_clock::now();
+
+                bool success = MDH::readMesh(&path_string, &mesh);
+
+                auto [rec_voxel_size, dimensions] = analyzeMesh(mesh, k_size, n_min_kernel, band_width, padding);
+
+                auto end_time = std::chrono::steady_clock::now();
+                auto duration_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+
+                if (success) {
+                    int count = ++success_counter;
+
+                    std::uintmax_t file_size = 0;
+
+                    try {
+                        file_size = std::filesystem::file_size(file);  // file is already an fs::path
+                    }
+                    catch (const std::filesystem::filesystem_error& e) {
+                        std::lock_guard<std::mutex> lock(cout_mutex);
+                        std::cerr << "Error getting file size: " << e.what() << "\n";
+                    }
+
+                    // Log to CSV
+                    {
+                        std::lock_guard<std::mutex> lock(csv_mutex);
+                        std::ofstream csv_append(rootDir.generic_string() + "/log.csv", std::ios::app);
+                        csv_append << file.filename().string() << ",";
+                        csv_append << std::fixed << std::setprecision(6) << rec_voxel_size << ",";
+                        csv_append << dimensions[0] << ",";
+                        csv_append << dimensions[1] << ",";
+                        csv_append << dimensions[2] << ",";
+                      
+                        csv_append << duration_ms << ",";
+                        csv_append << file_size;
+                        csv_append << "\n";
+                        csv_append.close();
+                    }
+
+                    std::lock_guard<std::mutex> lock(cout_mutex);
+                    std::cout << "Success count: " << count
+                        << " | Time: " << duration_ms << " ms" << std::endl;
+                }
+                else {
+                    std::lock_guard<std::mutex> lock(cout_mutex);
+                    std::cout << "Failed to read | Time: " << duration_ms << " ms" << std::endl;
+                }
             }
+            };
 
-            threads.emplace_back(process_directory, entry.path(), std::ref(csv), k_size, n_min_k, padding, bandwidth);
+        size_t chunk_size = (files.size() + thread_count - 1) / thread_count;
+
+        for (size_t i = 0; i < thread_count; ++i) {
+            size_t start = i * chunk_size;
+            size_t end = std::min(start + chunk_size, files.size());
+            if (start < end) {
+                threads.emplace_back(worker, start, end);
+            }
         }
 
         for (auto& t : threads) {
-            if (t.joinable()) t.join();
+            t.join();
         }
 
-        return 0;
-    }
+        std::cout << "Final successful reads: " << success_counter.load() << std::endl;
+        return success_counter;
 
+    }
 }

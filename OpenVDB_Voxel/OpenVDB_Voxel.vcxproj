@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ABCProcessing.cpp" />
     <ClCompile Include="DL_Preprocessing.cpp" />
     <ClCompile Include="MeshDataHandling.cpp" />
     <ClCompile Include="OpenVDB_Voxel.cpp" />
@@ -144,6 +145,7 @@
     <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ABCProcessing.h" />
     <ClInclude Include="DatasetToVoxel.h" />
     <ClInclude Include="DL_Preprocessing.h" />
     <ClInclude Include="GetABCStatistics.h" />

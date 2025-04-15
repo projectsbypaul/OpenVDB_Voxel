@@ -1,5 +1,9 @@
 #pragma once
 namespace Scripts {
+	int StatisticsOnABC();
+	int stripLinesFormOBJ();
+	int ABCtoDataset();
+	int CopyAndRenameYMLandOBJ();
 	int SdfToSegmentOnABC();
 	int WaveFunctionTest();
 	int FixedGridSizeTest();

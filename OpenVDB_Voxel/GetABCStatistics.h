@@ -20,5 +20,6 @@
 #include <filesystem>
 
 namespace Scripts {
-	int ProcessABCDir(std::string target_dir, std::string log_file, int& k_size, int& n_min_k, int& padding, int& bandwidth, unsigned max_threads = 0);
+	int AnalyzeABCDir(fs::path rootDir, std::string extension, int& k_size, int& n_min_kernel, int& band_width, int& padding, unsigned int max_threads=10);
+	std::vector<fs::path> GetFilesOfType(const fs::path& rootDir, const std::string& extension);
 }

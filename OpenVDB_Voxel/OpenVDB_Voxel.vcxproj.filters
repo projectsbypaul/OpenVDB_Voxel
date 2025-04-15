@@ -48,6 +48,9 @@
     <ClCompile Include="GetABCStatistics.cpp">
       <Filter>Source Files\Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="ABCProcessing.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
     <ClInclude Include="GetABCStatistics.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="ABCProcessing.h">
       <Filter>Header Files\Scripts</Filter>
     </ClInclude>
   </ItemGroup>

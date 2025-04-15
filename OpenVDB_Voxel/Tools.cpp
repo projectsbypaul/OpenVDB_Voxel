@@ -74,7 +74,7 @@ namespace Tools {
             }
 
             file.close();
-            std::cout << "Data saved to " << filename << std::endl;
+            // std::cout << "Data saved to " << filename << std::endl;
 
         }
 
@@ -437,6 +437,20 @@ namespace Tools {
     }
 
     namespace OpenVDBbased {
+
+        float getGridMinActiceValue(openvdb::FloatGrid::Ptr grid) {
+            // Get the minimum value among active voxels
+            float minValue = std::numeric_limits<float>::max();
+
+            for (auto iter = grid->cbeginValueOn(); iter.test(); ++iter) {
+                float val = *iter;
+                if (val < minValue) {
+                    minValue = val;
+                }
+            }
+
+            return minValue;
+        }
 
         std::vector<std::vector<float>> CoordListToFloatMatrix(std::vector<openvdb::Coord>& coord_list) {
             
