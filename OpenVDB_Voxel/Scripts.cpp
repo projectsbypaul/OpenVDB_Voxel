@@ -14,21 +14,34 @@
 #include "GetABCStatistics.h"
 #include "ABCProcessing.h"
 
+#include "LOG.h"
+#include <tbb/global_control.h>
 
 namespace Scripts {
 
     int ABCtoDataset(){
-        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
-        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_32_pad_4_bw_5_vs_adaptive_n2)";
 
-        int kernel_size = 32;
+        LOG_FUNC("ENTER");
+
+        
+    
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2)";
+
+        int kernel_size = 16;
         int padding = 4;
         int bandwidth = 5;
         double voxel_size = 0.5;
         int n_k_min = 2;
+        int max_threads = 8;
 
-        parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, 4);
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, max_threads);
+        openvdb::initialize();
 
+        parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);
+
+        LOG_FUNC("EXIT");
         return 0;
     }
 
@@ -225,7 +238,9 @@ namespace Scripts {
 
         Tools::LinearSDFMap map;
 
-        map.create(0, 1, background);
+        float min = Tools::OpenVDBbased::getGridMinActiceValue(sdfGrid);
+
+        map.create(min,background,-1, 1);
 
         Tools::OpenVDBbased::RemapFloat3DArray(floatArray, map);
 

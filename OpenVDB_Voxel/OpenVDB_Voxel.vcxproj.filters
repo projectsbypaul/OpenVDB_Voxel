@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Scripts">
       <UniqueIdentifier>{316e150a-276c-4abf-9a14-45c6a94266b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Marcros">
+      <UniqueIdentifier>{ee489c53-898f-4d6d-9542-c3c7d635e1d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Macros">
+      <UniqueIdentifier>{38a71fb0-3ce4-4ec0-a357-5066319bfd02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenVDB_Voxel.cpp">
@@ -51,6 +57,9 @@
     <ClCompile Include="ABCProcessing.cpp">
       <Filter>Source Files\Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="LOG.cpp">
+      <Filter>Source Files\Macros</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools.h">
@@ -76,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="ABCProcessing.h">
       <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="LOG.h">
+      <Filter>Header Files\Marcros</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

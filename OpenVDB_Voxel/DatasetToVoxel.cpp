@@ -62,7 +62,9 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 
     Tools::LinearSDFMap map;
 
-    map.create(0, 1, background);
+    float min = Tools::OpenVDBbased::getGridMinActiceValue(sdfGrid);
+
+    map.create(min, background, -1, 1);
 
     Tools::OpenVDBbased::RemapFloat3DArray(floatArray, map);
 

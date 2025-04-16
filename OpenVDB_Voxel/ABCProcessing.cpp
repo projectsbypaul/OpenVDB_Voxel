@@ -8,20 +8,21 @@
 #include <atomic>
 #include <iostream>
 
+#include "LOG.h"
+
 namespace fs = std::filesystem;
 
 
 namespace Scripts {
 
-    bool checkIfDirIsEmpty(const std::string& targetDir) {
-        for (const auto& entry : fs::directory_iterator(targetDir)) {
-            if (fs::is_regular_file(entry.status())) {
-                // Found a file, exit the function early
-                return false;
-            }
-            else
-                return true;
+    bool checkIfDirWasProcessed(const std::string& targetDir) {
+        if (fs::exists(targetDir) && fs::is_directory(targetDir)) {
+             return true;
         }
+        else {
+             return false;
+        }
+
     }
 
     void CopyAndRenameToParsedStructure(const fs::path& source_root, const fs::path& target_root) {
@@ -35,6 +36,8 @@ namespace Scripts {
                 std::string extension = file_path.extension().string();   // e.g., .obj, .yml
 
                 fs::path new_dir = target_root / parent_dir;
+
+
                 fs::create_directories(new_dir);
 
                 fs::path new_file_name = parent_dir.string() + extension; // e.g., 00000001.obj
@@ -54,6 +57,7 @@ namespace Scripts {
     // Stub for your actual processing function
     void processingForDLLDataset(const fs::path& sourceDir, const fs::path& outputDir,const std::string& subdirName, int k_size, double voxel_size, int band_width, int padding) {
         std::cout << "Processing: " << subdirName << " -> Output: " << outputDir << std::endl;
+     
 
 
         //Define source file and traget file location
@@ -62,12 +66,6 @@ namespace Scripts {
         std::string obj_out = (outputDir / subdirName).generic_string() + ".obj";
         std::string target_dir = (outputDir / subdirName).generic_string();
 
-        //check if dir was already processed
-        if (!checkIfDirIsEmpty(outputDir.generic_string())) {
-            std::cout << "Directory "<< outputDir.filename() <<" containes files -> processing skipped" << std::endl;
-            return;
-        }
-
         //load obj into cgal surface mesh
         //remember clean obj from "vc" lines 
         std::ifstream input(obj_name);
@@ -75,6 +73,7 @@ namespace Scripts {
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
             std::cerr << "Failed to read .obj file!" << std::endl;
+           
             return;
         }
 
@@ -90,7 +89,6 @@ namespace Scripts {
         std::string face_bin = target_dir + "/FaceTypeMap" + ".bin";
         Tools::util::saveTypeMapToBinary(face_list, face_bin);
         */
-
 
         //Create vertex to type map and save it a binary
         int n_vert = my_verts.size();
@@ -112,11 +110,12 @@ namespace Scripts {
         Tools::util::saveFloatMatrix(orgin_list, origin_bin);
 
         //Set up linear map for normalization
-        double background = grid->tree().background();
         Tools::LinearSDFMap lmap;
-        lmap.background = background;
-        lmap.maxVal = background;
-        lmap.minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        double background = grid->tree().background();
+        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        lmap.create(minVal, background, -1, 1);
 
         //Create a an array that holds cropping results
         Tools::Float3DArray clipped_array;
@@ -129,15 +128,17 @@ namespace Scripts {
             std::string f_name = target_dir + "_" + std::to_string(i) + ".bin";
             Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
         }
-        
-
-
 
     }
 
     // Stub for your actual processing function
     void processingForDLLDataset(const fs::path& sourceDir, const fs::path& outputDir, const std::string& subdirName, int k_size, int min_n_kernel, int band_width, int padding) {
+
+
+        LOG_FUNC("ENTER" << " subdirName = " << subdirName << ", outputDir = " << outputDir);
+
         std::cout << "Processing: " << subdirName << " -> Output: " << outputDir << std::endl;
+       
 
 
         //Define source file and traget file location
@@ -146,13 +147,6 @@ namespace Scripts {
         std::string obj_out = (outputDir / subdirName).generic_string() + ".obj";
         std::string target_dir = (outputDir / subdirName).generic_string();
 
-
-        //check if dir was already processed
-        if (!checkIfDirIsEmpty(outputDir.generic_string())) {
-            std::cout << "Directory " << outputDir.filename() << " containes files -> processing skipped" << std::endl;
-            return;
-        }
-
         //load obj into cgal surface mesh
         //remember clean obj from "vc" lines 
         std::ifstream input(obj_name);
@@ -160,6 +154,7 @@ namespace Scripts {
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
             std::cerr << "Failed to read .obj file!" << std::endl;
+            LOG_FUNC("EXIT" << " subdirName = " << subdirName << "outputDir = " << outputDir << " Failed to read .obj file!" );
             return;
         }
 
@@ -175,7 +170,7 @@ namespace Scripts {
         //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
         auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
 
-        if (crop_list.size() < 250) {
+        if (crop_list.size() < 300) {
             auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
             std::string origin_bin = outputDir.generic_string() + "/origins" + ".bin";
             Tools::util::saveFloatMatrix(orgin_list, origin_bin);
@@ -201,11 +196,13 @@ namespace Scripts {
             Tools::util::saveFloatMatrix(arr, arr_bin);
 
             //Set up linear map for normalization
-            double background = grid->tree().background();
+            
             Tools::LinearSDFMap lmap;
-            lmap.background = background;
-            lmap.maxVal = background;
-            lmap.minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+            double background = grid->tree().background();
+            float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+            lmap.create(minVal, background, -1, 1);
 
             //Create a an array that holds cropping results
             Tools::Float3DArray clipped_array;
@@ -219,13 +216,14 @@ namespace Scripts {
                 Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
             }
       
-        
-
         }
         else
         {
             std::cout << subdirName << +".bin " << "is odd sized --> skipped";
+            LOG_FUNC("EXIT" << " subdirName = " << subdirName << "outputDir = " << outputDir << "is odd sized --> skipped");
+           
         }
+        LOG_FUNC("EXIT" << " subdirName = " << subdirName << "outputDir = " << outputDir);
 
 
 
@@ -270,6 +268,8 @@ namespace Scripts {
 
     void parseABCtoDataset(fs::path& Source_Dir, fs::path Output_Dir, int& k_size, int& min_n_kernel, int& band_width, int& padding) {
 
+        LOG_FUNC("ENTER");
+
         // Create the target root if it doesn't exist
         fs::create_directories(Output_Dir);
 
@@ -295,15 +295,27 @@ namespace Scripts {
             // If both .obj and .yml are found, process
             if (hasObj && hasYml) {
                 fs::path newOutputDir = Output_Dir / subdirName;
-                fs::create_directories(newOutputDir);  // creates if not exists
-
-                processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size, min_n_kernel, band_width, padding);
+                
+                if (!checkIfDirWasProcessed(newOutputDir.generic_string())) {
+                    fs::create_directories(newOutputDir);  // creates if not exists
+                    processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size, min_n_kernel, band_width, padding);
+                }
+                else {
+                    std::cout << "Directory " << newOutputDir.filename() << " alreay processed -> skipped" << std::endl;
+                   
+                }
+                
             }
+
+            LOG_FUNC("EXIT");
         }
 
     }
 
-    void parseABCtoDataset(fs::path& Source_Dir, fs::path Output_Dir, int& k_size, int& min_n_kernel, int& band_width, int& padding, int max_threads=0) {
+    void parseABCtoDataset(fs::path& Source_Dir, fs::path Output_Dir, int& k_size, int& min_n_kernel, int& band_width, int& padding, int max_threads = 0) {
+
+        LOG_FUNC("ENTER" << " Source_Dir = " << Source_Dir.filename() << ", Output_Dir = " << Output_Dir.filename() << ", Threads = " << max_threads);
+
         fs::create_directories(Output_Dir);
 
         std::vector<std::thread> threads;
@@ -315,7 +327,8 @@ namespace Scripts {
             max_threads = std::thread::hardware_concurrency();
         }
 
-        std::cout << "Running on thread count: " << max_threads  << std::endl;
+        std::cout << "Running on thread count: " << max_threads << std::endl;
+       
 
         for (const auto& entry : fs::directory_iterator(Source_Dir)) {
             if (!fs::is_directory(entry.status())) continue;
@@ -337,6 +350,12 @@ namespace Scripts {
             if (hasObj && hasYml) {
                 fs::path newOutputDir = Output_Dir / subdirName;
 
+                if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
+                    std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                    LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
+                    continue;
+                }
+
                 // Wait until there is a free thread slot
                 std::unique_lock<std::mutex> lock(mtx);
                 cv.wait(lock, [&]() { return active_threads < max_threads; });
@@ -354,7 +373,6 @@ namespace Scripts {
 
                     processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size_cpy, min_n_kernel_cpy, band_width_cpy, padding_cpy);
 
-                    // Notify main thread after finishing
                     {
                         std::lock_guard<std::mutex> guard(mtx);
                         --active_threads;
@@ -364,10 +382,11 @@ namespace Scripts {
             }
         }
 
-        // Join all threads before exiting
         for (auto& t : threads) {
             if (t.joinable()) t.join();
         }
+
+        LOG_FUNC("EXIT" << " Source_Dir = " << Source_Dir.filename() << ", Output_Dir = " << Output_Dir.filename() << ", Threads = " << max_threads);
     }
 
 

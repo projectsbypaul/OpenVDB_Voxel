@@ -21,19 +21,18 @@ namespace Tools {
     };
 
     struct LinearSDFMap {
-        float minVal;
-        float maxVal; 
-        float background;
+        float n;
+        float m;
 
         float mapping(float val){
-            return (this->maxVal - this->minVal) / this->background * val + this->minVal;
+            return this->m * val + this->n;
         }
 
-        void create(float min, float max, float bg) {
-            this->minVal = min;
-            this->maxVal = max;
-            this->background = bg;
+        void create(float min, float max, float min_map, float max_map) {
+            this->m = (max_map - min_map) / (max - min);
+            this->n = max_map - this->m * max;
         }
+            
     };
 
     struct ABC_Surface {
@@ -45,6 +44,10 @@ namespace Tools {
     enum WaveType {
         SINE_WAVE,
         TRIANGLE_WAVE
+    };
+
+    struct Logger {
+
     };
 };
 #endif 
