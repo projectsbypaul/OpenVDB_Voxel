@@ -368,16 +368,26 @@ namespace Scripts {
                 int band_width_cpy = band_width;
                 int padding_cpy = padding;
 
-                threads.emplace_back([&, subdirPath, newOutputDir, subdirName, k_size_cpy, min_n_kernel_cpy, band_width_cpy, padding_cpy]() {
-                    fs::create_directories(newOutputDir);
+                threads.emplace_back([&, subdirPath, newOutputDir, subdirName,
+                    k_size_cpy, min_n_kernel_cpy, band_width_cpy, padding_cpy]() {
+                        LOG_LEVEL("INFO", "Started processing " + subdirName);
 
-                    processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size_cpy, min_n_kernel_cpy, band_width_cpy, padding_cpy);
+                        fs::create_directories(newOutputDir);
 
-                    {
-                        std::lock_guard<std::mutex> guard(mtx);
-                        --active_threads;
-                    }
-                    cv.notify_one();
+                        try {
+                            processingForDLLDataset(subdirPath, newOutputDir, subdirName,
+                                k_size_cpy, min_n_kernel_cpy, band_width_cpy, padding_cpy);
+                            LOG_LEVEL("INFO", "Finished processing " + subdirName);
+                        }
+                        catch (const std::exception& e) {
+                            LOG_LEVEL("ERROR", "Error processing " + subdirName + ": " + e.what());
+                        }
+
+                        {
+                            std::lock_guard<std::mutex> guard(mtx);
+                            --active_threads;
+                        }
+                        cv.notify_one();
                     });
             }
         }

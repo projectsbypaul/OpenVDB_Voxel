@@ -21,10 +21,9 @@ namespace Scripts {
 
     int ABCtoDataset(){
 
+
         LOG_FUNC("ENTER");
 
-        
-    
         fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
         fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2)";
 
