@@ -6,14 +6,11 @@ int main() {
 
     initLogger("program.log");
 
-    LOG_FUNC("test");
-
     //Scripts::stripLinesFormOBJ();
     //Scripts::CopyAndRenameYMLandOBJ();
-    Scripts::ABCtoDataset();
-
-    
-
+    //Scripts::ABCtoDataset();
+    //Scripts::MeshToSdfSegments();
+    Scripts::ApplySwirlOnMesh();
     return 0;
 }
 

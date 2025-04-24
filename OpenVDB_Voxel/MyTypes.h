@@ -45,9 +45,5 @@ namespace Tools {
         SINE_WAVE,
         TRIANGLE_WAVE
     };
-
-    struct Logger {
-
-    };
 };
 #endif 

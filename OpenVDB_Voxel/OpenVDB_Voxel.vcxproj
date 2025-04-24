@@ -139,6 +139,7 @@
     <ClCompile Include="DL_Preprocessing.cpp" />
     <ClCompile Include="LOG.cpp" />
     <ClCompile Include="MeshDataHandling.cpp" />
+    <ClCompile Include="NoiseOnMesh.cpp" />
     <ClCompile Include="OpenVDB_Voxel.cpp" />
     <ClCompile Include="DatasetToVoxel.cpp" />
     <ClCompile Include="GetABCStatistics.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="LOG.h" />
     <ClInclude Include="MeshDataHandling.h" />
     <ClInclude Include="MyTypes.h" />
+    <ClInclude Include="NoiseOnMesh.h" />
     <ClInclude Include="Scripts.h" />
     <ClInclude Include="Tools.h" />
   </ItemGroup>

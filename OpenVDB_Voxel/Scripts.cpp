@@ -17,7 +17,33 @@
 #include "LOG.h"
 #include <tbb/global_control.h>
 
+#include "NoiseOnMesh.h"
+
 namespace Scripts {
+
+    int ApplySwirlOnMesh() {
+        std::string f_name = R"(C:\Local_Data\cropping_test\model_1.stl)";
+
+        std::string target_dir = "C:/Local_Data/cropping_test";
+
+        Surface_mesh mesh;
+
+        std::ifstream input(f_name);
+
+        if (!input || !MDH::readMesh(&f_name, &mesh)) {
+            std::cerr << "Failed to read mesh file!" << std::endl;
+            return 1;
+        }
+
+        int removed = NoiseOnMesh::CGALbased::applySwirlyNoise(&mesh, 2 ,2, 0.5, 42);
+
+        std::cout << "Removed " << removed << " Faces" << std::endl;
+
+        std::string out_name = target_dir + "/swirly_mesh.stl";
+
+        MDH::writeMesh(&out_name, &mesh);
+
+    }
 
     int ABCtoDataset(){
 
@@ -91,7 +117,7 @@ namespace Scripts {
         std::string traget_dir = R"(C:\Local_Data\ABC\ABC_parsed_files)";
         std::string log_file = traget_dir + "/ABC_log.csv";
         int kernel_size = 32;
-        int n_min_k = 2;
+        int n_min_k = 1;
         int padding = 4;
         int bandwidth = 5;
 
@@ -101,6 +127,69 @@ namespace Scripts {
 
         return 0;
     }
+    int MeshToSdfSegments() {
+
+        std::string f_name = R"(C:\Local_Data\cropping_test\model_holes.stl)";
+
+        std::string target_dir = "C:/Local_Data/cropping_test";
+     
+        Surface_mesh mesh;
+
+        std::ifstream input(f_name);
+
+        if (!input || !MDH::readMesh(&f_name, &mesh)) {
+            std::cerr << "Failed to read mesh file!" << std::endl;
+            return 1;
+        }
+
+        int k_size = 32;
+        int n_min_k = 2;
+        int padding = 0;
+        int bandwidth = 5;
+
+        auto rec_voxelsize = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_k, bandwidth, padding, mesh);
+
+        auto [my_verts, my_faces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+
+        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, rec_voxelsize, (float)bandwidth, std::numeric_limits<float>::max());
+
+        int n_face = my_faces.size();
+
+        int n_vert = my_verts.size();
+
+
+        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
+
+        auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
+
+        std::string origin_bin = target_dir + "/origins" + ".bin";
+
+        Tools::util::saveFloatMatrix(orgin_list, origin_bin);
+
+
+        Tools::Float3DArray clipped_array;
+
+        double bckgrd = grid->tree().background();
+
+        double voxel_size = (double)rec_voxelsize;
+
+        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        Tools::LinearSDFMap lmap;
+
+        lmap.create(minVal, bckgrd, 0, 1);
+
+        for (size_t i = 0; i < crop_list.size(); ++i) {
+            clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
+            Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap);
+            std::string f_name = target_dir + "/cropped_" + std::to_string(i) + ".bin";
+            Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, bckgrd);
+        }
+
+        return 0;
+    }
+
+
     int SdfToSegmentOnABC() {
 
         std::string yml_name = "C:/Local_Data/ABC/feat/abc_meta_files/abc_0000_feat_v00/00000002/00000002_1ffb81a71e5b402e966b9341_features_001.yml";

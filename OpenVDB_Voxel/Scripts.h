@@ -1,5 +1,7 @@
 #pragma once
 namespace Scripts {
+	int ApplySwirlOnMesh();
+	int MeshToSdfSegments();
 	int StatisticsOnABC();
 	int stripLinesFormOBJ();
 	int ABCtoDataset();

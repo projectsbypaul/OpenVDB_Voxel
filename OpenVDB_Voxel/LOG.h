@@ -16,7 +16,19 @@ extern std::mutex logMutex;
 
 void initLogger(const std::string& path);
 
-inline std::string currentTimestamp();
+inline std::string currentTimestamp() {
+    auto now = std::chrono::system_clock::now();
+    std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+    std::tm tm_buf;
+#if defined(_MSC_VER)
+    localtime_s(&tm_buf, &now_time);
+#else
+    localtime_r(&now_time, &tm_buf);
+#endif
+    std::ostringstream oss;
+    oss << std::put_time(&tm_buf, "%Y-%m-%d %H:%M:%S");
+    return oss.str();
+}
 
 #define LOG_LEVEL(level, msg) do { \
     std::lock_guard<std::mutex> lock(logMutex); \
@@ -26,15 +38,9 @@ inline std::string currentTimestamp();
     logFile << msg << std::endl; \
 } while(0)
 
-#define LOG(msg) do { logFile << msg << std::endl; } while(0)
+#define LOG(msg) LOG_LEVEL("LOG", msg)
 
-#define LOG_FUNC(msg) do { \
-    auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now()); \
-    std::tm timeInfo; \
-    localtime_s(&timeInfo, &now); \
-    logFile << "[" << std::put_time(&timeInfo, "%Y-%m-%d %H:%M:%S") << "] "; \
-    logFile << "[" << __FUNCTION__ << "] " << msg << std::endl; \
-} while(0)
+#define LOG_FUNC(msg) LOG_LEVEL("INFO", std::string(__FUNCTION__) + "(): " + msg)
 
 #if defined(_MSC_VER)
 #define FUNC_SIG __FUNCSIG__
@@ -42,12 +48,6 @@ inline std::string currentTimestamp();
 #define FUNC_SIG __PRETTY_FUNCTION__
 #endif
 
-#define LOG_FUNC_SIG(msg) do { \
-    auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now()); \
-    std::tm timeInfo; \
-    localtime_s(&timeInfo, &now); \
-    logFile << "[" << std::put_time(&timeInfo, "%Y-%m-%d %H:%M:%S") << "] "; \
-    logFile << "[" << FUNC_SIG << "] " << msg << std::endl; \
-} while(0)
+#define LOG_FUNC_SIG(msg) LOG_LEVEL("INFO", std::string(FUNC_SIG) + ": " + msg)
 
 #endif
