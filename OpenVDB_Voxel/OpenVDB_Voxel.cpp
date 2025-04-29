@@ -5,12 +5,9 @@
 int main() {
 
     initLogger("program.log");
+   
+    Scripts::ABCtoDatasetAE();
 
-    //Scripts::stripLinesFormOBJ();
-    //Scripts::CopyAndRenameYMLandOBJ();
-    //Scripts::ABCtoDataset();
-    //Scripts::MeshToSdfSegments();
-    Scripts::ApplySwirlOnMesh();
     return 0;
 }
 

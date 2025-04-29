@@ -21,8 +21,116 @@
 
 namespace Scripts {
 
+    int ABCtoDatasetAE() {
+        LOG_FUNC("ENTER");
+
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_AE_Data_ks_16_pad_4_bw_5_vs_adaptive)";
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+ 
+        int n_k_min = 2;
+        int max_threads = 8;
+
+        double param_1 = 2.0;
+        double param_2 = 2.0;
+        double threshold = 0.25;
+        int seed = 42;
+
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, max_threads);
+        openvdb::initialize();
+
+        parseABCtoDatasetAE(Source, Target, kernel_size, n_k_min, bandwidth, padding, param_1, param_2, threshold, seed, max_threads);
+
+        LOG_FUNC("EXIT");
+        return 0;
+
+    }
+
+    int TestNoisedSDF() {
+
+        std::string source_root = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+
+        std::string target_root = R"(C:\Local_Data\ABC\ABC_noised)";
+
+        fs::create_directories(target_root);
+
+
+        int ks = 16;
+        int n_min_k = 2;
+        int band_width = 5;
+        int padding = 0;
+
+        for (const auto& entry : fs::recursive_directory_iterator(source_root)) {
+            if (fs::is_regular_file(entry)) {
+                fs::path file_path = entry.path();
+                fs::path parent_dir = file_path.parent_path().filename(); // e.g., 00000001
+                std::string extension = file_path.extension().string();   // e.g., .obj, .yml
+
+                fs::path new_dir = target_root / parent_dir;
+
+                if (extension == ".obj") {
+
+                    fs::create_directories(new_dir);
+
+                    fs::path new_file_name = parent_dir.string() + "_noised" + extension; // e.g., 00000001.obj
+                    fs::path dest_path = new_dir / new_file_name;
+
+                    Surface_mesh mesh;
+
+                    try {
+                        std::string f_name = file_path.generic_string();
+
+                        std::string out_name = dest_path.generic_string();
+
+                        std::ifstream input(f_name);
+
+                        if (!input || !MDH::readMesh(&f_name, &mesh)) {
+                            std::cerr << "Failed to read mesh file!" << std::endl;
+                            return 1;
+                        }
+
+                        int removed = NoiseOnMesh::CGALbased::applySwirlyNoise(&mesh, 2,2, 0.25, 42);
+
+                        std::cout << "Removed " << removed << " Faces" << std::endl;
+
+                        MDH::writeMesh(&out_name, &mesh);
+
+                        double voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(ks, n_min_k, band_width, padding, mesh);
+
+                        //extract verts and faces from CGAL mesh and create SDF Grid in OpenVDB 
+                        auto [my_verts, my_faces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+                        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, (float)voxel_size, (float)band_width, std::numeric_limits<float>::max());
+
+                        auto min_val = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+                        auto background = grid->tree().background();
+
+                        std::cout << "Min Val = " << min_val << std::endl;
+                        std::cout << "Background = " << background << std::endl;
+
+                    }
+                    catch (const std::exception& e) {
+                        std::cerr << "Failed to copy: " << file_path << " (" << e.what() << ")\n";
+                    }
+
+                }
+
+                
+            }
+        }
+
+    }
+
     int ApplySwirlOnMesh() {
-        std::string f_name = R"(C:\Local_Data\cropping_test\model_1.stl)";
+
+
+
+        std::string f_name = R"(C:\Local_Data\ABC\ABC_parsed_files\00000002\00000002.obj)";
 
         std::string target_dir = "C:/Local_Data/cropping_test";
 
@@ -35,13 +143,32 @@ namespace Scripts {
             return 1;
         }
 
-        int removed = NoiseOnMesh::CGALbased::applySwirlyNoise(&mesh, 2 ,2, 0.5, 42);
+        std::cout << "Applying noise pattern" << std::endl;
+
+        int removed = NoiseOnMesh::CGALbased::applySwirlyNoise(&mesh, 10 , 10, 0.2, 42);
 
         std::cout << "Removed " << removed << " Faces" << std::endl;
 
         std::string out_name = target_dir + "/swirly_mesh.stl";
 
         MDH::writeMesh(&out_name, &mesh);
+
+        //dertimine Reccomende voxel size 
+
+        int ks = 16;
+        int n_min_k = 2;
+        int band_width = 5;
+        int padding = 0;
+
+        double voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(ks, n_min_k, band_width, padding, mesh);
+
+        //extract verts and faces from CGAL mesh and create SDF Grid in OpenVDB 
+        auto [my_verts, my_faces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, (float)voxel_size, (float)band_width, std::numeric_limits<float>::max());
+
+        auto min_val = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        std::cout << "Min Val = " << min_val << std::endl;
 
     }
 
@@ -102,7 +229,7 @@ namespace Scripts {
 
     int CopyAndRenameYMLandOBJ()
     {
-        fs::path source_path = R"(C:\Local_Data\ABC\feat\abc_meta_files\abc_0000_feat_v00)";
+        fs::path source_path = R"(C:\Local_Data\ABC\obj\abc_meta_files\abc_0000_obj_v00)";
         fs::path target_path = R"(C:\Local_Data\ABC\ABC_parsed_files)";
 
         CopyAndRenameToParsedStructure(source_path, target_path);

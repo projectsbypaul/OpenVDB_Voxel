@@ -1,5 +1,7 @@
 #pragma once
 namespace Scripts {
+	int TestNoisedSDF();
+	int ABCtoDatasetAE();
 	int ApplySwirlOnMesh();
 	int MeshToSdfSegments();
 	int StatisticsOnABC();
