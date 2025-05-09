@@ -1,9 +1,42 @@
 ﻿#include "Tools.h"
 #include "MyTypes.h"
 
+
 namespace Tools {
 
     namespace util {
+
+        std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap) {
+            std::unordered_map<std::string, int> type_counts;
+
+            for (const auto& face_types : FaceToTypeMap) {
+                for (const auto& surf_type : face_types) {
+                    type_counts[surf_type]++;
+                }
+            }
+
+            return type_counts;
+        }
+
+
+        std::vector<Tools::MyVertex> CalculateFaceCenters(const std::vector<Tools::MyFace>& faces, const std::vector<Tools::MyVertex>& vertices) {
+
+            std::vector<Tools::MyVertex> face_centers(faces.size());
+
+            for (size_t i = 0; i < faces.size(); ++i) {
+                const Tools::MyFace& f = faces[i];
+
+                Tools::MyVertex center{};
+
+                center.x = (vertices[f.v0].x + vertices[f.v1].x + vertices[f.v2].x) / 3.0f;
+                center.y = (vertices[f.v0].y + vertices[f.v1].y + vertices[f.v2].y) / 3.0f;
+                center.z = (vertices[f.v0].z + vertices[f.v1].z + vertices[f.v2].z) / 3.0f;
+
+                face_centers[i] = center;
+            }
+
+            return face_centers;
+        }
 
         void saveTypeMapToBinary(const std::vector<std::vector<std::string>>& data, const std::string& filename) {
             std::ofstream out(filename, std::ios::binary);
@@ -301,6 +334,27 @@ namespace Tools {
             return FaceToTypeMap;
 
         }
+
+        void saveTypeCountsToBinary(
+            const std::unordered_map<std::string, int>& surface_type_counts,
+            const std::string& filename)
+        {
+            std::ofstream ofs(filename, std::ios::binary);
+            if (!ofs) {
+                throw std::runtime_error("Could not open file for writing: " + filename);
+            }
+
+            size_t map_size = surface_type_counts.size();
+            ofs.write(reinterpret_cast<const char*>(&map_size), sizeof(map_size));
+
+            for (const auto& [key, value] : surface_type_counts) {
+                size_t key_size = key.size();
+                ofs.write(reinterpret_cast<const char*>(&key_size), sizeof(key_size));
+                ofs.write(key.data(), key_size);
+                ofs.write(reinterpret_cast<const char*>(&value), sizeof(value));
+            }
+        }
+
     }
 
     namespace CGALbased {

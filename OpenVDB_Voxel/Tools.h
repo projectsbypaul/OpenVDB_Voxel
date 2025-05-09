@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include <unordered_map>
 #pragma endregion
 
 #pragma region util
@@ -42,6 +43,8 @@ namespace Tools {
     
 
     namespace util {
+        std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap);
+        std::vector<Tools::MyVertex> CalculateFaceCenters(const std::vector<Tools::MyFace>& faces, const std::vector<Tools::MyVertex>& vertices);
         char mapValueToChar(float value, float minVal, float maxVal);
         void saveTypeMapToBinary(const std::vector<std::vector<std::string>>& data, const std::string& filename);
         void saveFloatMatrix(const std::vector<std::vector<float>>& matrix, const std::string& filename);
@@ -52,6 +55,10 @@ namespace Tools {
         std::vector<ABC_Surface> ParseABCyml(std::string& file_name);
         std::vector<std::vector<std::string>> GetVertexToSurfTypeMapYAML(std::string f_name, int n_vertices);
         std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces);
+        void saveTypeMapToBinary(const std::vector<std::vector<std::string>>& data, const std::string& filename);
+        void saveTypeCountsToBinary(
+            const std::unordered_map<std::string, int>& surface_type_counts,
+            const std::string& filename);
     }
 
     namespace CGALbased {

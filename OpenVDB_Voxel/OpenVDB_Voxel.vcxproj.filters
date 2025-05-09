@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Macros">
       <UniqueIdentifier>{38a71fb0-3ce4-4ec0-a357-5066319bfd02}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Test">
+      <UniqueIdentifier>{24106cfc-bdca-416e-b973-7000f62298e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Test">
+      <UniqueIdentifier>{39a358dd-4650-4b36-b007-0f89a7122763}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenVDB_Voxel.cpp">
@@ -63,6 +69,9 @@
     <ClCompile Include="NoiseOnMesh.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="IO_Test.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools.h">
@@ -94,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="NoiseOnMesh.h">
       <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="IO_Test.h">
+      <Filter>Header Files\Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

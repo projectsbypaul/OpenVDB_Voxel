@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="ABCProcessing.cpp" />
     <ClCompile Include="DL_Preprocessing.cpp" />
+    <ClCompile Include="IO_Test.cpp" />
     <ClCompile Include="LOG.cpp" />
     <ClCompile Include="MeshDataHandling.cpp" />
     <ClCompile Include="NoiseOnMesh.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="DatasetToVoxel.h" />
     <ClInclude Include="DL_Preprocessing.h" />
     <ClInclude Include="GetABCStatistics.h" />
+    <ClInclude Include="IO_Test.h" />
     <ClInclude Include="LOG.h" />
     <ClInclude Include="MeshDataHandling.h" />
     <ClInclude Include="MyTypes.h" />

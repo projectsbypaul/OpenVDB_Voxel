@@ -50,7 +50,6 @@ namespace Scripts {
         return 0;
 
     }
-
     int TestNoisedSDF() {
 
         std::string source_root = R"(C:\Local_Data\ABC\ABC_parsed_files)";
@@ -125,7 +124,6 @@ namespace Scripts {
         }
 
     }
-
     int ApplySwirlOnMesh() {
 
 
@@ -171,7 +169,6 @@ namespace Scripts {
         std::cout << "Min Val = " << min_val << std::endl;
 
     }
-
     int ABCtoDataset(){
 
 
@@ -186,9 +183,10 @@ namespace Scripts {
         double voxel_size = 0.5;
         int n_k_min = 2;
         int max_threads = 8;
+        int openvdb_threads = 16;
 
         // Limit TBB thread count to max_threads
-        tbb::global_control control(tbb::global_control::max_allowed_parallelism, max_threads);
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
         parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);
@@ -196,7 +194,6 @@ namespace Scripts {
         LOG_FUNC("EXIT");
         return 0;
     }
-
     int stripLinesFormOBJ(){
         std::vector<fs::path> found_files = Scripts::GetFilesOfType(R"(C:\Local_Data\ABC\ABC_parsed_files)", ".obj");
         std::vector<std::string> filter = { "vc" };
@@ -225,8 +222,6 @@ namespace Scripts {
 
         return 0;
     }
-
-
     int CopyAndRenameYMLandOBJ()
     {
         fs::path source_path = R"(C:\Local_Data\ABC\obj\abc_meta_files\abc_0000_obj_v00)";
@@ -256,9 +251,9 @@ namespace Scripts {
     }
     int MeshToSdfSegments() {
 
-        std::string f_name = R"(C:\Local_Data\cropping_test\model_holes.stl)";
+        std::string f_name = R"(C:\Local_Data\cropping_test\00000004_with_holes.obj)";
 
-        std::string target_dir = "C:/Local_Data/cropping_test";
+        std::string target_dir = R"(C:\Local_Data\cropping_test\sdf_segments)";
      
         Surface_mesh mesh;
 
@@ -269,9 +264,9 @@ namespace Scripts {
             return 1;
         }
 
-        int k_size = 32;
+        int k_size = 16;
         int n_min_k = 2;
-        int padding = 0;
+        int padding = 4;
         int bandwidth = 5;
 
         auto rec_voxelsize = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_k, bandwidth, padding, mesh);
@@ -284,19 +279,24 @@ namespace Scripts {
 
         int n_vert = my_verts.size();
 
-
+        //create cropping Origins
         auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
 
         auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
-
         std::string origin_bin = target_dir + "/origins" + ".bin";
-
         Tools::util::saveFloatMatrix(orgin_list, origin_bin);
+
+        //Create a Face to Grid centered index map and save it as binary
+        auto face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
+
+        auto FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+        std::string FaceToGridIndex_bin = target_dir+ "/FaceToGridIndex.bin";
+        Tools::util::saveFloatMatrix(FaceToGridIndex, FaceToGridIndex_bin);
 
 
         Tools::Float3DArray clipped_array;
 
-        double bckgrd = grid->tree().background();
+        double background = grid->tree().background();
 
         double voxel_size = (double)rec_voxelsize;
 
@@ -304,19 +304,21 @@ namespace Scripts {
 
         Tools::LinearSDFMap lmap;
 
-        lmap.create(minVal, bckgrd, 0, 1);
+        std::cout << "minVal: " << minVal << " background: " << background << std::endl;
+
+        //map 0-1 for sdf with holes 
+        //map -1 - 1 for water tight sdfs
+        lmap.create(minVal, background, 0, 1);
 
         for (size_t i = 0; i < crop_list.size(); ++i) {
             clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
             Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap);
-            std::string f_name = target_dir + "/cropped_" + std::to_string(i) + ".bin";
-            Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, bckgrd);
+            std::string f_name = target_dir + "/segment_" + std::to_string(i) + ".bin";
+            Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
         }
 
         return 0;
     }
-
-
     int SdfToSegmentOnABC() {
 
         std::string yml_name = "C:/Local_Data/ABC/feat/abc_meta_files/abc_0000_feat_v00/00000002/00000002_1ffb81a71e5b402e966b9341_features_001.yml";

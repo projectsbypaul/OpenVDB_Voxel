@@ -84,30 +84,41 @@ namespace Scripts {
 
        
         //Create face to type map and save it a binary
-        /*
         int n_face = my_faces.size();
         auto face_list = Tools::util::GetFaceToSurfTypeMapYAML(yml_name, n_face);
-        std::string face_bin = target_dir + "/FaceTypeMap" + ".bin";
+        std::string face_bin = outputDir.generic_string() + "/FaceTypeMap" + ".bin";
         Tools::util::saveTypeMapToBinary(face_list, face_bin);
-        */
 
         //Create vertex to type map and save it a binary
         int n_vert = my_verts.size();
         auto vert_list = Tools::util::GetVertexToSurfTypeMapYAML(yml_name, n_vert);
-        std::string vert_bin = target_dir + "/VertTypeMap" + ".bin";
+        std::string vert_bin = outputDir.generic_string() + "/VertTypeMap" + ".bin";
         Tools::util::saveTypeMapToBinary(vert_list, vert_bin);
 
 
         //Create a Vertex to Grid centered index map and save it as binary
+        /*
         auto arr = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, my_verts);
         std::string arr_bin = target_dir + "/VertToGridIndex" + ".bin";
         Tools::util::saveFloatMatrix(arr, arr_bin);
+        */
+        //Create a Face to Grid centered index map and save it as binary
+        auto face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
 
+        auto FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+        std::string FaceToGridIndex_bin = outputDir.generic_string() + "/FaceToGridIndex.bin";
+        Tools::util::saveFloatMatrix(FaceToGridIndex, FaceToGridIndex_bin);
+
+        //Count Faces per SurfaceType and save counts binary
+        auto counts = Tools::util::CountFacesPerSurfaceType(face_list);
+        auto count_bin = outputDir.generic_string() + "/TypeCounts.bin";
+        Tools::util::saveTypeCountsToBinary(counts, count_bin);
+        
         //based on the cropping parameter -> calculate a origin for each cropping segemnent 
         //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
         auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
         auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
-        std::string origin_bin = target_dir + "/origins" + ".bin";
+        std::string origin_bin = outputDir.generic_string() + "/origins" + ".bin";
         Tools::util::saveFloatMatrix(orgin_list, origin_bin);
 
         //Set up linear map for normalization
@@ -126,7 +137,7 @@ namespace Scripts {
         for (size_t i = 0; i < crop_list.size(); ++i) {
             clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
             Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap); //normalize clipped array 
-            std::string f_name = target_dir + "_" + std::to_string(i) + ".bin";
+            std::string f_name = outputDir.generic_string() + "_" + std::to_string(i) + ".bin";
             Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
         }
 
@@ -140,8 +151,6 @@ namespace Scripts {
 
         std::cout << "Processing: " << subdirName << " -> Output: " << outputDir << std::endl;
        
-
-
         //Define source file and traget file location
         std::string yml_name = (sourceDir / subdirName).generic_string() + ".yml";
         std::string obj_name = (sourceDir / subdirName).generic_string() + ".obj";
@@ -177,12 +186,10 @@ namespace Scripts {
             Tools::util::saveFloatMatrix(orgin_list, origin_bin);
 
             //Create face to type map and save it a binary
-            /*
             int n_face = my_faces.size();
             auto face_list = Tools::util::GetFaceToSurfTypeMapYAML(yml_name, n_face);
-            std::string face_bin = target_dir + "/FaceTypeMap" + ".bin";
+            std::string face_bin = outputDir.generic_string() + "/FaceTypeMap" + ".bin";
             Tools::util::saveTypeMapToBinary(face_list, face_bin);
-            */
 
             //Create vertex to type map and save it a binary
             int n_vert = my_verts.size();
@@ -190,14 +197,25 @@ namespace Scripts {
             std::string vert_bin = outputDir.generic_string() + "/VertTypeMap" + ".bin";
             Tools::util::saveTypeMapToBinary(vert_list, vert_bin);
 
-
             //Create a Vertex to Grid centered index map and save it as binary
+            /*
             auto arr = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, my_verts);
-            std::string arr_bin = outputDir.generic_string() + "/VertToGridIndex" + ".bin";
+            std::string arr_bin = target_dir + "/VertToGridIndex" + ".bin";
             Tools::util::saveFloatMatrix(arr, arr_bin);
+            */
+
+            //Create a Face to Grid centered index map and save it as binary
+            auto face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
+            auto FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+            std::string FaceToGridIndex_bin = outputDir.generic_string() + "/FaceToGridIndex.bin";
+            Tools::util::saveFloatMatrix(FaceToGridIndex, FaceToGridIndex_bin);
+
+            //Count Faces per SurfaceType and save counts binary
+            auto counts = Tools::util::CountFacesPerSurfaceType(face_list);
+            auto count_bin = outputDir.generic_string() + "/TypeCounts.bin";
+            Tools::util::saveTypeCountsToBinary(counts, count_bin);
 
             //Set up linear map for normalization
-            
             Tools::LinearSDFMap lmap;
 
             double background = grid->tree().background();
@@ -216,7 +234,7 @@ namespace Scripts {
                 std::string f_name = target_dir + "_" + std::to_string(i) + ".bin";
                 Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
             }
-      
+
         }
         else
         {
