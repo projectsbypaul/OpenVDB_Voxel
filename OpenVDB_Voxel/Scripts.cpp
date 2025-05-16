@@ -32,7 +32,7 @@ namespace Scripts {
         int bandwidth = 5;
  
         int n_k_min = 2;
-        int max_threads = 8;
+        int max_threads = 10;
 
         double param_1 = 2.0;
         double param_2 = 2.0;
@@ -182,11 +182,12 @@ namespace Scripts {
         int bandwidth = 5;
         double voxel_size = 0.5;
         int n_k_min = 2;
-        int max_threads = 8;
+        int max_threads = 10;
         int openvdb_threads = 16;
 
+
         // Limit TBB thread count to max_threads
-        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        //tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
         parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);

@@ -9,7 +9,7 @@
 #include <atomic>
 #include <iostream>
 
-#include "LOG.h"
+
 
 namespace fs = std::filesystem;
 
@@ -59,8 +59,6 @@ namespace Scripts {
     void processingForDLLDataset(const fs::path& sourceDir, const fs::path& outputDir,const std::string& subdirName, int k_size, double voxel_size, int band_width, int padding) {
         std::cout << "Processing: " << subdirName << " -> Output: " << outputDir << std::endl;
      
-
-
         //Define source file and traget file location
         std::string yml_name = (sourceDir / subdirName).generic_string() + ".yml";
         std::string obj_name = (sourceDir / subdirName).generic_string() + ".obj";
@@ -614,8 +612,7 @@ namespace Scripts {
     }
 
 
-
-
+   
 
 
 }

@@ -31,11 +31,17 @@
     <Filter Include="Source Files\Macros">
       <UniqueIdentifier>{38a71fb0-3ce4-4ec0-a357-5066319bfd02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Test">
-      <UniqueIdentifier>{24106cfc-bdca-416e-b973-7000f62298e5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Test">
       <UniqueIdentifier>{39a358dd-4650-4b36-b007-0f89a7122763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ArchiveUtils">
+      <UniqueIdentifier>{6d6eb119-1d54-45a7-9872-f618214c0484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ArchiveUtils">
+      <UniqueIdentifier>{b806d45a-5990-4162-ae48-98ec31304dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Test">
+      <UniqueIdentifier>{24106cfc-bdca-416e-b973-7000f62298e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +78,9 @@
     <ClCompile Include="IO_Test.cpp">
       <Filter>Source Files\Test</Filter>
     </ClCompile>
+    <ClCompile Include="zlibFunctions.cpp">
+      <Filter>Source Files\ArchiveUtils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools.h">
@@ -106,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="IO_Test.h">
       <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="zlibFunction.h">
+      <Filter>Header Files\ArchiveUtils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

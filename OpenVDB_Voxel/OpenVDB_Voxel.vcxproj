@@ -146,12 +146,14 @@
     <ClCompile Include="GetABCStatistics.cpp" />
     <ClCompile Include="Scripts.cpp" />
     <ClCompile Include="Tools.cpp" />
+    <ClCompile Include="zlibFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ABCProcessing.h" />
     <ClInclude Include="DatasetToVoxel.h" />
     <ClInclude Include="DL_Preprocessing.h" />
     <ClInclude Include="GetABCStatistics.h" />
+    <ClInclude Include="zlibFunction.h" />
     <ClInclude Include="IO_Test.h" />
     <ClInclude Include="LOG.h" />
     <ClInclude Include="MeshDataHandling.h" />

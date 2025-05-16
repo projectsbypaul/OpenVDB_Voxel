@@ -6,7 +6,7 @@
 int main() {
 
     initLogger("program.log");
-    Scripts::MeshToSdfSegments();
+    Scripts::ABCtoDataset();
 
     return 0;
 }
