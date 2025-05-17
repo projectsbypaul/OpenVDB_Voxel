@@ -1,5 +1,10 @@
 #include "ABCProcessing.h"
 #include "NoiseOnMesh.h"
+#include "GenericDirectoryProcess.h"
+#include "ProcessChildren.h"
+#include "Tools.h"
+#include "LOG.h"
+#include "DL_Preprocessing.h"
 
 #include <filesystem>
 #include <vector>
@@ -9,13 +14,13 @@
 #include <atomic>
 #include <iostream>
 
-
-
 namespace fs = std::filesystem;
 
 
 namespace Scripts {
-
+    /// <summary>
+    /// Helper Functions
+    /// </summary>
     bool checkIfDirWasProcessed(const std::string& targetDir) {
         if (fs::exists(targetDir) && fs::is_directory(targetDir)) {
              return true;
@@ -54,6 +59,10 @@ namespace Scripts {
             }
         }
     }
+
+    /// <summary>
+    /// Processing Function for Subdirectories
+    /// </summary>
 
     // Stub for your actual processing function
     void processingForDLLDataset(const fs::path& sourceDir, const fs::path& outputDir,const std::string& subdirName, int k_size, double voxel_size, int band_width, int padding) {
@@ -349,6 +358,9 @@ namespace Scripts {
 
     }
 
+    /// <summary>
+    /// parsing functions to iterate over dataset 
+    /// </summary>
 
     void parseABCtoDataset(fs::path& Source_Dir, fs::path Output_Dir,int& k_size, double& voxel_size, int& band_width, int& padding) {
 
@@ -381,52 +393,6 @@ namespace Scripts {
 
                 processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size, voxel_size, band_width, padding);
             }
-        }
-
-    }
-
-    void parseABCtoDataset(fs::path& Source_Dir, fs::path Output_Dir, int& k_size, int& min_n_kernel, int& band_width, int& padding) {
-
-        LOG_FUNC("ENTER");
-
-        // Create the target root if it doesn't exist
-        fs::create_directories(Output_Dir);
-
-        // Iterate through subdirectories of the main folder
-        for (const auto& entry : fs::directory_iterator(Source_Dir)) {
-            if (!fs::is_directory(entry.status())) continue;
-
-            fs::path subdirPath = entry.path();
-            std::string subdirName = subdirPath.filename().string();
-
-            bool hasObj = false;
-            bool hasYml = false;
-
-            // Check for .obj and .yml files inside subdir
-            for (const auto& file : fs::directory_iterator(subdirPath)) {
-                if (!fs::is_regular_file(file.status())) continue;
-
-                std::string ext = file.path().extension().string();
-                if (ext == ".obj") hasObj = true;
-                if (ext == ".yml") hasYml = true;
-            }
-
-            // If both .obj and .yml are found, process
-            if (hasObj && hasYml) {
-                fs::path newOutputDir = Output_Dir / subdirName;
-                
-                if (!checkIfDirWasProcessed(newOutputDir.generic_string())) {
-                    fs::create_directories(newOutputDir);  // creates if not exists
-                    processingForDLLDataset(subdirPath, newOutputDir, subdirName, k_size, min_n_kernel, band_width, padding);
-                }
-                else {
-                    std::cout << "Directory " << newOutputDir.filename() << " alreay processed -> skipped" << std::endl;
-                   
-                }
-                
-            }
-
-            LOG_FUNC("EXIT");
         }
 
     }
@@ -516,6 +482,92 @@ namespace Scripts {
         }
 
         LOG_FUNC("EXIT" << " Source_Dir = " << Source_Dir.filename() << ", Output_Dir = " << Output_Dir.filename() << ", Threads = " << max_threads);
+    }
+
+    void parseABCtoDataset(ProcessingUtility:: GenericDirectoryProcess* Process, int max_threads = 0) {
+
+        if (!Process) {
+            LOG_LEVEL("ERROR", "Received a null GenericDirectoryProcess pointer.");
+            return;
+        }
+
+        LOG_FUNC("ENTER" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
+
+        fs::create_directories(Process->getTargetDir());
+
+        std::vector<std::thread> threads;
+        std::mutex mtx;
+        std::condition_variable cv;
+        int active_threads = 0;
+
+        if (max_threads == 0) {
+            max_threads = std::thread::hardware_concurrency();
+        }
+
+        std::cout << "Running on thread count: " << max_threads << std::endl;
+
+
+        for (const auto& entry : fs::directory_iterator(Process->getSourceDir())) {
+            if (!fs::is_directory(entry.status())) continue;
+
+            fs::path subdirPath = entry.path();
+            std::string subdirName = subdirPath.filename().string();
+
+            bool hasObj = false;
+            bool hasYml = false;
+
+            for (const auto& file : fs::directory_iterator(subdirPath)) {
+                if (!fs::is_regular_file(file.status())) continue;
+
+                std::string ext = file.path().extension().string();
+                if (ext == ".obj") hasObj = true;
+                if (ext == ".yml") hasYml = true;
+            }
+
+            if (hasObj && hasYml) {
+                fs::path newOutputDir = Process->getTargetDir() / subdirName;
+
+                if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
+                    std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                    LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
+                    continue;
+                }
+
+                // Wait until there is a free thread slot
+                std::unique_lock<std::mutex> lock(mtx);
+                cv.wait(lock, [&]() { return active_threads < max_threads; });
+                ++active_threads;
+                lock.unlock();
+
+                threads.emplace_back([&, subdirPath, newOutputDir, subdirName]() {
+
+                        LOG_LEVEL("INFO", "Started processing " + subdirName);
+
+                        fs::create_directories(newOutputDir);
+
+                        try {
+                            Process->run(subdirName);
+
+                            LOG_LEVEL("INFO", "Finished processing " + subdirName);
+                        }
+                        catch (const std::exception& e) {
+                            LOG_LEVEL("ERROR", "Error processing " + subdirName + ": " + e.what());
+                        }
+
+                        {
+                            std::lock_guard<std::mutex> guard(mtx);
+                            --active_threads;
+                        }
+                        cv.notify_one();
+                    });
+            }
+        }
+
+        for (auto& t : threads) {
+            if (t.joinable()) t.join();
+        }
+
+        LOG_FUNC("EXIT" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
     }
 
     void parseABCtoDatasetAE(fs::path& Source_Dir, fs::path Output_Dir, int& k_size, int& min_n_kernel, int& band_width, int& padding, double param_1, double param_2, double threshold, int random_seed, int max_threads = 0) {

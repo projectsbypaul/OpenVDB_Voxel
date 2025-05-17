@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Test">
       <UniqueIdentifier>{24106cfc-bdca-416e-b973-7000f62298e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ProcessingUtility">
+      <UniqueIdentifier>{e05caa58-c92a-4030-96bf-28b6d2698013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ProcessingUtility">
+      <UniqueIdentifier>{a39d6335-dfe4-458c-b176-a34d3ff28f3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenVDB_Voxel.cpp">
@@ -66,9 +72,6 @@
     <ClCompile Include="GetABCStatistics.cpp">
       <Filter>Source Files\Scripts</Filter>
     </ClCompile>
-    <ClCompile Include="ABCProcessing.cpp">
-      <Filter>Source Files\Scripts</Filter>
-    </ClCompile>
     <ClCompile Include="LOG.cpp">
       <Filter>Source Files\Macros</Filter>
     </ClCompile>
@@ -80,6 +83,15 @@
     </ClCompile>
     <ClCompile Include="zlibFunctions.cpp">
       <Filter>Source Files\ArchiveUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericDirectoryProcess.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessChildren.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="ABCProcessing.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,9 +116,6 @@
     <ClInclude Include="GetABCStatistics.h">
       <Filter>Header Files\Scripts</Filter>
     </ClInclude>
-    <ClInclude Include="ABCProcessing.h">
-      <Filter>Header Files\Scripts</Filter>
-    </ClInclude>
     <ClInclude Include="LOG.h">
       <Filter>Header Files\Marcros</Filter>
     </ClInclude>
@@ -118,6 +127,15 @@
     </ClInclude>
     <ClInclude Include="zlibFunction.h">
       <Filter>Header Files\ArchiveUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericDirectoryProcess.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessChildren.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="ABCProcessing.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

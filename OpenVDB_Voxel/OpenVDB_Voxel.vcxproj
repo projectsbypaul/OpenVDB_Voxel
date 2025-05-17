@@ -144,6 +144,8 @@
     <ClCompile Include="OpenVDB_Voxel.cpp" />
     <ClCompile Include="DatasetToVoxel.cpp" />
     <ClCompile Include="GetABCStatistics.cpp" />
+    <ClCompile Include="GenericDirectoryProcess.cpp" />
+    <ClCompile Include="ProcessChildren.cpp" />
     <ClCompile Include="Scripts.cpp" />
     <ClCompile Include="Tools.cpp" />
     <ClCompile Include="zlibFunctions.cpp" />
@@ -152,7 +154,9 @@
     <ClInclude Include="ABCProcessing.h" />
     <ClInclude Include="DatasetToVoxel.h" />
     <ClInclude Include="DL_Preprocessing.h" />
+    <ClInclude Include="GenericDirectoryProcess.h" />
     <ClInclude Include="GetABCStatistics.h" />
+    <ClInclude Include="ProcessChildren.h" />
     <ClInclude Include="zlibFunction.h" />
     <ClInclude Include="IO_Test.h" />
     <ClInclude Include="LOG.h" />

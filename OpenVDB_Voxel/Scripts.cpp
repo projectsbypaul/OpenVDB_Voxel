@@ -18,6 +18,7 @@
 #include <tbb/global_control.h>
 
 #include "NoiseOnMesh.h"
+#include "ProcessChildren.h"
 
 namespace Scripts {
 
@@ -182,15 +183,18 @@ namespace Scripts {
         int bandwidth = 5;
         double voxel_size = 0.5;
         int n_k_min = 2;
-        int max_threads = 10;
-        int openvdb_threads = 16;
+        int max_threads = 8;
+        int openvdb_threads = 20;
 
 
         // Limit TBB thread count to max_threads
-        //tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
-        parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);
+
+        ProcessingUtility::ProcessForDLLDataset process(Source, Target, kernel_size, padding, bandwidth, n_k_min);
+        parseABCtoDataset(&process, max_threads);
+        //parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);
 
         LOG_FUNC("EXIT");
         return 0;
@@ -252,9 +256,9 @@ namespace Scripts {
     }
     int MeshToSdfSegments() {
 
-        std::string f_name = R"(C:\Local_Data\cropping_test\00000004_with_holes.obj)";
+        std::string f_name = R"(C:\Local_Data\Segmentation_Alex\samples\hx_gyroid_2.obj)";
 
-        std::string target_dir = R"(C:\Local_Data\cropping_test\sdf_segments)";
+        std::string target_dir = R"(C:\Local_Data\Segmentation_Alex\hx_gyroid_2)";
      
         Surface_mesh mesh;
 
@@ -309,7 +313,7 @@ namespace Scripts {
 
         //map 0-1 for sdf with holes 
         //map -1 - 1 for water tight sdfs
-        lmap.create(minVal, background, 0, 1);
+        lmap.create(minVal, background, -1 , 1);
 
         for (size_t i = 0; i < crop_list.size(); ++i) {
             clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
