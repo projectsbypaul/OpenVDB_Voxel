@@ -21,6 +21,7 @@ namespace ProcessingUtility {
         int padding_;
         int bandwidth_;
         int n_min_kernel_;
+        double voxel_size_;
     public:
         /**
          * @brief Constructs a ProcessForDLLDataset object.
@@ -29,6 +30,8 @@ namespace ProcessingUtility {
          * @param targetDir The path to the main target directory.
          */
         ProcessForDLLDataset(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel);
+
+        ProcessForDLLDataset(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size);
         /**
          * @brief Executes the DLL dataset processing logic for the specified subdirectory.
          *
@@ -37,5 +40,69 @@ namespace ProcessingUtility {
          */
         void run(const std::string& subDirName = "") override;
     };
+
+    /// <summary>
+    ///Implementation of ProcessForDLLDataset
+    /// </summary>
+    /**
+     * @brief A class for processing DLL dataset within a specific subdirectory.
+     *
+     * This class inherits from GenericDirectoryProcess and adds a specific
+     * parameters for ...
+     */
+    class ProcessForDLLDatasetAE : public GenericDirectoryProcess {
+    private:
+        int kernel_size_;
+        int padding_;
+        int bandwidth_;
+        int n_min_kernel_;
+        double voxel_size_;
+        double param_1_;
+        double param_2_;
+        double threshold_;
+        int random_seed_;
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessForDLLDatasetAE(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int n_min_kernel, int bandwidth, int padding, double param_1, double param_2, double threshold, int random_seed);
+
+        ProcessForDLLDatasetAE(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, double voxel_size, int bandwidth, int padding, double param_1, double param_2, double threshold, int random_seed);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
+        void run(const std::string& subDirName = "") override;
+    };
+
+    /// <summary>
+    ///Implementation of ProcessForDLLDataset
+    /// </summary>
+    /**
+     * @brief A class for processing DLL dataset within a specific subdirectory.
+     *
+     * This class inherits from GenericDirectoryProcess and adds a specific
+     * parameters for ...
+     */
+    class ProcessForFaceTypeStats : public GenericDirectoryProcess {
+    private:
+
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessForFaceTypeStats(const fs::path& sourceDir, const fs::path& targetDir);
+
+        void run(const std::string& subDirName = "") override;
+    };
+
 }
 #endif // PROCESSFORDLLDATASET_H

@@ -21,36 +21,188 @@
 #include "ProcessChildren.h"
 
 namespace Scripts {
+    //Work Scripts
+    int ABCtoDataset() {
 
-    int ABCtoDatasetAE() {
+
         LOG_FUNC("ENTER");
 
         fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
-        fs::path Target = R"(C:\Local_Data\ABC\ABC_AE_Data_ks_16_pad_4_bw_5_vs_adaptive)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2)";
 
         int kernel_size = 16;
         int padding = 4;
         int bandwidth = 5;
- 
+        double voxel_size = 0.5;
         int n_k_min = 2;
-        int max_threads = 10;
+        int max_threads = 8;
+        int openvdb_threads = 20;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        ProcessingUtility::ProcessForDLLDataset process(Source, Target, kernel_size, padding, bandwidth, n_k_min);
+        parseABCtoDataset(&process, max_threads);
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
+    int ABCtoDatasetAE() {
+        LOG_FUNC("ENTER");
+
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_test)";
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+        double voxel_size = 0.5;
+        int n_k_min = 2;
+        int max_threads = 1;
+        int openvdb_threads = 1;
 
         double param_1 = 2.0;
         double param_2 = 2.0;
         double threshold = 0.25;
         int seed = 42;
 
-
         // Limit TBB thread count to max_threads
-        tbb::global_control control(tbb::global_control::max_allowed_parallelism, max_threads);
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
-        parseABCtoDatasetAE(Source, Target, kernel_size, n_k_min, bandwidth, padding, param_1, param_2, threshold, seed, max_threads);
+        ProcessingUtility::ProcessForDLLDatasetAE process(Source, Target, kernel_size, n_k_min, bandwidth, padding, param_1, param_2, threshold, seed);
+        parseABCtoDataset(&process, max_threads);
 
         LOG_FUNC("EXIT");
         return 0;
 
     }
+    int MeshToSdfSegments() {
+
+        std::string f_name = R"(C:\Local_Data\Segmentation_Alex\samples\hx_gyroid_2.obj)";
+
+        std::string target_dir = R"(C:\Local_Data\Segmentation_Alex\hx_gyroid_2)";
+
+        Surface_mesh mesh;
+
+        std::ifstream input(f_name);
+
+        if (!input || !MDH::readMesh(&f_name, &mesh)) {
+            std::cerr << "Failed to read mesh file!" << std::endl;
+            return 1;
+        }
+
+        int k_size = 16;
+        int n_min_k = 2;
+        int padding = 4;
+        int bandwidth = 5;
+
+        auto rec_voxelsize = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_k, bandwidth, padding, mesh);
+
+        auto [my_verts, my_faces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
+
+        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, rec_voxelsize, (float)bandwidth, std::numeric_limits<float>::max());
+
+        int n_face = my_faces.size();
+
+        int n_vert = my_verts.size();
+
+        //create cropping Origins
+        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
+
+        auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
+        std::string origin_bin = target_dir + "/origins" + ".bin";
+        Tools::util::saveFloatMatrix(orgin_list, origin_bin);
+
+        //Create a Face to Grid centered index map and save it as binary
+        auto face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
+
+        auto FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+        std::string FaceToGridIndex_bin = target_dir + "/FaceToGridIndex.bin";
+        Tools::util::saveFloatMatrix(FaceToGridIndex, FaceToGridIndex_bin);
+
+
+        Tools::Float3DArray clipped_array;
+
+        double background = grid->tree().background();
+
+        double voxel_size = (double)rec_voxelsize;
+
+        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        Tools::LinearSDFMap lmap;
+
+        std::cout << "minVal: " << minVal << " background: " << background << std::endl;
+
+        //map 0-1 for sdf with holes 
+        //map -1 - 1 for water tight sdfs
+        lmap.create(minVal, background, -1, 1);
+
+        for (size_t i = 0; i < crop_list.size(); ++i) {
+            clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
+            Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap);
+            std::string f_name = target_dir + "/segment_" + std::to_string(i) + ".bin";
+            Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
+        }
+
+        return 0;
+    }
+    int stripLinesFormOBJ() {
+        std::vector<fs::path> found_files = Scripts::GetFilesOfType(R"(C:\Local_Data\ABC\ABC_parsed_files)", ".obj");
+        std::vector<std::string> filter = { "vc" };
+
+        //const unsigned int max_threads = std::thread::hardware_concurrency(); // or set manually, e.g., 4
+        const unsigned int max_threads = 10;
+        std::vector<std::thread> threads;
+
+        size_t index = 0;
+
+        while (index < found_files.size()) {
+            while (threads.size() < max_threads && index < found_files.size()) {
+                threads.emplace_back([file = found_files[index], &filter]() {
+                    Tools::util::filterObjFile(file.generic_string(), filter);
+                    std::cout << "Removed line containing " << filter[0] << " from " << file.filename() << std::endl;
+                    });
+                ++index;
+            }
+
+            // Join all running threads before starting new ones
+            for (auto& t : threads) {
+                if (t.joinable()) t.join();
+            }
+            threads.clear();
+        }
+
+        return 0;
+    }
+    int ABCgetFaceTypeMaps() {
+
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark)";
+        fs::path Target = R"(C:\Local_Data\ABC\ABC_statistics\face_types_analysis\ABC_chunk_benchmark)";
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, 2);
+        openvdb::initialize();
+
+        int max_threads = 2;
+         
+        for (int i = 1; i < 11; i++) {
+
+            LOG_FUNC("ENTER_" + std::to_string(max_threads));
+
+            ProcessingUtility::ProcessForFaceTypeStats process_1(Source, Target);
+            parseABCtoDataset(&process_1, max_threads);
+
+            LOG_FUNC("EXIT_" + std::to_string(max_threads));
+        }
+  
+        
+
+        return 0;
+
+    }
+    //Testing Scripts
     int TestNoisedSDF() {
 
         std::string source_root = R"(C:\Local_Data\ABC\ABC_parsed_files)";
@@ -170,63 +322,6 @@ namespace Scripts {
         std::cout << "Min Val = " << min_val << std::endl;
 
     }
-    int ABCtoDataset(){
-
-
-        LOG_FUNC("ENTER");
-
-        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
-        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2)";
-
-        int kernel_size = 16;
-        int padding = 4;
-        int bandwidth = 5;
-        double voxel_size = 0.5;
-        int n_k_min = 2;
-        int max_threads = 8;
-        int openvdb_threads = 20;
-
-
-        // Limit TBB thread count to max_threads
-        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
-        openvdb::initialize();
-
-
-        ProcessingUtility::ProcessForDLLDataset process(Source, Target, kernel_size, padding, bandwidth, n_k_min);
-        parseABCtoDataset(&process, max_threads);
-        //parseABCtoDataset(Source, Target, kernel_size, n_k_min, bandwidth, padding, max_threads);
-
-        LOG_FUNC("EXIT");
-        return 0;
-    }
-    int stripLinesFormOBJ(){
-        std::vector<fs::path> found_files = Scripts::GetFilesOfType(R"(C:\Local_Data\ABC\ABC_parsed_files)", ".obj");
-        std::vector<std::string> filter = { "vc" };
-
-        //const unsigned int max_threads = std::thread::hardware_concurrency(); // or set manually, e.g., 4
-        const unsigned int max_threads = 10;
-        std::vector<std::thread> threads;
-
-        size_t index = 0;
-
-        while (index < found_files.size()) {
-            while (threads.size() < max_threads && index < found_files.size()) {
-                threads.emplace_back([file = found_files[index], &filter]() {
-                    Tools::util::filterObjFile(file.generic_string(), filter);
-                    std::cout << "Removed line containing " << filter[0] << " from " << file.filename() << std::endl;
-                    });
-                ++index;
-            }
-
-            // Join all running threads before starting new ones
-            for (auto& t : threads) {
-                if (t.joinable()) t.join();
-            }
-            threads.clear();
-        }
-
-        return 0;
-    }
     int CopyAndRenameYMLandOBJ()
     {
         fs::path source_path = R"(C:\Local_Data\ABC\obj\abc_meta_files\abc_0000_obj_v00)";
@@ -251,76 +346,6 @@ namespace Scripts {
         auto counter = Scripts::AnalyzeABCDir(traget_dir, ".stl", kernel_size, n_min_k, bandwidth, padding, 16);
 
         std::cout << "Filed sucessfully read " << counter;
-
-        return 0;
-    }
-    int MeshToSdfSegments() {
-
-        std::string f_name = R"(C:\Local_Data\Segmentation_Alex\samples\hx_gyroid_2.obj)";
-
-        std::string target_dir = R"(C:\Local_Data\Segmentation_Alex\hx_gyroid_2)";
-     
-        Surface_mesh mesh;
-
-        std::ifstream input(f_name);
-
-        if (!input || !MDH::readMesh(&f_name, &mesh)) {
-            std::cerr << "Failed to read mesh file!" << std::endl;
-            return 1;
-        }
-
-        int k_size = 16;
-        int n_min_k = 2;
-        int padding = 4;
-        int bandwidth = 5;
-
-        auto rec_voxelsize = DLPP::CGALbased::calculateRecommendeVoxelsize(k_size, n_min_k, bandwidth, padding, mesh);
-
-        auto [my_verts, my_faces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
-
-        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, rec_voxelsize, (float)bandwidth, std::numeric_limits<float>::max());
-
-        int n_face = my_faces.size();
-
-        int n_vert = my_verts.size();
-
-        //create cropping Origins
-        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, k_size, padding);
-
-        auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
-        std::string origin_bin = target_dir + "/origins" + ".bin";
-        Tools::util::saveFloatMatrix(orgin_list, origin_bin);
-
-        //Create a Face to Grid centered index map and save it as binary
-        auto face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
-
-        auto FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
-        std::string FaceToGridIndex_bin = target_dir+ "/FaceToGridIndex.bin";
-        Tools::util::saveFloatMatrix(FaceToGridIndex, FaceToGridIndex_bin);
-
-
-        Tools::Float3DArray clipped_array;
-
-        double background = grid->tree().background();
-
-        double voxel_size = (double)rec_voxelsize;
-
-        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
-
-        Tools::LinearSDFMap lmap;
-
-        std::cout << "minVal: " << minVal << " background: " << background << std::endl;
-
-        //map 0-1 for sdf with holes 
-        //map -1 - 1 for water tight sdfs
-        lmap.create(minVal, background, -1 , 1);
-
-        for (size_t i = 0; i < crop_list.size(); ++i) {
-            clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], k_size);
-            Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap);
-            std::string f_name = target_dir + "/segment_" + std::to_string(i) + ".bin";
-            Tools::util::saveFloat3DGridPythonic(f_name, clipped_array, voxel_size, background);
-        }
 
         return 0;
     }
@@ -484,84 +509,6 @@ namespace Scripts {
         */
         return 0;
     }
-    int TestFixedGridSize() {
-#pragma region IO
-
-
-        std::string filename = "C:/Local_Data/CGAL-6.0.1_examples/data/meshes/bunny00.off";
-        //std::string filename = "C:\\Local_Data\\SOLIDWORKS\\cut_cube.ply"
-        Surface_mesh mesh;
-
-        if (!MDH::readMesh(&filename, &mesh)) {
-            std::cerr << "Cannot open file " << filename << std::endl;
-            return EXIT_FAILURE;
-        }
-
-        auto [meshVertices, meshFaces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
-
-        // Define narrow-band widths
-        float exBandWidth = 5.0f;
-        float inBandWidth = 5.0f;
-
-        //define Voxel Dim
-#pragma endregion
-
-        std::vector<int> test_val;
-
-        for (int i = 20; i <= 200; i++) {
-            test_val.push_back(i);
-        }
-
-        for (auto targetMaxDim : test_val) {
-
-            auto sdfGrid = Tools::OpenVDBbased::MeshToFloatGrid(meshVertices, meshFaces, targetMaxDim, exBandWidth, inBandWidth);
-
-#pragma region Debug
-
-            // Get the bounding box in **index space** (voxel coordinates)
-            openvdb::CoordBBox bbox;
-            //sdfGrid->tree().evalLeafBoundingBox(bbox);
-            sdfGrid->tree().evalLeafBoundingBox(bbox);
-
-            // Get dimensions in voxels
-            int dimX = bbox.dim().x();
-            int dimY = bbox.dim().y();
-            int dimZ = bbox.dim().z();
-
-            // Print voxel count in each dimension
-            //std::cout << "World count: X = " << dimX << ", Y = " << dimY << ", Z = " << dimZ << std::endl;
-
-            //sdfGrid->tree().evalLeafBoundingBox(bbox);
-            sdfGrid->tree().evalActiveVoxelBoundingBox(bbox);
-
-            // Get dimensions in voxels
-            dimX = bbox.dim().x();
-            dimY = bbox.dim().y();
-            dimZ = bbox.dim().z();
-
-            // Print voxel count in each dimension
-            std::cout << "Traget Dim:" << targetMaxDim << " Active count: X = " << dimX << ", Y = " << dimY << ", Z = " << dimZ;
-            if (targetMaxDim >= dimX)
-            {
-                std::cout << "->PASSED" << std::endl;
-            }
-            else
-            {
-                std::cout << "->FAILED" << std::endl;
-            }
-
-
-            //openvdb::CoordBBox bboxWorld, bboxActive;
-            //sdfGrid->tree().evalLeafBoundingBox(bboxWorld);
-            //sdfGrid->tree().evalActiveVoxelBoundingBox(bboxActive);
-
-            //std::cout << "World Voxel BBox: " << bboxWorld << std::endl;
-            //std::cout << "Active Voxel BBox: " << bboxActive << std::endl;
-#pragma endregion
-
-        }
-        return 0;
-    }
     int WaveFunctionTest() {
 
         openvdb::initialize();
@@ -634,74 +581,6 @@ namespace Scripts {
             file.write(grids);
             file.close();
         }
-
-        return 0;
-    }
-    int FixedGridSizeTest() {
-        std::string filename = "C:/Local_Data/CGAL-6.0.1_examples/data/meshes/bunny00.off";
-        //std::string filename = "C:\\Local_Data\\SOLIDWORKS\\cut_cube.ply"
-
-        int voxelgrid_dim = 202;
-
-        float ex_band = 10.f;
-        float in_band = 3.f;
-
-        Surface_mesh mesh;
-
-        if (!MDH::readMesh(&filename, &mesh)) {
-            std::cerr << "Cannot open file " << filename << std::endl;
-            return EXIT_FAILURE;
-        }
-
-        auto [meshVertices, meshFaces] = Tools::CGALbased::GetVerticesAndFaces(mesh);
-
-        
-
-        // Extract dimensions
-        CGAL::Bbox_3 CGAL_bbox = CGAL::Polygon_mesh_processing::bbox(mesh);
-
-        double width = CGAL_bbox.xmax() - CGAL_bbox.xmin();
-        double height = CGAL_bbox.ymax() - CGAL_bbox.ymin();
-        double depth = CGAL_bbox.zmax() - CGAL_bbox.zmin();
-
-        std::cout << "Mesh World:" << std::endl;
-        std::cout << "X: " << width << std::endl;
-        std::cout << "Y: " << height << std::endl;
-        std::cout << "Z: " << depth << std::endl;
-
-        float vox_res = std::max({ width, height, depth }) / (voxelgrid_dim);
-
-        openvdb::FloatGrid::Ptr sdfGrid = Tools::OpenVDBbased::MeshToFloatGrid(
-            meshVertices,
-            meshFaces,
-            vox_res,
-            ex_band,
-            in_band
-        );
-
-        // openvdb::FloatGrid::Ptr evenGrid = Tools::OpenVDBbased::resizeToEvenGrid(sdfGrid, 50, 50, 50);
-
-        openvdb::CoordBBox fullBBox;
-        sdfGrid->tree().evalLeafBoundingBox(fullBBox);
-
-        openvdb::CoordBBox bbox = sdfGrid->evalActiveVoxelBoundingBox();
-
-        std::cout << "LeafBox: " << fullBBox.dim().x() << ", " << fullBBox.dim().y() << ", " << fullBBox.dim().z() << std::endl;
-
-        std::cout << "ActiveBox: " << bbox.dim().x() << ", " << bbox.dim().y() << ", " << bbox.dim().z() << std::endl;
-
-        Tools::Float3DArray FloatArry = Tools::OpenVDBbased::Float3DArrayFromFloatGrid(sdfGrid);
-
-        float test = sdfGrid->background();
-
-        openvdb::Vec3d minWorld = sdfGrid->indexToWorld(openvdb::Vec3d(fullBBox.min().asVec3d()));
-        openvdb::Vec3d maxWorld = sdfGrid->indexToWorld(openvdb::Vec3d(fullBBox.max().asVec3d()));
-
-        // Compute the width (x-dimension)
-        std::cout << "Grid World:" << std::endl;
-        std::cout << "X: " << (maxWorld.x() - minWorld.x()) << std::endl;
-        std::cout << "Y: " << (maxWorld.y() - minWorld.y()) << std::endl;
-        std::cout << "Z: " << (maxWorld.z() - minWorld.z()) << std::endl;
 
         return 0;
     }
