@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ABCProcessing.cpp" />
+    <ClCompile Include="DataContainer.cpp" />
     <ClCompile Include="DL_Preprocessing.cpp" />
     <ClCompile Include="IO_Test.cpp" />
     <ClCompile Include="LOG.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="DL_Preprocessing.h" />
     <ClInclude Include="GenericDirectoryProcess.h" />
     <ClInclude Include="GetABCStatistics.h" />
+    <ClInclude Include="DataContainer.h" />
     <ClInclude Include="ProcessChildren.h" />
     <ClInclude Include="zlibFunction.h" />
     <ClInclude Include="IO_Test.h" />

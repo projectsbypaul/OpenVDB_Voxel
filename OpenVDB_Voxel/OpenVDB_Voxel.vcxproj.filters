@@ -49,6 +49,12 @@
     <Filter Include="Header Files\ProcessingUtility">
       <UniqueIdentifier>{a39d6335-dfe4-458c-b176-a34d3ff28f3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\cppIOUtility">
+      <UniqueIdentifier>{de476318-b948-41fd-a3ee-193cd698f934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cppIOUtility">
+      <UniqueIdentifier>{fbc573b9-7904-4461-b950-c2818e0bc7d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenVDB_Voxel.cpp">
@@ -93,6 +99,9 @@
     <ClCompile Include="ABCProcessing.cpp">
       <Filter>Source Files\ProcessingUtility</Filter>
     </ClCompile>
+    <ClCompile Include="DataContainer.cpp">
+      <Filter>Source Files\cppIOUtility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools.h">
@@ -136,6 +145,9 @@
     </ClInclude>
     <ClInclude Include="ABCProcessing.h">
       <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="DataContainer.h">
+      <Filter>Header Files\cppIOUtility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

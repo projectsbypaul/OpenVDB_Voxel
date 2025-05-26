@@ -9,8 +9,8 @@ int main() {
     // * add children process to genertae TypeCount only 
     // * config reader -> instead of hard coding parama
 
-    initLogger("FaceTypeBenchmark_TBB_1_cpu_const.log");
-    Scripts::ABCgetFaceTypeMaps();
+    initLogger("processABCbenchmark.log");
+    Scripts::ABCtoDataset();
     return 0;
 }
 

@@ -27,25 +27,48 @@ namespace Scripts {
 
         LOG_FUNC("ENTER");
 
-        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files)";
-        fs::path Target = R"(C:\Local_Data\ABC\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2)";
+        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark)";
+        fs::path Target_dump = R"(C:\Local_Data\ABC\ABC_statistics\benchmarks\ABC_chunk_benchmark_dumptruck)";
+        fs::path Target_default = R"(C:\Local_Data\ABC\ABC_statistics\benchmarks\ABC_chunk_benchmark_default)";
 
         int kernel_size = 16;
         int padding = 4;
         int bandwidth = 5;
         double voxel_size = 0.5;
         int n_k_min = 2;
-        int max_threads = 8;
-        int openvdb_threads = 20;
+        int max_threads;
+        int openvdb_threads = 1;
 
         // Limit TBB thread count to max_threads
         tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
-        ProcessingUtility::ProcessForDLLDataset process(Source, Target, kernel_size, padding, bandwidth, n_k_min);
-        parseABCtoDataset(&process, max_threads);
+        for (int i = 1; i < 7; i++) {
 
-        LOG_FUNC("EXIT");
+            fs::remove_all(Target_dump);
+            fs::remove_all(Target_default);
+
+            max_threads = i;
+
+            LOG_FUNC("ENTER_dump_" + std::to_string(max_threads));
+
+            ProcessingUtility::ProcessWithDumpTruck process_dump(Source, Target_dump, kernel_size, padding, bandwidth, n_k_min);
+            parseABCtoDataset(&process_dump, max_threads);
+
+            LOG_FUNC("EXIT_dump_" + std::to_string(max_threads));
+
+
+            LOG_FUNC("ENTER_default_" + std::to_string(max_threads));
+
+            ProcessingUtility::ProcessForDLLDataset process(Source, Target_default, kernel_size, padding, bandwidth, n_k_min);
+            parseABCtoDataset(&process, max_threads);
+
+            LOG_FUNC("EXIT_default_" + std::to_string(max_threads));
+
+            LOG_FUNC("EXIT");
+
+        }
+
         return 0;
     }
     int ABCtoDatasetAE() {

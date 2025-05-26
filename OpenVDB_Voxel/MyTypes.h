@@ -12,6 +12,10 @@ namespace Tools {
 
     using Float3DArray = std::vector<std::vector<std::vector<float>>>;
 
+    using FloatMatrix = std::vector<std::vector<float>>;
+
+    using MappingTable = std::vector<std::vector<std::string>>;
+
     struct MyVertex {
         float x, y, z;
     };
