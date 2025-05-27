@@ -1,6 +1,10 @@
 #pragma once
+#include <filesystem>
+namespace fs = std::filesystem;
 namespace Scripts {
 	//Work Scripts
+	int ABCtoDatasetBatchJob(fs::path source, fs::path target, fs::path job_location);
+	int ABCtoDatasetBatch(fs::path source, fs::path target);
 	int ABCtoDataset();
 	int ABCtoDatasetAE();
 	int stripLinesFormOBJ();
