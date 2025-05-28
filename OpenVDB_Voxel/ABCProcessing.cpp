@@ -87,9 +87,6 @@ namespace Scripts {
     /// </summary>
     void processOnJobFile(ProcessingUtility::GenericDirectoryProcess* Process, fs::path job_location, int max_threads) {
 
-        //while benchmarking only !!!!
-        fs::remove_all(Process->getTargetDir());
-
         if (!Process) {
             LOG_LEVEL("ERROR", "Received a null GenericDirectoryProcess pointer.");
             return;
@@ -97,7 +94,7 @@ namespace Scripts {
 
         LOG_FUNC("ENTER" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
 
-        if (!(fs::exists(Process->getSourceDir()))) {
+        if (!(fs::exists(Process->getTargetDir()))) {
             fs::create_directories(Process->getTargetDir());
         }
 

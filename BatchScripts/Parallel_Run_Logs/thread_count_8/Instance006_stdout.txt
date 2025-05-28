@@ -1,0 +1,94 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\thread_count_8\Instance006_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_8\Instance006.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000081 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 27152 faces to array
+Wrote 13574 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000081\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000081\segmentation_data_segments.bin
+Processing: 00000082 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 474870 faces to array
+Wrote 237445 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000082\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000082\segmentation_data_segments.bin
+Processing: 00000083 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 32608 faces to array
+Wrote 16306 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000083\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000083\segmentation_data_segments.bin
+Processing: 00000084 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 74426 faces to array
+Resized to accommodate vertex: 37193
+Resized to accommodate vertex: 37194
+Wrote 37193 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000084\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000084\segmentation_data_segments.bin
+Processing: 00000085 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 10212 faces to array
+Wrote 5102 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000085\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000085\segmentation_data_segments.bin
+Processing: 00000086 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 238114 faces to array
+Wrote 119057 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000086\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000086\segmentation_data_segments.bin
+Processing: 00000087 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 59548 faces to array
+Wrote 29770 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000087\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000087\segmentation_data_segments.bin
+Processing: 00000088 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 50520 faces to array
+Wrote 25256 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000088\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000088\segmentation_data_segments.bin
+Processing: 00000089 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 41610 faces to array
+Wrote 20799 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000089\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000089\segmentation_data_segments.bin
+Processing: 00000090 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 41610 faces to array
+Wrote 20799 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000090\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000090\segmentation_data_segments.bin
+Processing: 00000091 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 23282 faces to array
+Wrote 11641 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000091\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000091\segmentation_data_segments.bin
+Processing: 00000092 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 22078 faces to array
+Wrote 11039 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000092\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000092\segmentation_data_segments.bin
+Processing: 00000093 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 25826 faces to array
+Wrote 12913 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000093\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000093\segmentation_data_segments.bin
+Processing: 00000094 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 45218 faces to array
+Wrote 22611 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000094\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000094\segmentation_data_segments.bin
+Processing: 00000095 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 195566 faces to array
+Resized to accommodate vertex: 97773
+Wrote 97773 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000095\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000095\segmentation_data_segments.bin
+Processing: 00000096 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 23698 faces to array
+Wrote 11851 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000096\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000096\segmentation_data_segments.bin
+[INFO] Program finished successfully.

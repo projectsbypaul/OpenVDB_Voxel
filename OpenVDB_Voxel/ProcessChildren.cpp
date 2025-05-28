@@ -376,7 +376,7 @@ namespace ProcessingUtility {
         //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
         auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, kernel_size_, padding_);
 
-        if (crop_list.size() < 300) {
+        if (crop_list.size() < 1000) {
             auto orgin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
             std::string origin_bin = target_dir + "/origins" + ".bin";
             Tools::util::saveFloatMatrix(orgin_list, origin_bin);

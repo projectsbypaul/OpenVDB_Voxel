@@ -1,0 +1,67 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\thread_count_16\Instance014_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_16\Instance014.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000105 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000105\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000105\segmentation_data_segments.bin
+Processing: 00000106 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000106\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000106\segmentation_data_segments.bin
+Processing: 00000107 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000107\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000107\segmentation_data_segments.bin
+Processing: 00000108 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000108\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000108\segmentation_data_segments.bin
+Processing: 00000109 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000109\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000109\segmentation_data_segments.bin
+Processing: 00000110 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000110\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000110\segmentation_data_segments.bin
+Processing: 00000111 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000111\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000111\segmentation_data_segments.bin
+Processing: 00000112 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 37362 faces to array
+current Cylinder contains vert_index = -1, vertex ignored
+current Torus contains vert_index = -1, vertex ignored
+Wrote 18680 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000112\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000112\segmentation_data_segments.bin
+[INFO] Program finished successfully.
