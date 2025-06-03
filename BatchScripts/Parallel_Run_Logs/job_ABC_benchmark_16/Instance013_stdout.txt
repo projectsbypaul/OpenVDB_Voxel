@@ -1,0 +1,50 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_benchmark_16\Instance013_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Benchmark\Outputs_Benchmark
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_16\Instance013.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000097 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 76400 faces to array
+Wrote 38170 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000097\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000097\segmentation_data_segments.bin
+Processing: 00000098 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+00000098.bin is odd sized --> skippedProcessing: 00000099 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 24224 faces to array
+Resized to accommodate vertex: 12110
+Wrote 12110 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000099\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000099\segmentation_data_segments.bin
+Processing: 00000100 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 29486 faces to array
+Resized to accommodate vertex: 14733
+Resized to accommodate vertex: 14734
+Wrote 14733 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000100\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000100\segmentation_data_segments.bin
+Processing: 00000101 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 87466 faces to array
+Wrote 43727 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000101\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000101\segmentation_data_segments.bin
+Processing: 00000102 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 30462 faces to array
+Wrote 15231 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000102\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000102\segmentation_data_segments.bin
+Processing: 00000103 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 32542 faces to array
+Wrote 16269 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000103\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000103\segmentation_data_segments.bin
+Processing: 00000104 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 46360 faces to array
+Wrote 23176 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000104\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000104\segmentation_data_segments.bin
+[INFO] Program finished successfully.

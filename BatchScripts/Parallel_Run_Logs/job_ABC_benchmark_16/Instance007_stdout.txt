@@ -1,0 +1,79 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_benchmark_16\Instance007_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Benchmark\Outputs_Benchmark
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_16\Instance007.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000049 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 64452 faces to array
+Wrote 32230 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000049\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000049\segmentation_data_segments.bin
+Processing: 00000050 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 115672 faces to array
+Wrote 57870 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000050\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000050\segmentation_data_segments.bin
+Processing: 00000051 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 924032 faces to array
+Wrote 462042 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000051\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000051\segmentation_data_segments.bin
+Processing: 00000052 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 53556 faces to array
+Wrote 26792 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000052\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000052\segmentation_data_segments.bin
+Processing: 00000053 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 37546 faces to array
+Wrote 18775 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000053\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000053\segmentation_data_segments.bin
+Processing: 00000054 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 15696 faces to array
+Wrote 7850 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000054\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000054\segmentation_data_segments.bin
+Processing: 00000055 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 34518 faces to array
+Wrote 17259 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000055\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000055\segmentation_data_segments.bin
+Processing: 00000056 -> Output: "C:\\Local_Data\\ABC\\ABC_Benchmark\\Outputs_Benchmark"
+Wrote 61306 faces to array
+Resized to accommodate vertex: 30657
+Resized to accommodate vertex: 30658
+Resized to accommodate vertex: 30659
+Resized to accommodate vertex: 30660
+Resized to accommodate vertex: 30661
+Resized to accommodate vertex: 30662
+Resized to accommodate vertex: 30663
+Resized to accommodate vertex: 30664
+Resized to accommodate vertex: 30665
+Resized to accommodate vertex: 30666
+Resized to accommodate vertex: 30667
+Resized to accommodate vertex: 30668
+Resized to accommodate vertex: 30669
+Resized to accommodate vertex: 30670
+Resized to accommodate vertex: 30671
+Resized to accommodate vertex: 30672
+Resized to accommodate vertex: 30673
+Resized to accommodate vertex: 30674
+Resized to accommodate vertex: 30675
+Resized to accommodate vertex: 30676
+Resized to accommodate vertex: 30677
+Resized to accommodate vertex: 30678
+Resized to accommodate vertex: 30679
+Resized to accommodate vertex: 30680
+Resized to accommodate vertex: 30681
+Resized to accommodate vertex: 30682
+Resized to accommodate vertex: 30683
+Resized to accommodate vertex: 30684
+Wrote 30657 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000056\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Benchmark/Outputs_Benchmark/00000056\segmentation_data_segments.bin
+[INFO] Program finished successfully.

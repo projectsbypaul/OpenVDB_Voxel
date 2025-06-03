@@ -1,0 +1,27 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\thread_count_16\Instance010_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_16\Instance010.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000073 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000073 contains 8 elements
+Processing: 00000074 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000074 contains 48 elements
+Processing: 00000075 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000075 contains 50 elements
+Processing: 00000076 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000076 contains 32 elements
+Processing: 00000077 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000077 contains 24 elements
+Processing: 00000078 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000078 contains 12 elements
+Processing: 00000079 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000079 contains 24 elements
+Processing: 00000080 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+00000080 contains 16 elements
+[INFO] Program finished successfully.

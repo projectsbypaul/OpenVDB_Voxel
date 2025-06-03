@@ -3,13 +3,14 @@
 namespace fs = std::filesystem;
 namespace Scripts {
 	//Work Scripts
+	int StripObjBatchJob(fs::path source, fs::path target, fs::path job_location);
+	int ABCtoDatasetBatchJobTimed(fs::path source, fs::path target, fs::path job_location);
 	int ABCtoDatasetBatchJob(fs::path source, fs::path target, fs::path job_location);
 	int ABCtoDatasetBatch(fs::path source, fs::path target);
 	int ABCtoDataset();
 	int ABCtoDatasetAE();
 	int stripLinesFormOBJ();
 	int MeshToSdfSegments();
-	int ABCgetFaceTypeMaps();
 	//Test Scripts 
 	int TestNoisedSDF();
 	int ApplySwirlOnMesh();

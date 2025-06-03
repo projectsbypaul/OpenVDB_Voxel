@@ -1,0 +1,152 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_chunk_01_run_01_8\Instance002_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_01
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Datasets\Segmentation\ABC_Chunk_01\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_chunk_01_run_01\Instance002.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00010601" already processed -> skipped
+Directory "00010602" already processed -> skipped
+Processing: 00010603 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010603.bin is odd sized --> skippedDirectory "00010604" already processed -> skipped
+Directory "00010605" already processed -> skipped
+Directory "00010606" already processed -> skipped
+Directory "00010607" already processed -> skipped
+Directory "00010608" already processed -> skipped
+Directory "00010609" already processed -> skipped
+Directory "00010610" already processed -> skipped
+Directory "00010611" already processed -> skipped
+Directory "00010612" already processed -> skipped
+Directory "00010613" already processed -> skipped
+Directory "00010614" already processed -> skipped
+Directory "00010615" already processed -> skipped
+Directory "00010616" already processed -> skipped
+Directory "00010617" already processed -> skipped
+Directory "00010618" already processed -> skipped
+Directory "00010619" already processed -> skipped
+Directory "00010620" already processed -> skipped
+Directory "00010621" already processed -> skipped
+Directory "00010622" already processed -> skipped
+Directory "00010623" already processed -> skipped
+Directory "00010624" already processed -> skipped
+Directory "00010625" already processed -> skipped
+Directory "00010626" already processed -> skipped
+Directory "00010627" already processed -> skipped
+Directory "00010628" already processed -> skipped
+Processing: 00010629 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010629.bin is odd sized --> skippedDirectory "00010630" already processed -> skipped
+Directory "00010633" already processed -> skipped
+Directory "00010635" already processed -> skipped
+Directory "00010636" already processed -> skipped
+Directory "00010637" already processed -> skipped
+Directory "00010638" already processed -> skipped
+Directory "00010639" already processed -> skipped
+Directory "00010640" already processed -> skipped
+Directory "00010641" already processed -> skipped
+Directory "00010642" already processed -> skipped
+Directory "00010643" already processed -> skipped
+Directory "00010644" already processed -> skipped
+Directory "00010645" already processed -> skipped
+Directory "00010646" already processed -> skipped
+Directory "00010648" already processed -> skipped
+Directory "00010649" already processed -> skipped
+Directory "00010650" already processed -> skipped
+Directory "00010652" already processed -> skipped
+Directory "00010653" already processed -> skipped
+Directory "00010654" already processed -> skipped
+Directory "00010655" already processed -> skipped
+Directory "00010656" already processed -> skipped
+Processing: 00010657 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010657.bin is odd sized --> skippedDirectory "00010658" already processed -> skipped
+Processing: 00010660 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010660.bin is odd sized --> skippedProcessing: 00010661 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010661.bin is odd sized --> skippedProcessing: 00010662 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010662.bin is odd sized --> skippedProcessing: 00010669 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010669.bin is odd sized --> skippedProcessing: 00010671 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010671.bin is odd sized --> skippedProcessing: 00010677 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00010714 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010714.bin is odd sized --> skippedProcessing: 00010715 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010715.bin is odd sized --> skippedProcessing: 00010716 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010716.bin is odd sized --> skippedProcessing: 00010717 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010717.bin is odd sized --> skippedProcessing: 00010735 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010735.bin is odd sized --> skippedProcessing: 00010770 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010770.bin is odd sized --> skippedProcessing: 00010784 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00010795 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010795.bin is odd sized --> skippedProcessing: 00010796 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010796.bin is odd sized --> skippedProcessing: 00010797 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010797.bin is odd sized --> skippedProcessing: 00010798 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010798.bin is odd sized --> skippedProcessing: 00010833 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010833.bin is odd sized --> skippedProcessing: 00010869 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010869.bin is odd sized --> skippedProcessing: 00010879 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010879.bin is odd sized --> skippedProcessing: 00010907 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00010916 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010916.bin is odd sized --> skippedProcessing: 00010931 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010931.bin is odd sized --> skippedProcessing: 00010959 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010959.bin is odd sized --> skippedProcessing: 00010979 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010979.bin is odd sized --> skippedProcessing: 00010981 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00010981.bin is odd sized --> skippedProcessing: 00011013 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011013.bin is odd sized --> skippedProcessing: 00011048 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011048.bin is odd sized --> skippedProcessing: 00011050 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011050.bin is odd sized --> skippedProcessing: 00011147 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011147.bin is odd sized --> skippedProcessing: 00011148 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011148.bin is odd sized --> skippedProcessing: 00011188 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011188.bin is odd sized --> skippedProcessing: 00011189 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011190 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011191 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011191.bin is odd sized --> skippedProcessing: 00011192 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011192.bin is odd sized --> skippedProcessing: 00011212 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011212.bin is odd sized --> skippedProcessing: 00011213 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011213.bin is odd sized --> skippedProcessing: 00011220 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011220.bin is odd sized --> skippedProcessing: 00011245 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011245.bin is odd sized --> skippedProcessing: 00011251 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011251.bin is odd sized --> skippedProcessing: 00011256 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011256.bin is odd sized --> skippedProcessing: 00011258 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011258.bin is odd sized --> skippedProcessing: 00011259 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011262 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011262.bin is odd sized --> skippedProcessing: 00011263 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011259.bin is odd sized --> skipped00011263.bin is odd sized --> skippedProcessing: 00011277 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011277.bin is odd sized --> skippedProcessing: 00011283 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011283.bin is odd sized --> skippedProcessing: 00011284 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011284.bin is odd sized --> skippedProcessing: 00011312 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011312.bin is odd sized --> skippedProcessing: 00011313 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011313.bin is odd sized --> skippedProcessing: 00011316 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011316.bin is odd sized --> skippedProcessing: 00011326 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011326.bin is odd sized --> skippedProcessing: 00011337 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011337.bin is odd sized --> skippedProcessing: 00011342 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011342.bin is odd sized --> skippedProcessing: 00011366 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011384 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011384.bin is odd sized --> skippedProcessing: 00011389 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011389.bin is odd sized --> skippedProcessing: 00011391 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011391.bin is odd sized --> skippedProcessing: 00011403 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011403.bin is odd sized --> skippedProcessing: 00011408 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011408.bin is odd sized --> skippedProcessing: 00011413 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011413.bin is odd sized --> skippedProcessing: 00011427 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011427.bin is odd sized --> skippedProcessing: 00011433 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011433.bin is odd sized --> skippedProcessing: 00011451 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011451.bin is odd sized --> skippedProcessing: 00011452 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011452.bin is odd sized --> skippedProcessing: 00011455 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011455.bin is odd sized --> skippedProcessing: 00011487 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011487.bin is odd sized --> skippedProcessing: 00011493 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011537 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011537.bin is odd sized --> skippedProcessing: 00011541 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011541.bin is odd sized --> skippedProcessing: 00011544 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011544.bin is odd sized --> skippedProcessing: 00011580 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011580.bin is odd sized --> skippedProcessing: 00011581 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00011600 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011600.bin is odd sized --> skippedProcessing: 00011601 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011601.bin is odd sized --> skippedProcessing: 00011610 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011610.bin is odd sized --> skippedProcessing: 00011617 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011617.bin is odd sized --> skippedProcessing: 00011619 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011619.bin is odd sized --> skippedProcessing: 00011620 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011620.bin is odd sized --> skippedProcessing: 00011621 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011621.bin is odd sized --> skippedProcessing: 00011622 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011622.bin is odd sized --> skippedProcessing: 00011623 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011623.bin is odd sized --> skippedProcessing: 00011624 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011624.bin is odd sized --> skippedProcessing: 00011625 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011625.bin is odd sized --> skippedProcessing: 00011626 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011626.bin is odd sized --> skippedProcessing: 00011731 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011731.bin is odd sized --> skippedProcessing: 00011748 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00011748.bin is odd sized --> skipped[INFO] Program finished successfully.

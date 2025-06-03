@@ -81,3 +81,21 @@ SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/
 SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000013\segmentation_data_segments.bin
 Processing: 00000014 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
 Wrote 584536 faces to array
+Resized to accommodate vertex: 292300
+Resized to accommodate vertex: 292301
+Resized to accommodate vertex: 292302
+Resized to accommodate vertex: 292303
+Wrote 292300 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000014\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000014\segmentation_data_segments.bin
+Processing: 00000015 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 41370 faces to array
+Wrote 20683 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000015\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000015\segmentation_data_segments.bin
+Processing: 00000016 -> Output: "C:\\Local_Data\\ABC\\ABC_statistics\\benchmarks\\Outputs_Benchmark"
+Wrote 53242 faces to array
+Wrote 26623 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000016\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_statistics/benchmarks/Outputs_Benchmark/00000016\segmentation_data_segments.bin
+[INFO] Program finished successfully.

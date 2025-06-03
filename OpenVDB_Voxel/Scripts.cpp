@@ -22,9 +22,55 @@
 
 namespace Scripts {
     //Work Scripts
+    int StripObjBatchJob(fs::path source, fs::path target, fs::path job_location) {
+
+        LOG_FUNC("ENTER");
+
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessObjStrip process(source, target);
+        processOnJobFile(&process, job_location, max_threads);
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+    int ABCtoDatasetBatchJobTimed(fs::path source, fs::path target, fs::path job_location) {
+
+
+        LOG_FUNC("ENTER");
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+        double voxel_size = 0.5;
+        int n_k_min = 2;
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER" + std::to_string(max_threads));
+
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min);
+        processOnJobFileTimed(&process_dump, job_location, max_threads);
+
+        LOG_FUNC("EXIT" + std::to_string(max_threads));
+
+        return 0;
+    }
+
     int ABCtoDatasetBatchJob(fs::path source, fs::path target, fs::path job_location) {
 
-        fs::remove_all(target);
 
         LOG_FUNC("ENTER");
 
@@ -252,32 +298,6 @@ namespace Scripts {
         }
 
         return 0;
-    }
-    int ABCgetFaceTypeMaps() {
-
-        fs::path Source = R"(C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark)";
-        fs::path Target = R"(C:\Local_Data\ABC\ABC_statistics\face_types_analysis\ABC_chunk_benchmark)";
-
-        // Limit TBB thread count to max_threads
-        tbb::global_control control(tbb::global_control::max_allowed_parallelism, 2);
-        openvdb::initialize();
-
-        int max_threads = 2;
-         
-        for (int i = 1; i < 11; i++) {
-
-            LOG_FUNC("ENTER_" + std::to_string(max_threads));
-
-            ProcessingUtility::ProcessForFaceTypeStats process_1(Source, Target);
-            parseABCtoDataset(&process_1, max_threads);
-
-            LOG_FUNC("EXIT_" + std::to_string(max_threads));
-        }
-  
-        
-
-        return 0;
-
     }
     //Testing Scripts
     int TestNoisedSDF() {

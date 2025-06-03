@@ -124,9 +124,10 @@ namespace ProcessingUtility {
      * This class inherits from GenericDirectoryProcess and adds a specific
      * parameters for ...
      */
-    class ProcessForFaceTypeStats : public GenericDirectoryProcess {
+    class ProcessObjStrip : public GenericDirectoryProcess {
     private:
-
+        std::vector<std::string> filter_ = { "vc" };
+        std::string extension_ = ".obj";
     public:
         /**
          * @brief Constructs a ProcessForDLLDataset object.
@@ -134,10 +135,15 @@ namespace ProcessingUtility {
          * @param sourceDir The path to the main source directory.
          * @param targetDir The path to the main target directory.
          */
-        ProcessForFaceTypeStats(const fs::path& sourceDir, const fs::path& targetDir);
-
+        ProcessObjStrip(const fs::path& sourceDir, const fs::path& targetDir);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
         void run(const std::string& subDirName = "") override;
-    };
 
+    };
 }
 #endif // PROCESSFORDLLDATASET_H

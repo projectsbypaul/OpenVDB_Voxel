@@ -1,0 +1,152 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_chunk_01_run_01_8\Instance004_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_01
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Datasets\Segmentation\ABC_Chunk_01\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_chunk_01_run_01\Instance004.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00013410" already processed -> skipped
+Directory "00013415" already processed -> skipped
+Directory "00013416" already processed -> skipped
+Directory "00013417" already processed -> skipped
+Directory "00013419" already processed -> skipped
+Directory "00013420" already processed -> skipped
+Directory "00013422" already processed -> skipped
+Directory "00013424" already processed -> skipped
+Directory "00013426" already processed -> skipped
+Directory "00013427" already processed -> skipped
+Directory "00013428" already processed -> skipped
+Directory "00013429" already processed -> skipped
+Directory "00013430" already processed -> skipped
+Directory "00013431" already processed -> skipped
+Directory "00013432" already processed -> skipped
+Directory "00013433" already processed -> skipped
+Directory "00013434" already processed -> skipped
+Directory "00013435" already processed -> skipped
+Directory "00013436" already processed -> skipped
+Processing: 00013437 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013437.bin is odd sized --> skippedProcessing: 00013438 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013438.bin is odd sized --> skippedDirectory "00013439" already processed -> skipped
+Directory "00013440" already processed -> skipped
+Processing: 00013445 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013445.bin is odd sized --> skippedDirectory "00013446" already processed -> skipped
+Directory "00013447" already processed -> skipped
+Directory "00013448" already processed -> skipped
+Directory "00013449" already processed -> skipped
+Directory "00013450" already processed -> skipped
+Directory "00013451" already processed -> skipped
+Directory "00013452" already processed -> skipped
+Directory "00013453" already processed -> skipped
+Directory "00013454" already processed -> skipped
+Directory "00013455" already processed -> skipped
+Directory "00013456" already processed -> skipped
+Directory "00013457" already processed -> skipped
+Directory "00013458" already processed -> skipped
+Directory "00013459" already processed -> skipped
+Directory "00013460" already processed -> skipped
+Directory "00013461" already processed -> skipped
+Directory "00013463" already processed -> skipped
+Directory "00013464" already processed -> skipped
+Directory "00013465" already processed -> skipped
+Directory "00013466" already processed -> skipped
+Directory "00013471" already processed -> skipped
+Directory "00013475" already processed -> skipped
+Directory "00013476" already processed -> skipped
+Directory "00013477" already processed -> skipped
+Directory "00013478" already processed -> skipped
+Directory "00013479" already processed -> skipped
+Directory "00013480" already processed -> skipped
+Directory "00013481" already processed -> skipped
+Directory "00013482" already processed -> skipped
+Directory "00013483" already processed -> skipped
+Directory "00013484" already processed -> skipped
+Directory "00013485" already processed -> skipped
+Directory "00013486" already processed -> skipped
+Directory "00013487" already processed -> skipped
+Directory "00013488" already processed -> skipped
+Directory "00013489" already processed -> skipped
+Directory "00013494" already processed -> skipped
+Directory "00013495" already processed -> skipped
+Directory "00013499" already processed -> skipped
+Directory "00013500" already processed -> skipped
+Processing: 00013501 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00013503" already processed -> skipped
+Directory "00013504" already processed -> skipped
+Directory "00013505" already processed -> skipped
+Directory "00013508" already processed -> skipped
+Directory "00013509" already processed -> skipped
+Directory "00013510" already processed -> skipped
+Directory "00013511" already processed -> skipped
+Directory "00013513" already processed -> skipped
+Processing: 00013514 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013514.bin is odd sized --> skippedProcessing: 00013515 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013515.bin is odd sized --> skippedDirectory "00013516" already processed -> skipped
+Directory "00013517" already processed -> skipped
+Directory "00013518" already processed -> skipped
+Directory "00013519" already processed -> skipped
+Directory "00013520" already processed -> skipped
+Directory "00013521" already processed -> skipped
+Directory "00013522" already processed -> skipped
+Directory "00013523" already processed -> skipped
+Directory "00013524" already processed -> skipped
+Directory "00013525" already processed -> skipped
+Directory "00013526" already processed -> skipped
+Directory "00013527" already processed -> skipped
+Directory "00013528" already processed -> skipped
+Directory "00013529" already processed -> skipped
+Processing: 00013530 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013530.bin is odd sized --> skippedDirectory "00013531" already processed -> skipped
+Directory "00013532" already processed -> skipped
+Directory "00013536" already processed -> skipped
+Directory "00013537" already processed -> skipped
+Directory "00013538" already processed -> skipped
+Directory "00013539" already processed -> skipped
+Processing: 00013540 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013540.bin is odd sized --> skippedDirectory "00013541" already processed -> skipped
+Directory "00013542" already processed -> skipped
+Directory "00013543" already processed -> skipped
+Directory "00013544" already processed -> skipped
+Directory "00013545" already processed -> skipped
+Directory "00013546" already processed -> skipped
+Directory "00013547" already processed -> skipped
+Directory "00013548" already processed -> skipped
+Directory "00013549" already processed -> skipped
+Directory "00013550" already processed -> skipped
+Directory "00013552" already processed -> skipped
+Directory "00013553" already processed -> skipped
+Directory "00013556" already processed -> skipped
+Directory "00013557" already processed -> skipped
+Directory "00013559" already processed -> skipped
+Processing: 00013560 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00013560.bin is odd sized --> skippedDirectory "00013561" already processed -> skipped
+Directory "00013564" already processed -> skipped
+Directory "00013566" already processed -> skipped
+Directory "00013567" already processed -> skipped
+Directory "00013568" already processed -> skipped
+Directory "00013569" already processed -> skipped
+Directory "00013570" already processed -> skipped
+Directory "00013571" already processed -> skipped
+Directory "00013572" already processed -> skipped
+Directory "00013574" already processed -> skipped
+Directory "00013577" already processed -> skipped
+Processing: 00013578 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_01\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00013579" already processed -> skipped
+Directory "00013581" already processed -> skipped
+Directory "00013582" already processed -> skipped
+Directory "00013583" already processed -> skipped
+Directory "00013584" already processed -> skipped
+Directory "00013585" already processed -> skipped
+Directory "00013586" already processed -> skipped
+Directory "00013588" already processed -> skipped
+Directory "00013589" already processed -> skipped
+Directory "00013590" already processed -> skipped
+Directory "00013591" already processed -> skipped
+Directory "00013592" already processed -> skipped
+Directory "00013593" already processed -> skipped
+Directory "00013594" already processed -> skipped
+Directory "00013595" already processed -> skipped
+Directory "00013596" already processed -> skipped
+[INFO] Program finished successfully.

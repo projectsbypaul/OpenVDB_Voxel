@@ -9,6 +9,7 @@
 #include "GenericDirectoryProcess.h"
 
 namespace Scripts {
+
     namespace fs = std::filesystem;
 
     /// <summary>
@@ -16,6 +17,10 @@ namespace Scripts {
     /// </summary>
     bool checkIfDirWasProcessed(const std::string& targetDir);
     void CopyAndRenameToParsedStructure(const fs::path& source_root, const fs::path& target_root);
+    /// <summary>
+    /// parsing functions to iterate over job fils with timeout
+    /// </summary>
+    void processOnJobFileTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path job_location, int max_threads, int timeout_min = 5);
     /// <summary>
     /// parsing functions to iterate over job fils
     /// </summary>
@@ -25,4 +30,5 @@ namespace Scripts {
     /// </summary>
     void parseABCtoDataset(ProcessingUtility::GenericDirectoryProcess* Process, int max_threads);
 }
+
 #endif // SCRIPTS_H

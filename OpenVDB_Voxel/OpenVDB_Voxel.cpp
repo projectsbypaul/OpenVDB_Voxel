@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
         initLogger(argv[1]); // Use argv[1] as the log file path
         LOG_FUNC("ENTER");
         //Scripts::ABCtoDatasetBatch(argv[2], argv[3]); // Use argv[2] and argv[3]
-        Scripts::ABCtoDatasetBatchJob(argv[2], argv[3], argv[4]);
+        Scripts::ABCtoDatasetBatchJobTimed(argv[2], argv[3], argv[4]);
         LOG_FUNC("EXIT");
     }
     else {
