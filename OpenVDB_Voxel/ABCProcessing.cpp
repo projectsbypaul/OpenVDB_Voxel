@@ -29,10 +29,10 @@ namespace Scripts {
     /// </summary>
     bool checkIfDirWasProcessed(const std::string& targetDir) {
         if (fs::exists(targetDir) && fs::is_directory(targetDir)) {
-             return true;
+            return true;
         }
         else {
-             return false;
+            return false;
         }
 
     }
@@ -129,7 +129,136 @@ namespace Scripts {
             return false;
         }
     }
+    /// <summary>
+   /// parsing function to iterate over jobfiles 
+   /// </summary>
+    void processOnSubdirTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads, int timeout_min) {
 
+        if (!Process) {
+            LOG_LEVEL("ERROR", "Received a null GenericDirectoryProcess pointer.");
+            return;
+        }
+
+        LOG_FUNC("ENTER" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
+
+        if (!(fs::exists(Process->getTargetDir()))) {
+            fs::create_directories(Process->getTargetDir());
+        }
+
+        if (max_threads == 0) {
+            max_threads = std::thread::hardware_concurrency();
+        }
+
+        std::cout << "Running on thread count: " << max_threads << std::endl;
+
+
+        fs::path subdirPath = Process->getSourceDir() / subdir_name;
+
+        if (!fs::is_directory(subdirPath)) return;
+
+        std::string subdirName = subdirPath.filename().string();
+
+        bool hasObj = false;
+        bool hasYml = false;
+
+        for (const auto& file : fs::directory_iterator(subdirPath)) {
+            if (!fs::is_regular_file(file.status())) continue;
+
+            std::string ext = file.path().extension().string();
+            if (ext == ".obj") hasObj = true;
+            if (ext == ".yml") hasYml = true;
+        }
+
+        if (hasObj && hasYml) {
+            fs::path newOutputDir = Process->getTargetDir() / subdirName;
+
+            if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
+                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
+                return;
+            }
+
+            LOG_LEVEL("INFO", "Started processing " + subdirName);
+
+            try {
+                // Correct: pass the lambda capturing both Process and subdirName
+                auto result = Scripts::run_with_timeout(
+                    [Process, subdirName]() { Process->run(subdirName); },
+                    std::chrono::minutes(timeout_min)
+                );
+
+                LOG_LEVEL("INFO", "Finished processing " + subdirName);
+            }
+            catch (const std::exception& e) {
+                LOG_LEVEL("ERROR", "Error processing " + subdirName + ": " + e.what());
+            }
+        }
+        LOG_FUNC("EXIT" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
+    }
+
+    /// <summary>
+    /// parsing function to iterate over jobfiles 
+    /// </summary>
+    void processOnSubdir(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads) {
+
+        if (!Process) {
+            LOG_LEVEL("ERROR", "Received a null GenericDirectoryProcess pointer.");
+            return;
+        }
+
+        LOG_FUNC("ENTER" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
+
+        if (!(fs::exists(Process->getTargetDir()))) {
+            fs::create_directories(Process->getTargetDir());
+        }
+
+        if (max_threads == 0) {
+            max_threads = std::thread::hardware_concurrency();
+        }
+
+        std::cout << "Running on thread count: " << max_threads << std::endl;
+
+
+        fs::path subdirPath = Process->getSourceDir() / subdir_name;
+
+        if (!fs::is_directory(subdirPath)) return;
+
+        std::string subdirName = subdirPath.filename().string();
+
+        bool hasObj = false;
+        bool hasYml = false;
+
+        for (const auto& file : fs::directory_iterator(subdirPath)) {
+            if (!fs::is_regular_file(file.status())) continue;
+
+            std::string ext = file.path().extension().string();
+            if (ext == ".obj") hasObj = true;
+            if (ext == ".yml") hasYml = true;
+        }
+
+        if (hasObj && hasYml) {
+            fs::path newOutputDir = Process->getTargetDir() / subdirName;
+
+            if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
+                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
+                return;
+            }
+
+            LOG_LEVEL("INFO", "Started processing " + subdirName);
+
+            try {
+                Process->run(subdirName);
+
+                LOG_LEVEL("INFO", "Finished processing " + subdirName);
+            }
+            catch (const std::exception& e) {
+                LOG_LEVEL("ERROR", "Error processing " + subdirName + ": " + e.what());
+            }
+        }
+        LOG_FUNC("EXIT" << " Source_Dir = " << Process->getSourceDir().filename() << ", Output_Dir = " << Process->getTargetDir().filename() << ", Threads = " << max_threads);
+    }
+    
 
     /// <summary>
     /// parsing function to iterate over jobfiles with time out

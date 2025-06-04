@@ -1,0 +1,14 @@
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00000002" already processed -> skipped
+Directory "00000003" already processed -> skipped
+Directory "00000004" already processed -> skipped
+Directory "00000005" already processed -> skipped
+Directory "00000006" already processed -> skipped
+Directory "00000007" already processed -> skipped
+Directory "00000008" already processed -> skipped
+Directory "00000009" already processed -> skipped
+Directory "00000010" already processed -> skipped
+Directory "00000015" already processed -> skipped
+Directory "00000016" already processed -> skipped
+Processing: 00000017 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"

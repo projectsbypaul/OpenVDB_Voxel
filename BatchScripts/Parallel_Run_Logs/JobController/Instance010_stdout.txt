@@ -1,0 +1,175 @@
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007448 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007448 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 34850 faces to array
+Wrote 17409 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007448\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007448\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007449 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007449 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 318236 faces to array
+Wrote 159058 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007449\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007449\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007450 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007450 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 71810 faces to array
+Wrote 35901 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007450\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007450\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007451 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007451 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 68518 faces to array
+Wrote 34247 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007451\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007451\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007452 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007452 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007452.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007453 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007453 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007453.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007454 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007454 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 13140 faces to array
+Wrote 6572 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007454\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007454\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007455 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007455 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 268096 faces to array
+Wrote 133996 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007455\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007455\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007456 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007456 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 169080 faces to array
+Wrote 84618 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007456\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007456\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007458 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007458 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 44444 faces to array
+Wrote 22222 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007458\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007458\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007459 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007459 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 25992 faces to array
+Resized to accommodate vertex: 12986
+Wrote 12986 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007459\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007459\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007460 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007460 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 33106 faces to array
+Wrote 16553 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007460\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007460\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007461 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007461 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 36824 faces to array
+Wrote 18410 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007461\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007461\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007462 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007462 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 122548 faces to array
+Wrote 61270 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007462\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007462\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007463 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007463 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 6710 faces to array
+Wrote 3349 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007463\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007463\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007464 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007464 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 62674 faces to array
+Wrote 31321 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007464\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007464\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007465 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007465 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 61814 faces to array
+Wrote 30911 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007465\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007465\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007466 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007466 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 49002 faces to array
+Wrote 24475 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007466\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007466\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007467 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007467 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 71064 faces to array
+Wrote 35534 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007467\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007467\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007468 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007468 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007468.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe --subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_00 H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2 00007469 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/Instance010_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00007469 -> Output: "H:/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 12698 faces to array
+Wrote 6351 vertices to array

@@ -29,6 +29,14 @@ namespace Scripts {
     /// parsing functions to iterate over dataset
     /// </summary>
     void parseABCtoDataset(ProcessingUtility::GenericDirectoryProcess* Process, int max_threads);
+    /// <summary>
+    /// executes process on spefict subdir 
+    /// </summary>
+    void processOnSubdir(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads);
+    /// <summary>
+    /// executes process on spefict subdir 
+    /// </summary>
+    void processOnSubdirTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads = 1, int timeout_min = 10);
 }
 
 #endif // SCRIPTS_H

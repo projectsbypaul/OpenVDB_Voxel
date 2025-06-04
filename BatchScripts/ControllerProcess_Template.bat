@@ -4,10 +4,11 @@ REM Batch script to launch MultiProcess.exe multiple times in parallel
 REM --- Configuration ---
 SET "GLOB_THREAD_COUNT=1"
 REM Path to your executable (using relative path from script location)
-SET "EXECUTABLE_PATH=%~dp0..\x64\Debug\OpenVDB_Voxel.exe"
+SET "EXECUTABLE_PATH=%~dp0..\x64\Debug\JobController.exe"
+SET "EXECUTABLE_CHILD_PROCESS=%~dp0..\x64\Debug\OpenVDB_Voxel.exe"
 
 REM Directory to store output logs from each instance
-SET "MAIN_OUTPUT_DIR=%~dp0Parallel_Run_Logs\thread_count_%GLOB_THREAD_COUNT%"
+SET "MAIN_OUTPUT_DIR=%~dp0Parallel_Run_Logs\JobController"
 
 REM Create the main output directory if it doesn't exist
 IF NOT EXIST "%MAIN_OUTPUT_DIR%" (
@@ -29,30 +30,11 @@ echo.
 REM ---Shared Parameters
 SET "GLOB_SOURCE_DIR=C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
 SET "GLOB_TARGET_DIR=C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark"
-SET "GLOB_JOB_DIR=C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_%GLOB_THREAD_COUNT%"
+SET "GLOB_JOB_DIR=C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_controller_test_4"
+SET "JOB_TYPE=--default"
 
 REM --- !!!rember  to change GLOB_THREAD_COUNT!!! --- 
 REM --- Instance Blocks Begin --- 
-
-REM --- Instance 1 ---
-SET "INSTANCE1_ID=Instance001"
-SET "INSTANCE1_APP_LOG=%MAIN_OUTPUT_DIR%\%INSTANCE1_ID%_app_internal.log"
-SET "INSTANCE1_SOURCE_DIR=%GLOB_SOURCE_DIR%"
-SET "INSTANCE1_TARGET_DIR=%GLOB_TARGET_DIR%"
-SET "INSTANCE1_JOB_LOC=%GLOB_JOB_DIR%\%INSTANCE1_ID%.job"
-SET "INSTANCE1_STDOUT_LOG=%MAIN_OUTPUT_DIR%\%INSTANCE1_ID%_stdout.txt"
-SET "INSTANCE1_STDERR_LOG=%MAIN_OUTPUT_DIR%\%INSTANCE1_ID%_stderr.txt"
-
-echo Launching %INSTANCE1_ID%...
-echo   App Log: %INSTANCE1_APP_LOG%
-echo   Source:  %INSTANCE1_SOURCE_DIR%
-echo   Target:  %INSTANCE1_TARGET_DIR%
-echo   JobLoc:  %INSTANCE1_JOB_LOC%
-echo   Stdout:  %INSTANCE1_STDOUT_LOG%
-echo   Stderr:  %INSTANCE1_STDERR_LOG%
-START "%INSTANCE1_ID% Process" /B "%EXECUTABLE_PATH%" "%INSTANCE1_APP_LOG%" "%INSTANCE1_SOURCE_DIR%" "%INSTANCE1_TARGET_DIR%" "%INSTANCE1_JOB_LOC%" > "%INSTANCE1_STDOUT_LOG%" 2> "%INSTANCE1_STDERR_LOG%"
-echo.
-
 
 
 REM --- Instance Blocks END ---

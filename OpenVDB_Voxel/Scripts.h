@@ -3,6 +3,7 @@
 namespace fs = std::filesystem;
 namespace Scripts {
 	//Work Scripts
+	int SubdirToDataset(fs::path source, fs::path target, std::string subdir_name);
 	int StripObjBatchJob(fs::path source, fs::path target, fs::path job_location);
 	int ABCtoDatasetBatchJobTimed(fs::path source, fs::path target, fs::path job_location);
 	int ABCtoDatasetBatchJob(fs::path source, fs::path target, fs::path job_location);

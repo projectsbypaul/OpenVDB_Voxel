@@ -1,0 +1,22 @@
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00007448" already processed -> skipped
+Directory "00007449" already processed -> skipped
+Directory "00007450" already processed -> skipped
+Directory "00007451" already processed -> skipped
+Processing: 00007452 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007452.bin is odd sized --> skippedProcessing: 00007453 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007453.bin is odd sized --> skippedDirectory "00007454" already processed -> skipped
+Directory "00007455" already processed -> skipped
+Directory "00007456" already processed -> skipped
+Directory "00007458" already processed -> skipped
+Directory "00007459" already processed -> skipped
+Directory "00007460" already processed -> skipped
+Directory "00007461" already processed -> skipped
+Directory "00007462" already processed -> skipped
+Directory "00007463" already processed -> skipped
+Directory "00007464" already processed -> skipped
+Directory "00007465" already processed -> skipped
+Directory "00007466" already processed -> skipped
+Directory "00007467" already processed -> skipped
+Processing: 00007468 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"

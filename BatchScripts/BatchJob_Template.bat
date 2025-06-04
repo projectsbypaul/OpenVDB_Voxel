@@ -7,7 +7,7 @@ REM Path to your executable (using relative path from script location)
 SET "EXECUTABLE_PATH=%~dp0..\x64\Debug\OpenVDB_Voxel.exe"
 
 REM Directory to store output logs from each instance
-SET "MAIN_OUTPUT_DIR=%~dp0Parallel_Run_Logs\thread_count_%GLOB_THREAD_COUNT%"
+SET "MAIN_OUTPUT_DIR=%~dp0Parallel_Run_Logs\BatchJob"
 
 REM Create the main output directory if it doesn't exist
 IF NOT EXIST "%MAIN_OUTPUT_DIR%" (
@@ -28,12 +28,11 @@ echo.
 
 REM ---Shared Parameters
 SET "GLOB_SOURCE_DIR=C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
-SET "GLOB_TARGET_DIR=C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark"
-SET "GLOB_JOB_DIR=C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_threads_%GLOB_THREAD_COUNT%"
+SET "GLOB_TARGET_DIR=C:\Local_Data\ABC\ABC_Benchmark\Outputs_Benchmark"
+SET "GLOB_JOB_DIR=C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_controller_test_4"
 
 REM --- !!!rember  to change GLOB_THREAD_COUNT!!! --- 
 REM --- Instance Blocks Begin --- 
-
 
 
 

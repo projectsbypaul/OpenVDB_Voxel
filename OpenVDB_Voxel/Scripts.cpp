@@ -22,6 +22,31 @@
 
 namespace Scripts {
     //Work Scripts
+    int SubdirToDataset(fs::path source, fs::path target, std::string subdir_name) {
+
+        LOG_FUNC("ENTER");
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+        double voxel_size = 0.5;
+        int n_k_min = 2;
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min);
+        processOnSubdirTimed(&process_dump, subdir_name,max_threads);
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
     int StripObjBatchJob(fs::path source, fs::path target, fs::path job_location) {
 
         LOG_FUNC("ENTER");
@@ -59,16 +84,15 @@ namespace Scripts {
         tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
-        LOG_FUNC("ENTER" + std::to_string(max_threads));
+        LOG_FUNC("ENTER");
 
         ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min);
         processOnJobFileTimed(&process_dump, job_location, max_threads);
 
-        LOG_FUNC("EXIT" + std::to_string(max_threads));
+        LOG_FUNC("EXIT");
 
         return 0;
     }
-
     int ABCtoDatasetBatchJob(fs::path source, fs::path target, fs::path job_location) {
 
 
@@ -86,12 +110,12 @@ namespace Scripts {
         tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
         openvdb::initialize();
 
-        LOG_FUNC("ENTER" + std::to_string(max_threads));
+        LOG_FUNC("ENTER");
 
         ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min);
         processOnJobFile(&process_dump, job_location, max_threads);
 
-        LOG_FUNC("EXIT" + std::to_string(max_threads));
+        LOG_FUNC("EXIT");
 
         return 0;
     }
