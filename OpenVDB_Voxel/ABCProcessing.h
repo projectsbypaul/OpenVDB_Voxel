@@ -20,7 +20,7 @@ namespace Scripts {
     /// <summary>
     /// parsing functions to iterate over job fils with timeout
     /// </summary>
-    void processOnJobFileTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path job_location, int max_threads, int timeout_min = 5);
+    void processOnJobFileTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path job_location, int max_threads, int timeout_min = 10);
     /// <summary>
     /// parsing functions to iterate over job fils
     /// </summary>

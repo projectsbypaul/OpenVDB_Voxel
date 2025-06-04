@@ -1,0 +1,726 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_chunk_00_16\Instance006_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_00
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Datasets\Segmentation\ABC_Chunk_00\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_chunk_00\Instance006.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00003170" already processed -> skipped
+Directory "00003173" already processed -> skipped
+Processing: 00003175 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003175.bin is odd sized --> skippedProcessing: 00003176 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003176.bin is odd sized --> skippedDirectory "00003177" already processed -> skipped
+Directory "00003178" already processed -> skipped
+Directory "00003179" already processed -> skipped
+Directory "00003181" already processed -> skipped
+Directory "00003182" already processed -> skipped
+Processing: 00003183 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003183.bin is odd sized --> skippedDirectory "00003184" already processed -> skipped
+Directory "00003185" already processed -> skipped
+Directory "00003186" already processed -> skipped
+Directory "00003187" already processed -> skipped
+Directory "00003189" already processed -> skipped
+Directory "00003190" already processed -> skipped
+Processing: 00003193 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003193.bin is odd sized --> skippedProcessing: 00003194 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003194.bin is odd sized --> skippedDirectory "00003195" already processed -> skipped
+Directory "00003196" already processed -> skipped
+Directory "00003197" already processed -> skipped
+Directory "00003198" already processed -> skipped
+Directory "00003199" already processed -> skipped
+Directory "00003200" already processed -> skipped
+Directory "00003202" already processed -> skipped
+Directory "00003203" already processed -> skipped
+Directory "00003204" already processed -> skipped
+Directory "00003205" already processed -> skipped
+Directory "00003206" already processed -> skipped
+Processing: 00003207 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003207.bin is odd sized --> skippedDirectory "00003208" already processed -> skipped
+Directory "00003209" already processed -> skipped
+Directory "00003210" already processed -> skipped
+Directory "00003211" already processed -> skipped
+Processing: 00003213 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003213.bin is odd sized --> skippedDirectory "00003214" already processed -> skipped
+Directory "00003215" already processed -> skipped
+Directory "00003216" already processed -> skipped
+Directory "00003217" already processed -> skipped
+Directory "00003218" already processed -> skipped
+Directory "00003219" already processed -> skipped
+Directory "00003220" already processed -> skipped
+Directory "00003221" already processed -> skipped
+Directory "00003222" already processed -> skipped
+Directory "00003223" already processed -> skipped
+Directory "00003227" already processed -> skipped
+Directory "00003230" already processed -> skipped
+Directory "00003231" already processed -> skipped
+Directory "00003232" already processed -> skipped
+Directory "00003233" already processed -> skipped
+Directory "00003234" already processed -> skipped
+Directory "00003235" already processed -> skipped
+Directory "00003238" already processed -> skipped
+Directory "00003239" already processed -> skipped
+Directory "00003240" already processed -> skipped
+Directory "00003243" already processed -> skipped
+Directory "00003244" already processed -> skipped
+Directory "00003245" already processed -> skipped
+Directory "00003246" already processed -> skipped
+Directory "00003247" already processed -> skipped
+Directory "00003248" already processed -> skipped
+Processing: 00003251 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003251.bin is odd sized --> skippedDirectory "00003255" already processed -> skipped
+Directory "00003256" already processed -> skipped
+Directory "00003258" already processed -> skipped
+Directory "00003259" already processed -> skipped
+Directory "00003260" already processed -> skipped
+Directory "00003261" already processed -> skipped
+Directory "00003262" already processed -> skipped
+Directory "00003264" already processed -> skipped
+Directory "00003265" already processed -> skipped
+Directory "00003266" already processed -> skipped
+Directory "00003267" already processed -> skipped
+Directory "00003268" already processed -> skipped
+Directory "00003269" already processed -> skipped
+Directory "00003270" already processed -> skipped
+Directory "00003271" already processed -> skipped
+Directory "00003272" already processed -> skipped
+Directory "00003273" already processed -> skipped
+Directory "00003274" already processed -> skipped
+Directory "00003275" already processed -> skipped
+Directory "00003278" already processed -> skipped
+Directory "00003280" already processed -> skipped
+Directory "00003281" already processed -> skipped
+Processing: 00003282 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003282.bin is odd sized --> skippedDirectory "00003283" already processed -> skipped
+Directory "00003286" already processed -> skipped
+Directory "00003287" already processed -> skipped
+Directory "00003288" already processed -> skipped
+Directory "00003290" already processed -> skipped
+Directory "00003291" already processed -> skipped
+Directory "00003292" already processed -> skipped
+Directory "00003293" already processed -> skipped
+Directory "00003294" already processed -> skipped
+Directory "00003295" already processed -> skipped
+Directory "00003296" already processed -> skipped
+Directory "00003297" already processed -> skipped
+Directory "00003299" already processed -> skipped
+Directory "00003300" already processed -> skipped
+Directory "00003301" already processed -> skipped
+Directory "00003302" already processed -> skipped
+Directory "00003303" already processed -> skipped
+Directory "00003304" already processed -> skipped
+Directory "00003306" already processed -> skipped
+Directory "00003307" already processed -> skipped
+Directory "00003308" already processed -> skipped
+Directory "00003309" already processed -> skipped
+Directory "00003311" already processed -> skipped
+Directory "00003312" already processed -> skipped
+Processing: 00003313 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003313.bin is odd sized --> skippedDirectory "00003314" already processed -> skipped
+Directory "00003315" already processed -> skipped
+Directory "00003316" already processed -> skipped
+Directory "00003318" already processed -> skipped
+Directory "00003319" already processed -> skipped
+Directory "00003321" already processed -> skipped
+Directory "00003323" already processed -> skipped
+Directory "00003324" already processed -> skipped
+Directory "00003326" already processed -> skipped
+Directory "00003327" already processed -> skipped
+Processing: 00003328 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003328.bin is odd sized --> skippedDirectory "00003329" already processed -> skipped
+Directory "00003330" already processed -> skipped
+Directory "00003331" already processed -> skipped
+Directory "00003332" already processed -> skipped
+Directory "00003333" already processed -> skipped
+Directory "00003336" already processed -> skipped
+Directory "00003337" already processed -> skipped
+Directory "00003338" already processed -> skipped
+Directory "00003339" already processed -> skipped
+Directory "00003340" already processed -> skipped
+Directory "00003342" already processed -> skipped
+Directory "00003343" already processed -> skipped
+Directory "00003344" already processed -> skipped
+Directory "00003345" already processed -> skipped
+Directory "00003346" already processed -> skipped
+Directory "00003347" already processed -> skipped
+Directory "00003348" already processed -> skipped
+Directory "00003350" already processed -> skipped
+Directory "00003351" already processed -> skipped
+Directory "00003352" already processed -> skipped
+Directory "00003354" already processed -> skipped
+Directory "00003355" already processed -> skipped
+Directory "00003356" already processed -> skipped
+Directory "00003357" already processed -> skipped
+Directory "00003358" already processed -> skipped
+Directory "00003359" already processed -> skipped
+Directory "00003360" already processed -> skipped
+Directory "00003361" already processed -> skipped
+Directory "00003362" already processed -> skipped
+Directory "00003365" already processed -> skipped
+Processing: 00003367 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003367.bin is odd sized --> skippedProcessing: 00003368 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003368.bin is odd sized --> skippedProcessing: 00003369 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003369.bin is odd sized --> skippedProcessing: 00003370 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003370.bin is odd sized --> skippedDirectory "00003371" already processed -> skipped
+Processing: 00003372 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003372.bin is odd sized --> skippedProcessing: 00003373 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003373.bin is odd sized --> skippedDirectory "00003374" already processed -> skipped
+Directory "00003375" already processed -> skipped
+Directory "00003377" already processed -> skipped
+Directory "00003378" already processed -> skipped
+Directory "00003379" already processed -> skipped
+Directory "00003381" already processed -> skipped
+Directory "00003382" already processed -> skipped
+Directory "00003383" already processed -> skipped
+Directory "00003385" already processed -> skipped
+Directory "00003386" already processed -> skipped
+Processing: 00003388 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00003389 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00003390" already processed -> skipped
+Directory "00003391" already processed -> skipped
+Directory "00003392" already processed -> skipped
+Directory "00003393" already processed -> skipped
+Directory "00003395" already processed -> skipped
+Directory "00003396" already processed -> skipped
+Directory "00003397" already processed -> skipped
+Directory "00003398" already processed -> skipped
+Directory "00003399" already processed -> skipped
+Processing: 00003400 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003400.bin is odd sized --> skippedDirectory "00003401" already processed -> skipped
+Directory "00003402" already processed -> skipped
+Processing: 00003403 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003403.bin is odd sized --> skippedDirectory "00003405" already processed -> skipped
+Directory "00003406" already processed -> skipped
+Directory "00003407" already processed -> skipped
+Directory "00003408" already processed -> skipped
+Directory "00003413" already processed -> skipped
+Directory "00003414" already processed -> skipped
+Directory "00003415" already processed -> skipped
+Directory "00003416" already processed -> skipped
+Directory "00003417" already processed -> skipped
+Directory "00003418" already processed -> skipped
+Directory "00003419" already processed -> skipped
+Directory "00003422" already processed -> skipped
+Directory "00003423" already processed -> skipped
+Directory "00003424" already processed -> skipped
+Directory "00003425" already processed -> skipped
+Directory "00003427" already processed -> skipped
+Directory "00003428" already processed -> skipped
+Directory "00003429" already processed -> skipped
+Directory "00003430" already processed -> skipped
+Directory "00003432" already processed -> skipped
+Directory "00003434" already processed -> skipped
+Directory "00003435" already processed -> skipped
+Directory "00003436" already processed -> skipped
+Directory "00003437" already processed -> skipped
+Directory "00003438" already processed -> skipped
+Directory "00003441" already processed -> skipped
+Directory "00003443" already processed -> skipped
+Directory "00003444" already processed -> skipped
+Directory "00003450" already processed -> skipped
+Directory "00003451" already processed -> skipped
+Directory "00003452" already processed -> skipped
+Directory "00003453" already processed -> skipped
+Directory "00003454" already processed -> skipped
+Directory "00003455" already processed -> skipped
+Directory "00003456" already processed -> skipped
+Directory "00003457" already processed -> skipped
+Directory "00003458" already processed -> skipped
+Directory "00003460" already processed -> skipped
+Directory "00003461" already processed -> skipped
+Directory "00003471" already processed -> skipped
+Directory "00003472" already processed -> skipped
+Directory "00003473" already processed -> skipped
+Directory "00003477" already processed -> skipped
+Directory "00003478" already processed -> skipped
+Directory "00003480" already processed -> skipped
+Directory "00003481" already processed -> skipped
+Directory "00003484" already processed -> skipped
+Processing: 00003485 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003485.bin is odd sized --> skippedDirectory "00003487" already processed -> skipped
+Directory "00003488" already processed -> skipped
+Directory "00003489" already processed -> skipped
+Directory "00003491" already processed -> skipped
+Directory "00003496" already processed -> skipped
+Directory "00003498" already processed -> skipped
+Directory "00003501" already processed -> skipped
+Directory "00003502" already processed -> skipped
+Directory "00003505" already processed -> skipped
+Directory "00003509" already processed -> skipped
+Directory "00003511" already processed -> skipped
+Directory "00003512" already processed -> skipped
+Directory "00003513" already processed -> skipped
+Directory "00003514" already processed -> skipped
+Directory "00003515" already processed -> skipped
+Directory "00003516" already processed -> skipped
+Directory "00003517" already processed -> skipped
+Processing: 00003518 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003518.bin is odd sized --> skippedDirectory "00003519" already processed -> skipped
+Directory "00003520" already processed -> skipped
+Directory "00003522" already processed -> skipped
+Directory "00003524" already processed -> skipped
+Directory "00003525" already processed -> skipped
+Directory "00003527" already processed -> skipped
+Directory "00003528" already processed -> skipped
+Directory "00003529" already processed -> skipped
+Directory "00003531" already processed -> skipped
+Directory "00003532" already processed -> skipped
+Directory "00003535" already processed -> skipped
+Directory "00003537" already processed -> skipped
+Directory "00003538" already processed -> skipped
+Directory "00003539" already processed -> skipped
+Processing: 00003540 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003540.bin is odd sized --> skippedProcessing: 00003541 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003541.bin is odd sized --> skippedDirectory "00003542" already processed -> skipped
+Directory "00003543" already processed -> skipped
+Directory "00003544" already processed -> skipped
+Directory "00003548" already processed -> skipped
+Directory "00003549" already processed -> skipped
+Processing: 00003550 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003550.bin is odd sized --> skippedDirectory "00003551" already processed -> skipped
+Directory "00003552" already processed -> skipped
+Directory "00003553" already processed -> skipped
+Directory "00003554" already processed -> skipped
+Processing: 00003556 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003556.bin is odd sized --> skippedDirectory "00003557" already processed -> skipped
+Directory "00003558" already processed -> skipped
+Processing: 00003560 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003560.bin is odd sized --> skippedDirectory "00003562" already processed -> skipped
+Directory "00003563" already processed -> skipped
+Directory "00003564" already processed -> skipped
+Directory "00003565" already processed -> skipped
+Directory "00003566" already processed -> skipped
+Directory "00003567" already processed -> skipped
+Directory "00003569" already processed -> skipped
+Directory "00003570" already processed -> skipped
+Directory "00003571" already processed -> skipped
+Directory "00003572" already processed -> skipped
+Directory "00003574" already processed -> skipped
+Directory "00003578" already processed -> skipped
+Directory "00003579" already processed -> skipped
+Directory "00003581" already processed -> skipped
+Directory "00003583" already processed -> skipped
+Directory "00003584" already processed -> skipped
+Directory "00003585" already processed -> skipped
+Directory "00003586" already processed -> skipped
+Directory "00003587" already processed -> skipped
+Directory "00003588" already processed -> skipped
+Directory "00003589" already processed -> skipped
+Directory "00003593" already processed -> skipped
+Directory "00003595" already processed -> skipped
+Directory "00003598" already processed -> skipped
+Directory "00003601" already processed -> skipped
+Directory "00003602" already processed -> skipped
+Directory "00003603" already processed -> skipped
+Directory "00003604" already processed -> skipped
+Directory "00003605" already processed -> skipped
+Directory "00003606" already processed -> skipped
+Directory "00003607" already processed -> skipped
+Directory "00003611" already processed -> skipped
+Directory "00003613" already processed -> skipped
+Directory "00003616" already processed -> skipped
+Directory "00003617" already processed -> skipped
+Directory "00003618" already processed -> skipped
+Directory "00003619" already processed -> skipped
+Directory "00003620" already processed -> skipped
+Directory "00003630" already processed -> skipped
+Directory "00003632" already processed -> skipped
+Directory "00003633" already processed -> skipped
+Directory "00003634" already processed -> skipped
+Directory "00003635" already processed -> skipped
+Directory "00003637" already processed -> skipped
+Directory "00003639" already processed -> skipped
+Directory "00003640" already processed -> skipped
+Directory "00003641" already processed -> skipped
+Directory "00003643" already processed -> skipped
+Directory "00003645" already processed -> skipped
+Directory "00003648" already processed -> skipped
+Directory "00003649" already processed -> skipped
+Directory "00003652" already processed -> skipped
+Directory "00003656" already processed -> skipped
+Directory "00003657" already processed -> skipped
+Directory "00003659" already processed -> skipped
+Directory "00003660" already processed -> skipped
+Directory "00003665" already processed -> skipped
+Directory "00003666" already processed -> skipped
+Directory "00003667" already processed -> skipped
+Directory "00003668" already processed -> skipped
+Directory "00003670" already processed -> skipped
+Directory "00003673" already processed -> skipped
+Directory "00003674" already processed -> skipped
+Directory "00003676" already processed -> skipped
+Directory "00003678" already processed -> skipped
+Directory "00003679" already processed -> skipped
+Processing: 00003680 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003680.bin is odd sized --> skippedProcessing: 00003681 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003681.bin is odd sized --> skippedProcessing: 00003682 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003682.bin is odd sized --> skippedProcessing: 00003683 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003683.bin is odd sized --> skippedProcessing: 00003685 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003685.bin is odd sized --> skippedDirectory "00003686" already processed -> skipped
+Directory "00003687" already processed -> skipped
+Directory "00003688" already processed -> skipped
+Directory "00003689" already processed -> skipped
+Directory "00003690" already processed -> skipped
+Directory "00003692" already processed -> skipped
+Directory "00003694" already processed -> skipped
+Directory "00003695" already processed -> skipped
+Directory "00003696" already processed -> skipped
+Directory "00003700" already processed -> skipped
+Directory "00003702" already processed -> skipped
+Directory "00003703" already processed -> skipped
+Directory "00003704" already processed -> skipped
+Directory "00003705" already processed -> skipped
+Directory "00003706" already processed -> skipped
+Directory "00003708" already processed -> skipped
+Directory "00003709" already processed -> skipped
+Directory "00003710" already processed -> skipped
+Directory "00003711" already processed -> skipped
+Directory "00003712" already processed -> skipped
+Processing: 00003713 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003713.bin is odd sized --> skippedDirectory "00003714" already processed -> skipped
+Directory "00003715" already processed -> skipped
+Directory "00003716" already processed -> skipped
+Directory "00003717" already processed -> skipped
+Directory "00003718" already processed -> skipped
+Directory "00003719" already processed -> skipped
+Directory "00003720" already processed -> skipped
+Directory "00003724" already processed -> skipped
+Processing: 00003728 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003728.bin is odd sized --> skippedDirectory "00003730" already processed -> skipped
+Directory "00003731" already processed -> skipped
+Directory "00003732" already processed -> skipped
+Directory "00003733" already processed -> skipped
+Directory "00003734" already processed -> skipped
+Directory "00003737" already processed -> skipped
+Directory "00003739" already processed -> skipped
+Directory "00003740" already processed -> skipped
+Processing: 00003741 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003741.bin is odd sized --> skippedDirectory "00003742" already processed -> skipped
+Directory "00003743" already processed -> skipped
+Directory "00003746" already processed -> skipped
+Directory "00003747" already processed -> skipped
+Directory "00003748" already processed -> skipped
+Directory "00003749" already processed -> skipped
+Directory "00003750" already processed -> skipped
+Directory "00003751" already processed -> skipped
+Directory "00003753" already processed -> skipped
+Directory "00003754" already processed -> skipped
+Directory "00003755" already processed -> skipped
+Processing: 00003756 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 251236 faces to array
+Wrote 125612 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003756\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003756\segmentation_data_segments.bin
+Processing: 00003758 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003758.bin is odd sized --> skippedProcessing: 00003759 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 61674 faces to array
+Resized to accommodate vertex: 30811
+Resized to accommodate vertex: 30812
+Resized to accommodate vertex: 30813
+Resized to accommodate vertex: 30814
+Resized to accommodate vertex: 30815
+Resized to accommodate vertex: 30816
+Resized to accommodate vertex: 30817
+Resized to accommodate vertex: 30818
+Resized to accommodate vertex: 30819
+Resized to accommodate vertex: 30820
+Wrote 30811 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003759\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003759\segmentation_data_segments.bin
+Processing: 00003762 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 50372 faces to array
+Wrote 25184 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003762\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003762\segmentation_data_segments.bin
+Processing: 00003763 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 219504 faces to array
+Wrote 109754 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003763\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003763\segmentation_data_segments.bin
+Processing: 00003764 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003764.bin is odd sized --> skippedProcessing: 00003765 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003765.bin is odd sized --> skippedProcessing: 00003766 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003766.bin is odd sized --> skippedProcessing: 00003769 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 1115366 faces to array
+Wrote 557683 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003769\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003769\segmentation_data_segments.bin
+Processing: 00003770 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 40690 faces to array
+Wrote 20339 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003770\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003770\segmentation_data_segments.bin
+Processing: 00003771 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 25966 faces to array
+Wrote 12981 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003771\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003771\segmentation_data_segments.bin
+Processing: 00003772 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00003772.bin is odd sized --> skippedProcessing: 00003773 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 252666 faces to array
+Wrote 126353 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003773\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003773\segmentation_data_segments.bin
+Processing: 00003774 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 49998 faces to array
+Wrote 24975 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003774\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003774\segmentation_data_segments.bin
+Processing: 00003775 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 47196 faces to array
+Wrote 23594 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003775\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003775\segmentation_data_segments.bin
+Processing: 00003777 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 71984 faces to array
+Wrote 36000 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003777\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003777\segmentation_data_segments.bin
+Processing: 00003778 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 21034 faces to array
+Resized to accommodate vertex: 10509
+Resized to accommodate vertex: 10510
+Resized to accommodate vertex: 10511
+Resized to accommodate vertex: 10512
+Wrote 10509 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003778\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003778\segmentation_data_segments.bin
+Processing: 00003780 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 56780 faces to array
+Wrote 28390 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003780\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003780\segmentation_data_segments.bin
+Processing: 00003781 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 42714 faces to array
+Wrote 21349 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003781\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003781\segmentation_data_segments.bin
+Processing: 00003782 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 42350 faces to array
+Resized to accommodate vertex: 21167
+Resized to accommodate vertex: 21168
+Resized to accommodate vertex: 21169
+Resized to accommodate vertex: 21170
+Wrote 21167 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003782\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003782\segmentation_data_segments.bin
+Processing: 00003783 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 20176 faces to array
+Wrote 10088 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003783\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003783\segmentation_data_segments.bin
+Processing: 00003784 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 37238 faces to array
+Wrote 18619 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003784\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003784\segmentation_data_segments.bin
+Processing: 00003785 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 38150 faces to array
+Wrote 19075 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003785\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003785\segmentation_data_segments.bin
+Processing: 00003786 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 42452 faces to array
+Resized to accommodate vertex: 21226
+Resized to accommodate vertex: 21227
+Resized to accommodate vertex: 21228
+Resized to accommodate vertex: 21229
+Resized to accommodate vertex: 21230
+Resized to accommodate vertex: 21231
+Resized to accommodate vertex: 21232
+Resized to accommodate vertex: 21233
+Resized to accommodate vertex: 21234
+Resized to accommodate vertex: 21235
+Resized to accommodate vertex: 21236
+Resized to accommodate vertex: 21237
+Wrote 21226 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003786\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003786\segmentation_data_segments.bin
+Processing: 00003787 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 40210 faces to array
+Resized to accommodate vertex: 20097
+Resized to accommodate vertex: 20098
+Resized to accommodate vertex: 20099
+Resized to accommodate vertex: 20100
+Resized to accommodate vertex: 20101
+Resized to accommodate vertex: 20102
+Resized to accommodate vertex: 20103
+Resized to accommodate vertex: 20104
+Resized to accommodate vertex: 20105
+Resized to accommodate vertex: 20106
+Wrote 20097 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003787\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003787\segmentation_data_segments.bin
+Processing: 00003788 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 29116 faces to array
+Wrote 14540 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003788\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003788\segmentation_data_segments.bin
+Processing: 00003789 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 34236 faces to array
+Wrote 17118 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003789\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003789\segmentation_data_segments.bin
+Processing: 00003790 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 57106 faces to array
+Resized to accommodate vertex: 28521
+Resized to accommodate vertex: 28522
+Resized to accommodate vertex: 28523
+Resized to accommodate vertex: 28524
+Resized to accommodate vertex: 28525
+Resized to accommodate vertex: 28526
+Resized to accommodate vertex: 28527
+Resized to accommodate vertex: 28528
+Resized to accommodate vertex: 28529
+Resized to accommodate vertex: 28530
+Resized to accommodate vertex: 28531
+Resized to accommodate vertex: 28532
+Resized to accommodate vertex: 28533
+Resized to accommodate vertex: 28534
+Resized to accommodate vertex: 28535
+Resized to accommodate vertex: 28536
+Resized to accommodate vertex: 28537
+Resized to accommodate vertex: 28538
+Resized to accommodate vertex: 28539
+Resized to accommodate vertex: 28540
+Resized to accommodate vertex: 28541
+Resized to accommodate vertex: 28542
+Resized to accommodate vertex: 28543
+Resized to accommodate vertex: 28544
+Resized to accommodate vertex: 28545
+Resized to accommodate vertex: 28546
+Resized to accommodate vertex: 28547
+Resized to accommodate vertex: 28548
+Resized to accommodate vertex: 28549
+Resized to accommodate vertex: 28550
+Resized to accommodate vertex: 28551
+Resized to accommodate vertex: 28552
+Wrote 28521 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003790\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003790\segmentation_data_segments.bin
+Processing: 00003795 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 3216 faces to array
+Wrote 1608 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003795\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003795\segmentation_data_segments.bin
+Processing: 00003796 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 110060 faces to array
+Wrote 55006 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003796\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003796\segmentation_data_segments.bin
+Processing: 00003801 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 23382 faces to array
+Wrote 11699 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003801\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003801\segmentation_data_segments.bin
+Processing: 00003802 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31050 faces to array
+Wrote 15529 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003802\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003802\segmentation_data_segments.bin
+Processing: 00003803 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 29924 faces to array
+Wrote 14962 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003803\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003803\segmentation_data_segments.bin
+Processing: 00003804 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 30968 faces to array
+Resized to accommodate vertex: 15484
+Resized to accommodate vertex: 15485
+Resized to accommodate vertex: 15486
+Resized to accommodate vertex: 15487
+Resized to accommodate vertex: 15488
+Resized to accommodate vertex: 15489
+Resized to accommodate vertex: 15490
+Resized to accommodate vertex: 15491
+Wrote 15484 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003804\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003804\segmentation_data_segments.bin
+Processing: 00003805 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 21460 faces to array
+Wrote 10732 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003805\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003805\segmentation_data_segments.bin
+Processing: 00003807 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 19974 faces to array
+Wrote 9981 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003807\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003807\segmentation_data_segments.bin
+Processing: 00003808 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 18354 faces to array
+Wrote 9173 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003808\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003808\segmentation_data_segments.bin
+Processing: 00003809 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 27926 faces to array
+Wrote 13969 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003809\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003809\segmentation_data_segments.bin
+Processing: 00003810 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 8474 faces to array
+Wrote 4237 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003810\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003810\segmentation_data_segments.bin
+Processing: 00003811 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 4134 faces to array
+Wrote 2067 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003811\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003811\segmentation_data_segments.bin
+Processing: 00003812 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 2502 faces to array
+Resized to accommodate vertex: 1251
+Resized to accommodate vertex: 1252
+Wrote 1251 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003812\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003812\segmentation_data_segments.bin
+Processing: 00003813 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 11054 faces to array
+Wrote 5527 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003813\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003813\segmentation_data_segments.bin
+Processing: 00003814 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 23832 faces to array
+Wrote 11918 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003814\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003814\segmentation_data_segments.bin
+Processing: 00003815 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 30234 faces to array
+Resized to accommodate vertex: 15111
+Resized to accommodate vertex: 15112
+Resized to accommodate vertex: 15113
+Resized to accommodate vertex: 15114
+Resized to accommodate vertex: 15115
+Resized to accommodate vertex: 15116
+Resized to accommodate vertex: 15117
+Resized to accommodate vertex: 15118
+Wrote 15111 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003815\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003815\segmentation_data_segments.bin
+Processing: 00003816 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 33798 faces to array
+Resized to accommodate vertex: 16901
+Wrote 16901 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003816\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003816\segmentation_data_segments.bin
+Processing: 00003817 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31022 faces to array
+Wrote 15513 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003817\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003817\segmentation_data_segments.bin
+Processing: 00003819 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 14124 faces to array
+Wrote 7052 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003819\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003819\segmentation_data_segments.bin
+Processing: 00003820 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31064 faces to array
+Resized to accommodate vertex: 15530
+Resized to accommodate vertex: 15531
+Resized to accommodate vertex: 15532
+Resized to accommodate vertex: 15533
+Wrote 15530 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003820\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00003820\segmentation_data_segments.bin
+[INFO] Program finished successfully.

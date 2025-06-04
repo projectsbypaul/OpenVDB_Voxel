@@ -1,0 +1,2635 @@
+Running main() with 5 arguments (program name + 4 user arguments)
+process (argv[0]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Potential log file (argv[1]): C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\job_ABC_chunk_00_16\Instance013_app_internal.log
+Potential source dir (argv[2]): C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_00
+Potential target dir (argv[3]): C:\Local_Data\ABC\ABC_Datasets\Segmentation\ABC_Chunk_00\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2
+Potential job location (argv[4]): C:\Local_Data\ABC\ABC_jobs\job_chunk_00\Instance013.job
+--- Finished printing received arguments ---
+[INFO] Correct number of arguments (5 user arguments) received. Proceeding.
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Directory "00007442" already processed -> skipped
+Directory "00007443" already processed -> skipped
+Directory "00007444" already processed -> skipped
+Directory "00007445" already processed -> skipped
+Directory "00007446" already processed -> skipped
+Directory "00007447" already processed -> skipped
+Directory "00007448" already processed -> skipped
+Directory "00007449" already processed -> skipped
+Directory "00007450" already processed -> skipped
+Directory "00007451" already processed -> skipped
+Processing: 00007452 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007452.bin is odd sized --> skippedProcessing: 00007453 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007453.bin is odd sized --> skippedDirectory "00007454" already processed -> skipped
+Directory "00007455" already processed -> skipped
+Directory "00007456" already processed -> skipped
+Directory "00007458" already processed -> skipped
+Directory "00007459" already processed -> skipped
+Directory "00007460" already processed -> skipped
+Directory "00007461" already processed -> skipped
+Directory "00007462" already processed -> skipped
+Directory "00007463" already processed -> skipped
+Directory "00007464" already processed -> skipped
+Directory "00007465" already processed -> skipped
+Directory "00007466" already processed -> skipped
+Directory "00007467" already processed -> skipped
+Processing: 00007468 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007468.bin is odd sized --> skippedDirectory "00007469" already processed -> skipped
+Directory "00007470" already processed -> skipped
+Directory "00007471" already processed -> skipped
+Directory "00007472" already processed -> skipped
+Directory "00007474" already processed -> skipped
+Directory "00007475" already processed -> skipped
+Directory "00007476" already processed -> skipped
+Directory "00007479" already processed -> skipped
+Directory "00007481" already processed -> skipped
+Directory "00007482" already processed -> skipped
+Directory "00007483" already processed -> skipped
+Directory "00007484" already processed -> skipped
+Directory "00007485" already processed -> skipped
+Directory "00007486" already processed -> skipped
+Directory "00007487" already processed -> skipped
+Directory "00007488" already processed -> skipped
+Directory "00007489" already processed -> skipped
+Directory "00007490" already processed -> skipped
+Directory "00007491" already processed -> skipped
+Directory "00007492" already processed -> skipped
+Directory "00007493" already processed -> skipped
+Directory "00007494" already processed -> skipped
+Directory "00007496" already processed -> skipped
+Directory "00007498" already processed -> skipped
+Directory "00007502" already processed -> skipped
+Directory "00007507" already processed -> skipped
+Directory "00007508" already processed -> skipped
+Directory "00007509" already processed -> skipped
+Processing: 00007510 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007510.bin is odd sized --> skippedDirectory "00007511" already processed -> skipped
+Directory "00007513" already processed -> skipped
+Directory "00007514" already processed -> skipped
+Directory "00007515" already processed -> skipped
+Directory "00007516" already processed -> skipped
+Processing: 00007518 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007518.bin is odd sized --> skippedDirectory "00007519" already processed -> skipped
+Processing: 00007520 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007520.bin is odd sized --> skippedProcessing: 00007521 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007521.bin is odd sized --> skippedProcessing: 00007522 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007522.bin is odd sized --> skippedProcessing: 00007523 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007523.bin is odd sized --> skippedDirectory "00007525" already processed -> skipped
+Processing: 00007526 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007526.bin is odd sized --> skippedProcessing: 00007527 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007527.bin is odd sized --> skippedDirectory "00007528" already processed -> skipped
+Processing: 00007529 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007529.bin is odd sized --> skippedDirectory "00007531" already processed -> skipped
+Directory "00007532" already processed -> skipped
+Directory "00007533" already processed -> skipped
+Directory "00007534" already processed -> skipped
+Directory "00007536" already processed -> skipped
+Directory "00007537" already processed -> skipped
+Processing: 00007538 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007538.bin is odd sized --> skippedDirectory "00007539" already processed -> skipped
+Directory "00007540" already processed -> skipped
+Directory "00007541" already processed -> skipped
+Processing: 00007542 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007542.bin is odd sized --> skippedDirectory "00007544" already processed -> skipped
+Directory "00007545" already processed -> skipped
+Directory "00007547" already processed -> skipped
+Directory "00007548" already processed -> skipped
+Processing: 00007549 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007549.bin is odd sized --> skippedDirectory "00007550" already processed -> skipped
+Directory "00007551" already processed -> skipped
+Directory "00007552" already processed -> skipped
+Processing: 00007553 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007553.bin is odd sized --> skippedDirectory "00007554" already processed -> skipped
+Directory "00007555" already processed -> skipped
+Directory "00007556" already processed -> skipped
+Directory "00007557" already processed -> skipped
+Directory "00007558" already processed -> skipped
+Directory "00007560" already processed -> skipped
+Directory "00007562" already processed -> skipped
+Directory "00007563" already processed -> skipped
+Directory "00007564" already processed -> skipped
+Directory "00007565" already processed -> skipped
+Directory "00007566" already processed -> skipped
+Directory "00007569" already processed -> skipped
+Directory "00007570" already processed -> skipped
+Directory "00007571" already processed -> skipped
+Directory "00007572" already processed -> skipped
+Directory "00007573" already processed -> skipped
+Directory "00007574" already processed -> skipped
+Directory "00007575" already processed -> skipped
+Directory "00007576" already processed -> skipped
+Directory "00007577" already processed -> skipped
+Directory "00007579" already processed -> skipped
+Processing: 00007584 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007584.bin is odd sized --> skippedProcessing: 00007585 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007585.bin is odd sized --> skippedDirectory "00007586" already processed -> skipped
+Directory "00007588" already processed -> skipped
+Directory "00007589" already processed -> skipped
+Directory "00007590" already processed -> skipped
+Directory "00007592" already processed -> skipped
+Directory "00007594" already processed -> skipped
+Directory "00007595" already processed -> skipped
+Processing: 00007596 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007596.bin is odd sized --> skippedDirectory "00007598" already processed -> skipped
+Directory "00007603" already processed -> skipped
+Directory "00007605" already processed -> skipped
+Directory "00007606" already processed -> skipped
+Directory "00007607" already processed -> skipped
+Directory "00007610" already processed -> skipped
+Directory "00007611" already processed -> skipped
+Directory "00007612" already processed -> skipped
+Directory "00007613" already processed -> skipped
+Directory "00007616" already processed -> skipped
+Directory "00007617" already processed -> skipped
+Directory "00007618" already processed -> skipped
+Directory "00007620" already processed -> skipped
+Directory "00007622" already processed -> skipped
+Directory "00007624" already processed -> skipped
+Directory "00007625" already processed -> skipped
+Directory "00007626" already processed -> skipped
+Processing: 00007627 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007628" already processed -> skipped
+Directory "00007631" already processed -> skipped
+Directory "00007633" already processed -> skipped
+Directory "00007634" already processed -> skipped
+Directory "00007636" already processed -> skipped
+Directory "00007637" already processed -> skipped
+Directory "00007638" already processed -> skipped
+Directory "00007640" already processed -> skipped
+Processing: 00007641 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007641.bin is odd sized --> skippedDirectory "00007642" already processed -> skipped
+Directory "00007644" already processed -> skipped
+Directory "00007645" already processed -> skipped
+Directory "00007646" already processed -> skipped
+Directory "00007647" already processed -> skipped
+Directory "00007648" already processed -> skipped
+Directory "00007649" already processed -> skipped
+Directory "00007650" already processed -> skipped
+Directory "00007651" already processed -> skipped
+Directory "00007652" already processed -> skipped
+Directory "00007654" already processed -> skipped
+Directory "00007655" already processed -> skipped
+Directory "00007656" already processed -> skipped
+Directory "00007657" already processed -> skipped
+Directory "00007658" already processed -> skipped
+Processing: 00007663 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007663.bin is odd sized --> skippedDirectory "00007670" already processed -> skipped
+Directory "00007671" already processed -> skipped
+Directory "00007672" already processed -> skipped
+Directory "00007673" already processed -> skipped
+Directory "00007674" already processed -> skipped
+Directory "00007675" already processed -> skipped
+Directory "00007676" already processed -> skipped
+Directory "00007677" already processed -> skipped
+Directory "00007680" already processed -> skipped
+Directory "00007681" already processed -> skipped
+Directory "00007683" already processed -> skipped
+Directory "00007684" already processed -> skipped
+Directory "00007685" already processed -> skipped
+Directory "00007687" already processed -> skipped
+Directory "00007688" already processed -> skipped
+Directory "00007690" already processed -> skipped
+Processing: 00007691 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007691.bin is odd sized --> skippedDirectory "00007692" already processed -> skipped
+Processing: 00007693 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007695" already processed -> skipped
+Directory "00007696" already processed -> skipped
+Directory "00007701" already processed -> skipped
+Directory "00007704" already processed -> skipped
+Directory "00007706" already processed -> skipped
+Directory "00007708" already processed -> skipped
+Directory "00007709" already processed -> skipped
+Directory "00007710" already processed -> skipped
+Directory "00007711" already processed -> skipped
+Directory "00007714" already processed -> skipped
+Directory "00007718" already processed -> skipped
+Directory "00007719" already processed -> skipped
+Directory "00007722" already processed -> skipped
+Processing: 00007723 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007723.bin is odd sized --> skippedProcessing: 00007725 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007725.bin is odd sized --> skippedDirectory "00007726" already processed -> skipped
+Processing: 00007728 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007728.bin is odd sized --> skippedDirectory "00007730" already processed -> skipped
+Processing: 00007731 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007731.bin is odd sized --> skippedDirectory "00007732" already processed -> skipped
+Directory "00007734" already processed -> skipped
+Processing: 00007735 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007735.bin is odd sized --> skippedDirectory "00007736" already processed -> skipped
+Processing: 00007737 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007737.bin is odd sized --> skippedDirectory "00007738" already processed -> skipped
+Directory "00007739" already processed -> skipped
+Directory "00007741" already processed -> skipped
+Directory "00007745" already processed -> skipped
+Directory "00007746" already processed -> skipped
+Processing: 00007747 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007749" already processed -> skipped
+Directory "00007750" already processed -> skipped
+Directory "00007751" already processed -> skipped
+Directory "00007754" already processed -> skipped
+Directory "00007755" already processed -> skipped
+Directory "00007756" already processed -> skipped
+Directory "00007757" already processed -> skipped
+Directory "00007758" already processed -> skipped
+Directory "00007759" already processed -> skipped
+Directory "00007760" already processed -> skipped
+Directory "00007762" already processed -> skipped
+Directory "00007764" already processed -> skipped
+Directory "00007765" already processed -> skipped
+Directory "00007767" already processed -> skipped
+Directory "00007768" already processed -> skipped
+Directory "00007769" already processed -> skipped
+Directory "00007770" already processed -> skipped
+Directory "00007771" already processed -> skipped
+Directory "00007772" already processed -> skipped
+Directory "00007773" already processed -> skipped
+Directory "00007774" already processed -> skipped
+Directory "00007776" already processed -> skipped
+Directory "00007777" already processed -> skipped
+Processing: 00007778 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007778.bin is odd sized --> skippedProcessing: 00007779 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007779.bin is odd sized --> skippedProcessing: 00007780 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007780.bin is odd sized --> skippedProcessing: 00007781 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007781.bin is odd sized --> skippedDirectory "00007782" already processed -> skipped
+Directory "00007786" already processed -> skipped
+Directory "00007787" already processed -> skipped
+Directory "00007788" already processed -> skipped
+Directory "00007792" already processed -> skipped
+Directory "00007793" already processed -> skipped
+Directory "00007795" already processed -> skipped
+Directory "00007796" already processed -> skipped
+Directory "00007797" already processed -> skipped
+Directory "00007801" already processed -> skipped
+Processing: 00007804 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007806" already processed -> skipped
+Directory "00007808" already processed -> skipped
+Directory "00007809" already processed -> skipped
+Directory "00007810" already processed -> skipped
+Directory "00007811" already processed -> skipped
+Directory "00007812" already processed -> skipped
+Processing: 00007813 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007813.bin is odd sized --> skippedProcessing: 00007814 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007814.bin is odd sized --> skippedProcessing: 00007815 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007815.bin is odd sized --> skippedProcessing: 00007816 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007816.bin is odd sized --> skippedProcessing: 00007817 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007817.bin is odd sized --> skippedProcessing: 00007818 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007818.bin is odd sized --> skippedDirectory "00007820" already processed -> skipped
+Directory "00007821" already processed -> skipped
+Directory "00007822" already processed -> skipped
+Directory "00007823" already processed -> skipped
+Directory "00007824" already processed -> skipped
+Processing: 00007825 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007825.bin is odd sized --> skippedDirectory "00007826" already processed -> skipped
+Directory "00007827" already processed -> skipped
+Directory "00007828" already processed -> skipped
+Directory "00007829" already processed -> skipped
+Directory "00007831" already processed -> skipped
+Processing: 00007832 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007833" already processed -> skipped
+Directory "00007834" already processed -> skipped
+Directory "00007835" already processed -> skipped
+Processing: 00007836 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Directory "00007837" already processed -> skipped
+Processing: 00007838 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007838.bin is odd sized --> skippedDirectory "00007839" already processed -> skipped
+Directory "00007840" already processed -> skipped
+Directory "00007841" already processed -> skipped
+Directory "00007842" already processed -> skipped
+Directory "00007843" already processed -> skipped
+Directory "00007845" already processed -> skipped
+Directory "00007848" already processed -> skipped
+Directory "00007850" already processed -> skipped
+Directory "00007851" already processed -> skipped
+Processing: 00007852 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007852.bin is odd sized --> skippedDirectory "00007854" already processed -> skipped
+Directory "00007855" already processed -> skipped
+Directory "00007856" already processed -> skipped
+Directory "00007857" already processed -> skipped
+Directory "00007858" already processed -> skipped
+Directory "00007860" already processed -> skipped
+Directory "00007861" already processed -> skipped
+Directory "00007862" already processed -> skipped
+Directory "00007863" already processed -> skipped
+Directory "00007865" already processed -> skipped
+Directory "00007866" already processed -> skipped
+Directory "00007867" already processed -> skipped
+Directory "00007868" already processed -> skipped
+Directory "00007870" already processed -> skipped
+Directory "00007871" already processed -> skipped
+Directory "00007872" already processed -> skipped
+Directory "00007875" already processed -> skipped
+Directory "00007877" already processed -> skipped
+Directory "00007878" already processed -> skipped
+Directory "00007879" already processed -> skipped
+Directory "00007880" already processed -> skipped
+Directory "00007881" already processed -> skipped
+Directory "00007882" already processed -> skipped
+Directory "00007883" already processed -> skipped
+Directory "00007884" already processed -> skipped
+Directory "00007885" already processed -> skipped
+Directory "00007886" already processed -> skipped
+Directory "00007887" already processed -> skipped
+Directory "00007888" already processed -> skipped
+Directory "00007889" already processed -> skipped
+Directory "00007890" already processed -> skipped
+Directory "00007893" already processed -> skipped
+Directory "00007903" already processed -> skipped
+Directory "00007904" already processed -> skipped
+Directory "00007905" already processed -> skipped
+Processing: 00007906 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007906.bin is odd sized --> skippedDirectory "00007908" already processed -> skipped
+Directory "00007909" already processed -> skipped
+Directory "00007910" already processed -> skipped
+Directory "00007911" already processed -> skipped
+Directory "00007913" already processed -> skipped
+Directory "00007914" already processed -> skipped
+Directory "00007915" already processed -> skipped
+Directory "00007916" already processed -> skipped
+Directory "00007917" already processed -> skipped
+Directory "00007920" already processed -> skipped
+Directory "00007921" already processed -> skipped
+Directory "00007922" already processed -> skipped
+Directory "00007923" already processed -> skipped
+Directory "00007924" already processed -> skipped
+Processing: 00007925 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 839888 faces to array
+Wrote 419932 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007925\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007925\segmentation_data_segments.bin
+Directory "00007927" already processed -> skipped
+Directory "00007930" already processed -> skipped
+Directory "00007931" already processed -> skipped
+Directory "00007932" already processed -> skipped
+Directory "00007935" already processed -> skipped
+Directory "00007936" already processed -> skipped
+Directory "00007937" already processed -> skipped
+Directory "00007938" already processed -> skipped
+Directory "00007939" already processed -> skipped
+Directory "00007940" already processed -> skipped
+Directory "00007941" already processed -> skipped
+Directory "00007943" already processed -> skipped
+Directory "00007944" already processed -> skipped
+Processing: 00007945 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 9432 faces to array
+Wrote 4718 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007945\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007945\segmentation_data_segments.bin
+Processing: 00007948 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 59166 faces to array
+Resized to accommodate vertex: 29585
+Resized to accommodate vertex: 29586
+Resized to accommodate vertex: 29587
+Resized to accommodate vertex: 29588
+Resized to accommodate vertex: 29589
+Resized to accommodate vertex: 29590
+Resized to accommodate vertex: 29591
+Resized to accommodate vertex: 29592
+Resized to accommodate vertex: 29593
+Resized to accommodate vertex: 29594
+Resized to accommodate vertex: 29595
+Resized to accommodate vertex: 29596
+Wrote 29585 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007948\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007948\segmentation_data_segments.bin
+Processing: 00007949 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 47396 faces to array
+Resized to accommodate vertex: 23700
+Resized to accommodate vertex: 23701
+Resized to accommodate vertex: 23702
+Resized to accommodate vertex: 23703
+Wrote 23700 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007949\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007949\segmentation_data_segments.bin
+Processing: 00007952 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 32730 faces to array
+Resized to accommodate vertex: 16357
+Resized to accommodate vertex: 16358
+Resized to accommodate vertex: 16359
+Resized to accommodate vertex: 16360
+Resized to accommodate vertex: 16361
+Resized to accommodate vertex: 16362
+Resized to accommodate vertex: 16363
+Resized to accommodate vertex: 16364
+Wrote 16357 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007952\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007952\segmentation_data_segments.bin
+Processing: 00007955 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007955.bin is odd sized --> skippedProcessing: 00007956 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 8672 faces to array
+Wrote 4338 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007956\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007956\segmentation_data_segments.bin
+Processing: 00007959 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 53746 faces to array
+Wrote 26863 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007959\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007959\segmentation_data_segments.bin
+Processing: 00007960 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 29070 faces to array
+Wrote 14537 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007960\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007960\segmentation_data_segments.bin
+Processing: 00007962 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 69454 faces to array
+Wrote 34727 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007962\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007962\segmentation_data_segments.bin
+Processing: 00007968 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 114098 faces to array
+Resized to accommodate vertex: 57049
+Resized to accommodate vertex: 57050
+Resized to accommodate vertex: 57051
+Resized to accommodate vertex: 57052
+Resized to accommodate vertex: 57053
+Resized to accommodate vertex: 57054
+Resized to accommodate vertex: 57055
+Resized to accommodate vertex: 57056
+Resized to accommodate vertex: 57057
+Resized to accommodate vertex: 57058
+Resized to accommodate vertex: 57059
+Resized to accommodate vertex: 57060
+Resized to accommodate vertex: 57061
+Resized to accommodate vertex: 57062
+Resized to accommodate vertex: 57063
+Resized to accommodate vertex: 57064
+Resized to accommodate vertex: 57065
+Resized to accommodate vertex: 57066
+Resized to accommodate vertex: 57067
+Resized to accommodate vertex: 57068
+Resized to accommodate vertex: 57069
+Resized to accommodate vertex: 57070
+Resized to accommodate vertex: 57071
+Resized to accommodate vertex: 57072
+Wrote 57049 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007968\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007968\segmentation_data_segments.bin
+Processing: 00007970 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007970.bin is odd sized --> skippedProcessing: 00007973 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Processing: 00007974 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 283666 faces to array
+Resized to accommodate vertex: 141831
+Resized to accommodate vertex: 141832
+Resized to accommodate vertex: 141833
+Resized to accommodate vertex: 141834
+Resized to accommodate vertex: 141835
+Resized to accommodate vertex: 141836
+Resized to accommodate vertex: 141837
+Resized to accommodate vertex: 141838
+Resized to accommodate vertex: 141839
+Resized to accommodate vertex: 141840
+Resized to accommodate vertex: 141841
+Resized to accommodate vertex: 141842
+Resized to accommodate vertex: 141843
+Resized to accommodate vertex: 141844
+Resized to accommodate vertex: 141845
+Resized to accommodate vertex: 141846
+Resized to accommodate vertex: 141847
+Resized to accommodate vertex: 141848
+Resized to accommodate vertex: 141849
+Resized to accommodate vertex: 141850
+Resized to accommodate vertex: 141851
+Resized to accommodate vertex: 141852
+Resized to accommodate vertex: 141853
+Resized to accommodate vertex: 141854
+Resized to accommodate vertex: 141855
+Resized to accommodate vertex: 141856
+Resized to accommodate vertex: 141857
+Resized to accommodate vertex: 141858
+Resized to accommodate vertex: 141859
+Resized to accommodate vertex: 141860
+Resized to accommodate vertex: 141861
+Resized to accommodate vertex: 141862
+Resized to accommodate vertex: 141863
+Resized to accommodate vertex: 141864
+Resized to accommodate vertex: 141865
+Resized to accommodate vertex: 141866
+Resized to accommodate vertex: 141867
+Resized to accommodate vertex: 141868
+Resized to accommodate vertex: 141869
+Resized to accommodate vertex: 141870
+Resized to accommodate vertex: 141871
+Resized to accommodate vertex: 141872
+Resized to accommodate vertex: 141873
+Resized to accommodate vertex: 141874
+Resized to accommodate vertex: 141875
+Resized to accommodate vertex: 141876
+Resized to accommodate vertex: 141877
+Resized to accommodate vertex: 141878
+Resized to accommodate vertex: 141879
+Resized to accommodate vertex: 141880
+Resized to accommodate vertex: 141881
+Resized to accommodate vertex: 141882
+Resized to accommodate vertex: 141883
+Resized to accommodate vertex: 141884
+Resized to accommodate vertex: 141885
+Resized to accommodate vertex: 141886
+Resized to accommodate vertex: 141887
+Resized to accommodate vertex: 141888
+Resized to accommodate vertex: 141889
+Resized to accommodate vertex: 141890
+Resized to accommodate vertex: 141891
+Resized to accommodate vertex: 141892
+Resized to accommodate vertex: 141893
+Resized to accommodate vertex: 141894
+Resized to accommodate vertex: 141895
+Resized to accommodate vertex: 141896
+Resized to accommodate vertex: 141897
+Resized to accommodate vertex: 141898
+Resized to accommodate vertex: 141899
+Resized to accommodate vertex: 141900
+Resized to accommodate vertex: 141901
+Resized to accommodate vertex: 141902
+Resized to accommodate vertex: 141903
+Resized to accommodate vertex: 141904
+Resized to accommodate vertex: 141905
+Resized to accommodate vertex: 141906
+Resized to accommodate vertex: 141907
+Resized to accommodate vertex: 141908
+Resized to accommodate vertex: 141909
+Resized to accommodate vertex: 141910
+Resized to accommodate vertex: 141911
+Resized to accommodate vertex: 141912
+Resized to accommodate vertex: 141913
+Resized to accommodate vertex: 141914
+Resized to accommodate vertex: 141915
+Resized to accommodate vertex: 141916
+Resized to accommodate vertex: 141917
+Resized to accommodate vertex: 141918
+Resized to accommodate vertex: 141919
+Resized to accommodate vertex: 141920
+Resized to accommodate vertex: 141921
+Resized to accommodate vertex: 141922
+Resized to accommodate vertex: 141923
+Resized to accommodate vertex: 141924
+Resized to accommodate vertex: 141925
+Resized to accommodate vertex: 141926
+Resized to accommodate vertex: 141927
+Resized to accommodate vertex: 141928
+Resized to accommodate vertex: 141929
+Resized to accommodate vertex: 141930
+Resized to accommodate vertex: 141931
+Resized to accommodate vertex: 141932
+Resized to accommodate vertex: 141933
+Resized to accommodate vertex: 141934
+Resized to accommodate vertex: 141935
+Resized to accommodate vertex: 141936
+Resized to accommodate vertex: 141937
+Resized to accommodate vertex: 141938
+Resized to accommodate vertex: 141939
+Resized to accommodate vertex: 141940
+Resized to accommodate vertex: 141941
+Resized to accommodate vertex: 141942
+Resized to accommodate vertex: 141943
+Resized to accommodate vertex: 141944
+Resized to accommodate vertex: 141945
+Resized to accommodate vertex: 141946
+Resized to accommodate vertex: 141947
+Resized to accommodate vertex: 141950
+Resized to accommodate vertex: 141951
+Resized to accommodate vertex: 141952
+Resized to accommodate vertex: 141953
+Resized to accommodate vertex: 141954
+Resized to accommodate vertex: 141955
+Resized to accommodate vertex: 141956
+Resized to accommodate vertex: 141957
+Resized to accommodate vertex: 141958
+Wrote 141831 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007974\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007974\segmentation_data_segments.bin
+Processing: 00007976 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 220592 faces to array
+Resized to accommodate vertex: 110294
+Resized to accommodate vertex: 110295
+Resized to accommodate vertex: 110296
+Resized to accommodate vertex: 110297
+Resized to accommodate vertex: 110298
+Resized to accommodate vertex: 110299
+Resized to accommodate vertex: 110300
+Resized to accommodate vertex: 110301
+Resized to accommodate vertex: 110302
+Resized to accommodate vertex: 110303
+Resized to accommodate vertex: 110304
+Resized to accommodate vertex: 110305
+Resized to accommodate vertex: 110306
+Resized to accommodate vertex: 110307
+Resized to accommodate vertex: 110308
+Resized to accommodate vertex: 110309
+Resized to accommodate vertex: 110310
+Resized to accommodate vertex: 110311
+Resized to accommodate vertex: 110312
+Resized to accommodate vertex: 110313
+Resized to accommodate vertex: 110314
+Resized to accommodate vertex: 110315
+Resized to accommodate vertex: 110316
+Resized to accommodate vertex: 110317
+Resized to accommodate vertex: 110318
+Resized to accommodate vertex: 110319
+Resized to accommodate vertex: 110320
+Resized to accommodate vertex: 110321
+Resized to accommodate vertex: 110322
+Resized to accommodate vertex: 110323
+Resized to accommodate vertex: 110324
+Resized to accommodate vertex: 110325
+Resized to accommodate vertex: 110326
+Resized to accommodate vertex: 110327
+Resized to accommodate vertex: 110328
+Resized to accommodate vertex: 110329
+Resized to accommodate vertex: 110330
+Resized to accommodate vertex: 110331
+Resized to accommodate vertex: 110332
+Resized to accommodate vertex: 110333
+Resized to accommodate vertex: 110334
+Resized to accommodate vertex: 110335
+Resized to accommodate vertex: 110336
+Resized to accommodate vertex: 110337
+Resized to accommodate vertex: 110338
+Resized to accommodate vertex: 110339
+Resized to accommodate vertex: 110340
+Resized to accommodate vertex: 110341
+Resized to accommodate vertex: 110342
+Resized to accommodate vertex: 110343
+Resized to accommodate vertex: 110344
+Resized to accommodate vertex: 110345
+Resized to accommodate vertex: 110346
+Resized to accommodate vertex: 110347
+Resized to accommodate vertex: 110348
+Resized to accommodate vertex: 110349
+Resized to accommodate vertex: 110350
+Resized to accommodate vertex: 110351
+Resized to accommodate vertex: 110352
+Resized to accommodate vertex: 110353
+Resized to accommodate vertex: 110354
+Resized to accommodate vertex: 110355
+Resized to accommodate vertex: 110356
+Resized to accommodate vertex: 110357
+Resized to accommodate vertex: 110358
+Resized to accommodate vertex: 110359
+Resized to accommodate vertex: 110360
+Resized to accommodate vertex: 110361
+Resized to accommodate vertex: 110362
+Resized to accommodate vertex: 110363
+Resized to accommodate vertex: 110364
+Resized to accommodate vertex: 110365
+Resized to accommodate vertex: 110366
+Resized to accommodate vertex: 110367
+Resized to accommodate vertex: 110368
+Resized to accommodate vertex: 110369
+Resized to accommodate vertex: 110370
+Resized to accommodate vertex: 110371
+Resized to accommodate vertex: 110372
+Resized to accommodate vertex: 110373
+Resized to accommodate vertex: 110374
+Resized to accommodate vertex: 110375
+Resized to accommodate vertex: 110376
+Resized to accommodate vertex: 110377
+Resized to accommodate vertex: 110378
+Resized to accommodate vertex: 110379
+Resized to accommodate vertex: 110380
+Resized to accommodate vertex: 110381
+Resized to accommodate vertex: 110382
+Resized to accommodate vertex: 110383
+Resized to accommodate vertex: 110384
+Resized to accommodate vertex: 110385
+Resized to accommodate vertex: 110386
+Resized to accommodate vertex: 110387
+Resized to accommodate vertex: 110388
+Resized to accommodate vertex: 110389
+Resized to accommodate vertex: 110390
+Resized to accommodate vertex: 110391
+Resized to accommodate vertex: 110392
+Resized to accommodate vertex: 110393
+Resized to accommodate vertex: 110394
+Resized to accommodate vertex: 110395
+Resized to accommodate vertex: 110396
+Resized to accommodate vertex: 110397
+Resized to accommodate vertex: 110398
+Resized to accommodate vertex: 110399
+Resized to accommodate vertex: 110400
+Resized to accommodate vertex: 110401
+Resized to accommodate vertex: 110402
+Resized to accommodate vertex: 110403
+Resized to accommodate vertex: 110404
+Resized to accommodate vertex: 110405
+Resized to accommodate vertex: 110406
+Resized to accommodate vertex: 110407
+Resized to accommodate vertex: 110408
+Resized to accommodate vertex: 110409
+Resized to accommodate vertex: 110410
+Resized to accommodate vertex: 110411
+Resized to accommodate vertex: 110412
+Resized to accommodate vertex: 110413
+Resized to accommodate vertex: 110414
+Resized to accommodate vertex: 110415
+Resized to accommodate vertex: 110416
+Resized to accommodate vertex: 110417
+Resized to accommodate vertex: 110418
+Resized to accommodate vertex: 110419
+Resized to accommodate vertex: 110420
+Resized to accommodate vertex: 110421
+Resized to accommodate vertex: 110422
+Resized to accommodate vertex: 110423
+Resized to accommodate vertex: 110424
+Resized to accommodate vertex: 110425
+Resized to accommodate vertex: 110426
+Resized to accommodate vertex: 110427
+Resized to accommodate vertex: 110428
+Resized to accommodate vertex: 110429
+Resized to accommodate vertex: 110430
+Resized to accommodate vertex: 110431
+Resized to accommodate vertex: 110432
+Resized to accommodate vertex: 110433
+Resized to accommodate vertex: 110434
+Resized to accommodate vertex: 110435
+Resized to accommodate vertex: 110436
+Wrote 110294 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007976\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007976\segmentation_data_segments.bin
+Processing: 00007978 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 24270 faces to array
+Wrote 12123 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007978\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007978\segmentation_data_segments.bin
+Processing: 00007979 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 12776 faces to array
+Wrote 6392 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007979\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007979\segmentation_data_segments.bin
+Processing: 00007980 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00007836.bin is odd sized --> skippedWrote 24020 faces to array
+Wrote 12010 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007980\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007980\segmentation_data_segments.bin
+Processing: 00007983 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 63078 faces to array
+Wrote 31539 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007983\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007983\segmentation_data_segments.bin
+Processing: 00007984 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 65062 faces to array
+Resized to accommodate vertex: 32509
+Resized to accommodate vertex: 32510
+Resized to accommodate vertex: 32511
+Resized to accommodate vertex: 32512
+Resized to accommodate vertex: 32513
+Resized to accommodate vertex: 32514
+Resized to accommodate vertex: 32515
+Resized to accommodate vertex: 32516
+Resized to accommodate vertex: 32517
+Resized to accommodate vertex: 32518
+Wrote 32509 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007984\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007984\segmentation_data_segments.bin
+Processing: 00007985 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 18884 faces to array
+Wrote 9444 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007985\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007985\segmentation_data_segments.bin
+Processing: 00007986 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 14842 faces to array
+Resized to accommodate vertex: 7423
+Resized to accommodate vertex: 7424
+Resized to accommodate vertex: 7425
+Resized to accommodate vertex: 7426
+Resized to accommodate vertex: 7427
+Resized to accommodate vertex: 7428
+Resized to accommodate vertex: 7429
+Resized to accommodate vertex: 7430
+Resized to accommodate vertex: 7431
+Resized to accommodate vertex: 7432
+Resized to accommodate vertex: 7433
+Resized to accommodate vertex: 7434
+Resized to accommodate vertex: 7435
+Resized to accommodate vertex: 7436
+Resized to accommodate vertex: 7437
+Resized to accommodate vertex: 7438
+Resized to accommodate vertex: 7439
+Resized to accommodate vertex: 7440
+Resized to accommodate vertex: 7441
+Resized to accommodate vertex: 7442
+Resized to accommodate vertex: 7443
+Resized to accommodate vertex: 7444
+Resized to accommodate vertex: 7445
+Resized to accommodate vertex: 7446
+Resized to accommodate vertex: 7447
+Resized to accommodate vertex: 7448
+Resized to accommodate vertex: 7449
+Resized to accommodate vertex: 7450
+Resized to accommodate vertex: 7451
+Resized to accommodate vertex: 7452
+Resized to accommodate vertex: 7453
+Resized to accommodate vertex: 7454
+Resized to accommodate vertex: 7455
+Resized to accommodate vertex: 7456
+Resized to accommodate vertex: 7457
+Resized to accommodate vertex: 7458
+Resized to accommodate vertex: 7459
+Resized to accommodate vertex: 7460
+Resized to accommodate vertex: 7461
+Resized to accommodate vertex: 7462
+Resized to accommodate vertex: 7463
+Resized to accommodate vertex: 7464
+Resized to accommodate vertex: 7465
+Resized to accommodate vertex: 7466
+Resized to accommodate vertex: 7467
+Resized to accommodate vertex: 7468
+Resized to accommodate vertex: 7469
+Resized to accommodate vertex: 7470
+Resized to accommodate vertex: 7471
+Resized to accommodate vertex: 7472
+Resized to accommodate vertex: 7473
+Resized to accommodate vertex: 7474
+Resized to accommodate vertex: 7475
+Resized to accommodate vertex: 7476
+Resized to accommodate vertex: 7477
+Resized to accommodate vertex: 7478
+Resized to accommodate vertex: 7479
+Resized to accommodate vertex: 7480
+Resized to accommodate vertex: 7481
+Resized to accommodate vertex: 7482
+Resized to accommodate vertex: 7483
+Resized to accommodate vertex: 7484
+Resized to accommodate vertex: 7485
+Resized to accommodate vertex: 7486
+Wrote 7423 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007986\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007986\segmentation_data_segments.bin
+Processing: 00007987 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 33664 faces to array
+Wrote 16824 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007987\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007987\segmentation_data_segments.bin
+Processing: 00007988 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 229480 faces to array
+Wrote 114420 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007988\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007988\segmentation_data_segments.bin
+Processing: 00007989 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 290630 faces to array
+Resized to accommodate vertex: 145319
+Resized to accommodate vertex: 145320
+Resized to accommodate vertex: 145321
+Resized to accommodate vertex: 145322
+Resized to accommodate vertex: 145323
+Resized to accommodate vertex: 145324
+Resized to accommodate vertex: 145325
+Resized to accommodate vertex: 145326
+Resized to accommodate vertex: 145327
+Resized to accommodate vertex: 145328
+Resized to accommodate vertex: 145329
+Resized to accommodate vertex: 145330
+Wrote 145319 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007989\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007989\segmentation_data_segments.bin
+Processing: 00007990 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 47870 faces to array
+Wrote 23919 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007990\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007990\segmentation_data_segments.bin
+Processing: 00007992 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 29534 faces to array
+Wrote 14753 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007992\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007992\segmentation_data_segments.bin
+Processing: 00007993 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 45272 faces to array
+Wrote 22634 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007993\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007993\segmentation_data_segments.bin
+Processing: 00007994 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 23586 faces to array
+Wrote 11791 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007994\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007994\segmentation_data_segments.bin
+Processing: 00007995 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 18806 faces to array
+Wrote 9405 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007995\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007995\segmentation_data_segments.bin
+Processing: 00007996 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 18876 faces to array
+Wrote 9440 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007996\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007996\segmentation_data_segments.bin
+Processing: 00007997 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 475334 faces to array
+Wrote 237671 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007997\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007997\segmentation_data_segments.bin
+Processing: 00007998 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 88652 faces to array
+Wrote 44324 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007998\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007998\segmentation_data_segments.bin
+Processing: 00007999 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 86786 faces to array
+Wrote 43393 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007999\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00007999\segmentation_data_segments.bin
+Processing: 00008000 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 114934 faces to array
+Wrote 57467 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008000\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008000\segmentation_data_segments.bin
+Processing: 00008002 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 92960 faces to array
+Wrote 46480 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008002\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008002\segmentation_data_segments.bin
+Processing: 00008007 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 71290 faces to array
+Resized to accommodate vertex: 35651
+Resized to accommodate vertex: 35652
+Resized to accommodate vertex: 35653
+Resized to accommodate vertex: 35654
+Resized to accommodate vertex: 35655
+Resized to accommodate vertex: 35656
+Resized to accommodate vertex: 35657
+Resized to accommodate vertex: 35658
+Resized to accommodate vertex: 35659
+Resized to accommodate vertex: 35660
+Resized to accommodate vertex: 35661
+Resized to accommodate vertex: 35662
+Wrote 35651 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008007\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008007\segmentation_data_segments.bin
+Processing: 00008008 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 40580 faces to array
+Resized to accommodate vertex: 20292
+Wrote 20292 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008008\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008008\segmentation_data_segments.bin
+Processing: 00008011 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 25096 faces to array
+Wrote 12550 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008011\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008011\segmentation_data_segments.bin
+Processing: 00008012 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31072 faces to array
+Wrote 15538 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008012\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008012\segmentation_data_segments.bin
+Processing: 00008013 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 25394 faces to array
+Wrote 12699 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008013\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008013\segmentation_data_segments.bin
+Processing: 00008015 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 36682 faces to array
+Wrote 18343 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008015\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008015\segmentation_data_segments.bin
+Processing: 00008016 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 40986 faces to array
+Resized to accommodate vertex: 20495
+Resized to accommodate vertex: 20496
+Wrote 20495 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008016\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008016\segmentation_data_segments.bin
+Processing: 00008017 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 40886 faces to array
+Resized to accommodate vertex: 20445
+Resized to accommodate vertex: 20446
+Wrote 20445 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008017\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008017\segmentation_data_segments.bin
+Processing: 00008018 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 45578 faces to array
+Resized to accommodate vertex: 22789
+Wrote 22789 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008018\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008018\segmentation_data_segments.bin
+Processing: 00008019 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 13158 faces to array
+Wrote 6581 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008019\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008019\segmentation_data_segments.bin
+Processing: 00008020 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008020.bin is odd sized --> skippedProcessing: 00008021 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 45572 faces to array
+Wrote 22786 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008021\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008021\segmentation_data_segments.bin
+Processing: 00008022 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008022.bin is odd sized --> skippedProcessing: 00008023 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 24188 faces to array
+Wrote 12092 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008023\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008023\segmentation_data_segments.bin
+Processing: 00008024 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 38974 faces to array
+Wrote 19487 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008024\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008024\segmentation_data_segments.bin
+Processing: 00008027 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 36256 faces to array
+Wrote 18130 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008027\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008027\segmentation_data_segments.bin
+Processing: 00008028 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 45454 faces to array
+Resized to accommodate vertex: 22729
+Resized to accommodate vertex: 22730
+Resized to accommodate vertex: 22731
+Resized to accommodate vertex: 22732
+Resized to accommodate vertex: 22733
+Resized to accommodate vertex: 22734
+Resized to accommodate vertex: 22735
+Resized to accommodate vertex: 22736
+Resized to accommodate vertex: 22737
+Resized to accommodate vertex: 22738
+Resized to accommodate vertex: 22739
+Resized to accommodate vertex: 22740
+Resized to accommodate vertex: 22741
+Resized to accommodate vertex: 22742
+Resized to accommodate vertex: 22743
+Resized to accommodate vertex: 22744
+Resized to accommodate vertex: 22745
+Resized to accommodate vertex: 22746
+Resized to accommodate vertex: 22747
+Resized to accommodate vertex: 22748
+Resized to accommodate vertex: 22749
+Resized to accommodate vertex: 22750
+Resized to accommodate vertex: 22751
+Resized to accommodate vertex: 22752
+Resized to accommodate vertex: 22753
+Resized to accommodate vertex: 22754
+Resized to accommodate vertex: 22755
+Resized to accommodate vertex: 22756
+Resized to accommodate vertex: 22757
+Resized to accommodate vertex: 22758
+Resized to accommodate vertex: 22759
+Resized to accommodate vertex: 22760
+Resized to accommodate vertex: 22761
+Resized to accommodate vertex: 22762
+Resized to accommodate vertex: 22763
+Resized to accommodate vertex: 22764
+Resized to accommodate vertex: 22765
+Resized to accommodate vertex: 22766
+Resized to accommodate vertex: 22767
+Resized to accommodate vertex: 22768
+Resized to accommodate vertex: 22769
+Resized to accommodate vertex: 22770
+Resized to accommodate vertex: 22772
+Resized to accommodate vertex: 22773
+Resized to accommodate vertex: 22774
+Resized to accommodate vertex: 22775
+Resized to accommodate vertex: 22776
+Resized to accommodate vertex: 22777
+Resized to accommodate vertex: 22778
+Resized to accommodate vertex: 22779
+Resized to accommodate vertex: 22780
+Resized to accommodate vertex: 22781
+Resized to accommodate vertex: 22782
+Resized to accommodate vertex: 22783
+Resized to accommodate vertex: 22784
+Wrote 22729 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008028\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008028\segmentation_data_segments.bin
+Processing: 00008029 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 33834 faces to array
+Resized to accommodate vertex: 16885
+Resized to accommodate vertex: 16886
+Resized to accommodate vertex: 16887
+Resized to accommodate vertex: 16888
+Resized to accommodate vertex: 16889
+Resized to accommodate vertex: 16890
+Resized to accommodate vertex: 16891
+Resized to accommodate vertex: 16892
+Resized to accommodate vertex: 16893
+Resized to accommodate vertex: 16894
+Resized to accommodate vertex: 16895
+Resized to accommodate vertex: 16896
+Resized to accommodate vertex: 16897
+Resized to accommodate vertex: 16898
+Resized to accommodate vertex: 16899
+Wrote 16885 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008029\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008029\segmentation_data_segments.bin
+Processing: 00008031 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 15524 faces to array
+Resized to accommodate vertex: 7748
+Resized to accommodate vertex: 7749
+Resized to accommodate vertex: 7750
+Resized to accommodate vertex: 7751
+Resized to accommodate vertex: 7752
+Resized to accommodate vertex: 7753
+Resized to accommodate vertex: 7754
+Resized to accommodate vertex: 7755
+Resized to accommodate vertex: 7756
+Resized to accommodate vertex: 7757
+Resized to accommodate vertex: 7758
+Resized to accommodate vertex: 7759
+Resized to accommodate vertex: 7760
+Resized to accommodate vertex: 7761
+Resized to accommodate vertex: 7762
+Wrote 7748 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008031\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008031\segmentation_data_segments.bin
+Processing: 00008034 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008034.bin is odd sized --> skippedProcessing: 00008035 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008035.bin is odd sized --> skippedProcessing: 00008036 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 143480 faces to array
+Wrote 71754 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008036\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008036\segmentation_data_segments.bin
+Processing: 00008037 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 230298 faces to array
+Wrote 115165 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008037\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008037\segmentation_data_segments.bin
+Processing: 00008039 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 81536 faces to array
+Resized to accommodate vertex: 40740
+Resized to accommodate vertex: 40741
+Resized to accommodate vertex: 40742
+Resized to accommodate vertex: 40743
+Resized to accommodate vertex: 40744
+Resized to accommodate vertex: 40745
+Wrote 40740 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008039\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008039\segmentation_data_segments.bin
+Processing: 00008040 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 235866 faces to array
+Resized to accommodate vertex: 118373
+Resized to accommodate vertex: 118374
+Resized to accommodate vertex: 118375
+Resized to accommodate vertex: 118376
+Wrote 118373 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008040\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008040\segmentation_data_segments.bin
+Processing: 00008042 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 98506 faces to array
+Resized to accommodate vertex: 49231
+Resized to accommodate vertex: 49232
+Resized to accommodate vertex: 49233
+Resized to accommodate vertex: 49234
+Resized to accommodate vertex: 49235
+Resized to accommodate vertex: 49236
+Resized to accommodate vertex: 49237
+Resized to accommodate vertex: 49238
+Wrote 49231 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008042\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008042\segmentation_data_segments.bin
+Processing: 00008043 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 27796 faces to array
+Wrote 13892 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008043\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008043\segmentation_data_segments.bin
+Processing: 00008044 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31342 faces to array
+Resized to accommodate vertex: 15673
+Resized to accommodate vertex: 15674
+Wrote 15673 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008044\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008044\segmentation_data_segments.bin
+Processing: 00008046 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 57004 faces to array
+Resized to accommodate vertex: 28502
+Resized to accommodate vertex: 28503
+Resized to accommodate vertex: 28504
+Resized to accommodate vertex: 28505
+Resized to accommodate vertex: 28506
+Resized to accommodate vertex: 28508
+Resized to accommodate vertex: 28510
+Resized to accommodate vertex: 28512
+Resized to accommodate vertex: 28514
+Resized to accommodate vertex: 28516
+Resized to accommodate vertex: 28518
+Resized to accommodate vertex: 28520
+Resized to accommodate vertex: 28521
+Resized to accommodate vertex: 28522
+Resized to accommodate vertex: 28523
+Resized to accommodate vertex: 28524
+Resized to accommodate vertex: 28525
+Resized to accommodate vertex: 28526
+Resized to accommodate vertex: 28527
+Resized to accommodate vertex: 28528
+Resized to accommodate vertex: 28529
+Resized to accommodate vertex: 28530
+Resized to accommodate vertex: 28531
+Resized to accommodate vertex: 28532
+Resized to accommodate vertex: 28533
+Resized to accommodate vertex: 28534
+Resized to accommodate vertex: 28535
+Resized to accommodate vertex: 28536
+Resized to accommodate vertex: 28537
+Resized to accommodate vertex: 28538
+Resized to accommodate vertex: 28540
+Resized to accommodate vertex: 28541
+Resized to accommodate vertex: 28542
+Resized to accommodate vertex: 28543
+Resized to accommodate vertex: 28544
+Resized to accommodate vertex: 28545
+Resized to accommodate vertex: 28546
+Resized to accommodate vertex: 28547
+Resized to accommodate vertex: 28548
+Resized to accommodate vertex: 28549
+Resized to accommodate vertex: 28550
+Resized to accommodate vertex: 28551
+Resized to accommodate vertex: 28552
+Resized to accommodate vertex: 28553
+Resized to accommodate vertex: 28554
+Resized to accommodate vertex: 28555
+Resized to accommodate vertex: 28556
+Resized to accommodate vertex: 28557
+Resized to accommodate vertex: 28558
+Resized to accommodate vertex: 28560
+Resized to accommodate vertex: 28561
+Resized to accommodate vertex: 28562
+Resized to accommodate vertex: 28563
+Resized to accommodate vertex: 28565
+Resized to accommodate vertex: 28566
+Resized to accommodate vertex: 28567
+Resized to accommodate vertex: 28568
+Resized to accommodate vertex: 28570
+Resized to accommodate vertex: 28571
+Resized to accommodate vertex: 28572
+Resized to accommodate vertex: 28573
+Resized to accommodate vertex: 28575
+Resized to accommodate vertex: 28576
+Resized to accommodate vertex: 28577
+Resized to accommodate vertex: 28578
+Resized to accommodate vertex: 28580
+Resized to accommodate vertex: 28581
+Resized to accommodate vertex: 28582
+Resized to accommodate vertex: 28583
+Resized to accommodate vertex: 28585
+Resized to accommodate vertex: 28586
+Resized to accommodate vertex: 28587
+Resized to accommodate vertex: 28588
+Resized to accommodate vertex: 28590
+Resized to accommodate vertex: 28591
+Resized to accommodate vertex: 28592
+Resized to accommodate vertex: 28593
+Resized to accommodate vertex: 28595
+Resized to accommodate vertex: 28596
+Resized to accommodate vertex: 28597
+Resized to accommodate vertex: 28598
+Resized to accommodate vertex: 28600
+Resized to accommodate vertex: 28601
+Resized to accommodate vertex: 28602
+Resized to accommodate vertex: 28603
+Resized to accommodate vertex: 28605
+Resized to accommodate vertex: 28606
+Resized to accommodate vertex: 28607
+Resized to accommodate vertex: 28608
+Resized to accommodate vertex: 28610
+Resized to accommodate vertex: 28612
+Resized to accommodate vertex: 28613
+Resized to accommodate vertex: 28614
+Resized to accommodate vertex: 28615
+Resized to accommodate vertex: 28616
+Resized to accommodate vertex: 28618
+Resized to accommodate vertex: 28619
+Resized to accommodate vertex: 28620
+Resized to accommodate vertex: 28621
+Resized to accommodate vertex: 28622
+Resized to accommodate vertex: 28623
+Resized to accommodate vertex: 28624
+Resized to accommodate vertex: 28625
+Resized to accommodate vertex: 28627
+Resized to accommodate vertex: 28628
+Resized to accommodate vertex: 28629
+Resized to accommodate vertex: 28630
+Resized to accommodate vertex: 28632
+Resized to accommodate vertex: 28633
+Resized to accommodate vertex: 28634
+Resized to accommodate vertex: 28635
+Resized to accommodate vertex: 28637
+Resized to accommodate vertex: 28638
+Resized to accommodate vertex: 28639
+Resized to accommodate vertex: 28640
+Resized to accommodate vertex: 28642
+Resized to accommodate vertex: 28643
+Resized to accommodate vertex: 28644
+Resized to accommodate vertex: 28645
+Resized to accommodate vertex: 28647
+Resized to accommodate vertex: 28648
+Resized to accommodate vertex: 28649
+Resized to accommodate vertex: 28650
+Resized to accommodate vertex: 28652
+Resized to accommodate vertex: 28653
+Resized to accommodate vertex: 28654
+Resized to accommodate vertex: 28655
+Resized to accommodate vertex: 28657
+Resized to accommodate vertex: 28658
+Resized to accommodate vertex: 28659
+Resized to accommodate vertex: 28660
+Resized to accommodate vertex: 28662
+Resized to accommodate vertex: 28663
+Resized to accommodate vertex: 28664
+Resized to accommodate vertex: 28665
+Resized to accommodate vertex: 28666
+Resized to accommodate vertex: 28667
+Resized to accommodate vertex: 28668
+Resized to accommodate vertex: 28669
+Resized to accommodate vertex: 28670
+Resized to accommodate vertex: 28671
+Resized to accommodate vertex: 28672
+Resized to accommodate vertex: 28673
+Resized to accommodate vertex: 28674
+Resized to accommodate vertex: 28675
+Resized to accommodate vertex: 28676
+Resized to accommodate vertex: 28677
+Resized to accommodate vertex: 28678
+Resized to accommodate vertex: 28679
+Resized to accommodate vertex: 28680
+Resized to accommodate vertex: 28681
+Resized to accommodate vertex: 28682
+Resized to accommodate vertex: 28683
+Resized to accommodate vertex: 28685
+Resized to accommodate vertex: 28686
+Resized to accommodate vertex: 28687
+Resized to accommodate vertex: 28688
+Resized to accommodate vertex: 28689
+Resized to accommodate vertex: 28690
+Resized to accommodate vertex: 28691
+Resized to accommodate vertex: 28692
+Resized to accommodate vertex: 28693
+Resized to accommodate vertex: 28694
+Resized to accommodate vertex: 28695
+Resized to accommodate vertex: 28696
+Resized to accommodate vertex: 28697
+Resized to accommodate vertex: 28698
+Resized to accommodate vertex: 28699
+Resized to accommodate vertex: 28700
+Resized to accommodate vertex: 28701
+Resized to accommodate vertex: 28702
+Resized to accommodate vertex: 28703
+Resized to accommodate vertex: 28704
+Resized to accommodate vertex: 28705
+Resized to accommodate vertex: 28706
+Resized to accommodate vertex: 28707
+Resized to accommodate vertex: 28708
+Resized to accommodate vertex: 28709
+Resized to accommodate vertex: 28710
+Resized to accommodate vertex: 28711
+Resized to accommodate vertex: 28712
+Resized to accommodate vertex: 28713
+Resized to accommodate vertex: 28714
+Resized to accommodate vertex: 28715
+Resized to accommodate vertex: 28716
+Resized to accommodate vertex: 28717
+Resized to accommodate vertex: 28718
+Resized to accommodate vertex: 28719
+Resized to accommodate vertex: 28720
+Resized to accommodate vertex: 28722
+Resized to accommodate vertex: 28723
+Resized to accommodate vertex: 28724
+Resized to accommodate vertex: 28725
+Resized to accommodate vertex: 28726
+Resized to accommodate vertex: 28727
+Resized to accommodate vertex: 28728
+Resized to accommodate vertex: 28729
+Resized to accommodate vertex: 28730
+Resized to accommodate vertex: 28731
+Resized to accommodate vertex: 28732
+Resized to accommodate vertex: 28733
+Resized to accommodate vertex: 28734
+Resized to accommodate vertex: 28735
+Resized to accommodate vertex: 28736
+Resized to accommodate vertex: 28737
+Resized to accommodate vertex: 28738
+Resized to accommodate vertex: 28739
+Resized to accommodate vertex: 28742
+Resized to accommodate vertex: 28743
+Resized to accommodate vertex: 28744
+Resized to accommodate vertex: 28745
+Resized to accommodate vertex: 28746
+Resized to accommodate vertex: 28747
+Resized to accommodate vertex: 28748
+Resized to accommodate vertex: 28749
+Resized to accommodate vertex: 28751
+Resized to accommodate vertex: 28752
+Resized to accommodate vertex: 28753
+Resized to accommodate vertex: 28754
+Resized to accommodate vertex: 28755
+Resized to accommodate vertex: 28756
+Resized to accommodate vertex: 28757
+Resized to accommodate vertex: 28758
+Resized to accommodate vertex: 28760
+Resized to accommodate vertex: 28761
+Resized to accommodate vertex: 28762
+Resized to accommodate vertex: 28763
+Resized to accommodate vertex: 28764
+Resized to accommodate vertex: 28765
+Resized to accommodate vertex: 28766
+Resized to accommodate vertex: 28767
+Resized to accommodate vertex: 28768
+Resized to accommodate vertex: 28769
+Resized to accommodate vertex: 28770
+Resized to accommodate vertex: 28771
+Resized to accommodate vertex: 28772
+Resized to accommodate vertex: 28773
+Resized to accommodate vertex: 28774
+Resized to accommodate vertex: 28775
+Resized to accommodate vertex: 28776
+Resized to accommodate vertex: 28777
+Resized to accommodate vertex: 28778
+Resized to accommodate vertex: 28779
+Resized to accommodate vertex: 28780
+Resized to accommodate vertex: 28781
+Resized to accommodate vertex: 28782
+Resized to accommodate vertex: 28783
+Resized to accommodate vertex: 28784
+Resized to accommodate vertex: 28785
+Resized to accommodate vertex: 28786
+Resized to accommodate vertex: 28787
+Resized to accommodate vertex: 28788
+Resized to accommodate vertex: 28789
+Resized to accommodate vertex: 28791
+Resized to accommodate vertex: 28792
+Resized to accommodate vertex: 28793
+Resized to accommodate vertex: 28794
+Resized to accommodate vertex: 28796
+Resized to accommodate vertex: 28797
+Resized to accommodate vertex: 28798
+Resized to accommodate vertex: 28799
+Resized to accommodate vertex: 28801
+Resized to accommodate vertex: 28802
+Resized to accommodate vertex: 28803
+Resized to accommodate vertex: 28804
+Resized to accommodate vertex: 28805
+Resized to accommodate vertex: 28807
+Resized to accommodate vertex: 28809
+Resized to accommodate vertex: 28810
+Resized to accommodate vertex: 28811
+Resized to accommodate vertex: 28812
+Resized to accommodate vertex: 28813
+Resized to accommodate vertex: 28814
+Resized to accommodate vertex: 28815
+Resized to accommodate vertex: 28816
+Resized to accommodate vertex: 28818
+Resized to accommodate vertex: 28819
+Resized to accommodate vertex: 28820
+Resized to accommodate vertex: 28821
+Resized to accommodate vertex: 28823
+Resized to accommodate vertex: 28824
+Resized to accommodate vertex: 28825
+Resized to accommodate vertex: 28826
+Resized to accommodate vertex: 28827
+Resized to accommodate vertex: 28828
+Resized to accommodate vertex: 28829
+Resized to accommodate vertex: 28830
+Resized to accommodate vertex: 28832
+Resized to accommodate vertex: 28833
+Resized to accommodate vertex: 28834
+Resized to accommodate vertex: 28835
+Resized to accommodate vertex: 28836
+Resized to accommodate vertex: 28837
+Resized to accommodate vertex: 28838
+Resized to accommodate vertex: 28839
+Resized to accommodate vertex: 28840
+Resized to accommodate vertex: 28841
+Resized to accommodate vertex: 28842
+Resized to accommodate vertex: 28843
+Resized to accommodate vertex: 28844
+Resized to accommodate vertex: 28845
+Resized to accommodate vertex: 28846
+Resized to accommodate vertex: 28847
+Resized to accommodate vertex: 28848
+Resized to accommodate vertex: 28849
+Resized to accommodate vertex: 28850
+Resized to accommodate vertex: 28851
+Resized to accommodate vertex: 28852
+Resized to accommodate vertex: 28853
+Resized to accommodate vertex: 28854
+Resized to accommodate vertex: 28855
+Resized to accommodate vertex: 28856
+Resized to accommodate vertex: 28857
+Resized to accommodate vertex: 28858
+Resized to accommodate vertex: 28859
+Resized to accommodate vertex: 28860
+Resized to accommodate vertex: 28861
+Resized to accommodate vertex: 28862
+Resized to accommodate vertex: 28863
+Resized to accommodate vertex: 28864
+Resized to accommodate vertex: 28865
+Resized to accommodate vertex: 28866
+Resized to accommodate vertex: 28867
+Resized to accommodate vertex: 28868
+Resized to accommodate vertex: 28869
+Resized to accommodate vertex: 28870
+Resized to accommodate vertex: 28871
+Resized to accommodate vertex: 28872
+Resized to accommodate vertex: 28873
+Resized to accommodate vertex: 28874
+Resized to accommodate vertex: 28875
+Resized to accommodate vertex: 28876
+Resized to accommodate vertex: 28877
+Resized to accommodate vertex: 28878
+Resized to accommodate vertex: 28879
+Resized to accommodate vertex: 28880
+Resized to accommodate vertex: 28881
+Resized to accommodate vertex: 28882
+Resized to accommodate vertex: 28883
+Resized to accommodate vertex: 28884
+Resized to accommodate vertex: 28885
+Resized to accommodate vertex: 28886
+Resized to accommodate vertex: 28887
+Resized to accommodate vertex: 28888
+Resized to accommodate vertex: 28889
+Resized to accommodate vertex: 28890
+Resized to accommodate vertex: 28891
+Resized to accommodate vertex: 28892
+Resized to accommodate vertex: 28893
+Resized to accommodate vertex: 28894
+Resized to accommodate vertex: 28895
+Resized to accommodate vertex: 28896
+Resized to accommodate vertex: 28897
+Resized to accommodate vertex: 28898
+Resized to accommodate vertex: 28899
+Resized to accommodate vertex: 28900
+Resized to accommodate vertex: 28901
+Resized to accommodate vertex: 28902
+Resized to accommodate vertex: 28903
+Resized to accommodate vertex: 28904
+Resized to accommodate vertex: 28905
+Resized to accommodate vertex: 28906
+Resized to accommodate vertex: 28907
+Resized to accommodate vertex: 28908
+Resized to accommodate vertex: 28909
+Resized to accommodate vertex: 28910
+Resized to accommodate vertex: 28911
+Resized to accommodate vertex: 28912
+Resized to accommodate vertex: 28913
+Resized to accommodate vertex: 28914
+Resized to accommodate vertex: 28915
+Resized to accommodate vertex: 28916
+Resized to accommodate vertex: 28917
+Resized to accommodate vertex: 28918
+Resized to accommodate vertex: 28919
+Resized to accommodate vertex: 28920
+Resized to accommodate vertex: 28921
+Resized to accommodate vertex: 28922
+Resized to accommodate vertex: 28923
+Resized to accommodate vertex: 28924
+Resized to accommodate vertex: 28925
+Resized to accommodate vertex: 28926
+Resized to accommodate vertex: 28927
+Resized to accommodate vertex: 28928
+Resized to accommodate vertex: 28929
+Resized to accommodate vertex: 28930
+Resized to accommodate vertex: 28931
+Resized to accommodate vertex: 28932
+Resized to accommodate vertex: 28933
+Resized to accommodate vertex: 28934
+Resized to accommodate vertex: 28935
+Resized to accommodate vertex: 28936
+Resized to accommodate vertex: 28937
+Resized to accommodate vertex: 28938
+Resized to accommodate vertex: 28939
+Resized to accommodate vertex: 28940
+Resized to accommodate vertex: 28941
+Resized to accommodate vertex: 28942
+Resized to accommodate vertex: 28943
+Resized to accommodate vertex: 28944
+Resized to accommodate vertex: 28945
+Resized to accommodate vertex: 28946
+Resized to accommodate vertex: 28947
+Resized to accommodate vertex: 28948
+Resized to accommodate vertex: 28949
+Resized to accommodate vertex: 28950
+Resized to accommodate vertex: 28951
+Resized to accommodate vertex: 28952
+Resized to accommodate vertex: 28953
+Resized to accommodate vertex: 28954
+Resized to accommodate vertex: 28955
+Resized to accommodate vertex: 28956
+Resized to accommodate vertex: 28959
+Resized to accommodate vertex: 28960
+Resized to accommodate vertex: 28961
+Resized to accommodate vertex: 28962
+Resized to accommodate vertex: 28963
+Resized to accommodate vertex: 28964
+Resized to accommodate vertex: 28967
+Resized to accommodate vertex: 28968
+Resized to accommodate vertex: 28969
+Resized to accommodate vertex: 28970
+Resized to accommodate vertex: 28971
+Resized to accommodate vertex: 28972
+Resized to accommodate vertex: 28973
+Resized to accommodate vertex: 28974
+Resized to accommodate vertex: 28975
+Resized to accommodate vertex: 28977
+Resized to accommodate vertex: 28978
+Resized to accommodate vertex: 28979
+Resized to accommodate vertex: 28980
+Resized to accommodate vertex: 28981
+Resized to accommodate vertex: 28982
+Resized to accommodate vertex: 28983
+Resized to accommodate vertex: 28984
+Resized to accommodate vertex: 28986
+Resized to accommodate vertex: 28987
+Resized to accommodate vertex: 28988
+Resized to accommodate vertex: 28989
+Resized to accommodate vertex: 28991
+Resized to accommodate vertex: 28992
+Resized to accommodate vertex: 28993
+Resized to accommodate vertex: 28994
+Resized to accommodate vertex: 28996
+Resized to accommodate vertex: 28997
+Resized to accommodate vertex: 28998
+Resized to accommodate vertex: 28999
+Resized to accommodate vertex: 29001
+Resized to accommodate vertex: 29002
+Resized to accommodate vertex: 29003
+Resized to accommodate vertex: 29004
+Resized to accommodate vertex: 29006
+Resized to accommodate vertex: 29007
+Resized to accommodate vertex: 29008
+Resized to accommodate vertex: 29009
+Resized to accommodate vertex: 29010
+Resized to accommodate vertex: 29011
+Resized to accommodate vertex: 29012
+Resized to accommodate vertex: 29013
+Resized to accommodate vertex: 29014
+Resized to accommodate vertex: 29015
+Resized to accommodate vertex: 29016
+Resized to accommodate vertex: 29017
+Resized to accommodate vertex: 29019
+Resized to accommodate vertex: 29020
+Resized to accommodate vertex: 29021
+Resized to accommodate vertex: 29022
+Resized to accommodate vertex: 29023
+Resized to accommodate vertex: 29024
+Resized to accommodate vertex: 29025
+Resized to accommodate vertex: 29026
+Resized to accommodate vertex: 29027
+Resized to accommodate vertex: 29028
+Resized to accommodate vertex: 29029
+Resized to accommodate vertex: 29030
+Resized to accommodate vertex: 29031
+Resized to accommodate vertex: 29032
+Resized to accommodate vertex: 29033
+Resized to accommodate vertex: 29034
+Resized to accommodate vertex: 29035
+Resized to accommodate vertex: 29036
+Resized to accommodate vertex: 29037
+Resized to accommodate vertex: 29039
+Resized to accommodate vertex: 29040
+Resized to accommodate vertex: 29041
+Resized to accommodate vertex: 29042
+Resized to accommodate vertex: 29044
+Resized to accommodate vertex: 29045
+Resized to accommodate vertex: 29046
+Resized to accommodate vertex: 29047
+Resized to accommodate vertex: 29049
+Resized to accommodate vertex: 29050
+Resized to accommodate vertex: 29051
+Resized to accommodate vertex: 29052
+Resized to accommodate vertex: 29054
+Resized to accommodate vertex: 29055
+Resized to accommodate vertex: 29056
+Resized to accommodate vertex: 29057
+Resized to accommodate vertex: 29059
+Resized to accommodate vertex: 29060
+Resized to accommodate vertex: 29061
+Resized to accommodate vertex: 29062
+Resized to accommodate vertex: 29064
+Resized to accommodate vertex: 29065
+Resized to accommodate vertex: 29066
+Resized to accommodate vertex: 29067
+Resized to accommodate vertex: 29069
+Resized to accommodate vertex: 29070
+Resized to accommodate vertex: 29071
+Resized to accommodate vertex: 29072
+Resized to accommodate vertex: 29074
+Resized to accommodate vertex: 29075
+Resized to accommodate vertex: 29076
+Resized to accommodate vertex: 29077
+Resized to accommodate vertex: 29079
+Resized to accommodate vertex: 29080
+Resized to accommodate vertex: 29081
+Resized to accommodate vertex: 29082
+Resized to accommodate vertex: 29084
+Resized to accommodate vertex: 29085
+Resized to accommodate vertex: 29086
+Resized to accommodate vertex: 29087
+Resized to accommodate vertex: 29089
+Resized to accommodate vertex: 29090
+Resized to accommodate vertex: 29091
+Resized to accommodate vertex: 29092
+Resized to accommodate vertex: 29094
+Resized to accommodate vertex: 29095
+Resized to accommodate vertex: 29096
+Resized to accommodate vertex: 29097
+Resized to accommodate vertex: 29099
+Resized to accommodate vertex: 29100
+Resized to accommodate vertex: 29101
+Resized to accommodate vertex: 29102
+Resized to accommodate vertex: 29104
+Resized to accommodate vertex: 29105
+Resized to accommodate vertex: 29106
+Resized to accommodate vertex: 29107
+Resized to accommodate vertex: 29109
+Resized to accommodate vertex: 29110
+Resized to accommodate vertex: 29111
+Resized to accommodate vertex: 29112
+Resized to accommodate vertex: 29114
+Resized to accommodate vertex: 29115
+Resized to accommodate vertex: 29116
+Resized to accommodate vertex: 29117
+Resized to accommodate vertex: 29119
+Resized to accommodate vertex: 29120
+Resized to accommodate vertex: 29121
+Resized to accommodate vertex: 29122
+Resized to accommodate vertex: 29124
+Resized to accommodate vertex: 29125
+Resized to accommodate vertex: 29126
+Resized to accommodate vertex: 29127
+Resized to accommodate vertex: 29129
+Resized to accommodate vertex: 29130
+Resized to accommodate vertex: 29131
+Resized to accommodate vertex: 29132
+Resized to accommodate vertex: 29134
+Resized to accommodate vertex: 29135
+Resized to accommodate vertex: 29136
+Resized to accommodate vertex: 29137
+Resized to accommodate vertex: 29139
+Resized to accommodate vertex: 29140
+Resized to accommodate vertex: 29141
+Resized to accommodate vertex: 29142
+Resized to accommodate vertex: 29143
+Resized to accommodate vertex: 29144
+Resized to accommodate vertex: 29145
+Resized to accommodate vertex: 29148
+Resized to accommodate vertex: 29149
+Resized to accommodate vertex: 29150
+Resized to accommodate vertex: 29151
+Resized to accommodate vertex: 29152
+Resized to accommodate vertex: 29153
+Resized to accommodate vertex: 29154
+Resized to accommodate vertex: 29155
+Resized to accommodate vertex: 29156
+Resized to accommodate vertex: 29157
+Resized to accommodate vertex: 29158
+Resized to accommodate vertex: 29159
+Resized to accommodate vertex: 29160
+Resized to accommodate vertex: 29161
+Resized to accommodate vertex: 29162
+Resized to accommodate vertex: 29163
+Resized to accommodate vertex: 29164
+Resized to accommodate vertex: 29166
+Resized to accommodate vertex: 29167
+Resized to accommodate vertex: 29168
+Resized to accommodate vertex: 29169
+Resized to accommodate vertex: 29170
+Resized to accommodate vertex: 29171
+Resized to accommodate vertex: 29172
+Resized to accommodate vertex: 29173
+Resized to accommodate vertex: 29175
+Resized to accommodate vertex: 29176
+Resized to accommodate vertex: 29177
+Resized to accommodate vertex: 29178
+Resized to accommodate vertex: 29179
+Resized to accommodate vertex: 29180
+Resized to accommodate vertex: 29181
+Resized to accommodate vertex: 29182
+Resized to accommodate vertex: 29183
+Resized to accommodate vertex: 29184
+Resized to accommodate vertex: 29185
+Resized to accommodate vertex: 29186
+Resized to accommodate vertex: 29187
+Resized to accommodate vertex: 29188
+Resized to accommodate vertex: 29189
+Resized to accommodate vertex: 29190
+Resized to accommodate vertex: 29192
+Resized to accommodate vertex: 29193
+Resized to accommodate vertex: 29194
+Resized to accommodate vertex: 29195
+Resized to accommodate vertex: 29197
+Resized to accommodate vertex: 29198
+Resized to accommodate vertex: 29199
+Resized to accommodate vertex: 29200
+Resized to accommodate vertex: 29202
+Resized to accommodate vertex: 29203
+Resized to accommodate vertex: 29204
+Resized to accommodate vertex: 29205
+Resized to accommodate vertex: 29206
+Resized to accommodate vertex: 29207
+Resized to accommodate vertex: 29208
+Resized to accommodate vertex: 29209
+Resized to accommodate vertex: 29210
+Resized to accommodate vertex: 29211
+Resized to accommodate vertex: 29212
+Resized to accommodate vertex: 29213
+Resized to accommodate vertex: 29214
+Resized to accommodate vertex: 29215
+Resized to accommodate vertex: 29216
+Resized to accommodate vertex: 29217
+Resized to accommodate vertex: 29218
+Resized to accommodate vertex: 29219
+Resized to accommodate vertex: 29220
+Resized to accommodate vertex: 29221
+Resized to accommodate vertex: 29222
+Resized to accommodate vertex: 29223
+Resized to accommodate vertex: 29224
+Resized to accommodate vertex: 29225
+Resized to accommodate vertex: 29226
+Resized to accommodate vertex: 29227
+Resized to accommodate vertex: 29228
+Resized to accommodate vertex: 29229
+Resized to accommodate vertex: 29230
+Resized to accommodate vertex: 29231
+Resized to accommodate vertex: 29232
+Resized to accommodate vertex: 29233
+Resized to accommodate vertex: 29234
+Resized to accommodate vertex: 29235
+Resized to accommodate vertex: 29236
+Resized to accommodate vertex: 29237
+Resized to accommodate vertex: 29238
+Resized to accommodate vertex: 29239
+Resized to accommodate vertex: 29240
+Resized to accommodate vertex: 29241
+Resized to accommodate vertex: 29242
+Resized to accommodate vertex: 29243
+Resized to accommodate vertex: 29244
+Resized to accommodate vertex: 29245
+Resized to accommodate vertex: 29246
+Resized to accommodate vertex: 29247
+Resized to accommodate vertex: 29248
+Resized to accommodate vertex: 29249
+Resized to accommodate vertex: 29250
+Resized to accommodate vertex: 29251
+Resized to accommodate vertex: 29252
+Resized to accommodate vertex: 29253
+Resized to accommodate vertex: 29254
+Resized to accommodate vertex: 29255
+Resized to accommodate vertex: 29256
+Resized to accommodate vertex: 29257
+Resized to accommodate vertex: 29258
+Resized to accommodate vertex: 29259
+Resized to accommodate vertex: 29260
+Resized to accommodate vertex: 29261
+Resized to accommodate vertex: 29262
+Resized to accommodate vertex: 29263
+Resized to accommodate vertex: 29264
+Resized to accommodate vertex: 29265
+Resized to accommodate vertex: 29266
+Resized to accommodate vertex: 29267
+Resized to accommodate vertex: 29268
+Resized to accommodate vertex: 29269
+Resized to accommodate vertex: 29270
+Resized to accommodate vertex: 29271
+Resized to accommodate vertex: 29272
+Resized to accommodate vertex: 29273
+Resized to accommodate vertex: 29274
+Resized to accommodate vertex: 29275
+Resized to accommodate vertex: 29276
+Resized to accommodate vertex: 29277
+Resized to accommodate vertex: 29278
+Resized to accommodate vertex: 29279
+Resized to accommodate vertex: 29281
+Resized to accommodate vertex: 29282
+Resized to accommodate vertex: 29283
+Resized to accommodate vertex: 29284
+Resized to accommodate vertex: 29285
+Resized to accommodate vertex: 29286
+Resized to accommodate vertex: 29287
+Resized to accommodate vertex: 29288
+Resized to accommodate vertex: 29289
+Resized to accommodate vertex: 29290
+Resized to accommodate vertex: 29291
+Resized to accommodate vertex: 29293
+Resized to accommodate vertex: 29294
+Resized to accommodate vertex: 29295
+Resized to accommodate vertex: 29296
+Resized to accommodate vertex: 29297
+Resized to accommodate vertex: 29298
+Resized to accommodate vertex: 29299
+Resized to accommodate vertex: 29300
+Resized to accommodate vertex: 29302
+Resized to accommodate vertex: 29303
+Resized to accommodate vertex: 29304
+Resized to accommodate vertex: 29305
+Resized to accommodate vertex: 29306
+Resized to accommodate vertex: 29307
+Resized to accommodate vertex: 29308
+Resized to accommodate vertex: 29309
+Resized to accommodate vertex: 29311
+Resized to accommodate vertex: 29312
+Resized to accommodate vertex: 29313
+Resized to accommodate vertex: 29314
+Resized to accommodate vertex: 29316
+Resized to accommodate vertex: 29317
+Resized to accommodate vertex: 29318
+Resized to accommodate vertex: 29319
+Resized to accommodate vertex: 29320
+Resized to accommodate vertex: 29321
+Resized to accommodate vertex: 29322
+Resized to accommodate vertex: 29323
+Resized to accommodate vertex: 29324
+Resized to accommodate vertex: 29325
+Resized to accommodate vertex: 29326
+Resized to accommodate vertex: 29327
+Resized to accommodate vertex: 29328
+Resized to accommodate vertex: 29329
+Resized to accommodate vertex: 29330
+Resized to accommodate vertex: 29331
+Resized to accommodate vertex: 29333
+Resized to accommodate vertex: 29334
+Resized to accommodate vertex: 29335
+Resized to accommodate vertex: 29336
+Resized to accommodate vertex: 29338
+Resized to accommodate vertex: 29339
+Resized to accommodate vertex: 29340
+Resized to accommodate vertex: 29341
+Resized to accommodate vertex: 29342
+Resized to accommodate vertex: 29343
+Resized to accommodate vertex: 29344
+Resized to accommodate vertex: 29345
+Resized to accommodate vertex: 29346
+Resized to accommodate vertex: 29347
+Resized to accommodate vertex: 29348
+Resized to accommodate vertex: 29349
+Resized to accommodate vertex: 29350
+Resized to accommodate vertex: 29351
+Resized to accommodate vertex: 29352
+Resized to accommodate vertex: 29353
+Resized to accommodate vertex: 29354
+Resized to accommodate vertex: 29355
+Resized to accommodate vertex: 29356
+Resized to accommodate vertex: 29357
+Resized to accommodate vertex: 29358
+Resized to accommodate vertex: 29359
+Resized to accommodate vertex: 29360
+Resized to accommodate vertex: 29361
+Resized to accommodate vertex: 29362
+Resized to accommodate vertex: 29363
+Resized to accommodate vertex: 29364
+Resized to accommodate vertex: 29365
+Resized to accommodate vertex: 29366
+Resized to accommodate vertex: 29367
+Resized to accommodate vertex: 29368
+Resized to accommodate vertex: 29369
+Resized to accommodate vertex: 29370
+Resized to accommodate vertex: 29371
+Resized to accommodate vertex: 29372
+Resized to accommodate vertex: 29373
+Resized to accommodate vertex: 29374
+Resized to accommodate vertex: 29375
+Resized to accommodate vertex: 29376
+Resized to accommodate vertex: 29377
+Resized to accommodate vertex: 29378
+Resized to accommodate vertex: 29379
+Resized to accommodate vertex: 29380
+Resized to accommodate vertex: 29381
+Resized to accommodate vertex: 29383
+Resized to accommodate vertex: 29384
+Resized to accommodate vertex: 29385
+Resized to accommodate vertex: 29386
+Resized to accommodate vertex: 29388
+Resized to accommodate vertex: 29389
+Resized to accommodate vertex: 29390
+Resized to accommodate vertex: 29391
+Resized to accommodate vertex: 29393
+Resized to accommodate vertex: 29394
+Resized to accommodate vertex: 29395
+Resized to accommodate vertex: 29396
+Resized to accommodate vertex: 29398
+Resized to accommodate vertex: 29399
+Resized to accommodate vertex: 29400
+Resized to accommodate vertex: 29401
+Resized to accommodate vertex: 29403
+Resized to accommodate vertex: 29404
+Resized to accommodate vertex: 29405
+Resized to accommodate vertex: 29406
+Resized to accommodate vertex: 29408
+Resized to accommodate vertex: 29409
+Resized to accommodate vertex: 29410
+Resized to accommodate vertex: 29411
+Resized to accommodate vertex: 29412
+Resized to accommodate vertex: 29413
+Resized to accommodate vertex: 29414
+Resized to accommodate vertex: 29415
+Resized to accommodate vertex: 29416
+Resized to accommodate vertex: 29417
+Resized to accommodate vertex: 29418
+Resized to accommodate vertex: 29419
+Resized to accommodate vertex: 29420
+Resized to accommodate vertex: 29421
+Resized to accommodate vertex: 29422
+Resized to accommodate vertex: 29423
+Resized to accommodate vertex: 29425
+Resized to accommodate vertex: 29426
+Resized to accommodate vertex: 29427
+Resized to accommodate vertex: 29428
+Resized to accommodate vertex: 29429
+Resized to accommodate vertex: 29430
+Resized to accommodate vertex: 29431
+Resized to accommodate vertex: 29432
+Resized to accommodate vertex: 29434
+Resized to accommodate vertex: 29435
+Resized to accommodate vertex: 29436
+Resized to accommodate vertex: 29437
+Resized to accommodate vertex: 29439
+Resized to accommodate vertex: 29440
+Resized to accommodate vertex: 29441
+Resized to accommodate vertex: 29442
+Resized to accommodate vertex: 29444
+Resized to accommodate vertex: 29445
+Resized to accommodate vertex: 29446
+Resized to accommodate vertex: 29447
+Resized to accommodate vertex: 29448
+Resized to accommodate vertex: 29449
+Resized to accommodate vertex: 29450
+Resized to accommodate vertex: 29451
+Resized to accommodate vertex: 29452
+Resized to accommodate vertex: 29453
+Resized to accommodate vertex: 29454
+Resized to accommodate vertex: 29455
+Resized to accommodate vertex: 29456
+Resized to accommodate vertex: 29457
+Resized to accommodate vertex: 29458
+Resized to accommodate vertex: 29459
+Resized to accommodate vertex: 29460
+Resized to accommodate vertex: 29461
+Resized to accommodate vertex: 29462
+Resized to accommodate vertex: 29463
+Resized to accommodate vertex: 29464
+Resized to accommodate vertex: 29465
+Resized to accommodate vertex: 29466
+Resized to accommodate vertex: 29467
+Resized to accommodate vertex: 29468
+Resized to accommodate vertex: 29469
+Resized to accommodate vertex: 29470
+Resized to accommodate vertex: 29471
+Resized to accommodate vertex: 29472
+Resized to accommodate vertex: 29473
+Resized to accommodate vertex: 29474
+Resized to accommodate vertex: 29475
+Resized to accommodate vertex: 29476
+Resized to accommodate vertex: 29477
+Resized to accommodate vertex: 29478
+Resized to accommodate vertex: 29479
+Resized to accommodate vertex: 29480
+Resized to accommodate vertex: 29481
+Resized to accommodate vertex: 29482
+Resized to accommodate vertex: 29483
+Resized to accommodate vertex: 29484
+Resized to accommodate vertex: 29485
+Resized to accommodate vertex: 29486
+Resized to accommodate vertex: 29488
+Resized to accommodate vertex: 29489
+Resized to accommodate vertex: 29490
+Resized to accommodate vertex: 29491
+Resized to accommodate vertex: 29492
+Resized to accommodate vertex: 29493
+Resized to accommodate vertex: 29494
+Resized to accommodate vertex: 29495
+Wrote 28502 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008046\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008046\segmentation_data_segments.bin
+Processing: 00008051 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008051.bin is odd sized --> skippedProcessing: 00008052 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 71290 faces to array
+Resized to accommodate vertex: 35651
+Resized to accommodate vertex: 35652
+Resized to accommodate vertex: 35653
+Resized to accommodate vertex: 35654
+Resized to accommodate vertex: 35655
+Resized to accommodate vertex: 35656
+Resized to accommodate vertex: 35657
+Resized to accommodate vertex: 35658
+Resized to accommodate vertex: 35659
+Resized to accommodate vertex: 35660
+Resized to accommodate vertex: 35661
+Resized to accommodate vertex: 35662
+Wrote 35651 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008052\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008052\segmentation_data_segments.bin
+Processing: 00008053 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 17684 faces to array
+Resized to accommodate vertex: 8834
+Resized to accommodate vertex: 8835
+Resized to accommodate vertex: 8836
+Resized to accommodate vertex: 8837
+Wrote 8834 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008053\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008053\segmentation_data_segments.bin
+Processing: 00008054 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 195488 faces to array
+Wrote 97744 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008054\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008054\segmentation_data_segments.bin
+Processing: 00008055 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 9452 faces to array
+Wrote 4728 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008055\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008055\segmentation_data_segments.bin
+Processing: 00008056 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008056.bin is odd sized --> skippedProcessing: 00008057 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 7170 faces to array
+Wrote 3563 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008057\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008057\segmentation_data_segments.bin
+Processing: 00008060 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008060.bin is odd sized --> skippedProcessing: 00008063 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008063.bin is odd sized --> skippedProcessing: 00008065 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 34258 faces to array
+Wrote 17131 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008065\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008065\segmentation_data_segments.bin
+Processing: 00008068 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008068.bin is odd sized --> skippedProcessing: 00008069 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008069.bin is odd sized --> skippedProcessing: 00008075 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 217862 faces to array
+Wrote 109801 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008075\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008075\segmentation_data_segments.bin
+Processing: 00008077 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 88870 faces to array
+Resized to accommodate vertex: 44433
+Resized to accommodate vertex: 44434
+Wrote 44433 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008077\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008077\segmentation_data_segments.bin
+Processing: 00008081 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 154840 faces to array
+Resized to accommodate vertex: 77290
+Resized to accommodate vertex: 77291
+Resized to accommodate vertex: 77292
+Resized to accommodate vertex: 77293
+Resized to accommodate vertex: 77294
+Resized to accommodate vertex: 77295
+Resized to accommodate vertex: 77296
+Resized to accommodate vertex: 77297
+Resized to accommodate vertex: 77298
+Resized to accommodate vertex: 77299
+Resized to accommodate vertex: 77300
+Resized to accommodate vertex: 77301
+Resized to accommodate vertex: 77302
+Resized to accommodate vertex: 77303
+Resized to accommodate vertex: 77304
+Resized to accommodate vertex: 77305
+Resized to accommodate vertex: 77306
+Resized to accommodate vertex: 77307
+Resized to accommodate vertex: 77308
+Resized to accommodate vertex: 77309
+Resized to accommodate vertex: 77310
+Resized to accommodate vertex: 77311
+Resized to accommodate vertex: 77312
+Resized to accommodate vertex: 77313
+Resized to accommodate vertex: 77314
+Resized to accommodate vertex: 77315
+Resized to accommodate vertex: 77316
+Resized to accommodate vertex: 77317
+Resized to accommodate vertex: 77318
+Resized to accommodate vertex: 77319
+Resized to accommodate vertex: 77320
+Resized to accommodate vertex: 77321
+Resized to accommodate vertex: 77322
+Resized to accommodate vertex: 77323
+Resized to accommodate vertex: 77324
+Resized to accommodate vertex: 77325
+Resized to accommodate vertex: 77326
+Resized to accommodate vertex: 77327
+Resized to accommodate vertex: 77328
+Resized to accommodate vertex: 77329
+Resized to accommodate vertex: 77330
+Resized to accommodate vertex: 77331
+Resized to accommodate vertex: 77332
+Resized to accommodate vertex: 77333
+Resized to accommodate vertex: 77334
+Resized to accommodate vertex: 77335
+Resized to accommodate vertex: 77336
+Resized to accommodate vertex: 77337
+Resized to accommodate vertex: 77338
+Resized to accommodate vertex: 77339
+Resized to accommodate vertex: 77340
+Resized to accommodate vertex: 77341
+Resized to accommodate vertex: 77342
+Resized to accommodate vertex: 77343
+Resized to accommodate vertex: 77344
+Resized to accommodate vertex: 77345
+Resized to accommodate vertex: 77346
+Resized to accommodate vertex: 77347
+Resized to accommodate vertex: 77348
+Resized to accommodate vertex: 77349
+Resized to accommodate vertex: 77350
+Resized to accommodate vertex: 77351
+Resized to accommodate vertex: 77352
+Resized to accommodate vertex: 77353
+Resized to accommodate vertex: 77354
+Resized to accommodate vertex: 77355
+Resized to accommodate vertex: 77356
+Resized to accommodate vertex: 77357
+Resized to accommodate vertex: 77358
+Resized to accommodate vertex: 77359
+Resized to accommodate vertex: 77360
+Resized to accommodate vertex: 77361
+Resized to accommodate vertex: 77362
+Resized to accommodate vertex: 77363
+Resized to accommodate vertex: 77364
+Resized to accommodate vertex: 77365
+Resized to accommodate vertex: 77366
+Resized to accommodate vertex: 77367
+Resized to accommodate vertex: 77368
+Resized to accommodate vertex: 77369
+Resized to accommodate vertex: 77370
+Resized to accommodate vertex: 77371
+Resized to accommodate vertex: 77372
+Resized to accommodate vertex: 77373
+Resized to accommodate vertex: 77374
+Resized to accommodate vertex: 77375
+Resized to accommodate vertex: 77376
+Resized to accommodate vertex: 77377
+Resized to accommodate vertex: 77378
+Resized to accommodate vertex: 77379
+Resized to accommodate vertex: 77380
+Resized to accommodate vertex: 77381
+Resized to accommodate vertex: 77382
+Resized to accommodate vertex: 77383
+Resized to accommodate vertex: 77384
+Resized to accommodate vertex: 77385
+Resized to accommodate vertex: 77386
+Resized to accommodate vertex: 77387
+Resized to accommodate vertex: 77388
+Resized to accommodate vertex: 77389
+Resized to accommodate vertex: 77390
+Resized to accommodate vertex: 77391
+Resized to accommodate vertex: 77392
+Resized to accommodate vertex: 77393
+Resized to accommodate vertex: 77394
+Resized to accommodate vertex: 77395
+Resized to accommodate vertex: 77396
+Resized to accommodate vertex: 77397
+Resized to accommodate vertex: 77398
+Resized to accommodate vertex: 77399
+Resized to accommodate vertex: 77400
+Resized to accommodate vertex: 77401
+Resized to accommodate vertex: 77402
+Resized to accommodate vertex: 77403
+Resized to accommodate vertex: 77404
+Resized to accommodate vertex: 77405
+Resized to accommodate vertex: 77406
+Resized to accommodate vertex: 77407
+Resized to accommodate vertex: 77408
+Resized to accommodate vertex: 77409
+Resized to accommodate vertex: 77410
+Resized to accommodate vertex: 77411
+Resized to accommodate vertex: 77412
+Resized to accommodate vertex: 77413
+Resized to accommodate vertex: 77414
+Resized to accommodate vertex: 77415
+Resized to accommodate vertex: 77416
+Resized to accommodate vertex: 77417
+Resized to accommodate vertex: 77418
+Resized to accommodate vertex: 77419
+Resized to accommodate vertex: 77420
+Resized to accommodate vertex: 77421
+Resized to accommodate vertex: 77422
+Resized to accommodate vertex: 77423
+Resized to accommodate vertex: 77424
+Resized to accommodate vertex: 77425
+Resized to accommodate vertex: 77426
+Resized to accommodate vertex: 77427
+Resized to accommodate vertex: 77428
+Resized to accommodate vertex: 77429
+Resized to accommodate vertex: 77430
+Resized to accommodate vertex: 77431
+Resized to accommodate vertex: 77432
+Resized to accommodate vertex: 77433
+Resized to accommodate vertex: 77434
+Resized to accommodate vertex: 77435
+Resized to accommodate vertex: 77436
+Resized to accommodate vertex: 77437
+Resized to accommodate vertex: 77438
+Resized to accommodate vertex: 77439
+Resized to accommodate vertex: 77440
+Resized to accommodate vertex: 77441
+Resized to accommodate vertex: 77442
+Resized to accommodate vertex: 77443
+Resized to accommodate vertex: 77444
+Resized to accommodate vertex: 77445
+Resized to accommodate vertex: 77446
+Resized to accommodate vertex: 77447
+Resized to accommodate vertex: 77448
+Resized to accommodate vertex: 77449
+Resized to accommodate vertex: 77450
+Resized to accommodate vertex: 77451
+Resized to accommodate vertex: 77452
+Resized to accommodate vertex: 77453
+Resized to accommodate vertex: 77454
+Resized to accommodate vertex: 77455
+Wrote 77290 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008081\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008081\segmentation_data_segments.bin
+Processing: 00008082 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 167094 faces to array
+Resized to accommodate vertex: 83571
+Resized to accommodate vertex: 83572
+Resized to accommodate vertex: 83573
+Resized to accommodate vertex: 83574
+Resized to accommodate vertex: 83575
+Resized to accommodate vertex: 83576
+Resized to accommodate vertex: 83577
+Resized to accommodate vertex: 83578
+Resized to accommodate vertex: 83579
+Resized to accommodate vertex: 83580
+Resized to accommodate vertex: 83581
+Resized to accommodate vertex: 83582
+Resized to accommodate vertex: 83583
+Resized to accommodate vertex: 83584
+Resized to accommodate vertex: 83585
+Resized to accommodate vertex: 83586
+Resized to accommodate vertex: 83587
+Resized to accommodate vertex: 83588
+Resized to accommodate vertex: 83589
+Resized to accommodate vertex: 83590
+Resized to accommodate vertex: 83591
+Resized to accommodate vertex: 83592
+Resized to accommodate vertex: 83593
+Resized to accommodate vertex: 83594
+Resized to accommodate vertex: 83595
+Resized to accommodate vertex: 83596
+Resized to accommodate vertex: 83597
+Resized to accommodate vertex: 83598
+Resized to accommodate vertex: 83599
+Resized to accommodate vertex: 83600
+Resized to accommodate vertex: 83601
+Resized to accommodate vertex: 83602
+Resized to accommodate vertex: 83603
+Resized to accommodate vertex: 83604
+Resized to accommodate vertex: 83605
+Resized to accommodate vertex: 83606
+Resized to accommodate vertex: 83607
+Resized to accommodate vertex: 83608
+Resized to accommodate vertex: 83609
+Resized to accommodate vertex: 83610
+Resized to accommodate vertex: 83611
+Resized to accommodate vertex: 83612
+Resized to accommodate vertex: 83613
+Resized to accommodate vertex: 83614
+Resized to accommodate vertex: 83615
+Resized to accommodate vertex: 83616
+Resized to accommodate vertex: 83617
+Resized to accommodate vertex: 83618
+Resized to accommodate vertex: 83619
+Resized to accommodate vertex: 83620
+Resized to accommodate vertex: 83621
+Resized to accommodate vertex: 83622
+Resized to accommodate vertex: 83623
+Resized to accommodate vertex: 83624
+Resized to accommodate vertex: 83625
+Resized to accommodate vertex: 83626
+Resized to accommodate vertex: 83627
+Resized to accommodate vertex: 83628
+Resized to accommodate vertex: 83629
+Resized to accommodate vertex: 83630
+Resized to accommodate vertex: 83631
+Resized to accommodate vertex: 83632
+Resized to accommodate vertex: 83633
+Resized to accommodate vertex: 83634
+Resized to accommodate vertex: 83635
+Resized to accommodate vertex: 83636
+Resized to accommodate vertex: 83637
+Resized to accommodate vertex: 83638
+Resized to accommodate vertex: 83639
+Resized to accommodate vertex: 83640
+Resized to accommodate vertex: 83641
+Resized to accommodate vertex: 83642
+Resized to accommodate vertex: 83643
+Resized to accommodate vertex: 83644
+Resized to accommodate vertex: 83645
+Resized to accommodate vertex: 83646
+Resized to accommodate vertex: 83647
+Resized to accommodate vertex: 83648
+Resized to accommodate vertex: 83649
+Resized to accommodate vertex: 83650
+Resized to accommodate vertex: 83651
+Resized to accommodate vertex: 83652
+Resized to accommodate vertex: 83653
+Resized to accommodate vertex: 83654
+Resized to accommodate vertex: 83655
+Resized to accommodate vertex: 83656
+Resized to accommodate vertex: 83657
+Resized to accommodate vertex: 83658
+Resized to accommodate vertex: 83659
+Resized to accommodate vertex: 83660
+Resized to accommodate vertex: 83661
+Resized to accommodate vertex: 83662
+Resized to accommodate vertex: 83663
+Resized to accommodate vertex: 83664
+Resized to accommodate vertex: 83665
+Resized to accommodate vertex: 83666
+Resized to accommodate vertex: 83667
+Resized to accommodate vertex: 83668
+Resized to accommodate vertex: 83669
+Resized to accommodate vertex: 83670
+Resized to accommodate vertex: 83671
+Resized to accommodate vertex: 83672
+Resized to accommodate vertex: 83673
+Resized to accommodate vertex: 83674
+Resized to accommodate vertex: 83675
+Resized to accommodate vertex: 83676
+Resized to accommodate vertex: 83677
+Resized to accommodate vertex: 83678
+Resized to accommodate vertex: 83679
+Resized to accommodate vertex: 83680
+Resized to accommodate vertex: 83681
+Resized to accommodate vertex: 83682
+Resized to accommodate vertex: 83683
+Resized to accommodate vertex: 83684
+Resized to accommodate vertex: 83685
+Resized to accommodate vertex: 83686
+Resized to accommodate vertex: 83687
+Resized to accommodate vertex: 83688
+Resized to accommodate vertex: 83689
+Resized to accommodate vertex: 83690
+Resized to accommodate vertex: 83691
+Resized to accommodate vertex: 83692
+Resized to accommodate vertex: 83693
+Resized to accommodate vertex: 83694
+Resized to accommodate vertex: 83695
+Resized to accommodate vertex: 83696
+Resized to accommodate vertex: 83697
+Resized to accommodate vertex: 83698
+Resized to accommodate vertex: 83699
+Resized to accommodate vertex: 83700
+Resized to accommodate vertex: 83701
+Resized to accommodate vertex: 83702
+Resized to accommodate vertex: 83703
+Resized to accommodate vertex: 83704
+Resized to accommodate vertex: 83705
+Resized to accommodate vertex: 83706
+Resized to accommodate vertex: 83707
+Resized to accommodate vertex: 83708
+Resized to accommodate vertex: 83709
+Resized to accommodate vertex: 83710
+Resized to accommodate vertex: 83711
+Resized to accommodate vertex: 83712
+Resized to accommodate vertex: 83713
+Resized to accommodate vertex: 83714
+Resized to accommodate vertex: 83715
+Resized to accommodate vertex: 83716
+Resized to accommodate vertex: 83717
+Resized to accommodate vertex: 83718
+Resized to accommodate vertex: 83719
+Resized to accommodate vertex: 83720
+Resized to accommodate vertex: 83721
+Resized to accommodate vertex: 83722
+Resized to accommodate vertex: 83723
+Resized to accommodate vertex: 83724
+Resized to accommodate vertex: 83725
+Resized to accommodate vertex: 83726
+Resized to accommodate vertex: 83727
+Resized to accommodate vertex: 83728
+Resized to accommodate vertex: 83729
+Resized to accommodate vertex: 83730
+Resized to accommodate vertex: 83731
+Resized to accommodate vertex: 83732
+Resized to accommodate vertex: 83733
+Resized to accommodate vertex: 83734
+Resized to accommodate vertex: 83735
+Resized to accommodate vertex: 83736
+Resized to accommodate vertex: 83737
+Resized to accommodate vertex: 83738
+Resized to accommodate vertex: 83739
+Resized to accommodate vertex: 83740
+Resized to accommodate vertex: 83741
+Resized to accommodate vertex: 83742
+Resized to accommodate vertex: 83743
+Resized to accommodate vertex: 83744
+Resized to accommodate vertex: 83745
+Resized to accommodate vertex: 83746
+Resized to accommodate vertex: 83747
+Resized to accommodate vertex: 83748
+Resized to accommodate vertex: 83749
+Resized to accommodate vertex: 83750
+Resized to accommodate vertex: 83751
+Resized to accommodate vertex: 83752
+Resized to accommodate vertex: 83753
+Resized to accommodate vertex: 83754
+Resized to accommodate vertex: 83755
+Resized to accommodate vertex: 83756
+Resized to accommodate vertex: 83757
+Resized to accommodate vertex: 83758
+Resized to accommodate vertex: 83759
+Resized to accommodate vertex: 83760
+Resized to accommodate vertex: 83761
+Resized to accommodate vertex: 83762
+Resized to accommodate vertex: 83763
+Resized to accommodate vertex: 83764
+Resized to accommodate vertex: 83765
+Resized to accommodate vertex: 83766
+Resized to accommodate vertex: 83767
+Resized to accommodate vertex: 83768
+Resized to accommodate vertex: 83769
+Resized to accommodate vertex: 83770
+Resized to accommodate vertex: 83771
+Resized to accommodate vertex: 83772
+Resized to accommodate vertex: 83773
+Resized to accommodate vertex: 83774
+Resized to accommodate vertex: 83775
+Resized to accommodate vertex: 83776
+Resized to accommodate vertex: 83777
+Resized to accommodate vertex: 83778
+Resized to accommodate vertex: 83779
+Resized to accommodate vertex: 83780
+Resized to accommodate vertex: 83781
+Resized to accommodate vertex: 83782
+Resized to accommodate vertex: 83783
+Resized to accommodate vertex: 83784
+Resized to accommodate vertex: 83785
+Resized to accommodate vertex: 83786
+Resized to accommodate vertex: 83787
+Resized to accommodate vertex: 83788
+Resized to accommodate vertex: 83789
+Resized to accommodate vertex: 83790
+Resized to accommodate vertex: 83791
+Resized to accommodate vertex: 83792
+Resized to accommodate vertex: 83793
+Resized to accommodate vertex: 83794
+Resized to accommodate vertex: 83795
+Resized to accommodate vertex: 83796
+Resized to accommodate vertex: 83797
+Resized to accommodate vertex: 83798
+Resized to accommodate vertex: 83799
+Resized to accommodate vertex: 83800
+Resized to accommodate vertex: 83801
+Resized to accommodate vertex: 83802
+Resized to accommodate vertex: 83803
+Resized to accommodate vertex: 83804
+Resized to accommodate vertex: 83805
+Resized to accommodate vertex: 83806
+Resized to accommodate vertex: 83807
+Resized to accommodate vertex: 83808
+Resized to accommodate vertex: 83809
+Resized to accommodate vertex: 83810
+Wrote 83571 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008082\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008082\segmentation_data_segments.bin
+Processing: 00008083 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 120990 faces to array
+Wrote 60519 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008083\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008083\segmentation_data_segments.bin
+Processing: 00008084 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 147080 faces to array
+Resized to accommodate vertex: 73520
+Wrote 73520 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008084\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008084\segmentation_data_segments.bin
+Processing: 00008085 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 62576 faces to array
+Resized to accommodate vertex: 31262
+Resized to accommodate vertex: 31263
+Resized to accommodate vertex: 31264
+Resized to accommodate vertex: 31265
+Resized to accommodate vertex: 31266
+Resized to accommodate vertex: 31267
+Resized to accommodate vertex: 31268
+Resized to accommodate vertex: 31269
+Resized to accommodate vertex: 31270
+Resized to accommodate vertex: 31271
+Resized to accommodate vertex: 31272
+Resized to accommodate vertex: 31273
+Wrote 31262 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008085\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008085\segmentation_data_segments.bin
+Processing: 00008088 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 48274 faces to array
+Wrote 24139 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008088\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008088\segmentation_data_segments.bin
+Processing: 00008090 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 20854 faces to array
+Wrote 10423 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008090\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008090\segmentation_data_segments.bin
+Processing: 00008091 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 32076 faces to array
+Wrote 16030 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008091\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008091\segmentation_data_segments.bin
+Processing: 00008094 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 52226 faces to array
+Wrote 26109 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008094\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008094\segmentation_data_segments.bin
+Processing: 00008098 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 57194 faces to array
+Resized to accommodate vertex: 28597
+Resized to accommodate vertex: 28598
+Resized to accommodate vertex: 28599
+Resized to accommodate vertex: 28600
+Resized to accommodate vertex: 28601
+Resized to accommodate vertex: 28602
+Resized to accommodate vertex: 28603
+Resized to accommodate vertex: 28604
+Resized to accommodate vertex: 28605
+Resized to accommodate vertex: 28606
+Resized to accommodate vertex: 28607
+Wrote 28597 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008098\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008098\segmentation_data_segments.bin
+Processing: 00008100 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+Wrote 31792 faces to array
+Wrote 15898 vertices to array
+SegmentationDataContainer text data dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008100\segmentation_data.dat
+SegmentationDataContainer segments dumped to: C:/Local_Data/ABC/ABC_Datasets/Segmentation/ABC_Chunk_00/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2/00008100\segmentation_data_segments.bin
+Processing: 00008102 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008102.bin is odd sized --> skippedProcessing: 00008103 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008103.bin is odd sized --> skippedProcessing: 00008104 -> Output: "C:\\Local_Data\\ABC\\ABC_Datasets\\Segmentation\\ABC_Chunk_00\\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+00008104.bin is odd sized --> skipped[INFO] Program finished successfully.
