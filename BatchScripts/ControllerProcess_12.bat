@@ -29,9 +29,9 @@ echo.
 
 REM ---Shared Parameters
 SET "GLOB_SOURCE_DIR=H:\ABC\ABC_parsed_files\ABC_chunk_00"
-SET "GLOB_TARGET_DIR=H:\ABC\ABC_Datasets\Segmentation\ABC_Chunk_00\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n2"
+SET "GLOB_TARGET_DIR=H:\ABC\ABC_Datasets\Segmentation\ABC_Chunk_00\ABC_Data_ks_16_pad_4_bw_5_vs_1f0"
 SET "GLOB_JOB_DIR=H:\ABC\ABC_jobs\job_chunk_00"
-SET "JOB_TYPE=--default"
+SET "JOB_TYPE=default"
 
 REM --- !!!rember  to change GLOB_THREAD_COUNT!!! --- 
 REM --- Instance Blocks Begin --- 

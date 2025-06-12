@@ -1,0 +1,72 @@
+Instance 001
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 23:12:32
+  First processed part: 2025-06-04 16:05:23 00000002
+  Last processed part: 2025-06-04 23:12:32 00000862
+
+Instance 002
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:33:19
+  First processed part: 2025-06-04 16:05:23 00000863
+  Last processed part: 2025-06-04 22:33:19 00001724
+
+Instance 003
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 21:40:15
+  First processed part: 2025-06-04 16:05:23 00001726
+  Last processed part: 2025-06-04 21:40:15 00002558
+
+Instance 004
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:04:35
+  First processed part: 2025-06-04 16:05:23 00002559
+  Last processed part: 2025-06-04 22:04:35 00003367
+
+Instance 005
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 23:03:11
+  First processed part: 2025-06-04 16:05:23 00003368
+  Last processed part: 2025-06-04 23:03:11 00004256
+
+Instance 006
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 21:53:36
+  First processed part: 2025-06-04 16:05:23 00004257
+  Last processed part: 2025-06-04 21:53:36 00004999
+
+Instance 007
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:59:06
+  First processed part: 2025-06-04 16:05:23 00005001
+  Last processed part: 2025-06-04 22:59:06 00005793
+
+Instance 008
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 23:16:58
+  First processed part: 2025-06-04 16:05:23 00005795
+  Last processed part: 2025-06-04 23:16:58 00006635
+
+Instance 009
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-05 00:17:47
+  First processed part: 2025-06-04 16:05:23 00006636
+  Last processed part: 2025-06-05 00:17:47 00007447
+
+Instance 010
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:17:30
+  First processed part: 2025-06-04 16:05:23 00007448
+  Last processed part: 2025-06-04 22:17:30 00008313
+
+Instance 011
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:02:16
+  First processed part: 2025-06-04 16:05:23 00008314
+  Last processed part: 2025-06-04 22:02:16 00009117
+
+Instance 012
+  Start time: 2025-06-04 16:05:23
+  End time: 2025-06-04 22:43:55
+  First processed part: 2025-06-04 16:05:23 00009118
+  Last processed part: 2025-06-04 22:43:55 00009999
+

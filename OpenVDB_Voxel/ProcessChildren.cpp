@@ -286,7 +286,7 @@ namespace ProcessingUtility {
             DumpTruck.setVoxelSize(voxel_size);
             DumpTruck.setMinVal(minVal);
 
-            lmap.create(minVal, background, 0, 1);
+            lmap.create(minVal, background, -1, 1);
 
             //Create a an array that holds cropping results
             Tools::Float3DArray clipped_array;
@@ -296,6 +296,7 @@ namespace ProcessingUtility {
             for (size_t i = 0; i < crop_list.size(); ++i) {
                 clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
                 Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap); //normalize clipped array 
+                //Tools::OpenVDBbased::NormalizeFloat3DArray(clipped_array, voxel_size);
                 DumpTruck.addSegment(clipped_array);
 
             }
@@ -408,7 +409,7 @@ namespace ProcessingUtility {
             double background = grid->tree().background();
             float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
 
-            lmap.create(minVal, background, 0, 1);
+            lmap.create(minVal, background, -1, 1);
 
             //Create a an array that holds cropping results
             Tools::Float3DArray clipped_array;
@@ -441,6 +442,121 @@ namespace ProcessingUtility {
     {
         fs::path file = sourceDir_ / subDirName /(subDirName + extension_);
         Tools::util::filterObjFile(file.generic_string(), filter_);
+    }
+
+    ProcessSimpleSegmentation::ProcessSimpleSegmentation(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0) {
+        std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
+    }
+
+    ProcessSimpleSegmentation::ProcessSimpleSegmentation(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size) {
+        std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
+    }
+
+    void ProcessSimpleSegmentation::run(const std::string& subDirName)
+    {
+        LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
+
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+
+        //Define source file and traget file location
+  
+        std::string obj_name = sourceDir_.generic_string();
+        std::string target_dir = (targetDir_ / subDirName).generic_string();
+
+        //load obj into cgal surface mesh
+        //remember clean obj from "vc" lines 
+        std::ifstream input(obj_name);
+
+        std::vector<Tools::MyVertex> my_verts;
+        std::vector<Tools::MyFace> my_faces;
+
+        double voxel_size;
+
+        {
+            Surface_mesh mesh;
+
+            if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
+                std::cerr << "Failed to read .obj file!" << std::endl;
+                LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
+                return;
+            }
+
+            //determine definition of voxel_size based on class initialization
+
+            if (voxel_size_ == 0) {
+                //dertimine Reccomende voxel size 
+                voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(kernel_size_, n_min_kernel_, bandwidth_, padding_, mesh);
+            }
+            else {
+                voxel_size = voxel_size_;
+            }
+
+            //extract verts and faces from CGAL mesh and create SDF Grid in OpenVDB 
+            std::tie(my_verts, my_faces) = Tools::CGALbased::GetVerticesAndFaces(mesh);
+        }
+
+        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, (float)voxel_size, (float)bandwidth_, std::numeric_limits<float>::max());
+
+        //based on the cropping parameter -> calculate a origin for each cropping segemnent 
+        //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
+        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, kernel_size_, padding_);
+
+
+        //setup data container
+        cppIOUtility::SegmentationDataContainer DumpTruck;
+
+
+
+        if (crop_list.size() < 500) {
+
+            {
+                std::vector<std::vector<float>> origin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
+                DumpTruck.setOriginContainer(origin_list);
+            }
+
+            //Create a Face to Grid centered index map and save it as binary
+            {
+                std::vector<Tools::MyVertex> face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
+                Tools::FloatMatrix FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+                DumpTruck.setFaceToGridIndex_container(FaceToGridIndex);
+            }
+
+            //Set up linear map for normalization
+            Tools::LinearSDFMap lmap;
+
+            double background = grid->tree().background();
+            float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+            DumpTruck.setBackground(background);
+            DumpTruck.setVoxelSize(voxel_size);
+            DumpTruck.setMinVal(minVal);
+
+            lmap.create(minVal, background, -1, 1);
+
+            //Create a an array that holds cropping results
+            Tools::Float3DArray clipped_array;
+
+            //crop sdf grid and write cropping result into 3D float array
+            //save cropped segments into binary file
+            for (size_t i = 0; i < crop_list.size(); ++i) {
+                clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
+                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap); //normalize clipped array 
+                DumpTruck.addSegment(clipped_array);
+
+            }
+
+            DumpTruck.dump(target_dir);
+
+        }
+        else
+        {
+            std::cout << subDirName << +".bin " << "is odd sized --> skipped";
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_ << "is odd sized --> skipped");
+
+        }
+        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }
 
 }

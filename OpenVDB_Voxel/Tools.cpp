@@ -777,7 +777,21 @@ namespace Tools {
                 }
             }
 
+        }
 
+        void NormalizeFloat3DArray(Float3DArray& array, double& voxel_size) {
+
+            int sizeX = array.size();
+            int sizeY = (sizeX > 0) ? array[0].size() : 0;
+            int sizeZ = (sizeY > 0) ? array[0][0].size() : 0;
+
+            for (int i = 0; i < sizeX; i++) {
+                for (int j = 0; j < sizeX; j++) {
+                    for (int k = 0; k < sizeX; k++) {
+                        array[i][j][k] = array[i][j][k] / float(voxel_size);
+                    }
+                }
+            }
 
         }
 

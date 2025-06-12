@@ -31,7 +31,7 @@ REM ---Shared Parameters
 SET "GLOB_SOURCE_DIR=C:\Local_Data\ABC\ABC_parsed_files\ABC_chunk_benchmark
 SET "GLOB_TARGET_DIR=C:\Local_Data\ABC\ABC_statistics\benchmarks\Outputs_Benchmark"
 SET "GLOB_JOB_DIR=C:\Local_Data\ABC\ABC_jobs\job_benchmark\job_controller_test_4"
-SET "JOB_TYPE=--default"
+SET "JOB_TYPE=default"
 
 REM --- !!!rember  to change GLOB_THREAD_COUNT!!! --- 
 REM --- Instance Blocks Begin --- 

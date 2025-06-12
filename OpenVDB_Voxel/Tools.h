@@ -97,6 +97,8 @@ namespace Tools {
 
         void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map);
 
+        void NormalizeFloat3DArray(Float3DArray& array, double& voxel_size);
+
         int ActivateInsideValues(openvdb::FloatGrid::Ptr grid);
 
         bool CheckIfGridHasValidInsideVoxel(openvdb::FloatGrid::Ptr grid);

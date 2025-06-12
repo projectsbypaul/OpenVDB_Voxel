@@ -3,6 +3,8 @@
 namespace fs = std::filesystem;
 namespace Scripts {
 	//Work Scripts
+	int segAdaptive(fs::path source, fs::path target, int n_k_min);
+	int segFixed(fs::path source, fs::path target, double voxel_size);
 	int SubdirToDataset(fs::path source, fs::path target, std::string subdir_name);
 	int StripObjBatchJob(fs::path source, fs::path target, fs::path job_location);
 	int ABCtoDatasetBatchJobTimed(fs::path source, fs::path target, fs::path job_location);

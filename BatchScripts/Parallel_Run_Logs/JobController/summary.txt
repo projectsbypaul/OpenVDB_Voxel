@@ -1,0 +1,108 @@
+Instance 001
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 04:40:43
+  First processed part: 2025-06-05 20:35:27 00000002
+  Last processed part: 2025-06-06 04:40:43 00000589
+
+Instance 002
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 04:25:42
+  First processed part: 2025-06-05 20:35:27 00000590
+  Last processed part: 2025-06-06 04:25:42 00001131
+
+Instance 003
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 05:01:37
+  First processed part: 2025-06-05 20:35:27 00001132
+  Last processed part: 2025-06-06 05:01:37 00001726
+
+Instance 004
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:27:39
+  First processed part: 2025-06-05 20:35:27 00001727
+  Last processed part: 2025-06-06 03:27:39 00002288
+
+Instance 005
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:09:33
+  First processed part: 2025-06-05 20:35:27 00002290
+  Last processed part: 2025-06-06 03:09:33 00002814
+
+Instance 006
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:24:19
+  First processed part: 2025-06-05 20:35:27 00002817
+  Last processed part: 2025-06-06 03:24:19 00003369
+
+Instance 007
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:01:51
+  First processed part: 2025-06-05 20:35:27 00003370
+  Last processed part: 2025-06-06 03:01:51 00003974
+
+Instance 008
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 04:07:20
+  First processed part: 2025-06-05 20:35:27 00003976
+  Last processed part: 2025-06-06 04:07:20 00004512
+
+Instance 009
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 01:26:31
+  First processed part: 2025-06-05 20:35:27 00004513
+  Last processed part: 2025-06-06 01:26:31 00005003
+
+Instance 010
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:35:15
+  First processed part: 2025-06-05 20:35:27 00005005
+  Last processed part: 2025-06-06 03:35:15 00005506
+
+Instance 011
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:45:43
+  First processed part: 2025-06-05 20:35:27 00005507
+  Last processed part: 2025-06-06 03:45:43 00006066
+
+Instance 012
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 07:01:14
+  First processed part: 2025-06-05 20:35:27 00006067
+  Last processed part: 2025-06-06 07:01:14 00006640
+
+Instance 013
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 05:31:48
+  First processed part: 2025-06-05 20:35:27 00006641
+  Last processed part: 2025-06-06 05:31:48 00007167
+
+Instance 014
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 09:08:58
+  First processed part: 2025-06-05 20:35:27 00007168
+  Last processed part: 2025-06-06 09:08:58 00007739
+
+Instance 015
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 04:27:37
+  First processed part: 2025-06-05 20:35:27 00007741
+  Last processed part: 2025-06-06 04:27:37 00008318
+
+Instance 016
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 03:05:26
+  First processed part: 2025-06-05 20:35:27 00008319
+  Last processed part: 2025-06-06 03:05:26 00008873
+
+Instance 017
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 02:23:40
+  First processed part: 2025-06-05 20:35:27 00008875
+  Last processed part: 2025-06-06 02:23:40 00009459
+
+Instance 018
+  Start time: 2025-06-05 20:35:27
+  End time: 2025-06-06 01:56:21
+  First processed part: 2025-06-05 20:35:27 00009460
+  Last processed part: 2025-06-06 01:56:21 00009999
+

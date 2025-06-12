@@ -22,6 +22,55 @@
 
 namespace Scripts {
     //Work Scripts
+    int segFixed(fs::path source, fs::path target, double voxel_size) {
+
+        LOG_FUNC("ENTER");
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessSimpleSegmentation process(source, target, kernel_size, padding, bandwidth, voxel_size);
+        process.run();
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
+    int segAdaptive(fs::path source, fs::path target, int n_k_min) {
+
+        LOG_FUNC("ENTER");
+
+        int kernel_size = 16;
+        int padding = 4;
+        int bandwidth = 5;
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessSimpleSegmentation process(source, target, kernel_size, padding, bandwidth, n_k_min);
+        process.run();
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
+
     int SubdirToDataset(fs::path source, fs::path target, std::string subdir_name) {
 
         LOG_FUNC("ENTER");
@@ -29,7 +78,7 @@ namespace Scripts {
         int kernel_size = 16;
         int padding = 4;
         int bandwidth = 5;
-        double voxel_size = 0.5;
+        double voxel_size = 1.0;
         int n_k_min = 2;
         int max_threads = 1;
         int openvdb_threads = 1;

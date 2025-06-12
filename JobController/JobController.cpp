@@ -15,7 +15,7 @@ void usage(const char* progname) {
     fs::path progpath = progname;
 
     std::cout << "Usage:\n";
-    std::cout << "  " << progpath.filename().generic_string() << " --default <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " default <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     exit(1);
 }
 
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 
     std::string mode = argv[1];
 
-    if (mode == "--default") {
+    if (mode == "default") {
         if (argc != 7) {
             usage(argv[0]);
         }
