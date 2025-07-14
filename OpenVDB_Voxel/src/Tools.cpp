@@ -878,7 +878,7 @@ namespace Tools {
 
                     // Compute displacement based on wave type
                     float waveOffset;
-                    float waveInput = frequency * projection * 2.0f * M_PI;
+                    float waveInput = frequency * projection * 2.0f * MY_PI;
 
                     if (waveType == SINE_WAVE) {
                         waveOffset = amplitude * scale * std::sin(waveInput);
