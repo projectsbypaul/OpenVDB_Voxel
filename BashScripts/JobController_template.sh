@@ -3,14 +3,13 @@
 
 # --- Configuration ---
 GLOB_THREAD_COUNT=16
-CHUNK="chunk_00"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-EXECUTABLE_PATH="$SCRIPT_DIR/../build/bin/JobController"
-EXECUTABLE_CHILD_PROCESS="$SCRIPT_DIR/../build/bin/OpenVDB_Voxel"
-MAIN_OUTPUT_DIR="$SCRIPT_DIR/Parallel_Run_Logs/JobController/$CHUNK"
+CHUNK="chunk_benchmark"
+EXECUTABLE_PATH="/home/pschuster/repos/OpenVDB_Voxel/build/bin/JobController"
+EXECUTABLE_CHILD_PROCESS="/home/pschuster/repos/OpenVDB_Voxel/build/bin/OpenVDB_Voxel"
+MAIN_OUTPUT_DIR="/mnt/h/libzip_test/logs/benchmark_default_wsl"
 GLOB_SOURCE_DIR="/mnt/h/ABC/ABC_parsed_files/ABC_${CHUNK}"
-GLOB_TARGET_DIR="/mnt/h/ABC/ABC_Datasets/Segmentation/val_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_${CHUNK}/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
-GLOB_JOB_DIR="/mnt/h/ABC/ABC_jobs/job_${CHUNK}"
+GLOB_TARGET_DIR="/mnt/h/libzip_test/benchmark_default"
+GLOB_JOB_DIR="/mnt/h/libzip_test/job"
 JOB_TYPE="default"
 
 # Create necessary directories
