@@ -3,6 +3,7 @@
 
 #include "GenericDirectoryProcess.h"
 #include <string>
+#include <vector>
 
 namespace ProcessingUtility {
 
