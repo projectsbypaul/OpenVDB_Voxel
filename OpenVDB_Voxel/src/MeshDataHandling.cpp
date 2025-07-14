@@ -1,4 +1,4 @@
-#include "MeshDataHandling.h"
+#include "../include/MeshDataHandling.h"
 #include <CGAL/IO/STL.h>
 #include <CGAL/IO/PLY.h>
 #include <CGAL/IO/OBJ.h>

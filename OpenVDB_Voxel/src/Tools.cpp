@@ -1,5 +1,5 @@
-﻿#include "Tools.h"
-#include "MyTypes.h"
+﻿#include "../include/Tools.h"
+#include "../include/MyTypes.h"
 
 
 namespace Tools {

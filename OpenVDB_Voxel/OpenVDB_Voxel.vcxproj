@@ -135,39 +135,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ABCProcessing.cpp" />
-    <ClCompile Include="DataContainer.cpp" />
-    <ClCompile Include="DatasetStats.cpp" />
-    <ClCompile Include="DL_Preprocessing.cpp" />
-    <ClCompile Include="IO_Test.cpp" />
-    <ClCompile Include="LOG.cpp" />
-    <ClCompile Include="MeshDataHandling.cpp" />
-    <ClCompile Include="NoiseOnMesh.cpp" />
-    <ClCompile Include="OpenVDB_Voxel.cpp" />
-    <ClCompile Include="DatasetToVoxel.cpp" />
-    <ClCompile Include="GetABCStatistics.cpp" />
-    <ClCompile Include="GenericDirectoryProcess.cpp" />
-    <ClCompile Include="ProcessChildren.cpp" />
-    <ClCompile Include="Scripts.cpp" />
-    <ClCompile Include="Tools.cpp" />
-    <ClCompile Include="zlibFunctions.cpp" />
+    <ClCompile Include="src\ABCProcessing.cpp" />
+    <ClCompile Include="src\DataContainer.cpp" />
+    <ClCompile Include="src\DatasetStats.cpp" />
+    <ClCompile Include="src\DatasetToVoxel.cpp" />
+    <ClCompile Include="src\DL_Preprocessing.cpp" />
+    <ClCompile Include="src\GenericDirectoryProcess.cpp" />
+    <ClCompile Include="src\GetABCStatistics.cpp" />
+    <ClCompile Include="src\IO_Test.cpp" />
+    <ClCompile Include="src\LOG.cpp" />
+    <ClCompile Include="src\MeshDataHandling.cpp" />
+    <ClCompile Include="src\NoiseOnMesh.cpp" />
+    <ClCompile Include="src\OpenVDB_Voxel.cpp" />
+    <ClCompile Include="src\ProcessChildren.cpp" />
+    <ClCompile Include="src\Scripts.cpp" />
+    <ClCompile Include="src\Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ABCProcessing.h" />
-    <ClInclude Include="DatasetStats.h" />
-    <ClInclude Include="DatasetToVoxel.h" />
-    <ClInclude Include="DL_Preprocessing.h" />
-    <ClInclude Include="GenericDirectoryProcess.h" />
-    <ClInclude Include="GetABCStatistics.h" />
-    <ClInclude Include="DataContainer.h" />
-    <ClInclude Include="ProcessChildren.h" />
-    <ClInclude Include="IO_Test.h" />
-    <ClInclude Include="LOG.h" />
-    <ClInclude Include="MeshDataHandling.h" />
-    <ClInclude Include="MyTypes.h" />
-    <ClInclude Include="NoiseOnMesh.h" />
-    <ClInclude Include="Scripts.h" />
-    <ClInclude Include="Tools.h" />
+    <ClInclude Include="include\ABCProcessing.h" />
+    <ClInclude Include="include\DataContainer.h" />
+    <ClInclude Include="include\DatasetStats.h" />
+    <ClInclude Include="include\DatasetToVoxel.h" />
+    <ClInclude Include="include\DL_Preprocessing.h" />
+    <ClInclude Include="include\GenericDirectoryProcess.h" />
+    <ClInclude Include="include\GetABCStatistics.h" />
+    <ClInclude Include="include\IO_Test.h" />
+    <ClInclude Include="include\LOG.h" />
+    <ClInclude Include="include\MeshDataHandling.h" />
+    <ClInclude Include="include\MyTypes.h" />
+    <ClInclude Include="include\NoiseOnMesh.h" />
+    <ClInclude Include="include\ProcessChildren.h" />
+    <ClInclude Include="include\Scripts.h" />
+    <ClInclude Include="include\Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

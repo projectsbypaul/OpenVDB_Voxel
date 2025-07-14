@@ -1,4 +1,4 @@
-#include "NoiseOnMesh.h"
+#include "../include/NoiseOnMesh.h"
 
 //created with aid of ChatGPT 
 //inspired by https://github.com/sol-prog/Perlin_Noise

@@ -12,7 +12,7 @@
 #include <numeric>
 #include <cmath>
 //project includes 
-#include "DatasetStats.h"
+#include "../include/DatasetStats.h"
 
 
 namespace Tools {

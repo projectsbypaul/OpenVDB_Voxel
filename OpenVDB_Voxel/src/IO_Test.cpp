@@ -1,4 +1,4 @@
-#include "IO_Test.h"
+#include "../include/IO_Test.h"
 
 namespace Test {
 	int TestFaceMapping() {

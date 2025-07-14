@@ -24,24 +24,24 @@
     <ClCompile Include="JobController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scripts\Scripts.cpp">
+    <ClCompile Include="src\Scripts.cpp">
       <Filter>Source Files\Scripts</Filter>
     </ClCompile>
-    <ClCompile Include="Tools\jobUtility.cpp">
+    <ClCompile Include="src\ZipUtility.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
-    <ClCompile Include="Tools\ZipUtility.cpp">
+    <ClCompile Include="src\jobUtility.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tools\jobUtility.h">
+    <ClInclude Include="include\ZipUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scripts\Scripts.h">
+    <ClInclude Include="include\jobUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tools\ZipUtility.h">
+    <ClInclude Include="include\Scripts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

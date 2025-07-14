@@ -132,14 +132,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JobController.cpp" />
-    <ClCompile Include="Scripts\Scripts.cpp" />
-    <ClCompile Include="Tools\jobUtility.cpp" />
-    <ClCompile Include="Tools\ZipUtility.cpp" />
+    <ClCompile Include="src\jobUtility.cpp" />
+    <ClCompile Include="src\Scripts.cpp" />
+    <ClCompile Include="src\ZipUtility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scripts\Scripts.h" />
-    <ClInclude Include="Tools\jobUtility.h" />
-    <ClInclude Include="Tools\ZipUtility.h" />
+    <ClInclude Include="include\jobUtility.h" />
+    <ClInclude Include="include\Scripts.h" />
+    <ClInclude Include="include\ZipUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

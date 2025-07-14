@@ -1,13 +1,13 @@
-#include "ProcessChildren.h"
+#include "../include/ProcessChildren.h"
 #include <iostream> // For demonstration purposes
 
-#include "Tools.h"
-#include "DatasetStats.h"
-#include "DL_Preprocessing.h"
-#include "NoiseOnMesh.h"
-#include "DataContainer.h"
-#include "LOG.h"
-#include "MeshDataHandling.h"
+#include "../include/Tools.h"
+#include "../include/DatasetStats.h"
+#include "../include/DL_Preprocessing.h"
+#include "../include/NoiseOnMesh.h"
+#include "../include/DataContainer.h"
+#include "../include/LOG.h"
+#include "../include/MeshDataHandling.h"
 
 
 namespace ProcessingUtility {

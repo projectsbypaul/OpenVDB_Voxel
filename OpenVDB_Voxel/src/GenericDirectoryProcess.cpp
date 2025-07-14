@@ -1,4 +1,4 @@
-#include "GenericDirectoryProcess.h"
+#include "../include/GenericDirectoryProcess.h"
 
 namespace ProcessingUtility {
     /**

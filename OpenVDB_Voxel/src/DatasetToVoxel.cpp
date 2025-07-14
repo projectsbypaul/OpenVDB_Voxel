@@ -6,9 +6,9 @@
 #include <CGAL/Bbox_3.h>
 #include <CGAL/Polygon_mesh_processing/bbox.h>
 
-#include "MeshDataHandling.h"
-#include "Tools.h"
-#include "DatasetToVoxel.h"
+#include "../include/MeshDataHandling.h"
+#include "../include/Tools.h"
+#include "../include/DatasetToVoxel.h"
 
 namespace fs = std::filesystem;
 

@@ -34,9 +34,6 @@
     <Filter Include="Header Files\Test">
       <UniqueIdentifier>{39a358dd-4650-4b36-b007-0f89a7122763}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\ArchiveUtils">
-      <UniqueIdentifier>{6d6eb119-1d54-45a7-9872-f618214c0484}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Test">
       <UniqueIdentifier>{24106cfc-bdca-416e-b973-7000f62298e5}</UniqueIdentifier>
     </Filter>
@@ -54,99 +51,96 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OpenVDB_Voxel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Tools.cpp">
-      <Filter>Source Files\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="MeshDataHandling.cpp">
-      <Filter>Source Files\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="Scripts.cpp">
-      <Filter>Source Files\Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="DatasetToVoxel.cpp">
-      <Filter>Source Files\Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="DL_Preprocessing.cpp">
-      <Filter>Source Files\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="GetABCStatistics.cpp">
-      <Filter>Source Files\Scripts</Filter>
-    </ClCompile>
-    <ClCompile Include="LOG.cpp">
-      <Filter>Source Files\Macros</Filter>
-    </ClCompile>
-    <ClCompile Include="NoiseOnMesh.cpp">
-      <Filter>Source Files\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="IO_Test.cpp">
-      <Filter>Source Files\Test</Filter>
-    </ClCompile>
-    <ClCompile Include="zlibFunctions.cpp">
-      <Filter>Source Files\ArchiveUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="GenericDirectoryProcess.cpp">
-      <Filter>Source Files\ProcessingUtility</Filter>
-    </ClCompile>
-    <ClCompile Include="ProcessChildren.cpp">
-      <Filter>Source Files\ProcessingUtility</Filter>
-    </ClCompile>
-    <ClCompile Include="ABCProcessing.cpp">
-      <Filter>Source Files\ProcessingUtility</Filter>
-    </ClCompile>
-    <ClCompile Include="DataContainer.cpp">
+    <ClCompile Include="src\DataContainer.cpp">
       <Filter>Source Files\cppIOUtility</Filter>
     </ClCompile>
-    <ClCompile Include="DatasetStats.cpp">
+    <ClCompile Include="src\LOG.cpp">
+      <Filter>Source Files\Macros</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ABCProcessing.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GenericDirectoryProcess.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProcessChildren.cpp">
+      <Filter>Source Files\ProcessingUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GetABCStatistics.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scripts.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DatasetToVoxel.cpp">
+      <Filter>Source Files\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IO_Test.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenVDB_Voxel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NoiseOnMesh.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tools.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DatasetStats.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DL_Preprocessing.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeshDataHandling.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tools.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="MyTypes.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="MeshDataHandling.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="Scripts.h">
-      <Filter>Header Files\Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="DatasetToVoxel.h">
-      <Filter>Header Files\Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="DL_Preprocessing.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="GetABCStatistics.h">
-      <Filter>Header Files\Scripts</Filter>
-    </ClInclude>
-    <ClInclude Include="LOG.h">
-      <Filter>Header Files\Marcros</Filter>
-    </ClInclude>
-    <ClInclude Include="NoiseOnMesh.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="IO_Test.h">
-      <Filter>Header Files\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="GenericDirectoryProcess.h">
-      <Filter>Header Files\ProcessingUtility</Filter>
-    </ClInclude>
-    <ClInclude Include="ProcessChildren.h">
-      <Filter>Header Files\ProcessingUtility</Filter>
-    </ClInclude>
-    <ClInclude Include="ABCProcessing.h">
-      <Filter>Header Files\ProcessingUtility</Filter>
-    </ClInclude>
-    <ClInclude Include="DataContainer.h">
+    <ClInclude Include="include\DataContainer.h">
       <Filter>Header Files\cppIOUtility</Filter>
     </ClInclude>
-    <ClInclude Include="DatasetStats.h">
+    <ClInclude Include="include\LOG.h">
+      <Filter>Header Files\Marcros</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ABCProcessing.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GenericDirectoryProcess.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ProcessChildren.h">
+      <Filter>Header Files\ProcessingUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DatasetToVoxel.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GetABCStatistics.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Scripts.h">
+      <Filter>Header Files\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IO_Test.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DatasetStats.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DL_Preprocessing.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MeshDataHandling.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MyTypes.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NoiseOnMesh.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Tools.h">
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
   </ItemGroup>

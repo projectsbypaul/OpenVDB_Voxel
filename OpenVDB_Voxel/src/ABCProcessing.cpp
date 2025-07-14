@@ -1,10 +1,10 @@
-#include "ABCProcessing.h"
-#include "NoiseOnMesh.h"
-#include "GenericDirectoryProcess.h"
-#include "ProcessChildren.h"
-#include "Tools.h"
-#include "LOG.h"
-#include "DL_Preprocessing.h"
+#include "../include/ABCProcessing.h"
+#include "../include/NoiseOnMesh.h"
+#include "../include/GenericDirectoryProcess.h"
+#include "../include/ProcessChildren.h"
+#include "../include/Tools.h"
+#include "../include/LOG.h"
+#include "../include/DL_Preprocessing.h"
 
 #include <filesystem>
 #include <vector>

@@ -1,6 +1,6 @@
-#include "Scripts.h"
-#include "../Tools/jobUtility.h"
-#include "../Tools/ZipUtility.h"
+#include "../include/Scripts.h"
+#include "../include/jobUtility.h"
+#include "../include/ZipUtility.h"
 
 #include <filesystem>
 #include <cstdlib>

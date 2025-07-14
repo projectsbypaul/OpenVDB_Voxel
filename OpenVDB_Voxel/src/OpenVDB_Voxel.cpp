@@ -1,6 +1,6 @@
 // INCLUDE - project
-#include "LOG.h"
-#include "Scripts.h"
+#include "../include/LOG.h"
+#include "../include/Scripts.h"
 // INCLUDE external
 #include <iostream>
 #include <filesystem>

@@ -1,7 +1,7 @@
 //INCLUDE - project
 //INCLUDE external
 #include <filesystem>
-#include "Scripts/Scripts.h"
+#include "include/Scripts.h"
 
 #include <iostream>
 #include <cstdlib>

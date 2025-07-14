@@ -1,25 +1,25 @@
-#include "Tools.h"
+#include "../include/Tools.h"
 #include <memory>
 #include <openvdb/tools/Composite.h>
-#include "MeshDataHandling.h"
-#include "Scripts.h"
+#include "../include/MeshDataHandling.h"
+#include "../include/Scripts.h"
 
 #include <CGAL/Bbox_3.h>
 #include <CGAL/Polygon_mesh_processing/bbox.h>
 
 #include <filesystem>
-#include "DatasetToVoxel.h"
+#include "../include/DatasetToVoxel.h"
 
-#include "DL_Preprocessing.h"
-#include "GetABCStatistics.h"
-#include "ABCProcessing.h"
+#include "../include/DL_Preprocessing.h"
+#include "../include/GetABCStatistics.h"
+#include "../include/ABCProcessing.h"
 
-#include "LOG.h"
+#include "../include/LOG.h"
 #include <tbb/global_control.h>
 
-#include "NoiseOnMesh.h"
-#include "ProcessChildren.h"
-#include "DatasetStats.h"
+#include "../include/NoiseOnMesh.h"
+#include "../include/ProcessChildren.h"
+#include "../include/DatasetStats.h"
 
 
 namespace Scripts {

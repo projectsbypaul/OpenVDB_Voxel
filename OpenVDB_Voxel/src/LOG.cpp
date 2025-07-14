@@ -1,5 +1,5 @@
 // LOG.cpp
-#include "LOG.h"
+#include "../include/LOG.h"
 
 std::ofstream logFile;
 std::mutex logMutex;
