@@ -1,7 +1,8 @@
 #include "../include/ZipUtility.h"
 
 #include <zip.h>
-
+#include <vector>
+#include <cstring>
 #include <iostream>
 #include <fstream>
 #include <sstream> // For std::ostringstream

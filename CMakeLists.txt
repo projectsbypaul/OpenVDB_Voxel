@@ -43,7 +43,7 @@ target_include_directories(OpenVDB_Voxel PRIVATE
 
 target_link_libraries(OpenVDB_Voxel
     OpenVDB::openvdb
-    yaml-cpp
+     yaml-cpp::yaml-cpp
 )
 
 # === Logging ===
