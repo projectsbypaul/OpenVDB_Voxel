@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OpenVDB_Voxel.cpp" />
     <ClCompile Include="src\ABCProcessing.cpp" />
     <ClCompile Include="src\DataContainer.cpp" />
     <ClCompile Include="src\DatasetStats.cpp" />
@@ -146,7 +147,6 @@
     <ClCompile Include="src\LOG.cpp" />
     <ClCompile Include="src\MeshDataHandling.cpp" />
     <ClCompile Include="src\NoiseOnMesh.cpp" />
-    <ClCompile Include="src\OpenVDB_Voxel.cpp" />
     <ClCompile Include="src\ProcessChildren.cpp" />
     <ClCompile Include="src\Scripts.cpp" />
     <ClCompile Include="src\Tools.cpp" />
