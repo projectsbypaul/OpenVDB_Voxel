@@ -2,10 +2,12 @@
 #include <iostream> // For demonstration purposes
 
 #include "Tools.h"
+#include "DatasetStats.h"
 #include "DL_Preprocessing.h"
 #include "NoiseOnMesh.h"
 #include "DataContainer.h"
 #include "LOG.h"
+#include "MeshDataHandling.h"
 
 
 namespace ProcessingUtility {
@@ -61,7 +63,7 @@ namespace ProcessingUtility {
 
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-            std::cerr << "Failed to read .obj file!" << std::endl;
+            std::cerr << "Failed to read . file!" << std::endl;
             LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
             return;
         }
@@ -281,12 +283,13 @@ namespace ProcessingUtility {
 
             double background = grid->tree().background();
             float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
-
+            
             DumpTruck.setBackground(background);
             DumpTruck.setVoxelSize(voxel_size);
             DumpTruck.setMinVal(minVal);
 
-            lmap.create(minVal, background, -1, 1);
+            //map for normalization 
+            lmap.create(-background, background, -1, 1);
 
             //Create a an array that holds cropping results
             Tools::Float3DArray clipped_array;
@@ -295,8 +298,11 @@ namespace ProcessingUtility {
             //save cropped segments into binary file
             for (size_t i = 0; i < crop_list.size(); ++i) {
                 clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
-                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap); //normalize clipped array 
-                //Tools::OpenVDBbased::NormalizeFloat3DArray(clipped_array, voxel_size);
+
+                //remapping with backgroud clamp values smaller than -background to min_map
+                // compensation for infinite inside bandwidth
+                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background); 
+
                 DumpTruck.addSegment(clipped_array);
 
             }
@@ -440,7 +446,7 @@ namespace ProcessingUtility {
 
     void ProcessObjStrip::run(const std::string& subDirName)
     {
-        fs::path file = sourceDir_ / subDirName /(subDirName + extension_);
+        fs::path file = (sourceDir_ / subDirName) / (subDirName + extension_);
         Tools::util::filterObjFile(file.generic_string(), filter_);
     }
 
@@ -462,12 +468,11 @@ namespace ProcessingUtility {
 
         //Define source file and traget file location
   
-        std::string obj_name = sourceDir_.generic_string();
+        std::string mesh_file_name = sourceDir_.generic_string();
         std::string target_dir = (targetDir_ / subDirName).generic_string();
 
         //load obj into cgal surface mesh
         //remember clean obj from "vc" lines 
-        std::ifstream input(obj_name);
 
         std::vector<Tools::MyVertex> my_verts;
         std::vector<Tools::MyFace> my_faces;
@@ -477,9 +482,11 @@ namespace ProcessingUtility {
         {
             Surface_mesh mesh;
 
-            if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-                std::cerr << "Failed to read .obj file!" << std::endl;
-                LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
+            
+
+            if (!MDH::readMesh(&mesh_file_name, &mesh)) {
+                std::cerr << "Failed to read mesh file!" << std::endl;
+                LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read mesh file!");
                 return;
             }
 
@@ -507,56 +514,176 @@ namespace ProcessingUtility {
         //setup data container
         cppIOUtility::SegmentationDataContainer DumpTruck;
 
+        {
+            std::vector<std::vector<float>> origin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
+            DumpTruck.setOriginContainer(origin_list);
+        }
 
+        //Create a Face to Grid centered index map and save it as binary
+        {
+            std::vector<Tools::MyVertex> face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
+            Tools::FloatMatrix FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
+            DumpTruck.setFaceToGridIndex_container(FaceToGridIndex);
+        }
 
-        if (crop_list.size() < 500) {
+        //Set up linear map for normalization
+        Tools::LinearSDFMap lmap;
 
-            {
-                std::vector<std::vector<float>> origin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
-                DumpTruck.setOriginContainer(origin_list);
+        double background = grid->tree().background();
+        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        DumpTruck.setBackground(background);
+        DumpTruck.setVoxelSize(voxel_size);
+        DumpTruck.setMinVal(minVal);
+
+        //map for normalization
+        lmap.create(-background, background, -1, 1);
+
+        //Create a an array that holds cropping results
+        Tools::Float3DArray clipped_array;
+
+        //crop sdf grid and write cropping result into 3D float array
+        //save cropped segments into binary file
+        for (size_t i = 0; i < crop_list.size(); ++i) {
+            clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
+
+            //Remapping with background to clamp "values < -background" to min_map 
+            Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background); //normalize clipped array 
+            DumpTruck.addSegment(clipped_array);
+
+        }
+
+        DumpTruck.dump(target_dir);
+
+        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+    }
+
+    ProcessGetStats::ProcessGetStats(const fs::path& sourceDir, const fs::path& targetDir, std::string temp_file_name)
+        : GenericDirectoryProcess(sourceDir, targetDir), temp_file_name_(temp_file_name)
+    {
+    }
+
+    void ProcessGetStats::run(const std::string& subDirName) {
+        fs::path temp_file = targetDir_ / "temp_stats" / temp_file_name_;
+     
+
+        if (!fs::exists(temp_file.parent_path())) {
+            fs::create_directories(temp_file.parent_path());
+        }
+
+        fs::path file = (targetDir_ / subDirName) / target_file_name_;
+        fs::path bin_file = (targetDir_ / subDirName) / target_bin_file_name_;
+
+        if (fs::exists(file) && fs::exists(bin_file)) {
+           
+            // Accumulated stats
+            size_t total_segments = 0;
+            size_t file_count = 0;
+            size_t min_segments = std::numeric_limits<size_t>::max();
+            size_t max_segments = 0;
+            std::map<std::string, size_t> type_counts;
+
+            // === Load from temp file if it exists ===
+            if (fs::exists(temp_file)) {
+                std::ifstream in(temp_file);
+                if (in.is_open()) {
+                    std::string line;
+                    bool in_type_counts = false;
+
+                    while (std::getline(in, line)) {
+                        line.erase(0, line.find_first_not_of(" \t"));
+                        line.erase(line.find_last_not_of(" \t") + 1);
+
+                        if (line.empty() || line[0] == '#') continue;
+
+                        if (line == "[TYPE_COUNTS]") {
+                            in_type_counts = true;
+                            continue;
+                        }
+                        if (line == "[END_TYPE_COUNTS]") {
+                            in_type_counts = false;
+                            continue;
+                        }
+
+                        if (line.find("total_segments:") == 0) {
+                            std::istringstream iss(line.substr(line.find(":") + 1));
+                            iss >> total_segments;
+                        }
+                        else if (line.find("file_count:") == 0) {
+                            std::istringstream iss(line.substr(line.find(":") + 1));
+                            iss >> file_count;
+                        }
+                        else if (line.find("min_segments:") == 0) {
+                            std::istringstream iss(line.substr(line.find(":") + 1));
+                            iss >> min_segments;
+                        }
+                        else if (line.find("max_segments:") == 0) {
+                            std::istringstream iss(line.substr(line.find(":") + 1));
+                            iss >> max_segments;
+                        }
+                        else if (in_type_counts) {
+                            auto colon = line.find(":");
+                            if (colon != std::string::npos) {
+                                std::string type = line.substr(0, colon);
+                                type.erase(type.find_last_not_of(" \t") + 1);
+                                size_t count = 0;
+                                std::istringstream iss(line.substr(colon + 1));
+                                iss >> count;
+                                type_counts[type] += count;
+                            }
+                        }
+                    }
+
+                    in.close();
+                }
+                else {
+                    std::cerr << "Failed to open temp file for reading: " << temp_file << std::endl;
+                }
             }
 
-            //Create a Face to Grid centered index map and save it as binary
-            {
-                std::vector<Tools::MyVertex> face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
-                Tools::FloatMatrix FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
-                DumpTruck.setFaceToGridIndex_container(FaceToGridIndex);
+            // === Process current subdir file ===
+            size_t seg_count = Tools::DatasetStats::Functions::read_segment_count(file.string());
+            total_segments += seg_count;
+            file_count += 1;
+
+            min_segments = std::min(min_segments, seg_count);
+            max_segments = std::max(max_segments, seg_count);
+
+            auto face_type_map = Tools::DatasetStats::Functions::read_face_type_map(file.string());
+            auto type_to_faces = Tools::DatasetStats::Functions::build_type_to_faces_map(face_type_map);
+
+            for (const auto& [type, faces] : type_to_faces) {
+                type_counts[type] += faces.size();
             }
 
-            //Set up linear map for normalization
-            Tools::LinearSDFMap lmap;
-
-            double background = grid->tree().background();
-            float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
-
-            DumpTruck.setBackground(background);
-            DumpTruck.setVoxelSize(voxel_size);
-            DumpTruck.setMinVal(minVal);
-
-            lmap.create(minVal, background, -1, 1);
-
-            //Create a an array that holds cropping results
-            Tools::Float3DArray clipped_array;
-
-            //crop sdf grid and write cropping result into 3D float array
-            //save cropped segments into binary file
-            for (size_t i = 0; i < crop_list.size(); ++i) {
-                clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
-                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap); //normalize clipped array 
-                DumpTruck.addSegment(clipped_array);
-
+            // === Write merged data back to temp file ===
+            std::ofstream out(temp_file);
+            if (!out.is_open()) {
+                std::cerr << "Failed to open temp file for writing: " << temp_file << std::endl;
+                return;
             }
 
-            DumpTruck.dump(target_dir);
+            out << "# Accumulated statistics\n";
+            out << "file_count: " << file_count << "\n";
+            out << "total_segments: " << total_segments << "\n";
+            out << "min_segments: " << min_segments << "\n";
+            out << "max_segments: " << max_segments << "\n";
 
+            out << "[TYPE_COUNTS]\n";
+            for (const auto& [type, total] : type_counts) {
+                out << type << ": " << total << "\n";
+            }
+            out << "[END_TYPE_COUNTS]\n";
+
+            out.close();
+
+            std::cout << "Updated statistics written to: " << temp_file << std::endl;
         }
         else
         {
-            std::cout << subDirName << +".bin " << "is odd sized --> skipped";
-            LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_ << "is odd sized --> skipped");
-
+            std::cerr << "File does not exist: " << file << std::endl;
         }
-        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }
+
 
 }

@@ -1,0 +1,922 @@
+Mode: dataset_stats, argc: 8
+argv[0] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\JobController.exe
+argv[1] = dataset_stats
+argv[2] = H:\ABC\ABC_Datasets\Segmentation\validation_samples\val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:\ABC\ABC_Datasets\Segmentation\validation_samples\val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = H:\ABC\ABC_jobs\job_stats\stats_1000\Instance012.job
+argv[5] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\JobController\stats_1000\Instance012_app_internal.log
+argv[6] = Instance012.stat
+argv[7] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\OpenVDB_Voxel.exe
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009258 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009258
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009267 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009267
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009269 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009269
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009273 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009273
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009278 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009278
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009281 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009281
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009290 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009290
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009299 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009299
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009303 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009303
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009305 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009305
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009313 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009313
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009315 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009315
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009352 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009352
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009360 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009360
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009377 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009377
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009380 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009380
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009389 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009389
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009432 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009432
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009436 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009436
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009444 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009444
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009459 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009459
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009463 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009463
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009464 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009464
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009466 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009466
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009484 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009484
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009499 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009499
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009530 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009530
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009535 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009535
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009541 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009541
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009602 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009602
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009603 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009603
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009613 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009613
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009614 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009614
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009631 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009631
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009632 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009632
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009654 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009654
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009655 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009655
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009670 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009670
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009671 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009671
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009680 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009680
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009696 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009696
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009700 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009700
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009717 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009717
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009725 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009725
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009730 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009730
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009732 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009732
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009746 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009746
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009770 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009770
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009771 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009771
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009773 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009773
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009778 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009778
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009797 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009797
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009809 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009809
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009810 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009810
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009816 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009816
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009835 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009835
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009875 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009875
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009878 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009878
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009880 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009880
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009883 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009883
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009886 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009886
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009892 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009892
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009897 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009897
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009907 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009907
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009908 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009908
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009920 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009920
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009921 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009921
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009934 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009934
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009936 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009936
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009940 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009940
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009941 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009941
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009943 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009943
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009951 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009951
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009952 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009952
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009959 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009959
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe stats_subdir H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3 00009998 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log Instance012.stat
+Mode: stats_subdir, argc: 7
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/x64/Debug/OpenVDB_Voxel.exe
+argv[1] = stats_subdir
+argv[2] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00009998
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/stats_1000/Instance012_app_internal.log
+argv[6] = Instance012.stat
+Running on thread count: 1
+Updated statistics written to: "H:/ABC/ABC_Datasets/Segmentation/validation_samples/val_1000_ks_16_pad_4_bw_5_vs_adaptive_n3\\temp_stats\\Instance012.stat"
+Result: 0
+Result: 0

@@ -1,0 +1,3 @@
+Failed to read .obj file!
+^CSubprocess failed for mesh: 00029161
+^C

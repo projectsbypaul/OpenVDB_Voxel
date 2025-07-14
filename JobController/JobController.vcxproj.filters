@@ -30,12 +30,18 @@
     <ClCompile Include="Tools\jobUtility.cpp">
       <Filter>Source Files\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="Tools\ZipUtility.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tools\jobUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Scripts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\ZipUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

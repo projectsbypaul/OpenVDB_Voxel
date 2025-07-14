@@ -1,0 +1,1039 @@
+Mode: default, argc: 7
+argv[0] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\JobController.exe
+argv[1] = default
+argv[2] = H:\ABC\ABC_parsed_files\ABC_chunk_02
+argv[3] = H:\ABC\ABC_Datasets\Segmentation\train_ks_16_pad_4_bw_5_vs_adaptive_n3\ABC_chunk_02\ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = H:\ABC\ABC_jobs\job_chunk_02_restart\Instance012.job
+argv[5] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\JobController\chunk_02\Instance012_app_internal.log
+argv[6] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028154 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028154
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028154 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028154.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028160 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028160
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028160 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028169 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028169
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028169 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028169.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028172 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028172
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028172 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028172.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028185 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028185
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028185 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028185.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028194 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028194
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028194 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028194.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028201 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028201
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028201 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028201.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028204 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028204
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028204 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028204.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028205 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028205
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028205 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028205.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028207 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028207
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028207 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028207.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028216 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028216
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028216 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028218 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028218
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028218 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028218.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028219 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028219
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028219 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028219.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028220 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028220
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028220 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028220.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028222 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028222
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028222 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028222.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028223 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028223
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028223 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028223.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028229 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028229
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028229 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028229.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028233 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028233
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028233 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028233.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028234 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028234
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028234 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028234.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028241 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028241
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028241 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028241.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028247 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028247
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028247 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028247.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028249 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028249
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028249 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028249.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028257 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028257
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028257 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028257.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028258 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028258
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028258 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028261 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028261
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028261 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028269 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028269
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028269 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028272 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028272
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028272 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028273 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028273
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028273 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028274 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028274
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028274 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028277 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028277
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028277 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028277.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028278 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028278
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028278 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028278.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028284 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028284
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028284 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028284.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028285 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028285
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028285 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028285.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028288 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028288
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028288 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028288.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028301 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028301
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028301 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028301.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028303 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028303
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028303 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028306 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028306
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028306 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028306.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028307 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028307
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028307 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028307.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028308 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028308
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028308 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028308.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028310 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028310
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028310 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028310.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028311 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028311
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028311 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028311.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028312 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028312
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028312 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028312.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028317 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028317
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028317 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028317.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028339 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028339
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028339 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028339.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028340 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028340
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028340 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028340.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028341 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028341
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028341 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028341.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028342 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028342
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028342 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028342.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028344 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028344
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028344 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028344.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028345 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028345
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028345 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028352 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028352
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028352 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028352.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028368 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028368
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028368 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028368.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028369 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028369
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028369 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028369.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028384 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028384
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028384 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028384.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028387 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028387
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028387 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028387.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028392 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028392
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028392 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028392.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028393 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028393
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028393 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028393.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028394 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028394
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028394 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028394.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028400 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028400
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028400 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028400.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028401 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028401
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028401 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028401.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028429 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028429
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028429 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028429.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028438 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028438
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028438 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028438.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028444 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028444
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028444 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028444.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028455 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028455
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028455 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028455.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028460 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028460
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028460 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028460.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028461 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028461
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028461 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028461.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028462 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028462
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028462 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028462.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028463 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028463
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028463 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028463.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028473 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028473
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028473 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028473.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028479 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028479
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028479 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028479.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028501 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028501
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028501 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028501.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028520 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028520
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028520 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028520.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028522 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028522
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028522 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028522.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028525 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028525
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028525 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028525.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028538 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028538
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028538 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028538.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028543 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028543
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028543 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028543.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028552 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028552
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028552 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028552.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028564 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028564
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028564 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028564.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028568 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028568
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028568 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028583 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028583
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028583 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028583.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028584 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028584
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028584 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028584.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028585 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028585
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028585 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028585.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028599 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028599
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028599 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028599.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028600 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028600
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028600 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028600.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028601 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028601
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028601 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028601.bin is odd sized --> skippedResult: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028602 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028602
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028602 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_02 H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3 00028603 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_02
+argv[3] = H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3
+argv[4] = 00028603
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_02/Instance012_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00028603 -> Output: "H:/ABC/ABC_Datasets/Segmentation/train_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_chunk_02/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
+00028603.bin is odd sized --> skippedResult: 0

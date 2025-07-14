@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="ABCProcessing.cpp" />
     <ClCompile Include="DataContainer.cpp" />
+    <ClCompile Include="DatasetStats.cpp" />
     <ClCompile Include="DL_Preprocessing.cpp" />
     <ClCompile Include="IO_Test.cpp" />
     <ClCompile Include="LOG.cpp" />
@@ -153,13 +154,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ABCProcessing.h" />
+    <ClInclude Include="DatasetStats.h" />
     <ClInclude Include="DatasetToVoxel.h" />
     <ClInclude Include="DL_Preprocessing.h" />
     <ClInclude Include="GenericDirectoryProcess.h" />
     <ClInclude Include="GetABCStatistics.h" />
     <ClInclude Include="DataContainer.h" />
     <ClInclude Include="ProcessChildren.h" />
-    <ClInclude Include="zlibFunction.h" />
     <ClInclude Include="IO_Test.h" />
     <ClInclude Include="LOG.h" />
     <ClInclude Include="MeshDataHandling.h" />

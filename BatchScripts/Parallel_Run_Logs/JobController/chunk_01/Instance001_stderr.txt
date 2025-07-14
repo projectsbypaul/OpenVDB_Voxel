@@ -1,0 +1,10 @@
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Failed to read .obj file!
+Subprocess failed for mesh: 00012228

@@ -95,9 +95,9 @@ namespace Tools {
 
         std::vector<std::vector<float>> CoordListToFloatMatrix(std::vector<openvdb::Coord>& coord_list);
 
-        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map);
+        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map, float background);
 
-        void NormalizeFloat3DArray(Float3DArray& array, double& voxel_size);
+        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map);
 
         int ActivateInsideValues(openvdb::FloatGrid::Ptr grid);
 

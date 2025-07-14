@@ -31,6 +31,23 @@ namespace jobUtilitiy {
             infile.close();
             return job_lines;
         }
+
+        void write_remaining_jobs(const fs::path& job_dir, const std::vector<std::string>& remaining_jobs) {
+            std::ofstream outfile(job_dir, std::ios::trunc);
+            if (!outfile.is_open()) {
+                std::cerr << "Error: Could not write to job file: " << job_dir << std::endl;
+                return;
+            }
+            for (const auto& job : remaining_jobs) {
+                if (!job.empty()) {
+                    outfile << job << "\n";
+                }
+            }
+            outfile.close();
+        }
+
+
+
 	}
 	namespace Macros {
 

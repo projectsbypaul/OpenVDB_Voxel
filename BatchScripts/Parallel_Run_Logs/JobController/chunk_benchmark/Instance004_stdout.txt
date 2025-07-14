@@ -1,0 +1,585 @@
+Mode: default, argc: 7
+argv[0] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\JobController.exe
+argv[1] = default
+argv[2] = H:\ABC\ABC_parsed_files\ABC_chunk_benchmark
+argv[3] = H:\ABC\ABC_Testing\ouput
+argv[4] = H:\ABC\ABC_jobs\job_benchmark\job_8\Instance004.job
+argv[5] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\Parallel_Run_Logs\JobController\chunk_benchmark\Instance004_app_internal.log
+argv[6] = C:\Users\pschuster\source\repos\OpenVDB_Voxel\BatchScripts\..\x64\Debug\OpenVDB_Voxel.exe
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000097 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000097
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000097 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000097\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000097\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000098 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000098
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000098 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000098\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000098\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000099 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000099
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000099 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000099\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000099\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000100 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000100
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000100 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000100\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000100\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000101 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000101
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000101 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000101\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000101\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000102 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000102
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000102 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000102\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000102\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000103 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000103
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000103 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000103\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000103\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000104 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000104
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000104 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000104\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000104\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000105 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000105
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000105 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000105\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000105\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000106 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000106
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000106 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000106\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000106\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000107 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000107
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000107 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000107\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000107\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000108 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000108
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000108 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000108\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000108\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000109 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000109
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000109 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000109\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000109\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000110 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000110
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000110 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000110\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000110\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000111 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000111
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000111 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000111\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000111\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000112 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000112
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000112 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000112\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000112\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000113 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000113
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000113 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000113\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000113\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000114 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000114
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000114 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000114\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000114\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000115 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000115
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000115 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000115\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000115\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000116 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000116
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000116 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000116\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000116\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000117 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000117
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000117 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000117\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000117\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000118 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000118
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000118 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000118\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000118\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000119 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000119
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000119 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000119\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000119\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000120 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000120
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000120 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000120\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000120\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000121 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000121
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000121 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000121\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000121\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000122 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000122
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000122 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000122\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000122\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000123 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000123
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000123 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000123\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000123\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000124 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000124
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000124 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000124\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000124\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000125 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000125
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000125 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000125\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000125\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000126 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000126
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000126 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000126\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000126\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000127 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000127
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000127 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000127\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000127\segmentation_data_segments.bin
+Result: 0
+Running: C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe subdirJob H:/ABC/ABC_parsed_files/ABC_chunk_benchmark H:/ABC/ABC_Testing/ouput 00000128 C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Mode: subdirJob, argc: 6
+argv[0] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/../x64/Debug/OpenVDB_Voxel.exe
+argv[1] = subdirJob
+argv[2] = H:/ABC/ABC_parsed_files/ABC_chunk_benchmark
+argv[3] = H:/ABC/ABC_Testing/ouput
+argv[4] = 00000128
+argv[5] = C:/Users/pschuster/source/repos/OpenVDB_Voxel/BatchScripts/Parallel_Run_Logs/JobController/chunk_benchmark/Instance004_app_internal.log
+Process will run in Mode - adaptive voxel size
+Running on thread count: 1
+Processing: 00000128 -> Output: "H:/ABC/ABC_Testing/ouput"
+Wrote 11342 faces to array
+Resized to accommodate vertex: 5673
+Resized to accommodate vertex: 5674
+Wrote 5673 vertices to array
+SegmentationDataContainer text data dumped to: H:/ABC/ABC_Testing/ouput/00000128\segmentation_data.dat
+SegmentationDataContainer segments dumped to: H:/ABC/ABC_Testing/ouput/00000128\segmentation_data_segments.bin
+Result: 0
+Result: 0

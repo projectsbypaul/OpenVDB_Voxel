@@ -105,10 +105,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\src\libzip-install\include;C:\src\libzip-install\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\src\libzip-install\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zip.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,10 +134,12 @@
     <ClCompile Include="JobController.cpp" />
     <ClCompile Include="Scripts\Scripts.cpp" />
     <ClCompile Include="Tools\jobUtility.cpp" />
+    <ClCompile Include="Tools\ZipUtility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scripts\Scripts.h" />
     <ClInclude Include="Tools\jobUtility.h" />
+    <ClInclude Include="Tools\ZipUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

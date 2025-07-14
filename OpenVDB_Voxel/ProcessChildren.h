@@ -172,5 +172,37 @@ namespace ProcessingUtility {
         void run(const std::string& subDirName = "") override;
 
     };
+
+    /// <summary>
+    ///Implementation of ProcessForDLLDataset
+    /// </summary>
+    /**
+     * @brief A class for processing DLL dataset within a specific subdirectory.
+     *
+     * This class inherits from GenericDirectoryProcess and adds a specific
+     * parameters for ...
+     */
+    class ProcessGetStats : public GenericDirectoryProcess {
+    private:
+        std::string temp_file_name_;
+        std::string target_file_name_ = "segmentation_data.dat";
+        std::string target_bin_file_name_ = "segmentation_data_segments.bin";
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessGetStats(const fs::path& sourceDir, const fs::path& targetDir, std::string temp_file_name);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
+        void run(const std::string& subDirName = "") override;
+
+    };
 }
 #endif // PROCESSFORDLLDATASET_H

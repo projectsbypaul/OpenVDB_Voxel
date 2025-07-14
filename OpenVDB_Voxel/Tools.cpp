@@ -779,20 +779,33 @@ namespace Tools {
 
         }
 
-        void NormalizeFloat3DArray(Float3DArray& array, double& voxel_size) {
-
+        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map, float background) {
             int sizeX = array.size();
             int sizeY = (sizeX > 0) ? array[0].size() : 0;
             int sizeZ = (sizeY > 0) ? array[0][0].size() : 0;
 
+            float minMappedValue = linear_map.mapping(-background);
+            float maxMappedValue = linear_map.mapping(background);
+
             for (int i = 0; i < sizeX; i++) {
-                for (int j = 0; j < sizeX; j++) {
-                    for (int k = 0; k < sizeX; k++) {
-                        array[i][j][k] = array[i][j][k] / float(voxel_size);
+                for (int j = 0; j < sizeY; j++) {
+                    for (int k = 0; k < sizeZ; k++) {
+                        float val = array[i][j][k];
+
+                        if (val <= -background) {
+                            array[i][j][k] = minMappedValue;
+                            
+                        }
+                        else if (val >= background) {
+                            array[i][j][k] = maxMappedValue;
+                           
+                        }
+                        else {
+                            array[i][j][k] = linear_map.mapping(val);
+                        }
                     }
                 }
             }
-
         }
 
         void GridAddWaveFunction(openvdb::FloatGrid::Ptr Floatgrid, float amp, float n_period, float disp, float direction[3]) {
