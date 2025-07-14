@@ -3,40 +3,50 @@ project(OpenVDB_Voxel)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# === Locate custom installed dependencies===
-# === Locate OpenVDB ===
+# === Locate dependencies ===
 list(APPEND CMAKE_MODULE_PATH "/usr/local/lib/cmake/OpenVDB") 
-#/usr/local/lib/cmake/<package>/<package>-config.cmake --> if this file doesnt exist list(APPEND ...) 
 find_package(OpenVDB REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
-# === Locate system libzip ===
 find_path(LIBZIP_INCLUDE_DIR zip.h REQUIRED)
 find_library(LIBZIP_LIBRARY zip REQUIRED)
 
-# === Locate yaml-cpp ===
-find_package(yaml-cpp REQUIRED)
-
 # === JobController Executable ===
-file(GLOB JOBCONTROLLER_SOURCES JobController/JobController.cpp)
+file(GLOB_RECURSE JOBCONTROLLER_SOURCES
+    JobController/src/*.cpp
+    JobController/JobController.cpp
+)
+
 add_executable(JobController ${JOBCONTROLLER_SOURCES})
 
-target_include_directories(JobController PRIVATE ${LIBZIP_INCLUDE_DIR})
+target_include_directories(JobController PRIVATE
+    JobController/include
+    ${LIBZIP_INCLUDE_DIR}
+)
+
 target_link_libraries(JobController
-    OpenVDB::openvdb
     ${LIBZIP_LIBRARY}
-    yaml-cpp
 )
 
 # === OpenVDB_Voxel Executable ===
-file(GLOB OPENVDBVOXEL_SOURCES OpenVDB_Voxel/OpenVDB_Voxel.cpp)
+file(GLOB_RECURSE OPENVDBVOXEL_SOURCES
+    OpenVDB_Voxel/src/*.cpp
+    OpenVDB_Voxel/OpenVDB_Voxel.cpp
+)
+
 add_executable(OpenVDB_Voxel ${OPENVDBVOXEL_SOURCES})
+
+target_include_directories(OpenVDB_Voxel PRIVATE
+    OpenVDB_Voxel/include
+    ${OpenVDB_INCLUDE_DIRS}
+)
 
 target_link_libraries(OpenVDB_Voxel
     OpenVDB::openvdb
     yaml-cpp
 )
 
-# === Optional: print found libs/paths ===
+# === Logging ===
 message(STATUS "OpenVDB include dir: ${OpenVDB_INCLUDE_DIRS}")
 message(STATUS "OpenVDB library: ${OpenVDB_LIBRARIES}")
 message(STATUS "libzip include dir: ${LIBZIP_INCLUDE_DIR}")
