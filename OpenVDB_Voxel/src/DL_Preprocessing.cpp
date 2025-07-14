@@ -27,7 +27,7 @@ namespace DLPP {
                 )
             );
 
-            openvdb::Coord kernel_max_point = openvdb::Coord({ origin.x() + kernel_size -1, origin.y() + kernel_size -1, origin.z() + kernel_size-1 });
+            openvdb::Coord kernel_max_point(origin.x() + kernel_size - 1, origin.y() + kernel_size - 1, origin.z() + kernel_size - 1);
 
             openvdb::CoordBBox clip_box = openvdb::CoordBBox(origin, kernel_max_point);
 
@@ -75,7 +75,7 @@ namespace DLPP {
                         int y_comp = origin.y() + j * kernel_size - (j + 1) * padding;
                         int z_comp = origin.z() + k * kernel_size - (k + 1) * padding;
 
-                        step_coord = openvdb::Coord({ x_comp, y_comp, z_comp });
+                        step_coord = openvdb::Coord(x_comp, y_comp, z_comp);
 
                         crop_origins.push_back(step_coord);
                     }

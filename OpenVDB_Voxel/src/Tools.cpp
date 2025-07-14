@@ -385,18 +385,15 @@ namespace Tools {
              // --- Create the vertex index property map manually ---
             // Try to get the property map with key "v:idx"
 
-            auto v_index_opt = mesh.property_map<Surface_mesh::Vertex_index, std::size_t>("v:idx");
-            // If it doesn't exist, create it and assign unique indices.
-            if (!v_index_opt.has_value()) {
-                auto result = mesh.add_property_map<Surface_mesh::Vertex_index, std::size_t>("v:idx", 0);
-                auto v_index = result.first;
+            auto v_index_result = mesh.add_property_map<Surface_mesh::Vertex_index, std::size_t>("v:idx", 0);
+            auto& v_index = v_index_result.first;
+            if (v_index_result.second) {
+                // Only assign if we just created it!
                 std::size_t idx = 0;
                 for (auto v : mesh.vertices()) {
                     v_index[v] = idx++;
                 }
             }
-            // Retrieve the (now ensured) property map.
-            auto v_index = *mesh.property_map<Surface_mesh::Vertex_index, std::size_t>("v:idx");
 
             //Pros & Cons
             //Control: You manually create and assign indices, which can be customized
