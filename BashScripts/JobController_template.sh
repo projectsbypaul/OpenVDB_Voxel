@@ -5,8 +5,8 @@
 GLOB_THREAD_COUNT=16
 CHUNK="chunk_00"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-EXECUTABLE_PATH="$SCRIPT_DIR/../x64/Debug/JobController.exe"
-EXECUTABLE_CHILD_PROCESS="$SCRIPT_DIR/../x64/Debug/OpenVDB_Voxel.exe"
+EXECUTABLE_PATH="$SCRIPT_DIR/../build/bin/JobController"
+EXECUTABLE_CHILD_PROCESS="$SCRIPT_DIR/../build/bin/OpenVDB_Voxel"
 MAIN_OUTPUT_DIR="$SCRIPT_DIR/Parallel_Run_Logs/JobController/$CHUNK"
 GLOB_SOURCE_DIR="/mnt/h/ABC/ABC_parsed_files/ABC_${CHUNK}"
 GLOB_TARGET_DIR="/mnt/h/ABC/ABC_Datasets/Segmentation/val_ks_16_pad_4_bw_5_vs_adaptive_n3/ABC_${CHUNK}/ABC_Data_ks_16_pad_4_bw_5_vs_adaptive_n3"
