@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # === Locate dependencies ===
 list(APPEND CMAKE_MODULE_PATH "/usr/local/lib/cmake/OpenVDB") 
 find_package(OpenVDB REQUIRED)
+find_package(CGAL REQUIRED)
 find_package(yaml-cpp REQUIRED)
 
 find_path(LIBZIP_INCLUDE_DIR zip.h REQUIRED)
@@ -39,11 +40,13 @@ add_executable(OpenVDB_Voxel ${OPENVDBVOXEL_SOURCES})
 target_include_directories(OpenVDB_Voxel PRIVATE
     OpenVDB_Voxel/include
     ${OpenVDB_INCLUDE_DIRS}
+	${CGAL_INCLUDE_DIRS}
 )
 
 target_link_libraries(OpenVDB_Voxel
     OpenVDB::openvdb
-     yaml-cpp::yaml-cpp
+    yaml-cpp::yaml-cpp
+	CGAL::CGAL
 )
 
 # === Logging ===
