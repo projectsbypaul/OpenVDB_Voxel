@@ -3,6 +3,10 @@ project(OpenVDB_Voxel)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Redirect all executables to build/bin/
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+
 # === Locate dependencies ===
 list(APPEND CMAKE_MODULE_PATH "/usr/local/lib/cmake/OpenVDB") 
 find_package(OpenVDB REQUIRED)
