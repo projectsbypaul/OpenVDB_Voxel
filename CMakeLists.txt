@@ -12,7 +12,7 @@ find_path(LIBZIP_INCLUDE_DIR zip.h REQUIRED)
 find_library(LIBZIP_LIBRARY zip REQUIRED)
 
 # === JobController Executable ===
-file(GLOB JOBCONTROLLER_SOURCES JobController/*.cpp)
+file(GLOB JOBCONTROLLER_SOURCES JobController/JobController.cpp)
 add_executable(JobController ${JOBCONTROLLER_SOURCES})
 
 target_include_directories(JobController PRIVATE ${LIBZIP_INCLUDE_DIR})
@@ -22,10 +22,10 @@ target_link_libraries(JobController
 )
 
 # === OpenVDB_Vo Executable ===
-file(GLOB OPENVDBVO_SOURCES OpenVDB_Vo/*.cpp)
-add_executable(OpenVDB_Vo ${OPENVDBVO_SOURCES})
+file(GLOB OPENVDBVO_SOURCES OpenVDB_Voxel/OpenVDB_Voxel.cpp)
+add_executable(OpenVDB_Voxel ${OPENVDBVO_SOURCES})
 
-target_link_libraries(OpenVDB_Vo
+target_link_libraries(OpenVDB_Voxel
     OpenVDB::openvdb
 )
 
