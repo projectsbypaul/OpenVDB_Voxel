@@ -131,6 +131,39 @@ namespace Scripts {
 
         return 0;
     }
+
+    int run_subdir_to_dataset(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, int n_k_min, int max_threads, int openvdb_threads, int timeout_min) {
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min);
+        processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
+    int run_subdir_to_dataset(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, double voxel_size, int max_threads, int openvdb_threads, int timeout_min) {
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size);
+        processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
     int run_strip_obj_batch_job(fs::path source, fs::path target, fs::path job_location) {
 
         int max_threads = 1;

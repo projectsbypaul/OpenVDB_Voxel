@@ -12,6 +12,8 @@ void usage(const char* progname) {
 
     std::cout << "Usage:\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobStrip <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <log_dir> <n_min_kernel>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segFixed <obj_path> <target_dir> <log_dir> <voxel_size>\n";
@@ -47,6 +49,52 @@ int main(int argc, char* argv[])
         LOG_FUNC("ENTER");
 
         int result = Scripts::run_subdir_to_dataset(source, target, subdir);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
+    if (mode == "nk_subdirJob") {
+        if (argc != 10) {
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        std::string subdir = argv[4];
+        fs::path log_dir = argv[5];
+        int kernel_size = std::stoi(argv[6]);
+        int padding = std::stoi(argv[7]);
+        int bandwidth = std::stoi(argv[8]);
+        int n_k_min = std::stoi(argv[9]);
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_subdir_to_dataset(source, target, subdir, kernel_size, padding, bandwidth, n_k_min);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
+    if (mode == "vs_subdirJob") {
+        if (argc != 10) {
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        std::string subdir = argv[4];
+        fs::path log_dir = argv[5];
+        int kernel_size = std::stoi(argv[6]);
+        int padding = std::stoi(argv[7]);
+        int bandwidth = std::stoi(argv[8]);
+        int voxel_size = atof(argv[9]);
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_subdir_to_dataset(source, target, subdir, kernel_size, padding, bandwidth, voxel_size);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");

@@ -172,13 +172,13 @@ namespace ProcessingUtility {
      * @param voxel_size Voxel Size used to calculate SDF grid
      * @param n_min_kernel Minimal ammount of cropping kernel required to fit in the smallest dimension if the mesh
      */
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit) {
         std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
     }
 
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit) {
         std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
     }
     /**s
@@ -244,7 +244,7 @@ namespace ProcessingUtility {
 
 
 
-        if (crop_list.size() < 500) {
+        if (crop_list.size() < segment_limit_) {
 
          
             {
@@ -736,7 +736,7 @@ namespace ProcessingUtility {
                 << " y=" << voxel_size.y()
                 << " z=" << voxel_size.z() << std::endl;
 
-            LOG_FUNC("ERROR", " Grid not unform x<>y<>z");
+            LOG_FUNC("ERROR"<< " Grid not unform x<>y<>z");
             return;
         }
         

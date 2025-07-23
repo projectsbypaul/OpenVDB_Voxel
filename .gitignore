@@ -365,3 +365,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore build directory at root and any subdirectories
+build/
+build*/
+**/build/
