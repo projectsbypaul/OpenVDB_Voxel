@@ -1,0 +1,119 @@
+Bootstrap: docker
+From: ubuntu:22.04
+
+%labels
+    Maintainer Your Name <your@email.com>
+    Description "ABC_DataPreprocessing with OpenVDB, CGAL, HDF5, libzip, and built executables"
+
+%post
+    set -eux
+
+    # Install build tools and dependencies
+    apt-get update && apt-get install -y \
+        build-essential \
+        cmake \
+        g++ \
+        make \
+        git \
+        libopenvdb-dev \
+        libcgal-dev \
+        libgmp-dev \
+        libmpfr-dev \
+        libzip-dev \
+        libhdf5-dev \
+        libtbb-dev \
+        libboost-iostreams-dev \
+        libboost-system-dev \
+        libboost-filesystem-dev \
+        libblosc-dev \
+        libz-dev \
+        libbz2-dev \
+        liblz4-dev \
+        libzstd-dev \
+        libsnappy-dev \
+        libyaml-cpp-dev
+		
+	
+    # ---- Build Imath 3.1.5 ----
+	rm -rf /tmp/Imath
+	cd /tmp
+	git clone --branch v3.1.5 https://github.com/AcademySoftwareFoundation/Imath.git
+	cd Imath
+	mkdir build && cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release
+	make -j12
+	make install
+
+	# ---- Build OpenEXR 3.1.5 ----
+	rm -rf /tmp/openexr
+	cd /tmp
+	git clone --branch v3.1.5 https://github.com/AcademySoftwareFoundation/openexr.git
+	cd openexr
+	mkdir build && cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release
+	make -j12
+	make install
+
+	# ---- Build yaml-cpp 0.8.0 ----
+	rm -rf /tmp/yaml-cpp
+	cd /tmp
+	git clone --branch 0.8.0 https://github.com/jbeder/yaml-cpp.git
+	cd yaml-cpp
+	mkdir build && cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release
+	make -j12
+	make install
+
+	# ---- Build OpenVDB 9.1.0 with EXR ----
+	rm -rf /tmp/openvdb
+	cd /tmp
+	git clone --branch v9.1.0 https://github.com/AcademySoftwareFoundation/openvdb.git
+	cd openvdb
+	mkdir build && cd build
+	cmake .. \
+	-DCMAKE_INSTALL_PREFIX=/usr/local \
+	-DUSE_EXR=ON \
+	-DUSE_BLOSC=ON \
+	-DUSE_ZLIB=ON \
+	-DUSE_LOG4CPLUS=OFF \
+	-DCMAKE_BUILD_TYPE=Release
+	make -j12
+	make install
+
+	# --- Clone and build your project ---
+	cd /opt
+	git clone --recursive https://github.com/projectsbypaul/OpenVDB_Voxel.git OpenVDB_Voxel
+	cd OpenVDB_Voxel
+	mkdir -p build
+	cd build
+	cmake .. -DCMAKE_BUILD_TYPE=Release
+	make -j12
+
+    # Confirm executables exist
+    ls -lh /opt/OpenVDB_Voxel/build/bin/
+
+    # Clean up
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+	
+	#create directories for mounting 
+	 mkdir -p /scripts /logs /source /target /jobs
+
+%environment
+    export EXECUTABLE_PATH=/opt/OpenVDB_Voxel/build/bin/JobController
+    export EXECUTABLE_CHILD_PROCESS=/opt/OpenVDB_Voxel/build/bin/OpenVDB_Voxel
+    export OMP_NUM_THREADS=1
+
+%runscript
+    # Runs when using 'singularity run'
+    echo "To launch: $EXECUTABLE_PATH"
+    exec "$EXECUTABLE_PATH" "$@"
+
+%help
+    This container builds and includes ABC_DataPreprocessing.
+    The main executables are at:
+      /opt/OpenVDB_Voxel/build/bin/JobController
+      /opt/OpenVDB_Voxel/build/bin/OpenVDB_Voxel
+    Input, output, and job directories should be mounted via --bind at runtime.
+    Example usage:
+      singularity exec --bind /host/data:/data abc_preprocessing.sif \
+        /opt/OpenVDB_Voxel/build/bin/JobController ...args...

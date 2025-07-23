@@ -15,6 +15,8 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobStrip <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <log_dir> <n_min_kernel>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segFixed <obj_path> <target_dir> <log_dir> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " segFromVDB <vdb_path> <target_dir> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " exportVDB <source_dir> <out_file> <log_dir>\n";
     exit(1);
 }
 
@@ -127,6 +129,59 @@ int main(int argc, char* argv[])
         LOG_FUNC("EXIT");
         return 0;
     }
+    else if (mode == "segFromVDB") {
+        if (argc != 5) {
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        fs::path log_dir = argv[4];
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_segmentation_on_vdb(source, target);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
+    else if (mode == "exportVDB") {
+        if (argc != 5) {
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        fs::path log_dir = argv[4];
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_export_vdb(source, target);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return 0;
+        }
+    else if (mode == "test") {
+        if (argc != 4) {
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path log_dir = argv[3];
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Tests::run_grid_test(source);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return 0;
+        }
     else {
         usage(argv[0]); // Unrecognized mode
     }

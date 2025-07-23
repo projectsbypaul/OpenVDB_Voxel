@@ -686,4 +686,88 @@ namespace ProcessingUtility {
     }
 
 
+    ProcessSegmentationFromVDB::ProcessSegmentationFromVDB(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding)
+    {
+    }
+
+    void ProcessSegmentationFromVDB::run(const std::string& subDirName)
+    {
+        LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
+
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+
+        openvdb::initialize();
+  
+
+        //Define source file and traget file location
+        std::string grid_file_name = sourceDir_.generic_string();
+        std::string target_dir = (targetDir_ / subDirName).generic_string();
+
+        openvdb::FloatGrid::Ptr grid;
+
+        if (!Tools::OpenVDBbased::loadSingleFloatGridFromVDB(grid, grid_file_name)) {
+            LOG_FUNC("ERROR" << "Faild to read .vdb");
+            return;
+        }
+
+        //based on the cropping parameter -> calculate a origin for each cropping segemnent 
+        //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
+        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, kernel_size_, padding_);
+
+
+        //setup data container
+        cppIOUtility::SegmentationDataContainer DumpTruck;
+
+        {
+            std::vector<std::vector<float>> origin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
+            DumpTruck.setOriginContainer(origin_list);
+        }
+
+        //Set up linear map for normalization
+        Tools::LinearSDFMap lmap;
+
+        openvdb::Vec3d voxel_size = grid->transform().voxelSize();
+
+        const double eps = 1e-9;
+        if (std::abs(voxel_size.x() - voxel_size.y()) > eps || std::abs(voxel_size.y() - voxel_size.z()) > eps) {
+
+            std::cerr << "ERROR: Grid is not uniform! x=" << voxel_size.x()
+                << " y=" << voxel_size.y()
+                << " z=" << voxel_size.z() << std::endl;
+
+            LOG_FUNC("ERROR", " Grid not unform x<>y<>z");
+            return;
+        }
+        
+
+        double background = grid->tree().background();
+        float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
+
+        DumpTruck.setBackground(background);
+        DumpTruck.setVoxelSize(voxel_size.x());
+        DumpTruck.setMinVal(minVal);
+
+        //map for normalization
+        lmap.create(-background, background, -1, 1);
+
+        //Create a an array that holds cropping results
+        Tools::Float3DArray clipped_array;
+
+        //crop sdf grid and write cropping result into 3D float array
+        //save cropped segments into binary file
+        for (size_t i = 0; i < crop_list.size(); ++i) {
+            clipped_array = DLPP::OpenVDBbased::KernelCropFloatGridFromCoord(grid, crop_list[i], kernel_size_);
+
+            //Remapping with background to clamp "values < -background" to min_map 
+            Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background); //normalize clipped array 
+            DumpTruck.addSegment(clipped_array);
+
+        }
+
+        DumpTruck.dump(target_dir);
+
+        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+    }
+
 }

@@ -1,5 +1,10 @@
 ﻿#include "../include/Tools.h"
 #include "../include/MyTypes.h"
+#include "../include/binArrayReader.h"
+
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 
 namespace Tools {
@@ -489,6 +494,49 @@ namespace Tools {
 
     namespace OpenVDBbased {
 
+        bool loadSingleFloatGridFromVDB(openvdb::FloatGrid::Ptr& outGrid, const std::string& filename)
+        {
+            openvdb::io::File file(filename);
+
+            try {
+                file.open();
+            }
+            catch (const openvdb::IoError& e) {
+                std::cerr << "Failed to open file: " << e.what() << std::endl;
+                return false;
+            }
+
+            // Count grids and get name
+            int gridCount = 0;
+            std::string gridName;
+            for (auto nameIter = file.beginName(); nameIter != file.endName(); ++nameIter) {
+                gridName = nameIter.gridName();
+                ++gridCount;
+            }
+
+            if (gridCount != 1) {
+                std::cerr << "File does not contain exactly one grid." << std::endl;
+                file.close();
+                return false;
+            }
+
+            // Read grid as GridBase
+            openvdb::GridBase::Ptr baseGrid = file.readGrid(gridName);
+
+            // Try to cast to FloatGrid
+            outGrid = openvdb::gridPtrCast<openvdb::FloatGrid>(baseGrid);
+
+            if (!outGrid) {
+                std::cerr << "The only grid in the file is not a FloatGrid." << std::endl;
+                file.close();
+                return false;
+            }
+
+            file.close();
+            return true;
+        }
+
+
         float getGridMinActiceValue(openvdb::FloatGrid::Ptr grid) {
             // Get the minimum value among active voxels
             float minValue = std::numeric_limits<float>::max();
@@ -504,9 +552,9 @@ namespace Tools {
         }
 
         std::vector<std::vector<float>> CoordListToFloatMatrix(std::vector<openvdb::Coord>& coord_list) {
-            
+
             std::vector<std::vector<float>> float_matrix;
-            
+
 
             for (const auto& coord : coord_list) {
                 std::vector<float> temp_float_entry;
@@ -527,7 +575,7 @@ namespace Tools {
             float voxelSize,
             float exteriorBandWidth,
             float interiorBandWidth
-            )  // Custom grid dimensions
+        )  // Custom grid dimensions
         {
             // Initialize OpenVDB
             openvdb::initialize();
@@ -611,7 +659,7 @@ namespace Tools {
 
             // Create an empty grid with a background value
             openvdb::FloatGrid::Ptr sdfGrid;
-           
+
             // Convert mesh to signed distance field
             sdfGrid = openvdb::tools::meshToSignedDistanceField<openvdb::FloatGrid>(
                 *transform, points, triangles, quads, exteriorBandWidth, interiorBandWidth);
@@ -638,7 +686,7 @@ namespace Tools {
                 if (*iter < 0) count++;
             }
             return (count > 0) ? true : false;
-        
+
         }
 
         int CountActiveValue(openvdb::FloatGrid::Ptr grid) {
@@ -663,7 +711,7 @@ namespace Tools {
 
             openvdb::Vec3d bboxSize = bboxMax - bboxMin;
 
-            return {bboxSize[0], bboxSize[1] , bboxSize[2]};
+            return { bboxSize[0], bboxSize[1] , bboxSize[2] };
         }
 
         Tools::Float3DArray Float3DArrayFromFloatGrid(openvdb::FloatGrid::Ptr FloatGrid) {
@@ -743,7 +791,7 @@ namespace Tools {
             int sizeY = (sizeX > 0) ? floatArray[0].size() : 0;
             int sizeZ = (sizeY > 0) ? floatArray[0][0].size() : 0;
 
-            float background = std::max(floatArray[0][0][0], floatArray[sizeX-1][sizeY-1][sizeZ-1]);
+            float background = std::max(floatArray[0][0][0], floatArray[sizeX - 1][sizeY - 1][sizeZ - 1]);
 
             openvdb::FloatGrid::Ptr grid = openvdb::FloatGrid::create(background);
 
@@ -760,7 +808,7 @@ namespace Tools {
             return grid;
         }
 
-        void RemapFloat3DArray(Float3DArray& array,  LinearSDFMap& linear_map) {
+        void RemapFloat3DArray(Float3DArray& array, LinearSDFMap& linear_map) {
 
             int sizeX = array.size();
             int sizeY = (sizeX > 0) ? array[0].size() : 0;
@@ -791,11 +839,11 @@ namespace Tools {
 
                         if (val <= -background) {
                             array[i][j][k] = minMappedValue;
-                            
+
                         }
                         else if (val >= background) {
                             array[i][j][k] = maxMappedValue;
-                           
+
                         }
                         else {
                             array[i][j][k] = linear_map.mapping(val);
@@ -938,12 +986,12 @@ namespace Tools {
         }
 
         std::vector<std::vector<float>> TransformWorldPointsToIndexFloatArray(openvdb::FloatGrid::Ptr& grid, std::vector<MyVertex>& vertex_list) {
-            
+
             std::vector<std::vector<float>> transformed_point_array;
 
             for (auto& vert : vertex_list) {
                 std::vector<float> transformed_point;
-        
+
                 openvdb::Vec3d word_point = openvdb::Vec3d(vert.x, vert.y, vert.z);
                 openvdb::Coord index_coord = grid->transform().worldToIndexCellCentered(word_point);
 
@@ -959,6 +1007,175 @@ namespace Tools {
         }
 
     }
+    namespace Functions {
+        float read_voxel_size(const std::string& dat_file) {
+            std::ifstream infile(dat_file);
+            std::string line;
+            while (std::getline(infile, line)) {
+                if (line.find("voxel_size:") != std::string::npos) {
+                    size_t pos = line.find(":");
+                    if (pos != std::string::npos) {
+                        return std::stof(line.substr(pos + 1));
+                    }
+                }
+            }
+            // Default value or error handling
+            return 1.0f;
+        }
+
+        openvdb::Vec3f read_bottom_coord(const std::string& dat_file) {
+            std::ifstream infile(dat_file);
+            std::string line;
+            bool in_origin_container = false;
+            float min_x = std::numeric_limits<float>::max();
+            float min_y = std::numeric_limits<float>::max();
+            float min_z = std::numeric_limits<float>::max();
+
+            while (std::getline(infile, line)) {
+                if (line.find("[ORIGIN_CONTAINER]") != std::string::npos) {
+                    in_origin_container = true;
+                    continue;
+                }
+                if (in_origin_container) {
+                    if (line.find("[END_ORIGIN_CONTAINER]") != std::string::npos) break;
+                    std::istringstream iss(line);
+                    float x, y, z;
+                    if (iss >> x >> y >> z) {
+                        if (x < min_x) min_x = x;
+                        if (y < min_y) min_y = y;
+                        if (z < min_z) min_z = z;
+                    }
+                }
+            }
+            return openvdb::Vec3f(min_x, min_y, min_z);
+        }
+
+
+        std::vector<float> read_grid_bin(const std::string& filename, int dimX, int dimY, int dimZ) {
+            std::vector<float> data(dimX * dimY * dimZ);
+            std::ifstream bin(filename, std::ios::binary);
+            bin.read(reinterpret_cast<char*>(data.data()), data.size() * sizeof(float));
+            return data;
+        }
+
+        void save_grid_to_vdb(const std::vector<float>& grid_data,
+            const int dims[3],
+            const openvdb::Vec3f& bottom_coord,
+            float voxel_size,
+            const std::string& filename)
+        {
+            int dimX = dims[0], dimY = dims[1], dimZ = dims[2];
+
+            // Create VDB grid
+            openvdb::FloatGrid::Ptr grid = openvdb::FloatGrid::create(0.0f);
+            grid->setName("prediction");
+
+            // Set the grid's transform: linear transform with offset for bottom_coord
+            openvdb::math::Transform::Ptr xform = openvdb::math::Transform::createLinearTransform(voxel_size);
+            xform->postTranslate(bottom_coord * voxel_size);
+            grid->setTransform(xform);
+           
+
+            // Fill the grid
+            openvdb::FloatGrid::Accessor accessor = grid->getAccessor();
+            for (int z = 0; z < dimZ; ++z) {
+                for (int y = 0; y < dimY; ++y) {
+                    for (int x = 0; x < dimX; ++x) {
+                        size_t idx = x + y * dimX + z * dimX * dimY;
+                        float value = grid_data[idx];
+                        if (value != 0.0f) {
+                            accessor.setValue(openvdb::Coord(x, y, z), value);
+                        }
+                    }
+                }
+            }
+            // Write to file
+            openvdb::io::File vdbfile(filename);
+            openvdb::GridPtrVec grids;
+            grids.push_back(grid);
+            vdbfile.write(grids);
+            vdbfile.close();
+        }
+
+        openvdb::FloatGrid::Ptr readFirstFloatGrid(const std::string& filename)
+        {
+            openvdb::initialize();
+
+            openvdb::io::File file(filename);
+            try {
+                file.open();
+
+                // Find the first grid name
+                for (auto nameIter = file.beginName(); nameIter != file.endName(); ++nameIter) {
+                    std::string gridName = nameIter.gridName();
+                    // Read the grid by name
+                    openvdb::GridBase::Ptr baseGrid = file.readGrid(gridName);
+                    // Try casting to FloatGrid
+                    openvdb::FloatGrid::Ptr floatGrid = openvdb::gridPtrCast<openvdb::FloatGrid>(baseGrid);
+                    if (floatGrid) {
+                        file.close();
+                        return floatGrid;
+                    }
+                    // If not FloatGrid, skip or try next
+                }
+
+                file.close();
+                std::cerr << "No FloatGrid found in file: " << filename << std::endl;
+                return nullptr;
+            }
+            catch (const openvdb::IoError& e) {
+                std::cerr << "OpenVDB IO error: " << e.what() << std::endl;
+                return nullptr;
+            }
+        }
+
+        void read_grid_shape(const std::string& shape_file, int dims[3]) {
+            std::ifstream infile(shape_file);
+            if (!infile) throw std::runtime_error("Could not open shape file!");
+            infile >> dims[0] >> dims[1] >> dims[2];
+        }
+
+
+    }//namespace Functions
+
+    namespace Macros {
+
+        void export_bin_to_vdb(const std::string& dat_file,
+            const std::string& bin_file,
+            const std::string& shape_file,
+            const std::string& out_vdb_file)
+        {
+           
+
+            // 1. Read meta info
+            openvdb::Vec3f bottom_coord = Functions::read_bottom_coord(dat_file);
+            float voxel_size = Functions::read_voxel_size(dat_file);
+
+            // 2. Read shape
+            int dims[3];
+            Functions::read_grid_shape(shape_file, dims);
+
+            // 3. Read grid data
+            std::vector<float> grid_data = Functions::read_grid_bin(bin_file, dims[0], dims[1], dims[2]);
+
+            // 4. Write to VDB
+            openvdb::initialize();
+            Functions::save_grid_to_vdb(grid_data, dims, bottom_coord, voxel_size, out_vdb_file);
+
+            std::cout << "Done! Saved to " << out_vdb_file << std::endl;
+        }
+
+        void test_grid_vdb(fs::path filename)
+        {
+            const std::string target = filename.generic_string();
+            auto segments = cppIO::Functions::read_segments_from_binary<float>(target);
+  
+
+        }
+    
+    }//namespace Macros
+
+   
 }
 
 

@@ -1,0 +1,4 @@
+/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/CMakeFiles/JobController.dir
+/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/CMakeFiles/OpenVDB_Voxel.dir
+/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/CMakeFiles/rebuild_cache.dir

@@ -174,6 +174,29 @@ namespace ProcessingUtility {
 
     };
 
+    class ProcessSegmentationFromVDB : public GenericDirectoryProcess {
+    private:
+        int kernel_size_;
+        int padding_;
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessSegmentationFromVDB(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
+        void run(const std::string& subDirName = "") override;
+
+    };
+
+
     /// <summary>
     ///Implementation of ProcessForDLLDataset
     /// </summary>

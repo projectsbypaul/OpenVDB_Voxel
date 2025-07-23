@@ -36,6 +36,30 @@ namespace Scripts {
 
     }
 
+    int run_segmentation_on_vdb(fs::path source, fs::path target) {
+
+        LOG_FUNC("ENTER");
+
+        int kernel_size = 16;
+        int padding = 4;
+
+
+        int openvdb_threads = 10;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessSegmentationFromVDB process(source, target, kernel_size, padding);
+        process.run();
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
     int run_segmentation_fixed(fs::path source, fs::path target, double voxel_size) {
 
         LOG_FUNC("ENTER");
@@ -125,4 +149,25 @@ namespace Scripts {
 
         return 0;
     }
+
+    int run_export_vdb(fs::path source, fs::path target) {
+
+        LOG_FUNC("ENTER");
+        fs::path dat_file = source / "segmentation_data.dat";
+        fs::path bin_file = source / "full_grid.bin";
+        fs::path shape_file = source / "fullgrid_shape.txt";
+
+        Tools::Macros::export_bin_to_vdb(dat_file.generic_string(), bin_file.generic_string(), shape_file.generic_string(), target.generic_string());
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
 }//namespace Scripts
+
+namespace Tests {
+    int run_grid_test(fs::path filename) {
+        Tools::Macros::test_grid_vdb(filename);
+        return 0;
+    }
+}//namespace Test
+

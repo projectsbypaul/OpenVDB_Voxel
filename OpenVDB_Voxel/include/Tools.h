@@ -9,6 +9,8 @@
 #include <vector>
 #include <cmath>
 #include <unordered_map>
+#include <filesystem>
+namespace fs = std::filesystem;
 #pragma endregion
 
 #pragma region util
@@ -74,6 +76,7 @@ namespace Tools {
     }
 
     namespace OpenVDBbased {
+        bool loadSingleFloatGridFromVDB(openvdb::FloatGrid::Ptr& outGrid, const std::string& filename);
         float getGridMinActiceValue(openvdb::FloatGrid::Ptr grid);
 
         openvdb::FloatGrid::Ptr MeshToFloatGrid(
@@ -143,5 +146,10 @@ namespace Tools {
         std::vector<double> DetermineBoundingBox(std::vector<openvdb::Vec3s> points);
 
         std::vector<std::vector<float>> TransformWorldPointsToIndexFloatArray(openvdb::FloatGrid::Ptr& grid, std::vector<MyVertex>& vertex_list);
+    }
+
+    namespace Macros {
+        void export_bin_to_vdb(const std::string& dat_file, const std::string& bin_file, const std::string& shape_file, const std::string& out_vdb_file);
+        void test_grid_vdb(fs::path filename);
     }
 }
