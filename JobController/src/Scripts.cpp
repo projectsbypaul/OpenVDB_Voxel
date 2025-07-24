@@ -1,4 +1,4 @@
-// Enhanced Scripts.cpp with vs_* and nk_* support
+// Enhanced Scripts.cpp with robust job tracking using set
 #include "../include/Scripts.h"
 #include "../include/jobUtility.h"
 #include "../include/ZipUtility.h"
@@ -7,10 +7,17 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <set>
 #include <iostream>
 namespace fs = std::filesystem;
 
 namespace Scripts {
+
+    // Helper to write set to job file as vector
+    inline void write_job_set(const fs::path& job_file, const std::set<std::string>& remaining_jobs) {
+        std::vector<std::string> jobs(remaining_jobs.begin(), remaining_jobs.end());
+        jobUtilitiy::Functions::write_remaining_jobs(job_file, jobs);
+    }
 
     // Existing function - unchanged
     int run_dataset_stats_job(fs::path target, fs::path job_dir, fs::path log_dir, std::string temp_file_name, fs::path process_location) {
@@ -34,15 +41,15 @@ namespace Scripts {
         return 0;
     }
 
-    // Original run_subdir_job (basic version)
+    // Original run_subdir_job (basic version) - now with set-based job tracking
     int run_subdir_job(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir, fs::path process_location) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
 
             std::string c0 = process_location.generic_string();
             std::string c1 = source.generic_string();
@@ -54,45 +61,35 @@ namespace Scripts {
             std::cout << "Running: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
                 std::cerr << "Subprocess failed for mesh: " << j << std::endl;
             }
 
-            // overwrite jobfile every 50 jobs to avoid timeouts and odd sized jobs 
-            // when rescheduling and restarting
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_dir, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_dir, remaining_jobs);
             }
         }
-
+        write_job_set(job_dir, remaining_jobs);
         return 0;
     }
 
-    // NEW: VS (Voxel Size) variant of run_subdir_job
+    // VS variant of run_subdir_job
     int run_subdir_job_vs(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         std::cout << "Starting VS job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
             << ", voxel_size=" << voxel_size << std::endl;
 
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
 
             std::string c0 = process_location.generic_string();
             std::string c1 = source.generic_string();
@@ -108,44 +105,35 @@ namespace Scripts {
             std::cout << "Running VS: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
                 std::cerr << "VS Subprocess failed for mesh: " << j << std::endl;
             }
 
-            // overwrite jobfile every 50 jobs
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_dir, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_dir, remaining_jobs);
             }
         }
-
+        write_job_set(job_dir, remaining_jobs);
         return 0;
     }
 
-    // NEW: NK (N_K_Min) variant of run_subdir_job
+    // NK variant of run_subdir_job
     int run_subdir_job_nk(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         std::cout << "Starting NK job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
             << ", n_k_min=" << n_k_min << std::endl;
 
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
 
             std::string c0 = process_location.generic_string();
             std::string c1 = source.generic_string();
@@ -161,36 +149,26 @@ namespace Scripts {
             std::cout << "Running NK: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
                 std::cerr << "NK Subprocess failed for mesh: " << j << std::endl;
             }
 
-            // overwrite jobfile every 50 jobs
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_dir, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_dir, remaining_jobs);
             }
         }
-
+        write_job_set(job_dir, remaining_jobs);
         return 0;
     }
 
-    // Original run_subdir_job_zip (basic version) - unchanged
+    // Original run_subdir_job_zip (basic version) - now with set-based job tracking
     int run_subdir_job_zip(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir, fs::path process_location) {
 
-        //reading job file
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         //create target zip 
         fs::path out_archive_name = job_file.stem().string() + ".zip";
@@ -209,11 +187,10 @@ namespace Scripts {
             fs::create_directories(temp_output);
         }
 
-        //iterate over jobs
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
-            //extract files from zip to temp_input
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
             ZIPutil::Functions::zip_extract_subfolder(source_zip, temp_input / j, j);
 
             std::string c0 = process_location.generic_string();
@@ -226,15 +203,13 @@ namespace Scripts {
             std::cout << "Running: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
 
                 if (fs::exists(temp_output / j)) {
-                    //write output data to zip  
                     ZIPutil::Functions::zip_write_subfolder(out_archive_path, temp_output / j, j);
                 }
 
-                //clean up temp_files
                 fs::remove_all(temp_input / j);
                 fs::remove_all(temp_output / j);
             }
@@ -242,44 +217,31 @@ namespace Scripts {
                 std::cerr << "Subprocess failed for mesh: " << j << std::endl;
             }
 
-            //overwrite jobfile every 50 jobs to avoid timeouts and odd sized jobs 
-            //when rescheduling and restarting
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_file, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_file, remaining_jobs);
             }
         }
-        //remove temp dir 
+        write_job_set(job_file, remaining_jobs);
         fs::remove_all(temp_dir);
 
         return 0;
     }
 
-    // NEW: VS variant of run_subdir_job_zip
+    // VS variant of run_subdir_job_zip
     int run_subdir_job_zip_vs(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
 
-        //reading job file
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         std::cout << "Starting VS ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
             << ", voxel_size=" << voxel_size << std::endl;
 
-        //create target zip 
         fs::path out_archive_name = job_file.stem().string() + "_vs.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
         ZIPutil::Functions::zip_create_archive(out_archive_path);
 
-        //create tmp dir 
         fs::path temp_dir = output_dir / ("temp_vs_" + out_archive_name.stem().generic_string());
         fs::path temp_input = temp_dir / "inputs";
         fs::path temp_output = temp_dir / "outputs";
@@ -291,11 +253,10 @@ namespace Scripts {
             fs::create_directories(temp_output);
         }
 
-        //iterate over jobs
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
-            //extract files from zip to temp_input
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
             ZIPutil::Functions::zip_extract_subfolder(source_zip, temp_input / j, j);
 
             std::string c0 = process_location.generic_string();
@@ -312,15 +273,13 @@ namespace Scripts {
             std::cout << "Running VS ZIP: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
 
                 if (fs::exists(temp_output / j)) {
-                    //write output data to zip  
                     ZIPutil::Functions::zip_write_subfolder(out_archive_path, temp_output / j, j);
                 }
 
-                //clean up temp_files
                 fs::remove_all(temp_input / j);
                 fs::remove_all(temp_output / j);
             }
@@ -328,43 +287,31 @@ namespace Scripts {
                 std::cerr << "VS ZIP Subprocess failed for mesh: " << j << std::endl;
             }
 
-            //overwrite jobfile every 50 jobs
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_file, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_file, remaining_jobs);
             }
         }
-        //remove temp dir 
+        write_job_set(job_file, remaining_jobs);
         fs::remove_all(temp_dir);
 
         return 0;
     }
 
-    // NEW: NK variant of run_subdir_job_zip
+    // NK variant of run_subdir_job_zip
     int run_subdir_job_zip_nk(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
 
-        //reading job file
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
-        std::vector<std::string> remaining_jobs = jobs;
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
         std::cout << "Starting NK ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
             << ", n_k_min=" << n_k_min << std::endl;
 
-        //create target zip 
         fs::path out_archive_name = job_file.stem().string() + "_nk.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
         ZIPutil::Functions::zip_create_archive(out_archive_path);
 
-        //create tmp dir 
         fs::path temp_dir = output_dir / ("temp_nk_" + out_archive_name.stem().generic_string());
         fs::path temp_input = temp_dir / "inputs";
         fs::path temp_output = temp_dir / "outputs";
@@ -376,11 +323,10 @@ namespace Scripts {
             fs::create_directories(temp_output);
         }
 
-        //iterate over jobs
         size_t processed_count = 0;
-        for (size_t i = 0; i < jobs.size(); ++i) {
-            const std::string& j = jobs[i];
-            //extract files from zip to temp_input
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
             ZIPutil::Functions::zip_extract_subfolder(source_zip, temp_input / j, j);
 
             std::string c0 = process_location.generic_string();
@@ -397,15 +343,13 @@ namespace Scripts {
             std::cout << "Running NK ZIP: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
             if (result == 0) {
-                remaining_jobs[i] = ""; // mark as processed
+                remaining_jobs.erase(j);
                 ++processed_count;
 
                 if (fs::exists(temp_output / j)) {
-                    //write output data to zip  
                     ZIPutil::Functions::zip_write_subfolder(out_archive_path, temp_output / j, j);
                 }
 
-                //clean up temp_files
                 fs::remove_all(temp_input / j);
                 fs::remove_all(temp_output / j);
             }
@@ -413,20 +357,11 @@ namespace Scripts {
                 std::cerr << "NK ZIP Subprocess failed for mesh: " << j << std::endl;
             }
 
-            //overwrite jobfile every 50 jobs
-            if (processed_count % 50 == 0 || i == jobs.size() - 1) {
-                std::vector<std::string> filtered_jobs;
-                for (const auto& job : remaining_jobs) {
-                    if (!job.empty()) {
-                        filtered_jobs.push_back(job);
-                    }
-                }
-
-                jobUtilitiy::Functions::write_remaining_jobs(job_file, filtered_jobs);
-                remaining_jobs = filtered_jobs;
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_file, remaining_jobs);
             }
         }
-        //remove temp dir 
+        write_job_set(job_file, remaining_jobs);
         fs::remove_all(temp_dir);
 
         return 0;
