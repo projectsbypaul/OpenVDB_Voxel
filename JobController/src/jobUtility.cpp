@@ -11,6 +11,26 @@ namespace fs = std::filesystem;
 namespace jobUtilitiy {
 
 	namespace Functions {
+
+        void clean_target_dir(const fs::path& dir_path) {
+            if (!fs::exists(dir_path) || !fs::is_directory(dir_path)) {
+                std::cerr << "Error: target is not a directory or does not exist" << std::endl;
+                return;
+            }
+
+            try {
+                for (const auto& entry : fs::directory_iterator(dir_path)) {
+                    // Remove all directories, and all non-zip files
+                    if (fs::is_directory(entry) || entry.path().extension() != ".zip") {
+                        fs::remove_all(entry);
+                    }
+                }
+            }
+            catch (const std::exception& e) {
+                std::cerr << "Exception while cleaning directory: " << e.what() << std::endl;
+            }
+        }
+
         std::vector<std::string> read_job_file(const fs::path& file_path) {
             std::vector<std::string> job_lines;
             std::ifstream infile(file_path);

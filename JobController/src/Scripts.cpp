@@ -170,6 +170,9 @@ namespace Scripts {
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
         std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
 
+        //clean traget dir 
+        jobUtilitiy::Functions::clean_target_dir(output_dir);
+
         //create target zip 
         fs::path out_archive_name = job_file.stem().string() + ".zip";
         fs::path out_archive_path = output_dir / out_archive_name;
@@ -233,6 +236,9 @@ namespace Scripts {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
         std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        //clean traget dir 
+        jobUtilitiy::Functions::clean_target_dir(output_dir);
 
         std::cout << "Starting VS ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
@@ -303,6 +309,9 @@ namespace Scripts {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
         std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        //clean traget dir 
+        jobUtilitiy::Functions::clean_target_dir(output_dir);
 
         std::cout << "Starting NK ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
