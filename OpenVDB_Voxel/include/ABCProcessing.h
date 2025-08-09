@@ -23,11 +23,11 @@ namespace Scripts {
     /// <summary>
     /// executes process on spefict subdir 
     /// </summary>
-    void processOnSubdirTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads = 1, int timeout_min = 10);
+    void processOnSubdirTimed(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads = 1, int timeout_min = 5);
     /// <summary>
     /// executes process on spefict subdir 
     /// </summary>
-    void processOnSubdirTimedNoCheck(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads = 1, int timeout_min = 10);
+    void processOnSubdirTimedNoCheck(ProcessingUtility::GenericDirectoryProcess* Process, fs::path subdir_name, int max_threads = 1, int timeout_min = 5);
 
 }
 
