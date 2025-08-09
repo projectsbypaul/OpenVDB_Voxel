@@ -66,9 +66,9 @@ namespace ProcessingUtility {
          * @param sourceDir The path to the main source directory.
          * @param targetDir The path to the main target directory.
          */
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 500);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 250);
 
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 500);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 250);
         /**
          * @brief Executes the DLL dataset processing logic for the specified subdirectory.
          *
