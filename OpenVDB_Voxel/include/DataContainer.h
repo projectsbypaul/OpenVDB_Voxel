@@ -48,6 +48,7 @@ namespace cppIOUtility {
         std::vector<Tools::Float3DArray> segment_container_;
         Tools::FloatMatrix origin_container_;
         Tools::FloatMatrix FaceToGridIndex_container_;
+        Tools::FloatMatrix VertexToGridIndex_conatiner_;
         //Tables
         Tools::MappingTable FaceTypeMap_;
         std::unordered_map<std::string, int> TypeCount_;
@@ -118,11 +119,18 @@ namespace cppIOUtility {
             VertTypeMap_ = vertTypeMap;
         }
         //For FaceToGridIndex_
-            const Tools::FloatMatrix & getFaceToGridIndex_container() const {
-                return FaceToGridIndex_container_;
+        const Tools::FloatMatrix & getFaceToGridIndex_container() const {
+            return FaceToGridIndex_container_;
         }
         void setFaceToGridIndex_container(const Tools::FloatMatrix& FaceToGridIndex_container) {
             FaceToGridIndex_container_ = FaceToGridIndex_container;
+        }
+        //For VertexToGridIndex_
+        const Tools::FloatMatrix& getVertexToGridIndex_container() const {
+            return VertexToGridIndex_conatiner_;
+        }
+        void setVertexToGridIndex_container(const Tools::FloatMatrix& VertexToGridIndex_container) {
+            VertexToGridIndex_conatiner_ = VertexToGridIndex_container;
         }
 
         #pragma endregion.

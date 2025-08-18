@@ -148,6 +148,36 @@ namespace ProcessingUtility {
 
     };
 
+    /// <summary>
+    ///Implementation of ProcessForDLLDataset
+    /// </summary>
+    /**
+     * @brief A class for processing DLL dataset within a specific subdirectory.
+     *
+     * This class inherits from GenericDirectoryProcess and adds a specific
+     * parameters for ...
+     */
+    class ProcessPurgeBySurfType : public GenericDirectoryProcess {
+    private:
+        std::vector<std::string> filter_;
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessPurgeBySurfType(const fs::path& sourceDir, const fs::path& targetDir, std::vector<std::string>& filter);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
+        void run(const std::string& subDirName = "") override;
+
+    };
+
     class ProcessSimpleSegmentation : public GenericDirectoryProcess {
     private:
         int kernel_size_;

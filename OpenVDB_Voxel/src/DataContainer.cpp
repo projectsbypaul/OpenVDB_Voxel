@@ -147,6 +147,10 @@ namespace cppIOUtility {
         write_text_matrix(dat_out, FaceToGridIndex_container_);
         dat_out << "[END_FACE_TO_GRID_INDEX_CONTAINER]\n\n";
 
+        dat_out << "[VERT_TO_GRID_INDEX_CONTAINER]\n";
+        write_text_matrix(dat_out, VertexToGridIndex_conatiner_);
+        dat_out << "[END_VERT_TO_GRID_INDEX_CONTAINER]\n\n";
+
         // Use the new function for FaceTypeMap_ and VertTypeMap_
         dat_out << "[FACE_TYPE_MAP]\n";
         write_indexed_vector_as_map(dat_out, FaceTypeMap_);

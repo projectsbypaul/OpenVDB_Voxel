@@ -277,6 +277,12 @@ namespace ProcessingUtility {
                 Tools::FloatMatrix FaceToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, face_centers);
                 DumpTruck.setFaceToGridIndex_container(FaceToGridIndex);
             }
+
+            //Create a Vertex to Grid centered index map and save it as binary
+            {
+                Tools::FloatMatrix VertexToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, my_verts);
+                DumpTruck.setVertexToGridIndex_container(VertexToGridIndex);
+            }
             
             //Set up linear map for normalization
             Tools::LinearSDFMap lmap;
@@ -766,6 +772,55 @@ namespace ProcessingUtility {
         }
 
         DumpTruck.dump(target_dir);
+
+        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+    }
+
+    ProcessPurgeBySurfType::ProcessPurgeBySurfType(const fs::path& sourceDir, const fs::path& targetDir, std::vector<std::string>& filter)
+        : GenericDirectoryProcess(sourceDir, targetDir), filter_(filter)
+    {
+    }
+
+    void ProcessPurgeBySurfType::run(const std::string& subDirName)
+    {
+        LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
+
+        const fs::path subdirPath = sourceDir_ / subDirName;
+        const fs::path ymlPath = subdirPath / (subDirName + ".yml");
+
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << '\n';
+
+        if (!fs::exists(ymlPath)) {
+            LOG("YAML not found: " << ymlPath);
+            std::cout << "YAML in " << subDirName << " not found; skipping\n";
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+            return;
+        }
+
+        // Parse and check types
+        std::string yml_path_string = ymlPath.generic_string();
+        const std::vector<Tools::ABC_Surface> surfaces = Tools::util::ParseABCyml(yml_path_string);
+
+        const std::unordered_set<std::string> blockedTypes(filter_.begin(), filter_.end());
+        const bool hasUnwanted = std::any_of(surfaces.begin(), surfaces.end(),
+            [&](const Tools::ABC_Surface& s) {
+                return blockedTypes.find(s.type) != blockedTypes.end();
+            });
+
+        if (hasUnwanted) {
+            LOG("YAML contains unwanted Surface Type -> deleting subdir: " << subdirPath);
+            std::cout << "YAML in " << subDirName << " contains unwanted Surface Type -> deleting subdir\n";
+            std::error_code ec;
+            fs::remove_all(subdirPath, ec);
+            if (ec) {
+                LOG("Failed to delete " << subdirPath << ": " << ec.message());
+                std::cerr << "Failed to delete " << subDirName << ": " << ec.message() << '\n';
+            }
+        }
+        else {
+            LOG("YAML contains valid types only");
+            std::cout << "YAML in " << subDirName << " contains valid types only\n";
+        }
 
         LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }

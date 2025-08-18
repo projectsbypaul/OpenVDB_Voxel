@@ -24,6 +24,22 @@
 
 namespace Scripts {
     //Work Scripts
+    int run_purge_obj_by_surf_type(fs::path source, fs::path target, fs::path job_location) {
+
+        int max_threads = 1;
+        std::vector<std::string> filter = { "Revolution", "Extrusion",  "Other"};
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessPurgeBySurfType process(source, target, filter);
+        processOnSubdirTimedNoCheck(&process, job_location, max_threads);
+
+        LOG_FUNC("EXIT");
+
+        return 0;
+    }
+
+
     int run_stats_on_subdir(fs::path source, fs::path target, std::string subdir_name, std::string temp_file_name) {
         LOG_FUNC("ENTER");
 

@@ -5,6 +5,7 @@ namespace fs = std::filesystem;
 namespace Scripts {
 
 	//Work Scripts
+	int run_purge_obj_by_surf_type(fs::path source, fs::path target, fs::path job_location);
 	int run_segmentation_on_vdb(fs::path source, fs::path target);
 	int run_stats_on_subdir(fs::path source, fs::path target, std::string subdir_name, std::string temp_file_name);
 	int run_segmentation_adaptive(fs::path source, fs::path target, int n_k_min);

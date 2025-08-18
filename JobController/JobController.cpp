@@ -15,6 +15,7 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " default <source_dir> <target_dir> <job_file> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " strip_obj <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " purge_yaml <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " dataset_stats <target_dir> <job_dir> <log_dir> <temp_file> <process_exe>\n";
 
     std::cout << "\nVoxel Size (VS) modes:\n";
@@ -87,6 +88,21 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_subdir_job_strip(source, target, job_dir, log_dir, process);
+        std::cout << "Result: " << result << std::endl;
+        return result;
+    }
+
+    else if (mode == "purge_yaml") {
+        if (argc != 7) {
+            usage(argv[0]);
+        }
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        fs::path job_dir = argv[4];
+        fs::path log_dir = argv[5];
+        fs::path process = argv[6];
+
+        int result = Scripts::run_subdir_job_purge(source, target, job_dir, log_dir, process);
         std::cout << "Result: " << result << std::endl;
         return result;
     }

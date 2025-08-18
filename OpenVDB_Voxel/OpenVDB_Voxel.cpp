@@ -15,6 +15,7 @@ void usage(const char* progname) {
     std::cout << "Basic processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobStrip <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " subdirJobPurge <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
 
     std::cout << "\nParameterized processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
@@ -84,6 +85,27 @@ int main(int argc, char* argv[])
         LOG_FUNC("ENTER");
 
         int result = Scripts::run_strip_obj_batch_job(source, target, subdir);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return result;
+    }
+
+    else if (mode == "subdirJobPurge") {
+        if (argc != 6) {
+            std::cerr << "subdirJobPurge mode requires exactly 6 arguments" << std::endl;
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        std::string subdir = argv[4];
+        fs::path log_dir = argv[5];
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_purge_obj_by_surf_type(source, target, subdir);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");

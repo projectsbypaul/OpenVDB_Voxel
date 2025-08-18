@@ -26,6 +26,10 @@ namespace Scripts {
     int run_subdir_job_strip(fs::path source, fs::path target, fs::path job_dir,
         fs::path log_dir, fs::path process_location);
 
+    // Strip job
+    int run_subdir_job_purge(fs::path source, fs::path target, fs::path job_dir,
+        fs::path log_dir, fs::path process_location);
+
     // ======== NEW VS (VOXEL SIZE) VARIANTS ========
 
     // VS subdir job - processes jobs with voxel size parameters
