@@ -172,7 +172,7 @@ namespace Scripts {
 
         LOG_FUNC("ENTER");
 
-        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size);
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size, 500);
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 
         LOG_FUNC("EXIT");
