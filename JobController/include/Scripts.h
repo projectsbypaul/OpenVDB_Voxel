@@ -40,6 +40,10 @@ namespace Scripts {
     int run_subdir_job_zip_vs(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size);
 
+    // VS subdir job with ZIP support
+    int run_subdir_job_zip_vs_maxseg(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size);
+
     // ======== NEW NK (N_K_MIN) VARIANTS ========
 
     // NK subdir job - processes jobs with n_k_min parameters
@@ -49,6 +53,11 @@ namespace Scripts {
     // NK subdir job with ZIP support
     int run_subdir_job_zip_nk(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
+
+    // NK subdir job with ZIP support
+    int run_subdir_job_zip_nk_maxseg(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
+
 
     // ======== UTILITY FUNCTIONS ========
 

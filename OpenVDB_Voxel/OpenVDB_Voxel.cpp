@@ -20,6 +20,8 @@ void usage(const char* progname) {
     std::cout << "\nParameterized processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob_maxseg <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob_maxseg <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
 
     std::cout << "\nSegmentation modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <log_dir> <n_min_kernel>\n";
@@ -142,6 +144,34 @@ int main(int argc, char* argv[])
         return result;
     }
 
+    else if (mode == "vs_subdirJob_maxseg") {
+        if (argc != 10) {
+            std::cerr << "vs_subdirJob mode requires exactly 10 arguments" << std::endl;
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        std::string subdir = argv[4];
+        fs::path log_dir = argv[5];
+        int kernel_size = std::stoi(argv[6]);
+        int padding = std::stoi(argv[7]);
+        int bandwidth = std::stoi(argv[8]);
+        double voxel_size = std::stod(argv[9]);
+
+        std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, voxel_size, 2500);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return result;
+    }
+
     else if (mode == "nk_subdirJob") {
         if (argc != 10) {
             std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << std::endl;
@@ -170,6 +200,32 @@ int main(int argc, char* argv[])
         return result;
     }
 
+    else if (mode == "nk_subdirJob_maxseg") {
+        if (argc != 10) {
+            std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << std::endl;
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        std::string subdir = argv[4];
+        fs::path log_dir = argv[5];
+        int kernel_size = std::stoi(argv[6]);
+        int padding = std::stoi(argv[7]);
+        int bandwidth = std::stoi(argv[8]);
+        int n_k_min = std::stoi(argv[9]);
+
+        std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, n_k_min, 2500);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+    }
     // ======== SEGMENTATION MODES ========
 
     else if (mode == "segAdaptive") {
