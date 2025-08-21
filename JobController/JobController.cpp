@@ -21,10 +21,12 @@ void usage(const char* progname) {
     std::cout << "\nVoxel Size (VS) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
 
     std::cout << "\nN_K_Min (NK) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
 
     std::cout << "\nUniversal mode:\n";
     std::cout << "  " << progpath.filename().generic_string() << " universal <job_type> <source_dir> <target_dir> <job_file> <log_dir> <process_exe> [<kernel_size> <padding> <bandwidth> <voxel_size|n_k_min>]\n";
