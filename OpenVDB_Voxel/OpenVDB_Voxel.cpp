@@ -165,7 +165,7 @@ int main(int argc, char* argv[])
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, voxel_size, 2500);
+        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, voxel_size);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
@@ -221,7 +221,7 @@ int main(int argc, char* argv[])
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, n_k_min, 2500);
+        int result = Scripts::run_subdir_to_dataset_maxseg(source, target, subdir, kernel_size, padding, bandwidth, n_k_min);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
