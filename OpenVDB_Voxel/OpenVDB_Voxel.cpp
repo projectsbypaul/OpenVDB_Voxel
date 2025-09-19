@@ -24,8 +24,8 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob_maxseg <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
 
     std::cout << "\nSegmentation modes:\n";
-    std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <log_dir> <n_min_kernel>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " segFixed <obj_path> <target_dir> <log_dir> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <kernel_size> <padding> <bandwidth> <n_min_kernel>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " segFixed <obj_path> <target_dir> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segFromVDB <vdb_path> <target_dir> <log_dir>\n";
 
     std::cout << "\nUtility modes:\n";
@@ -229,22 +229,25 @@ int main(int argc, char* argv[])
     // ======== SEGMENTATION MODES ========
 
     else if (mode == "segAdaptive") {
-        if (argc != 6) {
+        if (argc != 8) {
             std::cerr << "segAdaptive mode requires exactly 6 arguments" << std::endl;
             usage(argv[0]);
         }
 
         fs::path source = argv[2];
         fs::path target = argv[3];
-        fs::path log_dir = argv[4];
-        int n_min_kernel = std::stoi(argv[5]);
+        int ks = std::stoi(argv[4]);
+        int pd = std::stoi(argv[5]);
+        int bw = std::stoi(argv[6]);
+        int n_min_kernel = std::stoi(argv[7]);
 
         std::cout << "Adaptive Segmentation Parameters: n_min_kernel=" << n_min_kernel << std::endl;
 
-        initLogger(log_dir.generic_string());
+
+        initLogger((target / "actions.log").generic_string() );
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_segmentation_adaptive(source, target, n_min_kernel);
+        int result = Scripts::run_segmentation_adaptive(source, target,ks, pd, bw, n_min_kernel);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
@@ -252,22 +255,24 @@ int main(int argc, char* argv[])
     }
 
     else if (mode == "segFixed") {
-        if (argc != 6) {
+        if (argc != 8) {
             std::cerr << "segFixed mode requires exactly 6 arguments" << std::endl;
             usage(argv[0]);
         }
 
         fs::path source = argv[2];
         fs::path target = argv[3];
-        fs::path log_dir = argv[4];
-        double voxel_size = std::stod(argv[5]);
+        int ks = std::stoi(argv[4]);
+        int pd = std::stoi(argv[5]);
+        int bw = std::stoi(argv[6]);
+        double voxel_size = std::stod(argv[7]);
 
         std::cout << "Fixed Segmentation Parameters: voxel_size=" << voxel_size << std::endl;
 
-        initLogger(log_dir.generic_string());
+        initLogger((target / "actions.log").generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_segmentation_fixed(source, target, voxel_size);
+        int result = Scripts::run_segmentation_fixed(source, target, ks, pd, bw, voxel_size);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
