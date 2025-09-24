@@ -152,7 +152,7 @@ namespace Scripts {
 
         LOG_FUNC("ENTER");
 
-        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min, 500);
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min, 1500);
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 
         LOG_FUNC("EXIT");
@@ -168,7 +168,7 @@ namespace Scripts {
 
         LOG_FUNC("ENTER");
 
-        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size, 500);
+        ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size, 1500);
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 
         LOG_FUNC("EXIT");
