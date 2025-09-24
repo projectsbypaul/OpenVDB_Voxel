@@ -96,7 +96,9 @@ namespace DLPP {
 
 			std::vector<int> min_max_index = Tools::CGALbased::GetBBoxMinMaxIndex(mesh);
 
-			float recommended_voxelsize = bbox_dims[min_max_index[0]] / (kernel_size * min_n_kernel - 2 * exterior_bandwidth - (min_n_kernel - 1) * padding - 2 * padding);
+			//float recommended_voxelsize = bbox_dims[min_max_index[0]] / (kernel_size * min_n_kernel - 2 * exterior_bandwidth - (min_n_kernel - 1) * padding - 2 * padding);
+
+            float recommended_voxelsize = bbox_dims[min_max_index[0]] / (kernel_size * min_n_kernel) ;
 
 			return recommended_voxelsize;
 		}
