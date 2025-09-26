@@ -52,11 +52,12 @@ namespace DLPP {
 
         }
 
-        std::vector<openvdb::Coord> calculateCroppingOrigins(openvdb::FloatGrid::Ptr& grid, int& kernel_size, int& padding) {
+        std::vector<openvdb::Coord> calculateCroppingOrigins(openvdb::FloatGrid::Ptr& grid, int& kernel_size, int& padding, bool surface_only) {
             
             std::vector<openvdb::Coord> crop_origins;
             
             openvdb::CoordBBox ActiveBBox;
+            auto grid_accessor = grid->getAccessor();
             grid->tree().evalActiveVoxelBoundingBox(ActiveBBox);
 
             openvdb::Coord origin = ActiveBBox.min();
@@ -81,11 +82,63 @@ namespace DLPP {
                     }
                 }
 
-            }  
+            }
 
-            return crop_origins;
+            if (surface_only) {
+
+                std::vector<openvdb::Coord> surface_only_origins;
+
+                for (openvdb::Coord origin : crop_origins)
+                {
+                    int c_positive = 0;
+                    int c_negative = 0;
+                    int c_zero = 0;
+
+                    std::vector<openvdb::Coord> corners;
+                    int x_comp = origin.x();
+                    int y_comp = origin.y();
+                    int z_comp = origin.z();
+
+                    corners.push_back(openvdb::Coord(x_comp, y_comp, z_comp)); //0 0 0 
+                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp + kernel_size, z_comp + kernel_size)); //1 1 1 
+
+                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp, z_comp)); //1 0 0
+                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp + kernel_size, z_comp)); //1 1 0
+                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp, z_comp + kernel_size)); //1 0 1
+
+                    corners.push_back(openvdb::Coord(x_comp, y_comp + kernel_size, z_comp)); //0 1 0
+                    corners.push_back(openvdb::Coord(x_comp, y_comp + kernel_size, z_comp + kernel_size)); //0 1 1 
+
+
+                    corners.push_back(openvdb::Coord(x_comp, y_comp, z_comp + kernel_size)); // 0 0 1 
+
+                    for (openvdb::Coord point : corners) {
+                        float corner_value = grid_accessor.getValue(point);
+                        if (corner_value > 0) c_positive++;
+                        if (corner_value < 0) c_negative++;
+                        if (corner_value == 0) c_zero++;
+                    }
+
+                    int counters_greater_zero = 0;
+                    if (c_positive > 0) counters_greater_zero++;
+                    if (c_negative > 0) counters_greater_zero++;
+                    if (c_zero > 0) counters_greater_zero++;
+
+
+                    if (counters_greater_zero > 1) surface_only_origins.push_back(origin);
+                }
+                return surface_only_origins;
+
+            }
+            else
+            {
+                return crop_origins;
+            }
+
+            
 
         }
+
 	}
 
 	namespace CGALbased {

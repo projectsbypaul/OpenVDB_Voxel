@@ -236,7 +236,7 @@ namespace ProcessingUtility {
 
         //based on the cropping parameter -> calculate a origin for each cropping segemnent 
         //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
-        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, kernel_size_, padding_);
+        auto crop_list = DLPP::OpenVDBbased::calculateCroppingOrigins(grid, kernel_size_, padding_, true);
 
 
         //setup data container
