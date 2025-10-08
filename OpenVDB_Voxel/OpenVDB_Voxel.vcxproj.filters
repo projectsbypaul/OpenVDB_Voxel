@@ -49,6 +49,12 @@
     <Filter Include="Source Files\cppIOUtility">
       <UniqueIdentifier>{fbc573b9-7904-4461-b950-c2818e0bc7d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Labelling">
+      <UniqueIdentifier>{5a8756e1-c887-4901-9a5e-5b9b0853c507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Labelling">
+      <UniqueIdentifier>{42df8843-6b12-49c5-af39-00b6a356f971}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DataContainer.cpp">
@@ -99,6 +105,12 @@
     <ClCompile Include="src\binArrayReader.cpp">
       <Filter>Source Files\cppIOUtility</Filter>
     </ClCompile>
+    <ClCompile Include="src\DataContainerHelpers.cpp">
+      <Filter>Source Files\cppIOUtility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LabelTemplates.cpp">
+      <Filter>Source Files\Labelling</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\DataContainer.h">
@@ -148,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="include\binArrayReader.h">
       <Filter>Header Files\cppIOUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DataContainerHelpers.h">
+      <Filter>Header Files\cppIOUtility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LabelTemplates.h">
+      <Filter>Header Files\Labelling</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

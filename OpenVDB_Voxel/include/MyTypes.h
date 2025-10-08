@@ -10,6 +10,8 @@ constexpr double MY_PI= 3.14159265358979323846;
 
 namespace Tools {
 
+    using Int3DArray = std::vector<std::vector<std::vector<int>>>;
+
     using Float3DArray = std::vector<std::vector<std::vector<float>>>;
 
     using FloatMatrix = std::vector<std::vector<float>>;

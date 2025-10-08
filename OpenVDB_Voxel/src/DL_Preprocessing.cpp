@@ -1,17 +1,137 @@
 #include "../include/DL_Preprocessing.h"
 
+
 namespace DLPP {
+
+    namespace label_func {
+        Tools::Int3DArray label_by_template(const Tools::Int3DArray& segment, const Tools::MappingTable& face_to_type, LabelTemplates::LabelTemplate& label_template) {
+            int dim_x = segment.size();
+            int dim_y = segment[0].size();
+            int dim_z = segment[0][0].size();
+
+            Tools::Int3DArray labeled_segment(dim_x, std::vector<std::vector<int>>(dim_y, std::vector<int>(dim_z)));
+
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+            std::unordered_map<int, std::string> index_to_class = label_template.get_index_to_class();
+
+            //std::vector<int> class_count(label_template.class_count);
+
+            for (int x = 0; x < dim_x; x++) {
+                for (int y = 0; y < dim_y; y++) {
+                    for (int z = 0; z < dim_z; z++) {
+                        const int& face_index = segment[x][y][z];
+                        if (face_index > 0) {//surface
+                            const std::vector<std::string>& surf_types = face_to_type[face_index];
+                            labeled_segment[x][y][z] = class_to_index[surf_types[0]];
+                            //class_count[class_to_index[surf_types[0]]]++;
+                        }
+                        else if (face_index == -1) {//inside
+                            labeled_segment[x][y][z] = class_to_index["Inside"];
+                            //class_count[class_to_index["Inside"]]++;
+                        }
+                        else if (face_index == -2) {//outside
+                            labeled_segment[x][y][z] = class_to_index["Outside"];
+                            //class_count[class_to_index["Outside"]]++;
+                        }
+                    }
+
+                }
+            }
+
+            return labeled_segment;
+        }
+    }
+
 
 	namespace util {
 
-		int calculateMinCroppingStep(int n_voxel_dim, int kernel_size, int padding) {
+        bool nearly_equal(float a, float b, float eps = 1e-6) {
+            float delta = std::fabs(a - b);
+            return delta < eps;
+        }
 
-			double step_double = static_cast<double>(n_voxel_dim + padding) / (kernel_size - padding);
+        std::vector <Tools::FloatMatrix> bin_gridcoord_by_origin(const Tools::FloatMatrix& gridindex,const Tools::FloatMatrix& origins, int kernel_size) {
 
-			int min_cropping_steps = static_cast<int>(std::ceil(step_double));
+            const int n_origins = static_cast<int>(origins.size());
 
-			return min_cropping_steps;
-		}
+            std::vector <Tools::FloatMatrix> bins(n_origins);
+
+            for (const std::vector<float>& grid_coord : gridindex) {
+
+                for (int i = 0; i < n_origins; i++) {
+
+                    const std::vector<float>& origin = origins[i];
+                   
+                    bool in_bounds =
+                        (origin[0] <= grid_coord[0]) && (grid_coord[0] < (origin[0] + kernel_size)) &&
+                        (origin[1] <= grid_coord[1]) && (grid_coord[1] < (origin[1] + kernel_size)) &&
+                        (origin[2] <= grid_coord[2]) && (grid_coord[2] < (origin[2] + kernel_size));
+
+                    if (in_bounds) { bins[i].push_back(grid_coord); }
+
+
+                }
+            }
+
+            return bins;
+        }
+
+        Tools::Int3DArray get_nearest_face_index(Tools::FloatMatrix& face_to_gridindex, Tools::Float3DArray& segment, std::vector<float> origin, float max_r_surface) {
+            int dim_x = segment.size();
+            int dim_y = segment[0].size();
+            int dim_z = segment[0][0].size();
+
+            Tools::Int3DArray nearest_face_index(dim_x, std::vector<std::vector<int>>(dim_y, std::vector<int>(dim_z)));
+
+            for (int x = 0; x < dim_x; x++) {
+                for (int y = 0; y < dim_y; y++) {
+                    for (int z = 0; z < dim_z; z++) {
+
+                        if (segment[x][y][z] <= -max_r_surface) { //inside
+                            nearest_face_index[x][y][z] = -1;
+                        }
+                        else if (segment[x][y][z] >= max_r_surface) { //outside
+                            nearest_face_index[x][y][z] = -2;
+                        }
+                        else { //surface
+                            float min_r_abs = float(dim_x);
+                            int min_index = -1;
+
+                            int rolling_index = 0;
+                            for (std::vector<float> face_on_grid : face_to_gridindex) {
+                                float delta_x = (x + origin[0]) - face_on_grid[0];
+                                float delta_y = (y + origin[1]) - face_on_grid[1];
+                                float delta_z = (z + origin[2]) - face_on_grid[2];
+
+                                float r_abs = std::sqrt(delta_x * delta_x + delta_y * delta_y + delta_z * delta_z);
+                                if (r_abs < min_r_abs) {
+                                    min_r_abs = r_abs;
+                                    min_index = rolling_index;
+                                }
+
+                                rolling_index++;
+                            }
+                            nearest_face_index[x][y][z] = min_index;
+                        }
+
+                    }
+                }
+
+            }
+
+            return nearest_face_index;
+
+        }
+
+        int calculateMinCroppingStep(int n_voxel_dim, int kernel_size, int padding) {
+
+            double step_double = static_cast<double>(n_voxel_dim + padding) / (kernel_size - padding);
+
+            int min_cropping_steps = static_cast<int>(std::ceil(step_double));
+
+            return min_cropping_steps;
+        }
+
 
 	}
 

@@ -17,8 +17,10 @@ namespace Scripts {
 	int run_subdir_to_dataset_maxseg(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, double voxel_size, int max_threads = 1, int openvdb_threads = 1, int timeout_min = 5, int seglimit =2500);
 	int run_strip_obj_batch_job(fs::path source, fs::path target, fs::path job_location);
 	int run_export_vdb(fs::path source, fs::path target);
+	int run_labels_from_subdir(fs::path source, std::string subdir_name, std::string class_tempalte);
 	//Test Scripts
 }//namespace scripts
 namespace Tests {
-	int run_grid_test(fs::path filename);
+	int run_grid_test();
+	int run_rw_bin_test();
 }

@@ -87,6 +87,35 @@ namespace ProcessingUtility {
      * This class inherits from GenericDirectoryProcess and adds a specific
      * parameters for ...
      */
+    class ProcessLabelling : public GenericDirectoryProcess {
+    private:
+        std::string label_template_;
+    public:
+        /**
+         * @brief Constructs a ProcessForDLLDataset object.
+         *
+         * @param sourceDir The path to the main source directory.
+         * @param targetDir The path to the main target directory.
+         */
+        ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template);
+        /**
+         * @brief Executes the DLL dataset processing logic for the specified subdirectory.
+         *
+         * @param subDirPath The specific subdirectory path within the source directory to process.
+         * @override
+         */
+        void run(const std::string& subDirName = "") override;
+    };
+
+    /// <summary>
+    ///Implementation of ProcessForDLLDataset
+    /// </summary>
+    /**
+     * @brief A class for processing DLL dataset within a specific subdirectory.
+     *
+     * This class inherits from GenericDirectoryProcess and adds a specific
+     * parameters for ...
+     */
     class ProcessForDLLDatasetAE : public GenericDirectoryProcess {
     private:
         int kernel_size_;
@@ -259,5 +288,5 @@ namespace ProcessingUtility {
         void run(const std::string& subDirName = "") override;
 
     };
-}
-#endif // PROCESSFORDLLDATASET_H
+}// PROCESSFORDLLDATASET_H
+#endif 

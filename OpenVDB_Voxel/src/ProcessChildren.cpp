@@ -8,6 +8,7 @@
 #include "../include/DataContainer.h"
 #include "../include/LOG.h"
 #include "../include/MeshDataHandling.h"
+#include "../include/LabelTemplates.h"
 
 
 namespace ProcessingUtility {
@@ -821,6 +822,85 @@ namespace ProcessingUtility {
             LOG("YAML contains valid types only");
             std::cout << "YAML in " << subDirName << " contains valid types only\n";
         }
+
+        LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+    }
+
+    ProcessLabelling::ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template) :
+        GenericDirectoryProcess(sourceDir, targetDir), label_template_(label_template)
+    {
+    }
+
+    void ProcessLabelling::run(const std::string& subDirName)
+    {
+        LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
+
+        //path construction
+        const fs::path subdirPath = sourceDir_ / subDirName;
+        const fs::path check_dat_path = subdirPath / "segmentation_data.dat";
+        const fs::path check_bin_path = subdirPath / "segmentation_data_segments.bin";
+
+        if (!fs::exists(check_bin_path) || !fs::exists(check_dat_path)) {
+
+            std::string msg_00 = "segmentation_data.dat or segmentation_data_segments.bin not found";
+
+            std::cout << msg_00;
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << msg_00 << std::endl);
+
+            return;
+        }
+
+        std::cout << "Loading: " << subDirName << " -> Output: " << targetDir_ << '\n';
+
+        //loading data
+        cppIOUtility::SegmentationDataContainer SegmentData;
+        SegmentData.load(subdirPath);
+
+        std::vector <Tools::Float3DArray> segment_container = SegmentData.getSegmentContainer();
+        Tools::FloatMatrix origin = SegmentData.getOriginContainer();
+        Tools::FloatMatrix face_to_gird = SegmentData.getFaceToGridIndex_container();
+        Tools::MappingTable face_to_type = SegmentData.getFaceTypeMap();
+        float voxel_size = SegmentData.getVoxelSize();
+        float background = SegmentData.getBackground();
+
+        int kernel_size = segment_container[0].size();
+        float r_min_surface = voxel_size / background;
+
+       
+        std::cout << "Binning faces by segment origin..." << std::endl;
+        std::vector<Tools::FloatMatrix> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size);
+
+        int n_segments = segment_container.size();
+
+        std::cout << "Calculation neares face for voxels..." << std::endl;
+
+        std::vector<Tools::Int3DArray> indexed_segements(segment_container.size());
+
+        for (int i = 0; i < n_segments; i++) {
+            Tools::FloatMatrix& face_bin = face_bins[i];
+            Tools::Float3DArray& segment = segment_container[i];
+            std::vector<float> origin_coord = origin[i];
+
+            LOG("Start compute on segment: " << i << std::endl);
+            indexed_segements[i] = DLPP::util::get_nearest_face_index(face_bin, segment, origin_coord, r_min_surface);
+            LOG("Finished compute on segment: " << i << std::endl);
+
+            std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
+        }
+
+        LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
+
+        std::vector<Tools::Int3DArray> labeled_segements(segment_container.size());
+
+        for (int i = 0; i < n_segments; i++) {
+            Tools::Int3DArray& segment = indexed_segements[i];
+            LOG("Start labelling on segment: " << i << std::endl);
+            labeled_segements[i] = DLPP::label_func::label_by_template(segment, face_to_type, current_template);
+            LOG("Finished labelling on segment: " << i << std::endl);
+
+            std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << std::endl;
+        }
+
 
         LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }

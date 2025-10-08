@@ -45,6 +45,7 @@ namespace Tools {
     
 
     namespace util {
+       
         std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap);
         std::vector<Tools::MyVertex> CalculateFaceCenters(const std::vector<Tools::MyFace>& faces, const std::vector<Tools::MyVertex>& vertices);
         char mapValueToChar(float value, float minVal, float maxVal);

@@ -21,6 +21,8 @@
 #include "../include/ProcessChildren.h"
 #include "../include/DatasetStats.h"
 
+#include "../include/DataContainer.h"
+
 
 namespace Scripts {
     //Work Scripts
@@ -239,10 +241,38 @@ namespace Scripts {
         LOG_FUNC("EXIT");
         return 0;
     }
+    int run_labels_from_subdir(fs::path source, std::string subdir_name, std::string class_tempalte)
+    {
+        int max_threads = 1;
+        int openvdb_threads = 1;
+
+        // Limit TBB thread count to max_threads
+        tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
+        openvdb::initialize();
+
+        LOG_FUNC("ENTER");
+
+        ProcessingUtility::ProcessLabelling process(source, source, class_tempalte);
+        processOnSubdirTimedNoCheck(&process, subdir_name);
+
+        LOG_FUNC("EXIT");
+        return 0;
+    }
 }//namespace Scripts
 
 namespace Tests {
-    int run_grid_test(fs::path filename) {
+    int run_rw_bin_test() {
+        fs::path LoadDir = R"(H:\ws_seg_debug\debug_output\00000004)";
+        fs::path DumpDir = R"(H:\ws_seg_debug\debug_output\00000004_reloaded)";
+        cppIOUtility::SegmentationDataContainer test_container;
+        test_container.load(LoadDir);
+
+        test_container.dump(DumpDir);
+        return 0;
+    }
+
+    int run_grid_test() {
+        fs::path filename = "";
         Tools::Macros::test_grid_vdb(filename);
         return 0;
     }

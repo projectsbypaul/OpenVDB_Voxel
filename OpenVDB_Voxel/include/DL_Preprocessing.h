@@ -2,6 +2,7 @@
 
 #pragma region common 
 #include "Tools.h"
+#include "LabelTemplates.h"
 #pragma endregion 
 
 #pragma region OpenVDB 
@@ -14,6 +15,10 @@
 
 namespace DLPP {
 
+	namespace label_func {
+		Tools::Int3DArray label_by_template(const Tools::Int3DArray& segment, const Tools::MappingTable& face_to_type, LabelTemplates::LabelTemplate& label_template);
+	}
+
 	namespace util {
 		/// <summary>
 		/// Calcutlates the required ammount of cropping steps based on input cropping parameters 
@@ -24,6 +29,10 @@ namespace DLPP {
 		/// <param name="padding">: overlapp of cropping kernels</param>
 		/// <returns>minimal ammount of cropping stept in trages dim - return value is always round up</returns>
 		int calculateMinCroppingStep(int n_voxel_dim, int kernel_size, int padding);
+
+		Tools::Int3DArray get_nearest_face_index(Tools::FloatMatrix& face_to_gridindex, Tools::Float3DArray& segment, std::vector<float> origin, float max_r_surface);
+
+		std::vector <Tools::FloatMatrix> bin_gridcoord_by_origin(const Tools::FloatMatrix& gridindex, const Tools::FloatMatrix& origins, int kernel_size);
 
 	}
 

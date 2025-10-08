@@ -16,6 +16,7 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobStrip <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobPurge <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <sub_dir_name> <log_dir> <template>\n";
 
     std::cout << "\nParameterized processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
@@ -31,7 +32,7 @@ void usage(const char* progname) {
     std::cout << "\nUtility modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " stats_subdir <source_dir> <target_dir> <sub_dir_name> <log_dir> <temp_file_name>\n";
     std::cout << "  " << progpath.filename().generic_string() << " exportVDB <source_dir> <out_file> <log_dir>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " test <source_path> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " test <log_dir>\n";
 
     exit(1);
 }
@@ -108,6 +109,27 @@ int main(int argc, char* argv[])
         LOG_FUNC("ENTER");
 
         int result = Scripts::run_purge_obj_by_surf_type(source, target, subdir);
+        std::cout << "Result: " << result << std::endl;
+
+        LOG_FUNC("EXIT");
+        return result;
+    }
+
+    else if (mode == "subdirLabel") {
+        if (argc != 6) {
+            std::cerr << "subdirLabel mode requires exactly 6 arguments" << std::endl;
+            usage(argv[0]);
+        }
+
+        fs::path source = argv[2];
+        std::string subdir = argv[3];
+        fs::path log_dir = argv[4];
+        std::string class_template = argv[5];
+
+        initLogger(log_dir.generic_string());
+        LOG_FUNC("ENTER");
+
+        int result = Scripts::run_labels_from_subdir(source, subdir, class_template);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
@@ -346,18 +368,17 @@ int main(int argc, char* argv[])
     }
 
     else if (mode == "test") {
-        if (argc != 4) {
+        if (argc != 3) {
             std::cerr << "test mode requires exactly 4 arguments" << std::endl;
             usage(argv[0]);
         }
 
-        fs::path source = argv[2];
-        fs::path log_dir = argv[3];
+        fs::path log_dir = argv[2];
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Tests::run_grid_test(source);
+        int result = Tests::run_rw_bin_test();
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");

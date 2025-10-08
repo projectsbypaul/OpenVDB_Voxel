@@ -30,6 +30,7 @@ namespace cppIOUtility {
          * @note This is a pure virtual function, so derived classes must implement it.
          */
         virtual void dump(const fs::path& DumpDir = "") = 0;
+        virtual void load(const fs::path& LoadDir = "") = 0;
     };
 
     /**
@@ -138,6 +139,15 @@ namespace cppIOUtility {
         SegmentationDataContainer();
 
         void dump(const fs::path& DumpDir = "") override;
+
+        void load(const fs::path& LoadDir = "") override;
+        
+        void dump_info(const fs::path& dat_file_path, const fs::path& segment_bin_filename_str);
+        void dump_segments_bin(const fs::path& bin_file_path);
+        void dump_segments_h5(const fs::path& h5_filename_path);
+
+        void load_info(const fs::path& dat_file_path, fs::path* out_segment_bin_filename);
+        void load_segments_bin(const fs::path& bin_file_path);
     };
 }
 
