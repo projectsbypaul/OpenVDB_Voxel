@@ -56,12 +56,21 @@ namespace cppIOUtility {
         }
 
         fs::path dat_file_path = base_path / (base_filename_stem + ".dat");
+
         std::string segment_bin_filename_str = base_filename_stem + "_segments.bin";
         fs::path bin_file_path = base_path / segment_bin_filename_str;
+
+        std::string label_bin_filename_str = base_filename_stem + "_labels.bin";
+        fs::path label_bin_file_path = base_path / label_bin_filename_str;
+
+        std::string prediction_bin_filename_str = base_filename_stem + "_predictions.bin";
+        fs::path prediction_bin_file_path = base_path / prediction_bin_filename_str;
 
         this->dump_info(dat_file_path, segment_bin_filename_str);
 
         this->dump_segments_bin(bin_file_path);
+        this->dump_labels_bin(label_bin_file_path);
+        this->dump_predictions_bin(prediction_bin_file_path);
         
     }
 
@@ -103,6 +112,28 @@ namespace cppIOUtility {
                 << "); leaving segment_container_ empty.\n";
             segment_container_.clear();
         }
+
+        fs::path label_bin_file_path = base_path / (base_filename_stem + "_labels.bin");
+        if (fs::exists(label_bin_file_path)) {
+            this->load_labels_bin(label_bin_file_path);
+        }
+        else {
+            std::cout << "Note: binary labels file not found (" << bin_file_path
+                << "); leaving label_container_ empty.\n";
+            label_container_.clear();
+        }
+
+        fs::path prediction_bin_file_path = base_path / (base_filename_stem + "_predictions.bin");
+        if (fs::exists(prediction_bin_file_path)) {
+            this->load_predictions_bin(prediction_bin_file_path);
+        }
+        else {
+            std::cout << "Note: binary labels file not found (" << bin_file_path
+                << "); leaving prediction_container_ empty.\n";
+            prediction_container_.clear();
+        }
+
+
     }
 
     void SegmentationDataContainer::dump_info(const fs::path& dat_file_path, const fs::path& segment_bin_filename_str)
@@ -158,50 +189,22 @@ namespace cppIOUtility {
         std::cout << "SegmentationDataContainer text data dumped to: " << dat_file_path.string() << std::endl;
     }
 
-    void SegmentationDataContainer::dump_segments_bin(const fs::path& bin_file_path)
+    void SegmentationDataContainer::dump_segments_bin(const fs::path& p)
     {
-        // --- Write the .bin binary file (logic unchanged) ---
-        if (!segment_container_.empty()) {
-            // ... (binary writing logic as before) ...
-            std::ofstream bin_out(bin_file_path, std::ios::binary);
-            if (!bin_out.is_open()) {
-                std::cerr << "Error: Could not open .bin file for writing: " << bin_file_path.string() << std::endl;
-                return;
-            }
-            const uint32_t magic_number = 0x5345474D;
-            const uint16_t format_version = 1;
-            using ElementType = float;
-            uint8_t element_type_id = 0;
-            if (std::is_same<ElementType, double>::value) { element_type_id = 1; }
-            uint32_t num_segments_val = static_cast<uint32_t>(segment_container_.size());
-            write_binary(bin_out, magic_number);
-            write_binary(bin_out, format_version);
-            write_binary(bin_out, element_type_id);
-            write_binary(bin_out, num_segments_val);
-            for (const auto& segment : segment_container_) {
-                uint32_t d0 = static_cast<uint32_t>(segment.size());
-                uint32_t d1 = static_cast<uint32_t>((d0 > 0 && !segment[0].empty()) ? segment[0].size() : 0);
-                uint32_t d2 = static_cast<uint32_t>((d0 > 0 && d1 > 0 && !segment[0][0].empty()) ? segment[0][0].size() : 0);
-                write_binary(bin_out, d0); write_binary(bin_out, d1); write_binary(bin_out, d2);
-            }
-            for (const auto& segment : segment_container_) {
-                for (const auto& plane : segment) {
-                    for (const auto& row : plane) {
-                        if (!row.empty()) {
-                            bin_out.write(reinterpret_cast<const char*>(row.data()), row.size() * sizeof(ElementType));
-                        }
-                    }
-                }
-            }
-            bin_out.close();
-            std::cout << "SegmentationDataContainer segments dumped to: " << bin_file_path.string() << std::endl;
-        }
-        else {
-            std::cout << "Segment container is empty, skipping binary file generation." << std::endl;
-        }
+        dump_list_of_3d_arrays_bin(p, segment_container_);
     }
 
-    void SegmentationDataContainer::dump_segments_h5(const fs::path& h5_filename_path)
+    void SegmentationDataContainer::dump_labels_bin(const fs::path& p)
+    {
+        dump_list_of_3d_arrays_bin(p, label_container_);
+    }
+
+    void SegmentationDataContainer::dump_predictions_bin(const fs::path& p)
+    {
+        dump_list_of_3d_arrays_bin(p, prediction_container_);
+    }
+
+    void SegmentationDataContainer::dump_segments_h5(const fs::path& p)
     {
       //TODO 
     }
@@ -294,78 +297,27 @@ namespace cppIOUtility {
 
         std::cout << "SegmentationDataContainer text data loaded from: " << dat_file_path.string() << std::endl;
     }
-    void SegmentationDataContainer::load_segments_bin(const fs::path& bin_file_path)
+    void SegmentationDataContainer::load_segments_bin(const fs::path& p)
     {
-        std::ifstream bin_in(bin_file_path, std::ios::binary);
-        if (!bin_in.is_open()) {
-            std::cerr << "Error: Could not open .bin for reading: " << bin_file_path.string() << std::endl;
-            return;
+        if (load_list_of_3d_arrays_bin<float>(p, segment_container_)) {
+            std::cout << "SegmentationDataContainer segments loaded from: "
+                << p.string() << std::endl;
         }
+    }
 
-        const uint32_t expected_magic = 0x5345474D; // 'SEGM'
-        uint32_t magic = 0;
-        uint16_t version = 0;
-        uint8_t element_type_id = 0;
-        uint32_t num_segments = 0;
+    void SegmentationDataContainer::load_labels_bin(const fs::path& p)
+    {
+        if (load_list_of_3d_arrays_bin<int>(p, label_container_)) {
+            std::cout << "SegmentationDataContainer labels loaded from: "
+                << p.string() << std::endl;
+        }
+    }
 
-        if (!read_binary(bin_in, magic) || magic != expected_magic) {
-            std::cerr << "Error: Bad magic in segments bin.\n";
-            return;
+    void SegmentationDataContainer::load_predictions_bin(const fs::path& p)
+    {
+        if (load_list_of_3d_arrays_bin<int>(p, prediction_container_)) {
+            std::cout << "SegmentationDataContainer predictions loaded from: "
+                << p.string() << std::endl;
         }
-        if (!read_binary(bin_in, version) || version != 1) {
-            std::cerr << "Error: Unsupported segments bin version (got " << version << ").\n";
-            return;
-        }
-        if (!read_binary(bin_in, element_type_id)) {
-            std::cerr << "Error: Failed reading element_type_id.\n";
-            return;
-        }
-        if (element_type_id != 0) { // 0 == float in your writer
-            std::cerr << "Error: Unsupported element type id (expected float=0, got " << int(element_type_id) << ").\n";
-            return;
-        }
-        if (!read_binary(bin_in, num_segments)) {
-            std::cerr << "Error: Failed reading num_segments.\n";
-            return;
-        }
-
-        // Read shapes
-        struct Shape { uint32_t d0 = 0, d1 = 0, d2 = 0; };
-        std::vector<Shape> shapes(num_segments);
-        for (uint32_t s = 0; s < num_segments; ++s) {
-            if (!read_binary(bin_in, shapes[s].d0) ||
-                !read_binary(bin_in, shapes[s].d1) ||
-                !read_binary(bin_in, shapes[s].d2)) {
-                std::cerr << "Error: Failed reading shape for segment " << s << ".\n";
-                return;
-            }
-        }
-
-        using ElementType = float;
-        segment_container_.clear();
-        segment_container_.resize(num_segments);
-
-        // Allocate and read data
-        for (uint32_t s = 0; s < num_segments; ++s) {
-            const auto& sh = shapes[s];
-            auto& segment = segment_container_[s];
-            segment.resize(sh.d0); // planes
-            for (uint32_t p = 0; p < sh.d0; ++p) {
-                auto& plane = segment[p];
-                plane.resize(sh.d1); // rows
-                for (uint32_t r = 0; r < sh.d1; ++r) {
-                    auto& row = plane[r];
-                    row.resize(sh.d2);
-                    if (sh.d2 == 0) continue;
-                    const std::size_t bytes = sizeof(ElementType) * sh.d2;
-                    if (!bin_in.read(reinterpret_cast<char*>(row.data()), bytes)) {
-                        std::cerr << "Error: Unexpected EOF while reading segment data (s=" << s << ", p=" << p << ", r=" << r << ").\n";
-                        return;
-                    }
-                }
-            }
-        }
-
-        std::cout << "SegmentationDataContainer segments loaded from: " << bin_file_path.string() << std::endl;
     }
 } // namespace cppIOUtility

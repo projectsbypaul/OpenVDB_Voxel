@@ -866,41 +866,64 @@ namespace ProcessingUtility {
         int kernel_size = segment_container[0].size();
         float r_min_surface = voxel_size / background;
 
-       
+       //To speed up neares face computation faces get binned by the segments they are closest to 
         std::cout << "Binning faces by segment origin..." << std::endl;
-        std::vector<Tools::FloatMatrix> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size);
+        std::vector<Tools::FaceBin> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size, 4);
+       
 
-        int n_segments = segment_container.size();
 
+        //Nearest face for each voxel gets computed
         std::cout << "Calculation neares face for voxels..." << std::endl;
-
+        int n_segments = segment_container.size();
         std::vector<Tools::Int3DArray> indexed_segements(segment_container.size());
 
         for (int i = 0; i < n_segments; i++) {
-            Tools::FloatMatrix& face_bin = face_bins[i];
-            Tools::Float3DArray& segment = segment_container[i];
-            std::vector<float> origin_coord = origin[i];
+            
+            Tools::Float3DArray& seg = segment_container[i];
+            std::array<float, 3> origin_coord{ origin[i][0], origin[i][1], origin[i][2] };
 
             LOG("Start compute on segment: " << i << std::endl);
-            indexed_segements[i] = DLPP::util::get_nearest_face_index(face_bin, segment, origin_coord, r_min_surface);
+            //indexed_segements[i] = DLPP::util::get_nearest_face_index(face_to_gird, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
+            indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
             LOG("Finished compute on segment: " << i << std::endl);
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
         }
-
+        //TO DO
+        //-active Template Selection 
+        //-Edge Selection -> by neigbourhood analysis --> seen python version
+     
+        //Selection of class template
         LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
 
+        //Based on the selected template each voxel gets assiged the surface type of the closest face
         std::vector<Tools::Int3DArray> labeled_segements(segment_container.size());
+        std::vector<int> global_count(current_template.class_count, 0);
 
         for (int i = 0; i < n_segments; i++) {
+
             Tools::Int3DArray& segment = indexed_segements[i];
             LOG("Start labelling on segment: " << i << std::endl);
-            labeled_segements[i] = DLPP::label_func::label_by_template(segment, face_to_type, current_template);
-            LOG("Finished labelling on segment: " << i << std::endl);
+            auto [labeled_segement, local_count] = DLPP::label_func::label_by_template_count(segment, face_to_type, current_template);
+            labeled_segements[i] = labeled_segement;
 
+           //counting assignments
+            for (int j = 0; j < global_count.size(); j++) {
+                global_count[j] += local_count[j];
+            }
+
+            LOG("Finished labelling on segment: " << i << std::endl);
             std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << std::endl;
         }
 
+        //Debug Info: Display assigned
+        for (int i = 0; i < global_count.size(); i++) {
+            std::cout << current_template.to_label(i) << "::" << global_count[i] << std::endl;
+        }
+
+        //Saving Data
+        SegmentData.setLabelContainer(labeled_segements);
+        SegmentData.dump(targetDir_ / subDirName);
 
         LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }

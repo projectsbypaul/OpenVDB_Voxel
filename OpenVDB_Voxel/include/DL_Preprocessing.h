@@ -17,6 +17,12 @@ namespace DLPP {
 
 	namespace label_func {
 		Tools::Int3DArray label_by_template(const Tools::Int3DArray& segment, const Tools::MappingTable& face_to_type, LabelTemplates::LabelTemplate& label_template);
+
+		std::pair<Tools::Int3DArray, std::vector<int>> label_by_template_count(
+				const Tools::Int3DArray& segment,
+				const Tools::MappingTable& face_to_type,
+				LabelTemplates::LabelTemplate& label_template
+			);
 	}
 
 	namespace util {
@@ -30,9 +36,26 @@ namespace DLPP {
 		/// <returns>minimal ammount of cropping stept in trages dim - return value is always round up</returns>
 		int calculateMinCroppingStep(int n_voxel_dim, int kernel_size, int padding);
 
-		Tools::Int3DArray get_nearest_face_index(Tools::FloatMatrix& face_to_gridindex, Tools::Float3DArray& segment, std::vector<float> origin, float max_r_surface);
+		Tools::Int3DArray get_nearest_face_index(
+			const Tools::FloatMatrix& face_to_gridindex,   
+			const Tools::Float3DArray& segment,            
+			const std::array<float, 3>& origin,            
+			float voxel_size,                              
+			float back_ground,                              
+			float max_r_surface);
 
-		std::vector <Tools::FloatMatrix> bin_gridcoord_by_origin(const Tools::FloatMatrix& gridindex, const Tools::FloatMatrix& origins, int kernel_size);
+		Tools::Int3DArray get_nearest_face_index_binned(
+			const Tools::FloatMatrix& face_coords_bin,   
+			const std::vector<int>& to_global,           
+			const Tools::Float3DArray& segment,         
+			const std::array<float, 3>& origin,          
+			float voxel_size, float background, float max_r_surface);
+
+		std::vector <Tools::FaceBin> bin_gridcoord_by_origin(
+			const Tools::FloatMatrix& gridindex,
+			const Tools::FloatMatrix& origins,
+			int kernel_size,
+			int pad_indices);
 
 	}
 

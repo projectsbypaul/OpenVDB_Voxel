@@ -47,6 +47,11 @@ namespace Tools {
         std::vector<int> vert_indices;
     };
 
+    struct FaceBin {
+        Tools::FloatMatrix coords;   // Nx3
+        std::vector<int>   to_global; // size N, local i -> global face index
+    };
+
     enum WaveType {
         SINE_WAVE,
         TRIANGLE_WAVE

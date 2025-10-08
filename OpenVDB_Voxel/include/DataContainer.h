@@ -50,6 +50,8 @@ namespace cppIOUtility {
         Tools::FloatMatrix origin_container_;
         Tools::FloatMatrix FaceToGridIndex_container_;
         Tools::FloatMatrix VertexToGridIndex_conatiner_;
+        std::vector<Tools::Int3DArray> label_container_;
+        std::vector<Tools::Int3DArray> prediction_container_;
         //Tables
         Tools::MappingTable FaceTypeMap_;
         std::unordered_map<std::string, int> TypeCount_;
@@ -90,6 +92,20 @@ namespace cppIOUtility {
         // Or, provide methods to modify the container, e.g., addSegment
         void addSegment(const Tools::Float3DArray& segment) {
             segment_container_.push_back(segment);
+        }
+        //For label_container_
+        void setLabelContainer(const std::vector<Tools::Int3DArray>& labelContainer) {
+            label_container_ = labelContainer;
+        }
+        const std::vector<Tools::Int3DArray>& getLabelContainer() const {
+            return label_container_;
+        }
+        //For prediction_container_
+        void setPredictionContainer(const std::vector<Tools::Int3DArray>& predictionContainer) {
+            prediction_container_ = predictionContainer;
+        }
+        const std::vector<Tools::Int3DArray>& getPredictionContainer() const {
+            return prediction_container_;
         }
         // For origin_container_
         const Tools::FloatMatrix& getOriginContainer() const {
@@ -144,10 +160,14 @@ namespace cppIOUtility {
         
         void dump_info(const fs::path& dat_file_path, const fs::path& segment_bin_filename_str);
         void dump_segments_bin(const fs::path& bin_file_path);
+        void dump_labels_bin(const fs::path& label_bin_file_path);
+        void dump_predictions_bin(const fs::path& prediction_bin_file_path);
         void dump_segments_h5(const fs::path& h5_filename_path);
 
         void load_info(const fs::path& dat_file_path, fs::path* out_segment_bin_filename);
         void load_segments_bin(const fs::path& bin_file_path);
+        void load_labels_bin(const fs::path& label_bin_file_path);
+        void load_predictions_bin(const fs::path& prediction_bin_file_path);
     };
 }
 
