@@ -889,7 +889,9 @@ namespace ProcessingUtility {
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
         }
-        //TO DO
+        //###TO DO###
+        //-add to JobController
+        //-test JobController
         //-active Template Selection 
         //-Edge Selection -> by neigbourhood analysis --> seen python version
      
