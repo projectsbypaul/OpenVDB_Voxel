@@ -276,7 +276,7 @@ namespace DLPP {
         std::vector<openvdb::Coord> calculateCroppingOrigins(openvdb::FloatGrid::Ptr& grid, int& kernel_size, int& padding, bool surface_only) {
             
             std::vector<openvdb::Coord> crop_origins;
-            
+
             openvdb::CoordBBox ActiveBBox;
             auto grid_accessor = grid->getAccessor();
             grid->tree().evalActiveVoxelBoundingBox(ActiveBBox);
@@ -287,77 +287,78 @@ namespace DLPP {
             int y_steps = util::calculateMinCroppingStep((int)ActiveBBox.dim().y(), kernel_size, padding);
             int z_steps = util::calculateMinCroppingStep((int)ActiveBBox.dim().z(), kernel_size, padding);
 
-            openvdb::Coord step_coord;
-
             for (int i = 0; i < x_steps; i++) {
                 for (int j = 0; j < y_steps; j++) {
                     for (int k = 0; k < z_steps; k++) {
-
                         int x_comp = origin.x() + i * kernel_size - (i + 1) * padding;
                         int y_comp = origin.y() + j * kernel_size - (j + 1) * padding;
                         int z_comp = origin.z() + k * kernel_size - (k + 1) * padding;
-
-                        step_coord = openvdb::Coord(x_comp, y_comp, z_comp);
-
-                        crop_origins.push_back(step_coord);
+                        crop_origins.emplace_back(x_comp, y_comp, z_comp);
                     }
                 }
-
             }
 
-            if (surface_only) {
+            if (!surface_only) return crop_origins;
 
-                std::vector<openvdb::Coord> surface_only_origins;
+            //Enhanced surface-only filter: corners + center + inner cube (0.25..0.75)
+            std::vector<openvdb::Coord> surface_only_origins;
+            // Trilinear sampler in index space
+            openvdb::tools::GridSampler<openvdb::FloatGrid, openvdb::tools::BoxSampler> sampler(*grid);
+            constexpr double EPS = 1e-6; // treat very small magnitudes as zero
 
-                for (openvdb::Coord origin : crop_origins)
-                {
-                    int c_positive = 0;
-                    int c_negative = 0;
-                    int c_zero = 0;
+            for (const openvdb::Coord& org : crop_origins) {
+                const int x0 = org.x();
+                const int y0 = org.y();
+                const int z0 = org.z();
 
-                    std::vector<openvdb::Coord> corners;
-                    int x_comp = origin.x();
-                    int y_comp = origin.y();
-                    int z_comp = origin.z();
+                // Build sample positions (INDEX space)
+                std::vector<openvdb::Vec3d> samples;
+                samples.reserve(8 + 1 + 8); //outer cube + center + inner cube
 
-                    corners.push_back(openvdb::Coord(x_comp, y_comp, z_comp)); //0 0 0 
-                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp + kernel_size, z_comp + kernel_size)); //1 1 1 
+                //outer cube corners spanning [0, 1]^3
+                for (int dx = 0; dx < 2; ++dx)
+                    for (int dy = 0; dy < 2; ++dy)
+                        for (int dz = 0; dz < 2; ++dz) {
+                            samples.emplace_back(
+                                x0 + dx * kernel_size,
+                                y0 + dy * kernel_size,
+                                z0 + dz * kernel_size
+                            );
+                        }
 
-                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp, z_comp)); //1 0 0
-                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp + kernel_size, z_comp)); //1 1 0
-                    corners.push_back(openvdb::Coord(x_comp + kernel_size, y_comp, z_comp + kernel_size)); //1 0 1
+                // center (0.5, 0.5, 0.5)
+                samples.emplace_back(x0 + 0.5 * kernel_size, y0 + 0.5 * kernel_size, z0 + 0.5 * kernel_size);
 
-                    corners.push_back(openvdb::Coord(x_comp, y_comp + kernel_size, z_comp)); //0 1 0
-                    corners.push_back(openvdb::Coord(x_comp, y_comp + kernel_size, z_comp + kernel_size)); //0 1 1 
+                // inner cube corners spanning [0.25, 0.75]^3
+                for (int dx = 0; dx < 2; ++dx)
+                    for (int dy = 0; dy < 2; ++dy)
+                        for (int dz = 0; dz < 2; ++dz) {
+                            samples.emplace_back(
+                                x0 + (0.25 + 0.5 * dx) * kernel_size,
+                                y0 + (0.25 + 0.5 * dy) * kernel_size,
+                                z0 + (0.25 + 0.5 * dz) * kernel_size
+                            );
+                        }
 
-
-                    corners.push_back(openvdb::Coord(x_comp, y_comp, z_comp + kernel_size)); // 0 0 1 
-
-                    for (openvdb::Coord point : corners) {
-                        float corner_value = grid_accessor.getValue(point);
-                        if (corner_value > 0) c_positive++;
-                        if (corner_value < 0) c_negative++;
-                        if (corner_value == 0) c_zero++;
-                    }
-
-                    int counters_greater_zero = 0;
-                    if (c_positive > 0) counters_greater_zero++;
-                    if (c_negative > 0) counters_greater_zero++;
-                    if (c_zero > 0) counters_greater_zero++;
-
-
-                    if (counters_greater_zero > 1) surface_only_origins.push_back(origin);
+                // Count sign categories
+                int c_pos = 0, c_neg = 0, c_zero = 0;
+                for (const auto& p : samples) {
+                    const double v = sampler.isSample(p); // INDEX space sampling
+                    if (v > EPS)      ++c_pos;
+                    else if (v < -EPS)++c_neg;
+                    else              ++c_zero;
                 }
-                return surface_only_origins;
 
+                int kinds = 0;
+                if (c_pos > 0) ++kinds;
+                if (c_neg > 0) ++kinds;
+                if (c_zero > 0) ++kinds;
+
+                // If more than one category is present, the crop intersects the surface
+                if (kinds > 1) surface_only_origins.push_back(org);
             }
-            else
-            {
-                return crop_origins;
-            }
 
-            
-
+            return surface_only_origins;
         }
 
 	}

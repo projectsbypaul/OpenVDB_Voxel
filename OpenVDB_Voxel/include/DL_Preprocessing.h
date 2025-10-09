@@ -6,7 +6,7 @@
 #pragma endregion 
 
 #pragma region OpenVDB 
-
+#include <openvdb/tools/Interpolation.h>
 #pragma endregion 
 
 #pragma region CGAL 

@@ -845,7 +845,7 @@ namespace ProcessingUtility {
             std::string msg_00 = "segmentation_data.dat or segmentation_data_segments.bin not found";
 
             std::cout << msg_00;
-            LOG_FUNC("EXIT" << " subdirName = " << subDirName << msg_00 << std::endl);
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << msg_00);
 
             return;
         }
@@ -882,10 +882,10 @@ namespace ProcessingUtility {
             Tools::Float3DArray& seg = segment_container[i];
             std::array<float, 3> origin_coord{ origin[i][0], origin[i][1], origin[i][2] };
 
-            LOG("Start compute on segment: " << i << std::endl);
+            LOG("Start compute on segment: " << i);
             //indexed_segements[i] = DLPP::util::get_nearest_face_index(face_to_gird, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
             indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
-            LOG("Finished compute on segment: " << i << std::endl);
+            LOG("Finished compute on segment: " << i);
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
         }
@@ -905,7 +905,7 @@ namespace ProcessingUtility {
         for (int i = 0; i < n_segments; i++) {
 
             Tools::Int3DArray& segment = indexed_segements[i];
-            LOG("Start labelling on segment: " << i << std::endl);
+            LOG("Start labelling on segment: " << i);
             auto [labeled_segement, local_count] = DLPP::label_func::label_by_template_count(segment, face_to_type, current_template);
             labeled_segements[i] = labeled_segement;
 
@@ -914,7 +914,7 @@ namespace ProcessingUtility {
                 global_count[j] += local_count[j];
             }
 
-            LOG("Finished labelling on segment: " << i << std::endl);
+            LOG("Finished labelling on segment: " << i);
             std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << std::endl;
         }
 

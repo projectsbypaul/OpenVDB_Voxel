@@ -241,7 +241,7 @@ namespace Scripts {
         LOG_FUNC("EXIT");
         return 0;
     }
-    int run_labels_from_subdir(fs::path source, std::string subdir_name, std::string class_tempalte)
+    int run_labels_from_subdir(fs::path source, fs::path target, std::string subdir_name, std::string class_tempalte)
     {
         int max_threads = 1;
         int openvdb_threads = 1;
@@ -252,7 +252,7 @@ namespace Scripts {
 
         LOG_FUNC("ENTER");
 
-        ProcessingUtility::ProcessLabelling process(source, source, class_tempalte);
+        ProcessingUtility::ProcessLabelling process(source, target, class_tempalte);
         processOnSubdirTimedNoCheck(&process, subdir_name);
 
         LOG_FUNC("EXIT");
