@@ -266,8 +266,13 @@ int main(int argc, char* argv[])
 
         std::cout << "Adaptive Segmentation Parameters: n_min_kernel=" << n_min_kernel << std::endl;
 
+        if(!fs::exists(target)) {fs::create_directory(target);}
 
-        initLogger((target / "actions.log").generic_string() );
+        fs::path log_file = target / "actions.log";
+        std::ofstream file(log_file);
+        file.close();
+
+        initLogger(log_file.generic_string());
         LOG_FUNC("ENTER");
 
         int result = Scripts::run_segmentation_adaptive(source, target,ks, pd, bw, n_min_kernel);
@@ -292,7 +297,13 @@ int main(int argc, char* argv[])
 
         std::cout << "Fixed Segmentation Parameters: voxel_size=" << voxel_size << std::endl;
 
-        initLogger((target / "actions.log").generic_string());
+        if (!fs::exists(target)) { fs::create_directory(target);}
+
+        fs::path log_file = target / "actions.log";
+        std::ofstream file(log_file);
+        file.close();
+
+        initLogger(log_file.generic_string());
         LOG_FUNC("ENTER");
 
         int result = Scripts::run_segmentation_fixed(source, target, ks, pd, bw, voxel_size);

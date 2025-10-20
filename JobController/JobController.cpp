@@ -17,7 +17,7 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " strip_obj <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " purge_yaml <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " dataset_stats <target_dir> <job_dir> <log_dir> <temp_file> <process_exe>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <sub_dir_name> <log_dir> <template> <process_exe>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <log_dir> <template> <process_exe>\n";
 
     std::cout << "\nVoxel Size (VS) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";

@@ -357,6 +357,7 @@ namespace DLPP {
                 // If more than one category is present, the crop intersects the surface
                 if (kinds > 1) surface_only_origins.push_back(org);
             }
+            //
 
             return surface_only_origins;
         }
