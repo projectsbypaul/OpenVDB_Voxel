@@ -6,16 +6,11 @@ SET "GLOB_THREAD_COUNT=16"
 SET "CHUNK=chunk_benchmark"
 SET "EXECUTABLE_PATH=C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\JobController.exe"
 SET "EXECUTABLE_CHILD_PROCESS=C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\OpenVDB_Voxel.exe"
-SET "MAIN_OUTPUT_DIR=H:\ABC\ABC_Benchmark\debug_logs"
+SET "MAIN_OUTPUT_DIR=H:\libzip_test\logs\benchmark_default"
 SET "GLOB_SOURCE_DIR=H:\ABC\ABC_parsed_files\ABC_%CHUNK%"
-SET "GLOB_TARGET_DIR=H:\ABC\ABC_Benchmark\Outputs_Benchmark"
-SET "GLOB_JOB_DIR=H:\ABC\ABC_jobs\job_benchmark"
-
-SET "MODE=nk_default"
-SET "KS=16"
-SET "PADDING=0"
-SET "BANDWIDTH=5"
-SET "RESOLUTION=2"
+SET "GLOB_TARGET_DIR=H:\libzip_test\benchmark_default"
+SET "GLOB_JOB_DIR=H:\libzip_test\job"
+SET "JOB_TYPE=default"
 
 REM Create necessary directories
 IF NOT EXIST "%MAIN_OUTPUT_DIR%" (
@@ -53,7 +48,7 @@ FOR /L %%I IN (1,1,%GLOB_THREAD_COUNT%) DO (
     echo   Stdout:  !STDOUT_LOG!
     echo   Stderr:  !STDERR_LOG!
 
-    START "!INSTANCE_ID! Process" /B "%EXECUTABLE_PATH%" "%MODE%" "%GLOB_SOURCE_DIR%" "%GLOB_TARGET_DIR%" "!JOB_LOC!" "!APP_LOG!" "%EXECUTABLE_CHILD_PROCESS%" "%KS%" "%PADDING%" "%BANDWIDTH%" "%RESOLUTION%" > "!STDOUT_LOG!" 2> "!STDERR_LOG!"
+    START "!INSTANCE_ID! Process" /B "%EXECUTABLE_PATH%" "%JOB_TYPE%" "%GLOB_SOURCE_DIR%" "%GLOB_TARGET_DIR%" "!JOB_LOC!" "!APP_LOG!" "%EXECUTABLE_CHILD_PROCESS%" > "!STDOUT_LOG!" 2> "!STDERR_LOG!"
     ENDLOCAL
     echo.
 )

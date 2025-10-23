@@ -300,11 +300,15 @@ namespace DLPP {
 
             if (!surface_only) return crop_origins;
 
+            std::cout << "Running surface only check...";
             //Enhanced surface-only filter: corners + center + inner cube (0.25..0.75)
             std::vector<openvdb::Coord> surface_only_origins;
             // Trilinear sampler in index space
             openvdb::tools::GridSampler<openvdb::FloatGrid, openvdb::tools::BoxSampler> sampler(*grid);
             constexpr double EPS = 1e-6; // treat very small magnitudes as zero
+
+            std::vector<openvdb::Vec3d> samples;
+
 
             for (const openvdb::Coord& org : crop_origins) {
                 const int x0 = org.x();
@@ -313,51 +317,40 @@ namespace DLPP {
 
                 // Build sample positions (INDEX space)
                 std::vector<openvdb::Vec3d> samples;
-                samples.reserve(8 + 1 + 8); //outer cube + center + inner cube
+                samples.reserve(kernel_size*kernel_size*kernel_size); //outer cube + center + inner cube
 
                 //outer cube corners spanning [0, 1]^3
-                for (int dx = 0; dx < 2; ++dx)
-                    for (int dy = 0; dy < 2; ++dy)
-                        for (int dz = 0; dz < 2; ++dz) {
+                for (int dx = 0; dx < kernel_size; ++dx)
+                    for (int dy = 0; dy < kernel_size; ++dy)
+                        for (int dz = 0; dz < kernel_size; ++dz) {
                             samples.emplace_back(
-                                x0 + dx * kernel_size,
-                                y0 + dy * kernel_size,
-                                z0 + dz * kernel_size
-                            );
-                        }
-
-                // center (0.5, 0.5, 0.5)
-                samples.emplace_back(x0 + 0.5 * kernel_size, y0 + 0.5 * kernel_size, z0 + 0.5 * kernel_size);
-
-                // inner cube corners spanning [0.25, 0.75]^3
-                for (int dx = 0; dx < 2; ++dx)
-                    for (int dy = 0; dy < 2; ++dy)
-                        for (int dz = 0; dz < 2; ++dz) {
-                            samples.emplace_back(
-                                x0 + (0.25 + 0.5 * dx) * kernel_size,
-                                y0 + (0.25 + 0.5 * dy) * kernel_size,
-                                z0 + (0.25 + 0.5 * dz) * kernel_size
-                            );
+                                x0 + dx,
+                                y0 + dy,
+                                z0 + dz
+                                );
                         }
 
                 // Count sign categories
-                int c_pos = 0, c_neg = 0, c_zero = 0;
+                int c_pos = 0, c_neg = 0, c_zero = 0; int kinds = 0;
                 for (const auto& p : samples) {
                     const double v = sampler.isSample(p); // INDEX space sampling
                     if (v > EPS)      ++c_pos;
                     else if (v < -EPS)++c_neg;
                     else              ++c_zero;
+
+                    if (c_pos > 0) ++kinds;
+                    if (c_neg > 0) ++kinds;
+                    if (c_zero > 0) ++kinds;
+
+                    if (kinds > 1) {
+                        surface_only_origins.push_back(org);
+                        break;
+                    }
                 }
 
-                int kinds = 0;
-                if (c_pos > 0) ++kinds;
-                if (c_neg > 0) ++kinds;
-                if (c_zero > 0) ++kinds;
-
-                // If more than one category is present, the crop intersects the surface
-                if (kinds > 1) surface_only_origins.push_back(org);
+            
             }
-            //
+            std::cout << "done" << std::endl;
 
             return surface_only_origins;
         }

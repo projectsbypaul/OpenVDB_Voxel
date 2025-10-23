@@ -1,23 +1,16 @@
 @echo off
-REM Batch script to launch JobController.exe multiple times in parallel
+REM Batch script to launch MultiProcess.exe multiple times in parallel using a loop
 
 REM --- Configuration ---
 SET "GLOB_THREAD_COUNT=16"
-SET "CHUNK=chunk_benchmark"
 SET "EXECUTABLE_PATH=C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\JobController.exe"
 SET "EXECUTABLE_CHILD_PROCESS=C:\Users\pschuster\source\repos\OpenVDB_Voxel\x64\Debug\OpenVDB_Voxel.exe"
-SET "MAIN_OUTPUT_DIR=H:\ABC\ABC_Benchmark\debug_logs"
-SET "GLOB_SOURCE_DIR=H:\ABC\ABC_parsed_files\ABC_%CHUNK%"
-SET "GLOB_TARGET_DIR=H:\ABC\ABC_Benchmark\Outputs_Benchmark"
-SET "GLOB_JOB_DIR=H:\ABC\ABC_jobs\job_benchmark"
+SET "GLOB_TARGET_DIR=H:\ABC\ABC_parsed_files\train_chunks\ABC_chunk_02"
+SET "GLOB_JOB_DIR=H:\ABC\ABC_jobs\pj_chunk_02"
+SET "JOB_TYPE=purge_yaml"
+SET "MAIN_OUTPUT_DIR=%~dp0Parallel_Run_Logs\JobController\purge_job_02"
 
-SET "MODE=nk_default"
-SET "KS=16"
-SET "PADDING=0"
-SET "BANDWIDTH=5"
-SET "RESOLUTION=2"
-
-REM Create necessary directories
+REM --- Create necessary directories ---
 IF NOT EXIST "%MAIN_OUTPUT_DIR%" (
     echo Creating directory for output logs: %MAIN_OUTPUT_DIR%
     MKDIR "%MAIN_OUTPUT_DIR%"
@@ -27,7 +20,7 @@ IF NOT EXIST "%GLOB_TARGET_DIR%" (
     MKDIR "%GLOB_TARGET_DIR%"
 )
 
-REM Check if executable exists
+REM --- Check if executable exists ---
 IF NOT EXIST "%EXECUTABLE_PATH%" (
     echo ERROR: Executable not found at "%EXECUTABLE_PATH%"
     pause
@@ -36,7 +29,7 @@ IF NOT EXIST "%EXECUTABLE_PATH%" (
 echo Executable found: %EXECUTABLE_PATH%
 echo.
 
-REM --- Launch instances ---
+REM --- Launch instances in loop ---
 FOR /L %%I IN (1,1,%GLOB_THREAD_COUNT%) DO (
     SETLOCAL ENABLEDELAYEDEXPANSION
     SET "ID=00%%I"
@@ -50,10 +43,11 @@ FOR /L %%I IN (1,1,%GLOB_THREAD_COUNT%) DO (
     echo Launching !INSTANCE_ID!...
     echo   App Log: !APP_LOG!
     echo   JobLoc:  !JOB_LOC!
+    echo   TempFile: !TEMP_FILE!
     echo   Stdout:  !STDOUT_LOG!
     echo   Stderr:  !STDERR_LOG!
 
-    START "!INSTANCE_ID! Process" /B "%EXECUTABLE_PATH%" "%MODE%" "%GLOB_SOURCE_DIR%" "%GLOB_TARGET_DIR%" "!JOB_LOC!" "!APP_LOG!" "%EXECUTABLE_CHILD_PROCESS%" "%KS%" "%PADDING%" "%BANDWIDTH%" "%RESOLUTION%" > "!STDOUT_LOG!" 2> "!STDERR_LOG!"
+    START "!INSTANCE_ID! Process" /B "%EXECUTABLE_PATH%" "%JOB_TYPE%" "%GLOB_TARGET_DIR%" "%GLOB_TARGET_DIR%" "!JOB_LOC!" "!APP_LOG!" "%EXECUTABLE_CHILD_PROCESS%" > "!STDOUT_LOG!" 2> "!STDERR_LOG!"
     ENDLOCAL
     echo.
 )
