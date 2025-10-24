@@ -868,8 +868,6 @@ namespace ProcessingUtility {
         std::cout << "Binning faces by segment origin..." << std::endl;
         std::vector<Tools::FaceBin> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size, 4);
        
-
-
         //Nearest face for each voxel gets computed
         std::cout << "Calculation neares face for voxels..." << std::endl;
         int n_segments = segment_container.size();
@@ -887,14 +885,13 @@ namespace ProcessingUtility {
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
         }
-        //###TO DO###
-        //-add to JobController
-        //-test JobController
-        //-active Template Selection 
-        //-Edge Selection -> by neigbourhood analysis --> seen python version
+    
      
         //Selection of class template
         LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
+        std::unordered_map<std::string, int> class_to_index = current_template.get_class_to_index();
+        std::unordered_map<int, std::string>  index_to_class = current_template.get_index_to_class();
+        bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
 
         //Based on the selected template each voxel gets assiged the surface type of the closest face
         std::vector<Tools::Int3DArray> labeled_segements(segment_container.size());
@@ -921,8 +918,75 @@ namespace ProcessingUtility {
             std::cout << current_template.to_label(i) << "::" << global_count[i] << std::endl;
         }
 
-        //Saving Data
-        SegmentData.setLabelContainer(labeled_segements);
+
+        if (!has_Edge) {
+            //Saving Data 
+            SegmentData.setLabelContainer(labeled_segements);
+            SegmentData.dump(targetDir_ / subDirName);
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
+            return;
+        }
+
+        //Adding Edges to label
+        std::vector <Tools::Int3DArray> labels_with_edge(labeled_segements);
+        int added_edges = 0;
+
+        std::vector<Tools::IntMatrix> segmentwise_edge_indicies;
+        std::vector<int> segments_with_edge_index;
+    
+        for (int i = 0; i < n_segments; i++) {
+
+            Tools::Int3DArray& segment = labels_with_edge[i];
+            LOG("Start adding edges to segment: " << i);
+            auto [segment_with_edge, edge_indicies] = DLPP::label_func::add_edges_to_label_index(segment, current_template);
+            labels_with_edge[i] = segment_with_edge;    
+
+            added_edges += edge_indicies.size();
+            
+            if (edge_indicies.size() > 0) {
+                segmentwise_edge_indicies.push_back(edge_indicies);
+                segments_with_edge_index.push_back(i);
+            }
+
+           
+
+            LOG("Finished adding edges on segment: " << i);
+            std::cout << "Added edges to segments " << (i + 1) << "|" << n_segments << std::endl;
+        }
+        std::cout << "Added " << added_edges << " edge voxels in total" << std::endl;
+       
+        //Add edges to face_type_map
+
+        std::cout << "Remapped faces to surf type 'Edge'" << std::endl;
+        Tools::MappingTable ftm_edge(face_to_type);
+        int edge_face_count = 0;
+
+        for (int i = 0; i < segmentwise_edge_indicies.size(); i++) {
+            Tools::IntMatrix edge_indicies = segmentwise_edge_indicies[i];
+            int global_index = segments_with_edge_index[i];
+
+            int x = -1;
+            int y = -1;
+            int z = -1;
+            int face_index;
+
+            for (int j = 0; j < edge_indicies.size(); j++) {
+                x = edge_indicies[j][0];
+                y = edge_indicies[j][1];
+                z = edge_indicies[j][2];
+                face_index = indexed_segements[global_index][x][y][z];
+                if (ftm_edge[face_index][0] != "Edge") {
+                    ftm_edge[face_index] = { "Edge" };
+                    edge_face_count++;
+                }
+            }
+        }
+        //overwriting face_type_map
+        SegmentData.setFaceTypeMap(ftm_edge);
+        std::cout << "Remapped " << edge_face_count << " faces to surf type 'Edge'" << std::endl;
+        
+        //Saving Data 
+        SegmentData.setLabelContainer(labels_with_edge);
         SegmentData.dump(targetDir_ / subDirName);
 
         LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);

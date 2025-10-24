@@ -4,6 +4,201 @@
 namespace DLPP {
 
     namespace label_func {
+
+        std::vector<int> pool_neighbourhood_classes(Tools::Int3DArray& labeled_segment, LabelTemplates::LabelTemplate& label_template, int loc_x, int loc_y, int loc_z, int pad = 1) {
+
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+            std::size_t len = class_to_index.size();
+            std::vector<int> neighbourhood_pool(len, 0);
+
+            int dim_x = labeled_segment.size();
+            int dim_y = labeled_segment[0].size();
+            int dim_z = labeled_segment[0][0].size();
+
+            for (int x = std::max(0, loc_x - pad); x < std::min(dim_x, loc_x + pad); x++) {
+                for (int y = std::max(0, loc_y - pad); y < std::min(dim_y, loc_y + pad); y++) {
+                    for (int z = std::max(0, loc_z - pad); z < std::min(dim_z, loc_z + pad); z++) {
+                        if (x == loc_x && y == loc_y && z == loc_z) {
+                            continue; //exclude center
+                        }
+                        const int label = labeled_segment[x][y][z];
+
+                        if (label >= 0 && label < static_cast<int>(neighbourhood_pool.size())) { //make sure label fits into 
+                            neighbourhood_pool[label]++;
+                        }
+
+                    }
+                }
+            }
+
+
+            return neighbourhood_pool;
+        }
+
+        std::pair<Tools::Int3DArray, Tools::IntMatrix> add_edges_to_label_index(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours) {
+
+            int dim_x = in_label.size();
+            int dim_y = in_label[0].size();
+            int dim_z = in_label[0][0].size();
+
+            int added_egdes = 0;
+            Tools::IntMatrix edge_indicies;
+
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+
+            Tools::Int3DArray out_label(in_label);
+
+            bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
+            bool has_Inside = (class_to_index.find("Inside") != class_to_index.end());
+            bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
+
+            if (!has_Edge or !has_Inside or !has_Outside) {
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
+            }
+
+            for (int x = 0; x < dim_x; x++) {
+                for (int y = 0; y < dim_y; y++) {
+                    for (int z = 0; z < dim_z; z++) {
+
+
+                        int own_class = in_label[x][y][z];
+
+                        if (own_class == class_to_index["Outside"] or own_class == class_to_index["Inside"]) {
+                            //skip Outside/Inside Voxel
+                            continue;
+                        }
+
+                        std::vector<int> pooled_neighbours = pool_neighbourhood_classes(in_label, label_template, x, y, z);
+                        int count_diff = 0;
+
+                        //count neighbour different from inside/outside
+                        for (int i = 0; i < pooled_neighbours.size(); i++) {
+                            if (i != own_class && i != class_to_index["Outside"] && i != class_to_index["Inside"]) {
+                                count_diff += pooled_neighbours[i];
+                            }
+                        }
+
+                        if (count_diff >= min_neighbours) {
+                            //overwrite voxel with edge class 
+                            out_label[x][y][z] = class_to_index["Edge"];
+                            edge_indicies.push_back({x,y,z});
+                            added_egdes++;
+                        }
+
+                    }
+                }
+            }
+            return { out_label, edge_indicies};
+        }
+
+        std::pair<Tools::Int3DArray, int> add_edges_to_label_count(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours) {
+
+            int dim_x = in_label.size();
+            int dim_y = in_label[0].size();
+            int dim_z = in_label[0][0].size();
+
+            int added_egdes = 0;
+
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+
+            Tools::Int3DArray out_label(in_label);
+
+            bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
+            bool has_Inside = (class_to_index.find("Inside") != class_to_index.end());
+            bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
+
+            if (!has_Edge or !has_Inside or !has_Outside) {
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
+            }
+
+            for (int x = 0; x < dim_x; x++) {
+                for (int y = 0; y < dim_y; y++) {
+                    for (int z = 0; z < dim_z; z++) {
+
+
+                        int own_class = in_label[x][y][z];
+
+                        if (own_class == class_to_index["Outside"] or own_class == class_to_index["Inside"]) {
+                            //skip Outside/Inside Voxel
+                            continue;
+                        }
+
+                        std::vector<int> pooled_neighbours = pool_neighbourhood_classes(in_label, label_template, x, y, z);
+                        int count_diff = 0;
+
+                        //count neighbour different from inside/outside
+                        for (int i = 0; i < pooled_neighbours.size(); i++) {
+                            if (i != own_class && i != class_to_index["Outside"] && i != class_to_index["Inside"]) {
+                                count_diff += pooled_neighbours[i];
+                            }
+                        }
+
+                        if (count_diff >= min_neighbours) {
+                            //overwrite voxel with edge class 
+                            out_label[x][y][z] = class_to_index["Edge"];
+                            added_egdes++;
+                        }
+
+                    }
+                }
+            }
+            return {out_label, added_egdes};
+        }
+        
+        Tools::Int3DArray add_edges_to_label(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours) {
+
+            int dim_x = in_label.size();
+            int dim_y = in_label[0].size();
+            int dim_z = in_label[0][0].size();
+
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+
+            Tools::Int3DArray out_label(in_label);
+
+            bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
+            bool has_Inside = (class_to_index.find("Inside") != class_to_index.end());
+            bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
+
+            if (!has_Edge or !has_Inside or !has_Outside) {
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
+            }
+
+            for (int x = 0; x < dim_x; x++) {
+                for (int y = 0; y < dim_y; y++) {
+                    for (int z = 0; z < dim_z; z++) {
+
+
+                        int own_class = in_label[x][y][z];
+
+                        if (own_class == class_to_index["Outside"] or own_class == class_to_index["Inside"]) {
+                            //skip Outside/Inside Voxel
+                            continue;
+                        }
+                        
+                        std::vector<int> pooled_neighbours = pool_neighbourhood_classes(in_label, label_template, x, y, z);
+                        int count_diff = 0;
+
+                        //count neighbour different from inside/outside
+                        for (int i = 0; i < pooled_neighbours.size(); i++) {
+                            if (i != own_class && i != class_to_index["Outside"] && i != class_to_index["Inside"]) {
+                                count_diff += pooled_neighbours[i];
+                            }
+                        }
+
+                        if (count_diff >= min_neighbours) {
+                            //overwrite voxel with edge class 
+                            out_label[x][y][z] = class_to_index["Edge"];
+                        }
+                      
+                    }
+                }
+            }
+            return out_label;
+        }
+
         std::pair<Tools::Int3DArray, std::vector<int>>
             label_by_template_count(
                 const Tools::Int3DArray& segment,
@@ -48,6 +243,7 @@ namespace DLPP {
         }
 
         Tools::Int3DArray label_by_template(const Tools::Int3DArray& segment, const Tools::MappingTable& face_to_type, LabelTemplates::LabelTemplate& label_template) {
+           
             int dim_x = segment.size();
             int dim_y = segment[0].size();
             int dim_z = segment[0][0].size();
@@ -84,7 +280,6 @@ namespace DLPP {
             return labeled_segment;
         }
     }
-
 
 	namespace util {
 
@@ -239,7 +434,6 @@ namespace DLPP {
 	namespace OpenVDBbased {
 
         Tools::Float3DArray KernelCropFloatGridFromCoord(openvdb::FloatGrid::Ptr& grid, openvdb::Coord& origin, int& kernel_size) {
-
 
             // Create a 3D array initialized with the grid's background value
             std::vector<std::vector<std::vector<float>>> denseArray(

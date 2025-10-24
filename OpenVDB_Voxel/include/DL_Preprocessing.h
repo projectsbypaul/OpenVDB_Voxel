@@ -16,6 +16,10 @@
 namespace DLPP {
 
 	namespace label_func {
+		std::pair<Tools::Int3DArray, Tools::IntMatrix> add_edges_to_label_index(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);
+		std::pair<Tools::Int3DArray, int> add_edges_to_label_count(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);
+		Tools::Int3DArray add_edges_to_label(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);
+
 		Tools::Int3DArray label_by_template(const Tools::Int3DArray& segment, const Tools::MappingTable& face_to_type, LabelTemplates::LabelTemplate& label_template);
 
 		std::pair<Tools::Int3DArray, std::vector<int>> label_by_template_count(

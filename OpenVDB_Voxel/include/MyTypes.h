@@ -16,6 +16,8 @@ namespace Tools {
 
     using FloatMatrix = std::vector<std::vector<float>>;
 
+    using IntMatrix = std::vector<std::vector<int>>;
+
     using MappingTable = std::vector<std::vector<std::string>>;
 
     struct MyVertex {
