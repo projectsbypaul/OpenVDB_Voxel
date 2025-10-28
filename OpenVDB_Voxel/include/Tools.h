@@ -46,6 +46,7 @@ namespace Tools {
 
     namespace util {
        
+        Tools::Int3DArray AssembleArrays(Tools::FloatMatrix origins, std::vector<Int3DArray> arrays);
         std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap);
         std::vector<Tools::MyVertex> CalculateFaceCenters(const std::vector<Tools::MyFace>& faces, const std::vector<Tools::MyVertex>& vertices);
         char mapValueToChar(float value, float minVal, float maxVal);
@@ -150,7 +151,7 @@ namespace Tools {
     }
 
     namespace Macros {
-        void export_bin_to_vdb(const std::string& dat_file, const std::string& bin_file, const std::string& shape_file, const std::string& out_vdb_file);
+        void export_prediction_vdb(const std::string& source, const std::string& out_file);
         void test_grid_vdb(fs::path filename);
     }
 }

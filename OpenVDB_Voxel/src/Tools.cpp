@@ -1,6 +1,7 @@
 ﻿#include "../include/Tools.h"
 #include "../include/MyTypes.h"
 #include "../include/binArrayReader.h"
+#include "../include/DataContainer.h"
 
 #include <filesystem>
 
@@ -10,7 +11,41 @@ namespace fs = std::filesystem;
 namespace Tools {
 
     namespace util {
+        Tools::Int3DArray AssembleArrays(Tools::FloatMatrix origins, std::vector<Int3DArray> arrays)
+        {
+            // Initialize min/max with extreme values
+            std::vector<float> min_pt = {
+                std::numeric_limits<float>::max(),
+                std::numeric_limits<float>::max(),
+                std::numeric_limits<float>::max()
+            };
+            std::vector<float> max_pt = {
+                std::numeric_limits<float>::lowest(),
+                std::numeric_limits<float>::lowest(),
+                std::numeric_limits<float>::lowest()
+            };
 
+            std::array<int, 3> max_index;
+            max_index.fill(-1);
+            std::array<int, 3> min_index;
+            min_index.fill(-1);
+            
+            //iterate over origing and find bounding box
+            for (int i = 0; i < origins.size(); i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (origins[i][j] < min_pt[j]) {
+                        min_pt[j] = origins[i][j];
+                        min_index[j] = i;
+                    }
+                    if (origins[i][j] > min_pt[j]) {
+                        max_pt[j] = origins[i][j];
+                        max_index[j] = i;
+                    }
+                }
+            }
+
+            return Tools::Int3DArray();
+        }
         std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap) {
             std::unordered_map<std::string, int> type_counts;
 
@@ -1140,29 +1175,21 @@ namespace Tools {
 
     namespace Macros {
 
-        void export_bin_to_vdb(const std::string& dat_file,
-            const std::string& bin_file,
-            const std::string& shape_file,
-            const std::string& out_vdb_file)
+        void export_prediction_vdb(const std::string& source, const std::string& out_file)
         {
-           
 
-            // 1. Read meta info
-            openvdb::Vec3f bottom_coord = Functions::read_bottom_coord(dat_file);
-            float voxel_size = Functions::read_voxel_size(dat_file);
+            std::ifstream f(R"(H:\ws_seg_vdb\output_adaptive\test.bin)", std::ios::binary);
+            int32_t val;
+            while (f.read(reinterpret_cast<char*>(&val), sizeof(val))) {
+                std::cout << val << ' ' << std::endl;
+            }
+            //#1 Load datacontainer
+            cppIOUtility::SegmentationDataContainer seg_data;
+            seg_data.load(source);
+            auto predictions = seg_data.getPredictionContainer();
+        
+            std::cout << "[0,0,0,0]: " << predictions[0][0][0][0] << std::endl;
 
-            // 2. Read shape
-            int dims[3];
-            Functions::read_grid_shape(shape_file, dims);
-
-            // 3. Read grid data
-            std::vector<float> grid_data = Functions::read_grid_bin(bin_file, dims[0], dims[1], dims[2]);
-
-            // 4. Write to VDB
-            openvdb::initialize();
-            Functions::save_grid_to_vdb(grid_data, dims, bottom_coord, voxel_size, out_vdb_file);
-
-            std::cout << "Done! Saved to " << out_vdb_file << std::endl;
         }
 
         void test_grid_vdb(fs::path filename)

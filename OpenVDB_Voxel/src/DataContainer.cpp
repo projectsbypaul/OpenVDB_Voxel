@@ -315,7 +315,7 @@ namespace cppIOUtility {
 
     void SegmentationDataContainer::load_predictions_bin(const fs::path& p)
     {
-        if (load_list_of_3d_arrays_bin<int>(p, prediction_container_)) {
+        if (load_list_of_3d_arrays_bin<int32_t>(p, prediction_container_)) {
             std::cout << "SegmentationDataContainer predictions loaded from: "
                 << p.string() << std::endl;
         }

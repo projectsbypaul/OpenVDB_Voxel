@@ -27,7 +27,7 @@ void usage(const char* progname) {
     std::cout << "\nSegmentation modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " segAdaptive <obj_path> <target_dir> <kernel_size> <padding> <bandwidth> <n_min_kernel>\n";
     std::cout << "  " << progpath.filename().generic_string() << " segFixed <obj_path> <target_dir> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " segFromVDB <vdb_path> <target_dir> <log_dir>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " segFromVDB <vdb_path> <target_dir> <kernel_size> <padding> <log_dir>\n";
 
     std::cout << "\nUtility modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " stats_subdir <source_dir> <target_dir> <sub_dir_name> <log_dir> <temp_file_name>\n";
@@ -117,7 +117,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "subdirLabel") {
         if (argc != 7) {
-            std::cerr << "subdirLabel mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "subdirLabel mode requires exactly 7 arguments" << std::endl;
             usage(argv[0]);
         }
 
@@ -314,19 +314,21 @@ int main(int argc, char* argv[])
     }
 
     else if (mode == "segFromVDB") {
-        if (argc != 5) {
-            std::cerr << "segFromVDB mode requires exactly 5 arguments" << std::endl;
+        if (argc != 7) {
+            std::cerr << "segFromVDB mode requires exactly 7 arguments" << std::endl;
             usage(argv[0]);
         }
 
         fs::path source = argv[2];
         fs::path target = argv[3];
-        fs::path log_dir = argv[4];
+        int ks = std::stoi(argv[4]);
+        int pd = std::stoi(argv[5]);
+        fs::path log_dir = argv[6];
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_segmentation_on_vdb(source, target);
+        int result = Scripts::run_segmentation_on_vdb(source, target, ks, pd);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
@@ -366,13 +368,13 @@ int main(int argc, char* argv[])
         }
 
         fs::path source = argv[2];
-        fs::path target = argv[3];
+        fs::path outfile = argv[3];
         fs::path log_dir = argv[4];
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_export_vdb(source, target);
+        int result = Scripts::run_export_vdb(source, outfile);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
