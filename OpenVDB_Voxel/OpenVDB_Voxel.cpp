@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <string>
 #include <cstdlib>
+#include <H5Cpp.h>
 namespace fs = std::filesystem;
 
 void usage(const char* progname) {

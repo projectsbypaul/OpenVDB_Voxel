@@ -2,6 +2,10 @@
 #include "../include/MyTypes.h"
 #include "../include/binArrayReader.h"
 #include "../include/DataContainer.h"
+#include "../include/h5_utility.h"
+
+#include <H5Cpp.h>
+#include <H5Cpublic.h>    // for hsize_t
 
 #include <filesystem>
 
@@ -11,41 +15,160 @@ namespace fs = std::filesystem;
 namespace Tools {
 
     namespace util {
-        Tools::Int3DArray AssembleArrays(Tools::FloatMatrix origins, std::vector<Int3DArray> arrays)
+
+        std::vector<Tools::Int3DArray> assemble_from_sequence(
+            const std::vector<int>& data_sequence,
+            hsize_t dims[4])
         {
-            // Initialize min/max with extreme values
-            std::vector<float> min_pt = {
-                std::numeric_limits<float>::max(),
-                std::numeric_limits<float>::max(),
-                std::numeric_limits<float>::max()
-            };
-            std::vector<float> max_pt = {
-                std::numeric_limits<float>::lowest(),
-                std::numeric_limits<float>::lowest(),
-                std::numeric_limits<float>::lowest()
+            // dims = {N, D, H, W}
+            std::vector<Tools::Int3DArray> int_arrays;
+            int_arrays.resize(dims[0]); // N samples
+
+            size_t idx = 0; // flat index into data_sequence
+
+            for (size_t n = 0; n < dims[0]; ++n) {
+                // allocate 3D array [D][H][W]
+                Tools::Int3DArray arr;
+                arr.resize(dims[1], std::vector<std::vector<int>>(dims[2],
+                    std::vector<int>(dims[3])));
+
+                for (size_t d = 0; d < dims[1]; ++d) {
+                    for (size_t h = 0; h < dims[2]; ++h) {
+                        for (size_t w = 0; w < dims[3]; ++w) {
+                            arr[d][h][w] = data_sequence[idx++];
+                        }
+                    }
+                }
+
+                int_arrays[n] = std::move(arr);
+            }
+
+            return int_arrays;
+        }
+
+        std::array<int, 3> ComputeBottomCoord(const Tools::FloatMatrix& origins, int kernel_size) {
+            std::array<int, 3> bottom_coord = {
+                std::numeric_limits<int>::max(),
+                std::numeric_limits<int>::max(),
+                std::numeric_limits<int>::max()
             };
 
-            std::array<int, 3> max_index;
-            max_index.fill(-1);
-            std::array<int, 3> min_index;
-            min_index.fill(-1);
-            
-            //iterate over origing and find bounding box
-            for (int i = 0; i < origins.size(); i++) {
-                for (int j = 0; j < 3; j++) {
-                    if (origins[i][j] < min_pt[j]) {
-                        min_pt[j] = origins[i][j];
-                        min_index[j] = i;
-                    }
-                    if (origins[i][j] > min_pt[j]) {
-                        max_pt[j] = origins[i][j];
-                        max_index[j] = i;
+            for (const auto& origin : origins) {
+                for (int d = 0; d < 3; d++) {
+                    int start = static_cast<int>(origin[d]);
+                    bottom_coord[d] = std::min(bottom_coord[d], start);
+                }
+            }
+            return bottom_coord;
+        }
+
+        std::array<int, 3> ComputeTopCoord(const Tools::FloatMatrix& origins, int kernel_size) {
+            std::array<int, 3> top_inclusive = {
+                std::numeric_limits<int>::lowest(),
+                std::numeric_limits<int>::lowest(),
+                std::numeric_limits<int>::lowest()
+            };
+
+            for (const auto& origin : origins) {
+                for (int d = 0; d < 3; d++) {
+                    int end = static_cast<int>(origin[d]) + kernel_size - 1;
+                    top_inclusive[d] = std::max(top_inclusive[d], end);
+                }
+            }
+            return top_inclusive;
+        }
+
+
+        Tools::Int3DArray AssembleArrays(
+            const Tools::FloatMatrix& origins,
+            const std::vector<Tools::Int3DArray>& arrays,
+            int kernel_size,
+            int padding,
+            int fill_idx
+        ) {
+            int n = static_cast<int>(origins.size());
+            if (n == 0) {
+                return Tools::Int3DArray();
+            }
+
+            // 1. Compute bounding box
+            std::array<int, 3> bottom_coord = {
+                std::numeric_limits<int>::max(),
+                std::numeric_limits<int>::max(),
+                std::numeric_limits<int>::max()
+            };
+
+            std::array<int, 3> top_inclusive = {
+                std::numeric_limits<int>::lowest(),
+                std::numeric_limits<int>::lowest(),
+                std::numeric_limits<int>::lowest()
+            };
+
+            for (int i = 0; i < n; i++) {
+                for (int d = 0; d < 3; d++) {
+                    int start = static_cast<int>(origins[i][d]);
+                    int end = start + kernel_size - 1;
+                    bottom_coord[d] = std::min(bottom_coord[d], start);
+                    top_inclusive[d] = std::max(top_inclusive[d], end);
+                }
+            }
+
+            std::array<int, 3> top_exclusive;
+            std::array<int, 3> dim_vec;
+            for (int d = 0; d < 3; d++) {
+                top_exclusive[d] = top_inclusive[d] + 1;
+                dim_vec[d] = top_exclusive[d] - bottom_coord[d];
+            }
+
+            // 2. Allocate output filled with fill_idx
+            Tools::Int3DArray full_grid(
+                dim_vec[0],
+                std::vector<std::vector<int>>(
+                    dim_vec[1],
+                    std::vector<int>(dim_vec[2], fill_idx)
+                )
+            );
+
+            // 3. Compute crop extents (padding removal)
+            int pad_half = padding / 2;
+            int x0 = pad_half;
+            int x1 = kernel_size - pad_half;
+            if (x1 <= x0) {
+                throw std::runtime_error("Padding too large for kernel_size; nothing to paste.");
+            }
+
+            int dx = x1 - x0;
+            int dy = x1 - x0;
+            int dz = x1 - x0;
+
+            // 4. Paste each block
+            for (int g = 0; g < n; g++) {
+                const auto& block = arrays[g]; // assumed (ks x ks x ks)
+
+                // Global offset
+                std::array<int, 3> off;
+                for (int d = 0; d < 3; d++) {
+                    off[d] = (static_cast<int>(origins[g][d]) - bottom_coord[d]);
+                }
+
+                int ox = off[0] + x0;
+                int oy = off[1] + x0;
+                int oz = off[2] + x0;
+
+                for (int x = 0; x < dx; x++) {
+                    for (int y = 0; y < dy; y++) {
+                        for (int z = 0; z < dz; z++) {
+                            full_grid[ox + x][oy + y][oz + z] =
+                                block[x0 + x][x0 + y][x0 + z];
+                        }
                     }
                 }
             }
 
-            return Tools::Int3DArray();
+            return full_grid;
         }
+
+
         std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap) {
             std::unordered_map<std::string, int> type_counts;
 
@@ -1175,21 +1298,83 @@ namespace Tools {
 
     namespace Macros {
 
-        void export_prediction_vdb(const std::string& source, const std::string& out_file)
+        void export_prediction_vdb(const fs::path& source, const fs::path& out_file)
         {
 
-            std::ifstream f(R"(H:\ws_seg_vdb\output_adaptive\test.bin)", std::ios::binary);
-            int32_t val;
-            while (f.read(reinterpret_cast<char*>(&val), sizeof(val))) {
-                std::cout << val << ' ' << std::endl;
-            }
-            //#1 Load datacontainer
-            cppIOUtility::SegmentationDataContainer seg_data;
-            seg_data.load(source);
-            auto predictions = seg_data.getPredictionContainer();
-        
-            std::cout << "[0,0,0,0]: " << predictions[0][0][0][0] << std::endl;
+            cppIOUtility::SegmentationDataContainer seg_con;
+            seg_con.load(source);
+            Tools::FloatMatrix origins = seg_con.getOriginContainer();
 
+            float voxel_size = seg_con.getVoxelSize();
+
+            fs::path h5_container_path = source / "segmentation_data_predictions.h5";
+            fs::path h5_out_path = source / "int_grid_predictions.h5";
+
+            H5::H5File file(h5_container_path.generic_string(), H5F_ACC_RDONLY);
+            H5::DataSet dataset = file.openDataSet("predictions");
+
+            H5::DataSpace dataspace = dataset.getSpace();
+            hsize_t dims_out[4];
+            dataspace.getSimpleExtentDims(dims_out, nullptr);
+
+            size_t totalSize = 1;
+            for (int i = 0; i < 4; i++) {
+                totalSize *= dims_out[i];
+            }
+
+            std::vector<int> readData(totalSize);
+            dataset.read(readData.data(), H5::PredType::NATIVE_INT);
+
+            //std::vector<Tools::Int3DArray> predictions = util::assemble_from_sequence(readData, dims_out);
+            std::vector<Tools::Int3DArray> predictions = H5util::unflatten4D(
+                readData, dims_out[0], dims_out[1], dims_out[2], dims_out[3]
+            );
+
+            Tools::Int3DArray int_grid = util::AssembleArrays(origins, predictions, 32, 8, -1);
+
+            /*
+            auto flat_int_grid = H5util::flatten3D<int>(int_grid);
+            hsize_t dim_x = int_grid.size();
+            hsize_t dim_y = int_grid[0].size();
+            hsize_t dim_z = int_grid[0][0].size();
+
+            H5util::write_ndarray_to_h5(flat_int_grid, { dim_x, dim_y, dim_z }, "flat_predictions", h5_out_path);
+            */
+
+            std::array<int, 3> bottom_coord = Tools::util::ComputeBottomCoord(origins, 32);
+
+            // --- Build OpenVDB IntGrid ---
+            openvdb::initialize();
+            openvdb::FloatGrid::Ptr grid = openvdb::FloatGrid::create(/*background value*/ -2.0);
+            grid->setName("prediction_grid");
+
+            // Access the tree for writing
+            openvdb::FloatGrid::Accessor accessor = grid->getAccessor();
+
+            openvdb::math::Transform::Ptr transform = openvdb::math::Transform::createLinearTransform(voxel_size);
+            grid->setTransform(transform);
+
+            // Fill from int_grid, offsetting by bottom_coord
+            for (int x = 0; x < static_cast<int>(int_grid.size()); ++x) {
+                for (int y = 0; y < static_cast<int>(int_grid[x].size()); ++y) {
+                    for (int z = 0; z < static_cast<int>(int_grid[x][y].size()); ++z) {
+                        // offset voxel coordinate by bottom_coord
+                        accessor.setValue(
+                            openvdb::Coord(x + bottom_coord[0],
+                                y + bottom_coord[1],
+                                z + bottom_coord[2]),
+                             static_cast<float>(int_grid[x][y][z])
+                        );
+                    }
+                }
+            }
+
+            // Write to file
+            openvdb::io::File file_out(out_file.string());
+            openvdb::GridPtrVec grids;
+            grids.push_back(grid);
+            file_out.write(grids);
+            file_out.close();
         }
 
         void test_grid_vdb(fs::path filename)

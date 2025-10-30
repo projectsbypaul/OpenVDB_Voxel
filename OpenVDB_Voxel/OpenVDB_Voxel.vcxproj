@@ -106,14 +106,15 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\src\openvdb_install\bin;C:\src\openvdb_install\include;C:\src\vcpkg\installed\x64-windows\include;C:\src\vcpkg\installed\x64-windows\bin</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\openvdb_install\bin;C:\src\openvdb_install\include;C:\src\vcpkg\installed\x64-windows\include;C:\src\vcpkg\installed\x64-windows\bin;C:\src\h5_cpp_install\bin;C:\src\h5_cpp_install\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\src\openvdb_install\lib\openvdb.lib;C:\src\vcpkg\installed\x64-windows\lib\mpfr.lib;C:\src\vcpkg\installed\x64-windows\lib\gmp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\openvdb_install\lib\openvdb.lib;C:\src\vcpkg\installed\x64-windows\lib\mpfr.lib;C:\src\vcpkg\installed\x64-windows\lib\gmp.lib;libhdf5.lib;libhdf5_cpp.lib;ShLwApi.Lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>LinkVerboseCLR</ShowProgress>
+      <AdditionalLibraryDirectories>C:\src\h5_cpp_install\lib;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.19041.0\um;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,6 +146,7 @@
     <ClCompile Include="src\DL_Preprocessing.cpp" />
     <ClCompile Include="src\GenericDirectoryProcess.cpp" />
     <ClCompile Include="src\GetABCStatistics.cpp" />
+    <ClCompile Include="src\h5_utility.cpp" />
     <ClCompile Include="src\IO_Test.cpp" />
     <ClCompile Include="src\LabelTemplates.cpp" />
     <ClCompile Include="src\LOG.cpp" />
@@ -164,6 +166,7 @@
     <ClInclude Include="include\DL_Preprocessing.h" />
     <ClInclude Include="include\GenericDirectoryProcess.h" />
     <ClInclude Include="include\GetABCStatistics.h" />
+    <ClInclude Include="include\h5_utility.h" />
     <ClInclude Include="include\IO_Test.h" />
     <ClInclude Include="include\LabelTemplates.h" />
     <ClInclude Include="include\LOG.h" />

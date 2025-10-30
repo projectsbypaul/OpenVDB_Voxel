@@ -45,8 +45,10 @@ namespace Tools {
     
 
     namespace util {
-       
-        Tools::Int3DArray AssembleArrays(Tools::FloatMatrix origins, std::vector<Int3DArray> arrays);
+        std::array<int, 3> ComputeTopCoord(const Tools::FloatMatrix& origins, int kernel_size);
+        std::array<int, 3> ComputeBottomCoord(const Tools::FloatMatrix& origins, int kernel_size);
+        Tools::Int3DArray AssembleArrays(const Tools::FloatMatrix& origins, const std::vector<Tools::Int3DArray>& arrays,
+            int kernel_size, int padding, int fill_idx);
         std::unordered_map<std::string, int> CountFacesPerSurfaceType(const std::vector<std::vector<std::string>>& FaceToTypeMap);
         std::vector<Tools::MyVertex> CalculateFaceCenters(const std::vector<Tools::MyFace>& faces, const std::vector<Tools::MyVertex>& vertices);
         char mapValueToChar(float value, float minVal, float maxVal);
@@ -151,7 +153,7 @@ namespace Tools {
     }
 
     namespace Macros {
-        void export_prediction_vdb(const std::string& source, const std::string& out_file);
+        void export_prediction_vdb(const fs::path& source, const fs::path& out_file);
         void test_grid_vdb(fs::path filename);
     }
 }
