@@ -16,6 +16,19 @@ find_package(yaml-cpp REQUIRED)
 find_path(LIBZIP_INCLUDE_DIR zip.h REQUIRED)
 find_library(LIBZIP_LIBRARY zip REQUIRED)
 
+# === HDF5 ===
+find_package(HDF5 REQUIRED COMPONENTS C CXX)
+
+if(TARGET hdf5::hdf5_cpp)
+    message(STATUS "Using imported HDF5 targets (modern CMake).")
+    set(HDF5_LIBRARIES hdf5::hdf5_cpp hdf5::hdf5)
+else()
+    message(WARNING "HDF5 imported targets not found — falling back to manual linkage.")
+    include_directories(${HDF5_INCLUDE_DIRS})
+    # Force both the C++ and C libraries
+    set(HDF5_LIBRARIES ${HDF5_CXX_LIBRARIES} ${HDF5_LIBRARIES} hdf5_cpp hdf5)
+endif()
+
 # === JobController Executable ===
 file(GLOB_RECURSE JOBCONTROLLER_SOURCES
     JobController/src/*.cpp
@@ -48,10 +61,12 @@ target_include_directories(OpenVDB_Voxel PRIVATE
 )
 
 target_link_libraries(OpenVDB_Voxel
+    PRIVATE
     OpenVDB::openvdb
     yaml-cpp::yaml-cpp
     CGAL::CGAL
     CGAL::CGAL_Core
+    ${HDF5_LIBRARIES}
 )
 
 
@@ -61,3 +76,5 @@ message(STATUS "OpenVDB library: ${OpenVDB_LIBRARIES}")
 message(STATUS "libzip include dir: ${LIBZIP_INCLUDE_DIR}")
 message(STATUS "libzip library: ${LIBZIP_LIBRARY}")
 message(STATUS "yaml-cpp found and linked.")
+message(STATUS "HDF5 include dirs: ${HDF5_INCLUDE_DIRS}")
+message(STATUS "HDF5 libraries: ${HDF5_LIBRARIES}")
