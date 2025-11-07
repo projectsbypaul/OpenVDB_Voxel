@@ -880,7 +880,7 @@ namespace ProcessingUtility {
 
             LOG("Start compute on segment: " << i);
             //indexed_segements[i] = DLPP::util::get_nearest_face_index(face_to_gird, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
-            indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
+            indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, 3.0f * voxel_size);
             LOG("Finished compute on segment: " << i);
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
