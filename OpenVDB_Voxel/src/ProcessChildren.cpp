@@ -824,8 +824,8 @@ namespace ProcessingUtility {
         LOG_FUNC("EXIT" << " subdirName = " << subDirName << " outputDir = " << targetDir_);
     }
 
-    ProcessLabelling::ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template) :
-        GenericDirectoryProcess(sourceDir, targetDir), label_template_(label_template)
+    ProcessLabelling::ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template, const float surface_threshold) :
+        GenericDirectoryProcess(sourceDir, targetDir), label_template_(label_template), surface_threshold_(surface_threshold)
     {
     }
 
@@ -880,7 +880,7 @@ namespace ProcessingUtility {
 
             LOG("Start compute on segment: " << i);
             //indexed_segements[i] = DLPP::util::get_nearest_face_index(face_to_gird, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
-            indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
+            indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, surface_threshold_ * voxel_size);
             LOG("Finished compute on segment: " << i);
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;

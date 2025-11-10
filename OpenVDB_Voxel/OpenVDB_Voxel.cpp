@@ -17,7 +17,7 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobStrip <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
     std::cout << "  " << progpath.filename().generic_string() << " subdirJobPurge <source_dir> <target_dir> <sub_dir_name> <log_dir>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <sub_dir_name> <log_dir> <template>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <sub_dir_name> <log_dir> <template> <surface_threshold>\n";
 
     std::cout << "\nParameterized processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
@@ -117,8 +117,8 @@ int main(int argc, char* argv[])
     }
 
     else if (mode == "subdirLabel") {
-        if (argc != 7) {
-            std::cerr << "subdirLabel mode requires exactly 7 arguments" << std::endl;
+        if (argc != 8) {
+            std::cerr << "subdirLabel mode requires exactly 8 arguments" << std::endl;
             usage(argv[0]);
         }
 
@@ -127,11 +127,12 @@ int main(int argc, char* argv[])
         std::string subdir = argv[4];
         fs::path log_dir = argv[5];
         std::string class_template = argv[6];
+        float srf_thres = std::stof(argv[7]);
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_labels_from_subdir(source, target, subdir, class_template);
+        int result = Scripts::run_labels_from_subdir(source, target, subdir, class_template, srf_thres);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");

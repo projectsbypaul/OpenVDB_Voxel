@@ -17,7 +17,7 @@ void usage(const char* progname) {
     std::cout << "  " << progpath.filename().generic_string() << " strip_obj <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " purge_yaml <source_dir> <target_dir> <job_dir> <log_dir> <process_exe>\n";
     std::cout << "  " << progpath.filename().generic_string() << " dataset_stats <target_dir> <job_dir> <log_dir> <temp_file> <process_exe>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <log_dir> <template> <process_exe>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " subdirLabel <source_dir> <target_dir> <log_dir> <template> <surface_threshold> <process_exe>\n";
 
     std::cout << "\nVoxel Size (VS) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
@@ -126,7 +126,7 @@ int main(int argc, char* argv[])
     }
 
     else if (mode == "subdirLabel") {
-        if (argc != 8) {
+        if (argc != 9) {
             usage(argv[0]);
         }
         fs::path source = argv[2];
@@ -134,9 +134,10 @@ int main(int argc, char* argv[])
         fs::path job_dir = argv[4];
         fs::path log_dir = argv[5];
         std::string label_template = argv[6];
-        fs::path process = argv[7];
+        float srf_thres = std::stof(argv[7]);
+        fs::path process = argv[8];
 
-        int result = Scripts::run_label_job(source, target, job_dir, log_dir, label_template, process);
+        int result = Scripts::run_label_job(source, target, job_dir, log_dir, label_template, srf_thres, process);
         std::cout << "Result: " << result << std::endl;
         return result;
     }

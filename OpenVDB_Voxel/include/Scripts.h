@@ -16,7 +16,7 @@ namespace Scripts {
 	int run_subdir_to_dataset_maxseg(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, int n_k_min, int max_threads = 1, int openvdb_threads = 1, int timeout_min = 5, int seglimit=2500);
 	int run_subdir_to_dataset_maxseg(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, double voxel_size, int max_threads = 1, int openvdb_threads = 1, int timeout_min = 5, int seglimit =2500);
 	int run_strip_obj_batch_job(fs::path source, fs::path target, fs::path job_location);
-	int run_labels_from_subdir(fs::path source, fs::path target, std::string subdir_name, std::string class_tempalte);
+	int run_labels_from_subdir(fs::path source, fs::path target, std::string subdir_name, std::string class_tempalte, float surface_threshold);
 	int run_export_vdb(fs::path source, fs::path out_file);
 }//namespace scripts
 namespace Tests {

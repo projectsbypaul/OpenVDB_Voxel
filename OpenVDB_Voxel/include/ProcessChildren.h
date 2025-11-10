@@ -90,6 +90,7 @@ namespace ProcessingUtility {
     class ProcessLabelling : public GenericDirectoryProcess {
     private:
         std::string label_template_;
+        float surface_threshold_;
     public:
         /**
          * @brief Constructs a ProcessForDLLDataset object.
@@ -97,7 +98,7 @@ namespace ProcessingUtility {
          * @param sourceDir The path to the main source directory.
          * @param targetDir The path to the main target directory.
          */
-        ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template);
+        ProcessLabelling(const fs::path& sourceDir, const fs::path& targetDir, const std::string label_template, const float surface_threshold = 1.0f);
         /**
          * @brief Executes the DLL dataset processing logic for the specified subdirectory.
          *

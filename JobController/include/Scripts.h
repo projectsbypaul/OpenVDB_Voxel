@@ -11,7 +11,7 @@ namespace Scripts {
     // ======== EXISTING FUNCTIONS ========
     // Dataset label job
     int run_label_job(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
-        std::string label_template, fs::path process_location);
+        std::string label_template, float surface_threshold, fs::path process_location);
 
     // Dataset statistics job
     int run_dataset_stats_job(fs::path target, fs::path job_dir, fs::path log_dir,

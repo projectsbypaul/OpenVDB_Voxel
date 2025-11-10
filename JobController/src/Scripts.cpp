@@ -20,7 +20,7 @@ namespace Scripts {
     }
 
     // Existing function - unchanged
-    int run_label_job(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir, std::string label_template, fs::path process_location) {
+    int run_label_job(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir, std::string label_template, float surface_threshold, fs::path process_location) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
 
@@ -30,7 +30,8 @@ namespace Scripts {
             std::string c2 = target.generic_string();
             std::string c3 = log_dir.generic_string();
             std::string c4 = label_template;
-            std::string cmd = c0 + " " + "subdirLabel" + " " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4;
+            std::string c5 = std::to_string(surface_threshold);
+            std::string cmd = c0 + " " + "subdirLabel" + " " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5;
 
             std::cout << "Running: " << cmd << std::endl;
             int result = std::system(cmd.c_str());
