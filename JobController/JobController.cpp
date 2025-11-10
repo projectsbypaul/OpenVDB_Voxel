@@ -43,9 +43,9 @@ int main(int argc, char* argv[])
     }
 
     std::string mode = argv[1];
-    std::cout << "Mode: " << mode << ", argc: " << argc << std::endl;
+    std::cout << "Mode: " << mode << ", argc: " << argc << "\n";
     for (int i = 0; i < argc; ++i) {
-        std::cout << "argv[" << i << "] = " << argv[i] << std::endl;
+        std::cout << "argv[" << i << "] = " << argv[i] << "\n";
     }
 
     // ======== EXISTING BASIC MODES ========
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_subdir_job(source, target, job_dir, log_dir, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_subdir_job_zip(source_zip, output_dir, job_file, log_dir, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_subdir_job_strip(source, target, job_dir, log_dir, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -106,7 +106,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_subdir_job_purge(source, target, job_dir, log_dir, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -121,7 +121,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[6];
 
         int result = Scripts::run_dataset_stats_job(target, job_dir, log_dir, temp_file, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -138,7 +138,7 @@ int main(int argc, char* argv[])
         fs::path process = argv[8];
 
         int result = Scripts::run_label_job(source, target, job_dir, log_dir, label_template, srf_thres, process);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -160,11 +160,11 @@ int main(int argc, char* argv[])
         double voxel_size = std::stod(argv[10]);
 
         std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
         int result = Scripts::run_subdir_job_vs(source, target, job_file, log_dir, process,
             kernel_size, padding, bandwidth, voxel_size);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -183,11 +183,11 @@ int main(int argc, char* argv[])
         double voxel_size = std::stod(argv[10]);
 
         std::cout << "VS ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
         int result = Scripts::run_subdir_job_zip_vs(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, voxel_size);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -206,11 +206,11 @@ int main(int argc, char* argv[])
         double voxel_size = std::stod(argv[10]);
 
         std::cout << "VS ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
         int result = Scripts::run_subdir_job_zip_vs_maxseg(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, voxel_size);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
         }
     // ======== NEW N_K_MIN (NK) MODES ========
@@ -230,11 +230,11 @@ int main(int argc, char* argv[])
         int n_k_min = std::stoi(argv[10]);
 
         std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
         int result = Scripts::run_subdir_job_nk(source, target, job_file, log_dir, process,
             kernel_size, padding, bandwidth, n_k_min);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -253,11 +253,11 @@ int main(int argc, char* argv[])
         int n_k_min = std::stoi(argv[10]);
 
         std::cout << "NK ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
         int result = Scripts::run_subdir_job_zip_nk(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, n_k_min);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
     }
 
@@ -276,11 +276,11 @@ int main(int argc, char* argv[])
         int n_k_min = std::stoi(argv[10]);
 
         std::cout << "NK ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
         int result = Scripts::run_subdir_job_zip_nk_maxseg(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, n_k_min);
-        std::cout << "Result: " << result << std::endl;
+        std::cout << "Result: " << result << "\n";
         return result;
         }
 
@@ -300,17 +300,17 @@ int main(int argc, char* argv[])
 
         if (job_type == "basic") {
             if (argc != 8) {
-                std::cerr << "Basic universal mode requires exactly 8 arguments" << std::endl;
+                std::cerr << "Basic universal mode requires exactly 8 arguments" << "\n";
                 usage(argv[0]);
             }
 
             int result = Scripts::run_universal_subdir_job(source, target, job_file, log_dir, process, "basic");
-            std::cout << "Universal Basic Result: " << result << std::endl;
+            std::cout << "Universal Basic Result: " << result << "\n";
             return result;
         }
         else if (job_type == "vs") {
             if (argc != 12) {
-                std::cerr << "VS universal mode requires exactly 12 arguments" << std::endl;
+                std::cerr << "VS universal mode requires exactly 12 arguments" << "\n";
                 usage(argv[0]);
             }
 
@@ -321,12 +321,12 @@ int main(int argc, char* argv[])
 
             int result = Scripts::run_universal_subdir_job(source, target, job_file, log_dir, process, "vs",
                 kernel_size, padding, bandwidth, voxel_size);
-            std::cout << "Universal VS Result: " << result << std::endl;
+            std::cout << "Universal VS Result: " << result << "\n";
             return result;
         }
         else if (job_type == "nk") {
             if (argc != 12) {
-                std::cerr << "NK universal mode requires exactly 12 arguments" << std::endl;
+                std::cerr << "NK universal mode requires exactly 12 arguments" << "\n";
                 usage(argv[0]);
             }
 
@@ -337,11 +337,11 @@ int main(int argc, char* argv[])
 
             int result = Scripts::run_universal_subdir_job(source, target, job_file, log_dir, process, "nk",
                 kernel_size, padding, bandwidth, 0.0, n_k_min);
-            std::cout << "Universal NK Result: " << result << std::endl;
+            std::cout << "Universal NK Result: " << result << "\n";
             return result;
         }
         else {
-            std::cerr << "Unknown job_type: " << job_type << ". Use 'basic', 'vs', or 'nk'" << std::endl;
+            std::cerr << "Unknown job_type: " << job_type << ". Use 'basic', 'vs', or 'nk'" << "\n";
             usage(argv[0]);
         }
     }
@@ -349,7 +349,7 @@ int main(int argc, char* argv[])
     // ======== ERROR HANDLING ========
 
     else {
-        std::cerr << "Unknown mode: " << mode << std::endl;
+        std::cerr << "Unknown mode: " << mode << "\n";
         usage(argv[0]);
     }
 

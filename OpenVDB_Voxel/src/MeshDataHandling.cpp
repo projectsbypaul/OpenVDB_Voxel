@@ -23,20 +23,20 @@ std::string getFileExtension(const std::string& path)
 void readSTL(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::read_STL(*path, *mesh)) {
-        std::cout << "Can't create the mesh" << std::endl;
+        std::cout << "Can't create the mesh" << "\n";
     }
     else {
-        std::cout << "Reading: " << *path << std::endl;
+        std::cout << "Reading: " << *path << "\n";
     }
 }
 
 void writeSTL(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::write_STL(*path, *mesh)) {
-        std::cout << "Error: Unable to write STL file" << std::endl;
+        std::cout << "Error: Unable to write STL file" << "\n";
     }
     else {
-        std::cout << "Successfully wrote: " << *path << std::endl;
+        std::cout << "Successfully wrote: " << *path << "\n";
     }
 }
 
@@ -44,20 +44,20 @@ void writeSTL(std::string* path, Surface_mesh* mesh)
 void readPLY(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::read_PLY(*path, *mesh)) {
-        std::cout << "Error: Can't read PLY file" << std::endl;
+        std::cout << "Error: Can't read PLY file" << "\n";
     }
     else {
-        std::cout << "Successfully read: " << *path << std::endl;
+        std::cout << "Successfully read: " << *path << "\n";
     }
 }
 
 void writePLY(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::write_PLY(*path, *mesh)) {
-        std::cout << "Error: Unable to write PLY file" << std::endl;
+        std::cout << "Error: Unable to write PLY file" << "\n";
     }
     else {
-        std::cout << "Successfully wrote: " << *path << std::endl;
+        std::cout << "Successfully wrote: " << *path << "\n";
     }
 }
 
@@ -65,20 +65,20 @@ void writePLY(std::string* path, Surface_mesh* mesh)
 void readOBJ(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::read_OBJ(*path, *mesh)) {
-        std::cout << "Error: Can't read OBJ file" << std::endl;
+        std::cout << "Error: Can't read OBJ file" << "\n";
     }
     else {
-        std::cout << "Successfully read: " << *path << std::endl;
+        std::cout << "Successfully read: " << *path << "\n";
     }
 }
 
 void writeOBJ(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::write_OBJ(*path, *mesh)) {
-        std::cout << "Error: Unable to write OBJ file" << std::endl;
+        std::cout << "Error: Unable to write OBJ file" << "\n";
     }
     else {
-        std::cout << "Successfully wrote: " << *path << std::endl;
+        std::cout << "Successfully wrote: " << *path << "\n";
     }
 }
 
@@ -86,20 +86,20 @@ void writeOBJ(std::string* path, Surface_mesh* mesh)
 void readOFF(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::read_OFF(*path, *mesh)) {
-        std::cout << "Error: Can't read OFF file" << std::endl;
+        std::cout << "Error: Can't read OFF file" << "\n";
     }
     else {
-        std::cout << "Successfully read: " << *path << std::endl;
+        std::cout << "Successfully read: " << *path << "\n";
     }
 }
 
 void writeOFF(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::write_OFF(*path, *mesh)) {
-        std::cout << "Error: Unable to write OFF file" << std::endl;
+        std::cout << "Error: Unable to write OFF file" << "\n";
     }
     else {
-        std::cout << "Successfully wrote: " << *path << std::endl;
+        std::cout << "Successfully wrote: " << *path << "\n";
     }
 }
 
@@ -107,20 +107,20 @@ void writeOFF(std::string* path, Surface_mesh* mesh)
 void readGOCAD(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::read_GOCAD(*path, *mesh)) {
-        std::cout << "Error: Can't read GOCAD file" << std::endl;
+        std::cout << "Error: Can't read GOCAD file" << "\n";
     }
     else {
-        std::cout << "Successfully read: " << *path << std::endl;
+        std::cout << "Successfully read: " << *path << "\n";
     }
 }
 
 void writeGOCAD(std::string* path, Surface_mesh* mesh)
 {
     if (!CGAL::IO::write_GOCAD(*path, *mesh)) {
-        std::cout << "Error: Unable to write GOCAD file" << std::endl;
+        std::cout << "Error: Unable to write GOCAD file" << "\n";
     }
     else {
-        std::cout << "Successfully wrote: " << *path << std::endl;
+        std::cout << "Successfully wrote: " << *path << "\n";
     }
 }
 
@@ -128,7 +128,7 @@ void writeGOCAD(std::string* path, Surface_mesh* mesh)
 bool readMesh(std::string* path, Surface_mesh* mesh)
 {
     std::string ext = getFileExtension(*path);
-    std::cout << "Fileextension: " << ext << std::endl;
+    std::cout << "Fileextension: " << ext << "\n";
 
     if (ext == ".stl" || ext == ".STL") {
         readSTL(path, mesh);
@@ -151,7 +151,7 @@ bool readMesh(std::string* path, Surface_mesh* mesh)
         return true;
     }
     else {
-        std::cout << "Error: handling for filetype " << ext << " not implemented" << std::endl;
+        std::cout << "Error: handling for filetype " << ext << " not implemented" << "\n";
         return false;
     }
 }
@@ -159,7 +159,7 @@ bool readMesh(std::string* path, Surface_mesh* mesh)
 void writeMesh(std::string* path, Surface_mesh* mesh)
 {
     std::string ext = getFileExtension(*path);
-    std::cout << "Fileextension: " << ext << std::endl;
+    std::cout << "Fileextension: " << ext << "\n";
 
     if (ext == ".stl" || ext == ".STL") {
         writeSTL(path, mesh);
@@ -177,7 +177,7 @@ void writeMesh(std::string* path, Surface_mesh* mesh)
         writeGOCAD(path, mesh);
     }
     else {
-        std::cout << "Error: handling for filetype " << ext << " not implemented" << std::endl;
+        std::cout << "Error: handling for filetype " << ext << " not implemented" << "\n";
     }
 }
 

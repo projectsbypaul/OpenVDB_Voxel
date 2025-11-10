@@ -15,10 +15,10 @@ namespace ZIPutil {
 
         int zip_create_archive(fs::path new_zip_name) {
             
-                std::cout << "Creating empty archive: " << new_zip_name << std::endl;
+                std::cout << "Creating empty archive: " << new_zip_name << "\n";
 
                 if(fs::exists(new_zip_name)){
-                    std::cerr << "[INFO] Archive: " << new_zip_name.filename().generic_string() << "already exists!" << std::endl;
+                    std::cerr << "[INFO] Archive: " << new_zip_name.filename().generic_string() << "already exists!" << "\n";
                     return -1;
                 }
 
@@ -34,7 +34,7 @@ namespace ZIPutil {
 
                 // Add dummy directory entry to ensure archive is written
                 if (zip_dir_add(zip, "temp/", ZIP_FL_ENC_UTF_8) < 0) {
-                    std::cerr << "Failed to add dummy directory to zip: " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to add dummy directory to zip: " << zip_strerror(zip) << "\n";
                     zip_discard(zip);
                     return 2;
                 }
@@ -44,7 +44,7 @@ namespace ZIPutil {
                     return 2;
                 }
 
-                std::cout << "Created zip with empty directory:" << new_zip_name << std::endl;
+                std::cout << "Created zip with empty directory:" << new_zip_name << "\n";
            
             return 0; 
         }
@@ -59,7 +59,7 @@ namespace ZIPutil {
             if (!zip) {
                 zip_error_t ziperror;
                 zip_error_init_with_code(&ziperror, error);
-                std::cerr << "Failed to create zip: " << zip_error_strerror(&ziperror) << std::endl;
+                std::cerr << "Failed to create zip: " << zip_error_strerror(&ziperror) << "\n";
                 zip_error_fini(&ziperror);
                 return 1;
             }
@@ -72,14 +72,14 @@ namespace ZIPutil {
 
                 zip_source_t* source = zip_source_file(zip, entry.path().string().c_str(), 0, 0);
                 if (!source) {
-                    std::cerr << "Failed to create zip source for " << entry.path() << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to create zip source for " << entry.path() << ": " << zip_strerror(zip) << "\n";
                     zip_discard(zip);
                     return 2;
                 }
 
                 zip_int64_t idx = zip_file_add(zip, zip_entry_name.c_str(), source, ZIP_FL_ENC_UTF_8);
                 if (idx < 0) {
-                    std::cerr << "Failed to add file to zip: " << zip_entry_name << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to add file to zip: " << zip_entry_name << ": " << zip_strerror(zip) << "\n";
                     zip_source_free(source);
                     zip_discard(zip);
                     return 3;
@@ -87,16 +87,16 @@ namespace ZIPutil {
 
                 // Store without compression (ZIP_CM_STORE), can change to ZIP_CM_DEFLATE for compression
                 if (zip_set_file_compression(zip, idx, ZIP_CM_STORE, 0) != 0) {
-                    std::cerr << "Failed to set compression for file: " << zip_entry_name << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to set compression for file: " << zip_entry_name << ": " << zip_strerror(zip) << "\n";
                     zip_discard(zip);
                     return 4;
                 }
 
-                std::cout << "Added " << zip_entry_name << std::endl;
+                std::cout << "Added " << zip_entry_name << "\n";
             }
 
             if (zip_close(zip) < 0) {
-                std::cerr << "Failed to close zip: " << zip_strerror(zip) << std::endl;
+                std::cerr << "Failed to close zip: " << zip_strerror(zip) << "\n";
                 zip_discard(zip);
                 return 5;
             }
@@ -110,7 +110,7 @@ namespace ZIPutil {
             if (!za) {
                 zip_error_t ze;
                 zip_error_init_with_code(&ze, err);
-                std::cerr << "Cannot open archive: " << zip_error_strerror(&ze) << std::endl;
+                std::cerr << "Cannot open archive: " << zip_error_strerror(&ze) << "\n";
                 zip_error_fini(&ze);
                 return 1;
             }
@@ -142,13 +142,13 @@ namespace ZIPutil {
 
                 zip_file_t* zf = zip_fopen_index(za, i, 0);
                 if (!zf) {
-                    std::cerr << "Failed to open zip entry: " << entry_name << std::endl;
+                    std::cerr << "Failed to open zip entry: " << entry_name << "\n";
                     continue;
                 }
 
                 std::ofstream out(out_path, std::ios::binary);
                 if (!out) {
-                    std::cerr << "Failed to create file: " << out_path << std::endl;
+                    std::cerr << "Failed to create file: " << out_path << "\n";
                     zip_fclose(zf);
                     continue;
                 }
@@ -160,7 +160,7 @@ namespace ZIPutil {
                 }
 
                 if (bytes_read < 0)
-                    std::cerr << "Error reading from archive: " << entry_name << std::endl;
+                    std::cerr << "Error reading from archive: " << entry_name << "\n";
 
                 zip_fclose(zf);
             }
@@ -210,7 +210,7 @@ namespace ZIPutil {
                     fs::create_directories(zip_location);
                 }
                 catch (const fs::filesystem_error& e) {
-                    std::cerr << "Failed to create zip location directory: " << e.what() << std::endl;
+                    std::cerr << "Failed to create zip location directory: " << e.what() << "\n";
                     return 1;
                 }
             }
@@ -231,7 +231,7 @@ namespace ZIPutil {
 
             for (const auto& target : zip_targets) {
                 if (!fs::exists(target)) {
-                    std::cerr << "Target does not exist: " << target << std::endl;
+                    std::cerr << "Target does not exist: " << target << "\n";
                     continue;  // skip this file
                 }
 
@@ -240,14 +240,14 @@ namespace ZIPutil {
                     rel_path = fs::relative(target, zip_source_dir);
                 }
                 catch (const fs::filesystem_error& e) {
-                    std::cerr << "Failed to compute relative path: " << e.what() << std::endl;
+                    std::cerr << "Failed to compute relative path: " << e.what() << "\n";
                     continue;
                 }
 
                 // Create a zip source from the file
                 zip_source_t* source = zip_source_file(zip, target.generic_string().c_str(), 0, 0);
                 if (!source) {
-                    std::cerr << "Failed to create zip source for " << target << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to create zip source for " << target << ": " << zip_strerror(zip) << "\n";
                     zip_discard(zip);
                     return 3;
                 }
@@ -255,14 +255,14 @@ namespace ZIPutil {
                 // Add file
                 zip_int64_t idx = zip_file_add(zip, rel_path.generic_string().c_str(), source, ZIP_FL_ENC_UTF_8);
                 if (idx < 0) {
-                    std::cerr << "Failed to add file to zip: " << rel_path << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to add file to zip: " << rel_path << ": " << zip_strerror(zip) << "\n";
                     zip_source_free(source);
                     zip_discard(zip);
                     return 4;
                 }
                 else
                 {
-                    std::cout << "Added " << rel_path.generic_string() << " to " << zip_file_name << std::endl;
+                    std::cout << "Added " << rel_path.generic_string() << " to " << zip_file_name << "\n";
                 }
 
                 //No Compression ZIP_CM_STORE mode == 0
@@ -274,7 +274,7 @@ namespace ZIPutil {
 
                 // Set Compression Method
                 if (zip_set_file_compression(zip, idx, compression_method, 0) != 0) {
-                    std::cerr << "Failed to set compression for file: " << rel_path << ": " << zip_strerror(zip) << std::endl;
+                    std::cerr << "Failed to set compression for file: " << rel_path << ": " << zip_strerror(zip) << "\n";
                     zip_discard(zip);
                     return 6;
                 }
@@ -282,7 +282,7 @@ namespace ZIPutil {
 
             // Close the zip archive
             if (zip_close(zip) < 0) {
-                std::cerr << "Failed to close zip: " << zip_strerror(zip) << std::endl;
+                std::cerr << "Failed to close zip: " << zip_strerror(zip) << "\n";
                 zip_discard(zip);
                 return 5;
             }
@@ -296,7 +296,7 @@ namespace ZIPutil {
             if (!za) {
                 zip_error_t ziperror;
                 zip_error_init_with_code(&ziperror, err);
-                std::cerr << "Failed to open zip archive: " << zip_error_strerror(&ziperror) << std::endl;
+                std::cerr << "Failed to open zip archive: " << zip_error_strerror(&ziperror) << "\n";
                 zip_error_fini(&ziperror);
                 return 1;
             }
@@ -305,7 +305,7 @@ namespace ZIPutil {
             for (zip_uint64_t i = 0; i < num_entries; ++i) {
                 const char* name = zip_get_name(za, i, ZIP_FL_ENC_GUESS);
                 if (!name) {
-                    std::cerr << "Failed to get file name for entry " << i << ": " << zip_strerror(za) << std::endl;
+                    std::cerr << "Failed to get file name for entry " << i << ": " << zip_strerror(za) << "\n";
                     continue;
                 }
 
@@ -322,13 +322,13 @@ namespace ZIPutil {
 
                 zip_file_t* zf = zip_fopen_index(za, i, 0);
                 if (!zf) {
-                    std::cerr << "Failed to open file in archive: " << name << ": " << zip_strerror(za) << std::endl;
+                    std::cerr << "Failed to open file in archive: " << name << ": " << zip_strerror(za) << "\n";
                     continue;
                 }
 
                 std::ofstream out_file(out_path, std::ios::binary);
                 if (!out_file) {
-                    std::cerr << "Failed to create output file: " << out_path << std::endl;
+                    std::cerr << "Failed to create output file: " << out_path << "\n";
                     zip_fclose(zf);
                     continue;
                 }
@@ -341,7 +341,7 @@ namespace ZIPutil {
                 }
 
                 if (bytes_read < 0) {
-                    std::cerr << "Error reading file from archive: " << name << std::endl;
+                    std::cerr << "Error reading file from archive: " << name << "\n";
                 }
 
                 zip_fclose(zf);
@@ -377,7 +377,7 @@ namespace ZIPutil {
                 std::vector<fs::path> targets = Functions::get_job_zip_target_paths(source_dir, jobs);
 
                 if (!fs::is_regular_file(job_file)) {
-                    std::cout << "job_file path is not a file" << std::endl;
+                    std::cout << "job_file path is not a file" << "\n";
                     return 1;
                 }
 
@@ -395,7 +395,7 @@ namespace ZIPutil {
             std::vector<fs::path> targets = Functions::get_job_zip_target_paths(source_dir, jobs);
 
             if (!fs::is_regular_file(job_file)) {
-                std::cout << "job_file path is not a file" << std::endl;
+                std::cout << "job_file path is not a file" << "\n";
                 return 1;
             }
 
@@ -411,24 +411,24 @@ namespace ZIPutil {
 	namespace Tests {
         int test_for_Jobcontroller(fs::path source_zip, fs::path output_zip, std::string subdir_name) {
             
-            std::cout << "Creating Archive" << std::endl;
+            std::cout << "Creating Archive" << "\n";
             Functions::zip_create_archive(output_zip);
             fs::path out_dir = output_zip.parent_path();
             fs::path temp_dir = out_dir / "temp";
 
-            std::cout << "unpacking to temp" << std::endl;
+            std::cout << "unpacking to temp" << "\n";
             Functions::zip_extract_subfolder(source_zip, temp_dir / subdir_name, subdir_name);
 
-            std::cout << "writing subdir to archive" << std::endl;
+            std::cout << "writing subdir to archive" << "\n";
             Functions::zip_write_subfolder(output_zip, temp_dir / subdir_name, subdir_name);
 
-            std::cout << "Test for Jobcontroller completed" << std::endl;
+            std::cout << "Test for Jobcontroller completed" << "\n";
 
             return 0;
         }
 
 		int test_create(fs::path target) {
-            std::cout << "Running zip test" << std::endl;
+            std::cout << "Running zip test" << "\n";
             int error;
             zip_t* zip = zip_open(target.generic_string().c_str(), ZIP_CREATE | ZIP_TRUNCATE, &error);
             if (!zip) {

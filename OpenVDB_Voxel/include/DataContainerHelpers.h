@@ -124,7 +124,7 @@ namespace cppIOUtility {
     {
         std::ifstream bin_in(bin_file_path, std::ios::binary);
         if (!bin_in.is_open()) {
-            std::cerr << "Error: Could not open .bin for reading: " << bin_file_path.string() << std::endl;
+            std::cerr << "Error: Could not open .bin for reading: " << bin_file_path.string() << "\n";
             return false;
         }
 

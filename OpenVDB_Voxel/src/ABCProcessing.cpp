@@ -45,7 +45,7 @@ namespace Scripts {
             // Handle error: unable to open file
             // You could throw an exception, return an empty vector,
             // or print an error message.
-            std::cerr << "Error: Could not open file " << file_path << std::endl;
+            std::cerr << "Error: Could not open file " << file_path << "\n";
             return job_lines; // Return empty vector on error
         }
 
@@ -119,7 +119,7 @@ namespace Scripts {
             max_threads = std::thread::hardware_concurrency();
         }
 
-        std::cout << "Running on thread count: " << max_threads << std::endl;
+        std::cout << "Running on thread count: " << max_threads << "\n";
 
 
         fs::path subdirPath = Process->getSourceDir() / subdir_name;
@@ -143,7 +143,7 @@ namespace Scripts {
             fs::path newOutputDir = Process->getTargetDir() / subdirName;
 
             if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
-                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << "\n";
                 LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
                 return;
             }
@@ -186,7 +186,7 @@ namespace Scripts {
             max_threads = std::thread::hardware_concurrency();
         }
 
-        std::cout << "Running on thread count: " << max_threads << std::endl;
+        std::cout << "Running on thread count: " << max_threads << "\n";
 
 
         fs::path subdirPath = Process->getSourceDir() / subdir_name;
@@ -233,7 +233,7 @@ namespace Scripts {
             max_threads = std::thread::hardware_concurrency();
         }
 
-        std::cout << "Running on thread count: " << max_threads << std::endl;
+        std::cout << "Running on thread count: " << max_threads << "\n";
 
 
         fs::path subdirPath = Process->getSourceDir() / subdir_name;
@@ -257,7 +257,7 @@ namespace Scripts {
             fs::path newOutputDir = Process->getTargetDir() / subdirName;
 
             if (checkIfDirWasProcessed(newOutputDir.generic_string())) {
-                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << std::endl;
+                std::cout << "Directory " << newOutputDir.filename() << " already processed -> skipped" << "\n";
                 LOG_FUNC("EXIT " << " Directory " << newOutputDir.filename() << " already processed->skipped");
                 return;
             }

@@ -33,10 +33,10 @@ namespace Scripts {
             std::string c5 = std::to_string(surface_threshold);
             std::string cmd = c0 + " " + "subdirLabel" + " " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result != 0) {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
         }
         return 0;
@@ -54,10 +54,10 @@ namespace Scripts {
             std::string c3 = temp_file_name;
             std::string cmd = c0 + " " + "stats_subdir" + " " + c1 + " " + c1 + " " + j + " " + c2 + " " + c3;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result != 0) {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
         }
 
@@ -81,14 +81,14 @@ namespace Scripts {
 
             std::string cmd = c0 + " subdirJob " + c1 + " " + c2 + " " + j + " " + c3;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -108,7 +108,7 @@ namespace Scripts {
 
         std::cout << "Starting VS job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", voxel_size=" << voxel_size << std::endl;
+            << ", voxel_size=" << voxel_size << "\n";
 
         size_t processed_count = 0;
         for (const auto& j : jobs) {
@@ -125,14 +125,14 @@ namespace Scripts {
 
             std::string cmd = c0 + " vs_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running VS: " << cmd << std::endl;
+            std::cout << "Running VS: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
-                std::cerr << "VS Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "VS Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -152,7 +152,7 @@ namespace Scripts {
 
         std::cout << "Starting NK job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", n_k_min=" << n_k_min << std::endl;
+            << ", n_k_min=" << n_k_min << "\n";
 
         size_t processed_count = 0;
         for (const auto& j : jobs) {
@@ -169,14 +169,14 @@ namespace Scripts {
 
             std::string cmd = c0 + " nk_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running NK: " << cmd << std::endl;
+            std::cout << "Running NK: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
                 ++processed_count;
             }
             else {
-                std::cerr << "NK Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "NK Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -226,7 +226,7 @@ namespace Scripts {
 
             std::string cmd = c0 + " subdirJob " + c1 + " " + c2 + " " + j + " " + c3;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
@@ -240,7 +240,7 @@ namespace Scripts {
                 fs::remove_all(temp_output / j);
             }
             else {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -265,7 +265,7 @@ namespace Scripts {
 
         std::cout << "Starting VS ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", voxel_size=" << voxel_size << std::endl;
+            << ", voxel_size=" << voxel_size << "\n";
 
         fs::path out_archive_name = job_file.stem().string() + "_vs.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
@@ -299,7 +299,7 @@ namespace Scripts {
 
             std::string cmd = c0 + " vs_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running VS ZIP: " << cmd << std::endl;
+            std::cout << "Running VS ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
@@ -313,7 +313,7 @@ namespace Scripts {
                 fs::remove_all(temp_output / j);
             }
             else {
-                std::cerr << "VS ZIP Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "VS ZIP Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -336,7 +336,7 @@ namespace Scripts {
 
         std::cout << "Starting VS ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", voxel_size=" << voxel_size << std::endl;
+            << ", voxel_size=" << voxel_size << "\n";
 
         fs::path out_archive_name = job_file.stem().string() + "_vs.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
@@ -370,7 +370,7 @@ namespace Scripts {
 
             std::string cmd = c0 + " vs_subdirJob_maxseg " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running VS ZIP: " << cmd << std::endl;
+            std::cout << "Running VS ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
@@ -384,7 +384,7 @@ namespace Scripts {
                 fs::remove_all(temp_output / j);
             }
             else {
-                std::cerr << "VS ZIP Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "VS ZIP Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -409,7 +409,7 @@ namespace Scripts {
 
         std::cout << "Starting NK ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", n_k_min=" << n_k_min << std::endl;
+            << ", n_k_min=" << n_k_min << "\n";
 
         fs::path out_archive_name = job_file.stem().string() + "_nk.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
@@ -443,7 +443,7 @@ namespace Scripts {
 
             std::string cmd = c0 + " nk_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running NK ZIP: " << cmd << std::endl;
+            std::cout << "Running NK ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
@@ -457,7 +457,7 @@ namespace Scripts {
                 fs::remove_all(temp_output / j);
             }
             else {
-                std::cerr << "NK ZIP Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "NK ZIP Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -480,7 +480,7 @@ namespace Scripts {
 
         std::cout << "Starting NK ZIP job with parameters: kernel=" << kernel_size
             << ", padding=" << padding << ", bandwidth=" << bandwidth
-            << ", n_k_min=" << n_k_min << std::endl;
+            << ", n_k_min=" << n_k_min << "\n";
 
         fs::path out_archive_name = job_file.stem().string() + "_nk.zip";
         fs::path out_archive_path = output_dir / out_archive_name;
@@ -514,7 +514,7 @@ namespace Scripts {
 
             std::string cmd = c0 + " nk_subdirJob_maxseg " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
-            std::cout << "Running NK ZIP: " << cmd << std::endl;
+            std::cout << "Running NK ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result == 0) {
                 remaining_jobs.erase(j);
@@ -528,7 +528,7 @@ namespace Scripts {
                 fs::remove_all(temp_output / j);
             }
             else {
-                std::cerr << "NK ZIP Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "NK ZIP Subprocess failed for mesh: " << j << "\n";
             }
 
             if (processed_count % 10 == 0 || processed_count == jobs.size()) {
@@ -555,10 +555,10 @@ namespace Scripts {
 
             std::string cmd = c0 + " " + "subdirJobStrip" + " " + c1 + " " + c2 + " " + j + " " + c3;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result != 0) {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
         }
 
@@ -577,10 +577,10 @@ namespace Scripts {
 
             std::string cmd = c0 + " " + "subdirJobPurge" + " " + c1 + " " + c2 + " " + j + " " + c3;
 
-            std::cout << "Running: " << cmd << std::endl;
+            std::cout << "Running: " << cmd << "\n";
             int result = std::system(cmd.c_str());
             if (result != 0) {
-                std::cerr << "Subprocess failed for mesh: " << j << std::endl;
+                std::cerr << "Subprocess failed for mesh: " << j << "\n";
             }
         }
 
@@ -605,7 +605,7 @@ namespace Scripts {
                 kernel_size, padding, bandwidth, n_k_min);
         }
         else {
-            std::cerr << "Unknown job type: " << job_type << std::endl;
+            std::cerr << "Unknown job type: " << job_type << "\n";
             return 1;
         }
     }

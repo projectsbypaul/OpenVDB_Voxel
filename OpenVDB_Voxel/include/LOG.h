@@ -35,7 +35,7 @@ inline std::string currentTimestamp() {
     logFile << "[" << currentTimestamp() << "] "; \
     logFile << "[" << level << "] "; \
     logFile << "[Thread " << std::this_thread::get_id() << "] "; \
-    logFile << msg << std::endl; \
+    logFile << msg << "\n"; \
 } while(0)
 
 #define LOG(msg) LOG_LEVEL("LOG", msg)

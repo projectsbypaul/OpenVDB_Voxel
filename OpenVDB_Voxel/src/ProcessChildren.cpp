@@ -30,12 +30,12 @@ namespace ProcessingUtility {
      */
     ProcessForDLLDataset::ProcessForDLLDataset(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0) {
-        std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
     ProcessForDLLDataset::ProcessForDLLDataset(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size) {
-        std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
     /**s
     * @brief Executes the DLL dataset processing logic for the specified subdirectory.
@@ -47,7 +47,7 @@ namespace ProcessingUtility {
     {
         LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
 
-        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << "\n";
 
         //Define source file and traget file location
         std::string yml_name = (sourceDir_ / subDirName / subDirName).generic_string() + ".yml";
@@ -64,7 +64,7 @@ namespace ProcessingUtility {
 
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-            std::cerr << "Failed to read . file!" << std::endl;
+            std::cerr << "Failed to read . file!" << "\n";
             LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
             return;
         }
@@ -175,12 +175,12 @@ namespace ProcessingUtility {
      */
     ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit) {
-        std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
     ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit) {
-        std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
     /**s
     * @brief Executes the DLL dataset processing logic for the specified subdirectory.
@@ -192,7 +192,7 @@ namespace ProcessingUtility {
     {
         LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
 
-        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << "\n";
 
         //Define source file and traget file location
         std::string yml_name = (sourceDir_ / subDirName / subDirName).generic_string() + ".yml";
@@ -212,7 +212,7 @@ namespace ProcessingUtility {
             Surface_mesh mesh;
 
             if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-                std::cerr << "Failed to read .obj file!" << std::endl;
+                std::cerr << "Failed to read .obj file!" << "\n";
                 LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
                 return;
             }
@@ -351,20 +351,20 @@ namespace ProcessingUtility {
         GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), n_min_kernel_(n_min_kernel), bandwidth_(bandwidth), padding_(padding), param_1_(param_1), param_2_(param_2_), threshold_(threshold), random_seed_(random_seed)
     {
         voxel_size_ = 0;
-        std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
     ProcessForDLLDatasetAE::ProcessForDLLDatasetAE(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, double voxel_size, int bandwidth, int padding, double param_1, double param_2, double threshold, int random_seed) :
         GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), voxel_size_(voxel_size), bandwidth_(bandwidth), padding_(padding), param_1_(param_1), param_2_(param_2_), threshold_(threshold), random_seed_(random_seed)
     {
-        std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
 
     void ProcessForDLLDatasetAE::run(const std::string& subDirName)
     {
         LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
 
-        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << "\n";
 
         //Define source file and traget file location
         std::string yml_name = (sourceDir_ / subDirName / subDirName).generic_string() + ".yml";
@@ -377,7 +377,7 @@ namespace ProcessingUtility {
         Surface_mesh mesh;
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-            std::cerr << "Failed to read .obj file!" << std::endl;
+            std::cerr << "Failed to read .obj file!" << "\n";
             LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
             return;
         }
@@ -385,7 +385,7 @@ namespace ProcessingUtility {
         //Add noise to mesh 
         int removed = NoiseOnMesh::CGALbased::applySwirlyNoise(&mesh, param_1_, param_2_, threshold_, random_seed_);
 
-        std::cout << "Removed " << removed << " Faces from" << subDirName << std::endl;
+        std::cout << "Removed " << removed << " Faces from" << subDirName << "\n";
 
 
         //dertimine Reccomende voxel size 
@@ -457,19 +457,19 @@ namespace ProcessingUtility {
 
     ProcessSimpleSegmentation::ProcessSimpleSegmentation(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0) {
-        std::cout << "Process will run in Mode - " << "adaptive voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
     ProcessSimpleSegmentation::ProcessSimpleSegmentation(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size)
         : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size) {
-        std::cout << "Process will run in Mode - " << "fixed voxel size" << std::endl;
+        std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
 
     void ProcessSimpleSegmentation::run(const std::string& subDirName)
     {
         LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
 
-        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << "\n";
 
         //Define source file and traget file location
   
@@ -490,7 +490,7 @@ namespace ProcessingUtility {
             
 
             if (!MDH::readMesh(&mesh_file_name, &mesh)) {
-                std::cerr << "Failed to read mesh file!" << std::endl;
+                std::cerr << "Failed to read mesh file!" << "\n";
                 LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read mesh file!");
                 return;
             }
@@ -642,7 +642,7 @@ namespace ProcessingUtility {
                     in.close();
                 }
                 else {
-                    std::cerr << "Failed to open temp file for reading: " << temp_file << std::endl;
+                    std::cerr << "Failed to open temp file for reading: " << temp_file << "\n";
                 }
             }
 
@@ -664,7 +664,7 @@ namespace ProcessingUtility {
             // === Write merged data back to temp file ===
             std::ofstream out(temp_file);
             if (!out.is_open()) {
-                std::cerr << "Failed to open temp file for writing: " << temp_file << std::endl;
+                std::cerr << "Failed to open temp file for writing: " << temp_file << "\n";
                 return;
             }
 
@@ -682,11 +682,11 @@ namespace ProcessingUtility {
 
             out.close();
 
-            std::cout << "Updated statistics written to: " << temp_file << std::endl;
+            std::cout << "Updated statistics written to: " << temp_file << "\n";
         }
         else
         {
-            std::cerr << "File does not exist: " << file << std::endl;
+            std::cerr << "File does not exist: " << file << "\n";
         }
     }
 
@@ -700,7 +700,7 @@ namespace ProcessingUtility {
     {
         LOG_FUNC("ENTER" << " subdirName = " << subDirName << ", outputDir = " << targetDir_);
 
-        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << std::endl;
+        std::cout << "Processing: " << subDirName << " -> Output: " << targetDir_ << "\n";
 
         openvdb::initialize();
   
@@ -739,7 +739,7 @@ namespace ProcessingUtility {
 
             std::cerr << "ERROR: Grid is not uniform! x=" << voxel_size.x()
                 << " y=" << voxel_size.y()
-                << " z=" << voxel_size.z() << std::endl;
+                << " z=" << voxel_size.z() << "\n";
 
             LOG_FUNC("ERROR"<< " Grid not unform x<>y<>z");
             return;
@@ -865,11 +865,11 @@ namespace ProcessingUtility {
         float r_min_surface = voxel_size / background;
 
        //To speed up neares face computation faces get binned by the segments they are closest to 
-        std::cout << "Binning faces by segment origin..." << std::endl;
+        std::cout << "Binning faces by segment origin..." << "\n";
         std::vector<Tools::FaceBin> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size, 4);
        
         //Nearest face for each voxel gets computed
-        std::cout << "Calculation neares face for voxels..." << std::endl;
+        std::cout << "Calculation neares face for voxels..." << "\n";
         int n_segments = segment_container.size();
         std::vector<Tools::Int3DArray> indexed_segements(segment_container.size());
 
@@ -883,7 +883,7 @@ namespace ProcessingUtility {
             indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, surface_threshold_ * voxel_size);
             LOG("Finished compute on segment: " << i);
 
-            std::cout << "Computed segments " << (i + 1) << "|" << n_segments << std::endl;
+            std::cout << "Computed segments " << (i + 1) << "|" << n_segments << "\n";
         }
     
      
@@ -910,12 +910,12 @@ namespace ProcessingUtility {
             }
 
             LOG("Finished labelling on segment: " << i);
-            std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << std::endl;
+            std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << "\n";
         }
 
         //Debug Info: Display assigned
         for (int i = 0; i < global_count.size(); i++) {
-            std::cout << current_template.to_label(i) << "::" << global_count[i] << std::endl;
+            std::cout << current_template.to_label(i) << "::" << global_count[i] << "\n";
         }
 
 
@@ -951,13 +951,13 @@ namespace ProcessingUtility {
            
 
             LOG("Finished adding edges on segment: " << i);
-            std::cout << "Added edges to segments " << (i + 1) << "|" << n_segments << std::endl;
+            std::cout << "Added edges to segments " << (i + 1) << "|" << n_segments << "\n";
         }
-        std::cout << "Added " << added_edges << " edge voxels in total" << std::endl;
+        std::cout << "Added " << added_edges << " edge voxels in total" << "\n";
        
         //Add edges to face_type_map
 
-        std::cout << "Remapped faces to surf type 'Edge'" << std::endl;
+        std::cout << "Remapped faces to surf type 'Edge'" << "\n";
         Tools::MappingTable ftm_edge(face_to_type);
         int edge_face_count = 0;
 
@@ -983,7 +983,7 @@ namespace ProcessingUtility {
         }
         //overwriting face_type_map
         SegmentData.setFaceTypeMap(ftm_edge);
-        std::cout << "Remapped " << edge_face_count << " faces to surf type 'Edge'" << std::endl;
+        std::cout << "Remapped " << edge_face_count << " faces to surf type 'Edge'" << "\n";
         
         //Saving Data 
         SegmentData.setLabelContainer(labels_with_edge);

@@ -24,7 +24,7 @@ namespace Tools {
             size_t read_segment_count(const std::string& filepath) {
                 std::ifstream in(filepath);
                 if (!in.is_open()) {
-                    std::cerr << "Error: Could not open file for reading: " << filepath << std::endl;
+                    std::cerr << "Error: Could not open file for reading: " << filepath << "\n";
                     return 0;
                 }
 
@@ -52,7 +52,7 @@ namespace Tools {
             std::map<size_t, std::vector<std::string>> read_face_type_map(const std::string& filepath) {
                 std::ifstream in(filepath);
                 if (!in.is_open()) {
-                    std::cerr << "Error: Could not open file for reading: " << filepath << std::endl;
+                    std::cerr << "Error: Could not open file for reading: " << filepath << "\n";
                     return {};
                 }
 

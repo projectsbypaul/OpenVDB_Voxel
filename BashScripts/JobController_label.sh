@@ -2,15 +2,16 @@
 # Bash script to launch JobController multiple times in parallel
 
 # --- Default configuration ---
-GLOB_THREAD_COUNT=16
+GLOB_THREAD_COUNT=14
 EXECUTABLE_PATH="/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/bin/JobController"
 EXECUTABLE_CHILD_PROCESS="/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/bin/OpenVDB_Voxel"
-MAIN_OUTPUT_DIR="/mnt/h/ws_abc_chunks/logs"
+MAIN_OUTPUT_DIR="/mnt/h/ws_label_test/logs"
 JOB_TYPE="subdirLabel"
-CLASS_TEMPLATE="inside_outside"
-GLOB_SOURCE_DIR="/mnt/h/ws_abc_chunks/source/ABC_chunk_01_ks32swo4nbw8nk3_20250929-101945/ABC_chunk_01_ks32swo4nbw8nk3"
-GLOB_TARGET_DIR="/mnt/h/ws_abc_chunks/source/ABC_chunk_01_ks32swo4nbw8nk3_20250929-101945/ABC_chunk_01_labeled"
-GLOB_JOB_DIR="/mnt/h/ws_abc_chunks/source/ABC_chunk_01_ks32swo4nbw8nk3_20250929-101945/jobs"
+CLASS_TEMPLATE="edge"
+SURFACE_THRESHOLD=8.0
+GLOB_SOURCE_DIR="/mnt/h/ws_label_test/target"
+GLOB_TARGET_DIR="/mnt/h/ws_label_test/label"
+GLOB_JOB_DIR="/mnt/h/ws_label_test/jobs"
 
 # --- Parse arguments ---
 usage() {
@@ -59,7 +60,7 @@ for (( i=1; i<=GLOB_THREAD_COUNT; i++ )); do
     STDERR_LOG="${MAIN_OUTPUT_DIR}/${INSTANCE_ID}_stderr.txt"
 
     echo "Launching $INSTANCE_ID..."
-    "$EXECUTABLE_PATH" "$JOB_TYPE" "$GLOB_SOURCE_DIR" "$GLOB_TARGET_DIR" "$JOB_LOC" "$APP_LOG" "$CLASS_TEMPLATE" "$EXECUTABLE_CHILD_PROCESS"\
+    "$EXECUTABLE_PATH" "$JOB_TYPE" "$GLOB_SOURCE_DIR" "$GLOB_TARGET_DIR" "$JOB_LOC" "$APP_LOG" "$CLASS_TEMPLATE" "$SURFACE_THRESHOLD" "$EXECUTABLE_CHILD_PROCESS"\
         > "$STDOUT_LOG" 2> "$STDERR_LOG" &
 done
 

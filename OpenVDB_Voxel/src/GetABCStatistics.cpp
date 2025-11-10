@@ -24,7 +24,7 @@ namespace Scripts {
         std::vector<fs::path> matchingFiles;
 
         if (!fs::exists(rootDir) || !fs::is_directory(rootDir)) {
-            std::cerr << "Directory does not exist: " << rootDir << std::endl;
+            std::cerr << "Directory does not exist: " << rootDir << "\n";
             return matchingFiles;
         }
 
@@ -61,7 +61,7 @@ namespace Scripts {
 
                 {
                     std::lock_guard<std::mutex> lock(cout_mutex);
-                    std::cout << file << std::endl;
+                    std::cout << file << "\n";
                 }
 
                 Surface_mesh mesh;
@@ -106,11 +106,11 @@ namespace Scripts {
 
                     std::lock_guard<std::mutex> lock(cout_mutex);
                     std::cout << "Success count: " << count
-                        << " | Time: " << duration_ms << " ms" << std::endl;
+                        << " | Time: " << duration_ms << " ms" << "\n";
                 }
                 else {
                     std::lock_guard<std::mutex> lock(cout_mutex);
-                    std::cout << "Failed to read | Time: " << duration_ms << " ms" << std::endl;
+                    std::cout << "Failed to read | Time: " << duration_ms << " ms" << "\n";
                 }
             }
             };
@@ -129,7 +129,7 @@ namespace Scripts {
             t.join();
         }
 
-        std::cout << "Final successful reads: " << success_counter.load() << std::endl;
+        std::cout << "Final successful reads: " << success_counter.load() << "\n";
         return success_counter;
 
     }

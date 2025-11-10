@@ -30,7 +30,7 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
     std::string in_file = srcFilePath.string();
 
     if (!MDH::readMesh(&in_file, &mesh)) {
-        std::cerr << "Cannot open file " << srcFilePath.string() << std::endl;
+        std::cerr << "Cannot open file " << srcFilePath.string() << "\n";
         return;
     }
 
@@ -44,11 +44,11 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 
     auto sdfGrid = Tools::OpenVDBbased::MeshToFloatGrid(meshVertices, meshFaces, voxel_count, exBandWidth, inBandWidth);
 
-    std::cout << "MeshToFloatGrid "<< "done" << std::endl;
+    std::cout << "MeshToFloatGrid "<< "done" << "\n";
 
     int test = Tools::OpenVDBbased::ActivateInsideValues(sdfGrid);
 
-    std::cout << "ActivateInsideValues " << "done" << std::endl;
+    std::cout << "ActivateInsideValues " << "done" << "\n";
 
     double voxelSize = sdfGrid->transform().voxelSize()[0];
 
@@ -58,7 +58,7 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 
     Tools::Float3DArray floatArray = Tools::OpenVDBbased::Float3DArrayFromFloatGrid(sdfGrid, voxel_count);
 
-    std::cout << "Float3DArrayFromFloatGrid " << "done" << std::endl;
+    std::cout << "Float3DArrayFromFloatGrid " << "done" << "\n";
 
     Tools::LinearSDFMap map;
 
@@ -68,7 +68,7 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 
     Tools::OpenVDBbased::RemapFloat3DArray(floatArray, map);
 
-    std::cout << "RemapFloat3DArray " << "done" << std::endl;
+    std::cout << "RemapFloat3DArray " << "done" << "\n";
 
     std::string out_dir = destDir.string();
 
@@ -76,20 +76,20 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 
     Tools::util::saveFloat3DGridPythonic(out_dir, fname, floatArray, voxelSize, background);
 
-    std::cout << "saveFloat3DGridPythonic " << "done" << std::endl;
+    std::cout << "saveFloat3DGridPythonic " << "done" << "\n";
 
     //Done 
-    std::cout << srcFilePath.filename() << "// Modified and Copied to target" << std::endl;
+    std::cout << srcFilePath.filename() << "// Modified and Copied to target" << "\n";
 
     srcFile.close();
     //destFile.close();
 
-    std::cout << "Processed: " << srcFilePath << " -> " << destFilePath << std::endl;
+    std::cout << "Processed: " << srcFilePath << " -> " << destFilePath << "\n";
     //}
     //else
     //{
-    //    std::cout << srcFilePath.filename() << " has no valid inside voxels -> processing skipped" << std::endl;
-    //    std::cout << "Reasons: mesh is not watertight or 1 dimension to small for selected Bandwidth" << std::endl;
+    //    std::cout << srcFilePath.filename() << " has no valid inside voxels -> processing skipped" << "\n";
+    //    std::cout << "Reasons: mesh is not watertight or 1 dimension to small for selected Bandwidth" << "\n";
     //}
 
     
@@ -99,7 +99,7 @@ void processFile(const fs::path& srcFilePath, const fs::path& destDir, const std
 // Function to copy and process files while maintaining structure
 void processDirectory(const fs::path& srcDir, const fs::path& destDir, const std::string& newExtension) {
     if (!fs::exists(srcDir) || !fs::is_directory(srcDir)) {
-        std::cerr << "Source directory does not exist or is not a directory!" << std::endl;
+        std::cerr << "Source directory does not exist or is not a directory!" << "\n";
         return;
     }
 
@@ -130,7 +130,7 @@ void ParseDataset(fs::path& srcDir, fs::path& destDir, std::string& newExtension
 
     processDirectory(srcDir, destDir, newExtension);
 
-    std::cout << "Processing complete. Edited files saved in: " << destDir << std::endl;
+    std::cout << "Processing complete. Edited files saved in: " << destDir << "\n";
 
     return;
 }

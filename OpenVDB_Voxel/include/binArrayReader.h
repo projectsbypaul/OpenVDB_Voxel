@@ -27,7 +27,7 @@ namespace cppIO {
             std::vector<std::vector<T>> segments;
             std::ifstream bin(filename, std::ios::binary);
             if (!bin) {
-                std::cerr << "Failed to open: " << filename << std::endl;
+                std::cerr << "Failed to open: " << filename << "\n";
                 return segments;
             }
 
@@ -43,7 +43,7 @@ namespace cppIO {
             bin.read(reinterpret_cast<char*>(&num_segments), 4);
 
             if (magic != 0x5345474D) {
-                std::cerr << "Wrong magic: " << std::hex << magic << std::endl;
+                std::cerr << "Wrong magic: " << std::hex << magic << "\n";
                 return segments;
             }
 

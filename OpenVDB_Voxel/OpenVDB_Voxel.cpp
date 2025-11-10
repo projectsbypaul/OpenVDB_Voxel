@@ -46,16 +46,16 @@ int main(int argc, char* argv[])
 
     std::string mode = argv[1];
 
-    std::cout << "Mode: " << mode << ", argc: " << argc << std::endl;
+    std::cout << "Mode: " << mode << ", argc: " << argc << "\n";
     for (int i = 0; i < argc; ++i) {
-        std::cout << "argv[" << i << "] = " << argv[i] << std::endl;
+        std::cout << "argv[" << i << "] = " << argv[i] << "\n";
     }
 
     // ======== BASIC PROCESSING MODES ========
 
     if (mode == "subdirJob") {
         if (argc != 6) {
-            std::cerr << "subdirJob mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "subdirJob mode requires exactly 6 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "subdirJobStrip") {
         if (argc != 6) {
-            std::cerr << "subdirJobStrip mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "subdirJobStrip mode requires exactly 6 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -97,7 +97,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "subdirJobPurge") {
         if (argc != 6) {
-            std::cerr << "subdirJobPurge mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "subdirJobPurge mode requires exactly 6 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -118,7 +118,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "subdirLabel") {
         if (argc != 8) {
-            std::cerr << "subdirLabel mode requires exactly 8 arguments" << std::endl;
+            std::cerr << "subdirLabel mode requires exactly 8 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -143,7 +143,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "vs_subdirJob") {
         if (argc != 10) {
-            std::cerr << "vs_subdirJob mode requires exactly 10 arguments" << std::endl;
+            std::cerr << "vs_subdirJob mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -157,7 +157,7 @@ int main(int argc, char* argv[])
         double voxel_size = std::stod(argv[9]);
 
         std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
@@ -171,7 +171,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "vs_subdirJob_maxseg") {
         if (argc != 10) {
-            std::cerr << "vs_subdirJob mode requires exactly 10 arguments" << std::endl;
+            std::cerr << "vs_subdirJob mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -185,7 +185,7 @@ int main(int argc, char* argv[])
         double voxel_size = std::stod(argv[9]);
 
         std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << std::endl;
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
@@ -199,7 +199,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "nk_subdirJob") {
         if (argc != 10) {
-            std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << std::endl;
+            std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -213,7 +213,7 @@ int main(int argc, char* argv[])
         int n_k_min = std::stoi(argv[9]);
 
         std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
@@ -227,7 +227,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "nk_subdirJob_maxseg") {
         if (argc != 10) {
-            std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << std::endl;
+            std::cerr << "nk_subdirJob mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -241,7 +241,7 @@ int main(int argc, char* argv[])
         int n_k_min = std::stoi(argv[9]);
 
         std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
-            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << std::endl;
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
@@ -255,7 +255,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "segAdaptive") {
         if (argc != 8) {
-            std::cerr << "segAdaptive mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "segAdaptive mode requires exactly 6 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -266,7 +266,7 @@ int main(int argc, char* argv[])
         int bw = std::stoi(argv[6]);
         int n_min_kernel = std::stoi(argv[7]);
 
-        std::cout << "Adaptive Segmentation Parameters: n_min_kernel=" << n_min_kernel << std::endl;
+        std::cout << "Adaptive Segmentation Parameters: n_min_kernel=" << n_min_kernel << "\n";
 
         if(!fs::exists(target)) {fs::create_directory(target);}
 
@@ -286,7 +286,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "segFixed") {
         if (argc != 8) {
-            std::cerr << "segFixed mode requires exactly 6 arguments" << std::endl;
+            std::cerr << "segFixed mode requires exactly 6 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -297,7 +297,7 @@ int main(int argc, char* argv[])
         int bw = std::stoi(argv[6]);
         double voxel_size = std::stod(argv[7]);
 
-        std::cout << "Fixed Segmentation Parameters: voxel_size=" << voxel_size << std::endl;
+        std::cout << "Fixed Segmentation Parameters: voxel_size=" << voxel_size << "\n";
 
         if (!fs::exists(target)) { fs::create_directory(target);}
 
@@ -317,7 +317,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "segFromVDB") {
         if (argc != 7) {
-            std::cerr << "segFromVDB mode requires exactly 7 arguments" << std::endl;
+            std::cerr << "segFromVDB mode requires exactly 7 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -341,7 +341,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "stats_subdir") {
         if (argc != 7) {
-            std::cerr << "stats_subdir mode requires exactly 7 arguments" << std::endl;
+            std::cerr << "stats_subdir mode requires exactly 7 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -351,7 +351,7 @@ int main(int argc, char* argv[])
         fs::path log_dir = argv[5];
         std::string temp_file_name = argv[6];
 
-        std::cout << "Stats Parameters: temp_file=" << temp_file_name << std::endl;
+        std::cout << "Stats Parameters: temp_file=" << temp_file_name << "\n";
 
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
@@ -365,7 +365,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "exportVDB") {
         if (argc != 5) {
-            std::cerr << "exportVDB mode requires exactly 5 arguments" << std::endl;
+            std::cerr << "exportVDB mode requires exactly 5 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -385,7 +385,7 @@ int main(int argc, char* argv[])
 
     else if (mode == "test") {
         if (argc != 3) {
-            std::cerr << "test mode requires exactly 4 arguments" << std::endl;
+            std::cerr << "test mode requires exactly 4 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -404,7 +404,7 @@ int main(int argc, char* argv[])
     // ======== ERROR HANDLING ========
 
     else {
-        std::cerr << "Unknown mode: " << mode << std::endl;
+        std::cerr << "Unknown mode: " << mode << "\n";
         usage(argv[0]);
     }
 

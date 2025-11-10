@@ -35,7 +35,7 @@ namespace cppIOUtility {
         else {
             if (!fs::exists(DumpDir) && !DumpDir.has_extension() && !DumpDir.stem().empty()) { // Check if it looks like a dir name
                 try { fs::create_directories(DumpDir); }
-                catch (const std::exception& e) { std::cerr << "Error creating directory " << DumpDir.string() << ": " << e.what() << std::endl; return; }
+                catch (const std::exception& e) { std::cerr << "Error creating directory " << DumpDir.string() << ": " << e.what() << "\n"; return; }
             }
 
             if (fs::is_directory(DumpDir)) {
@@ -50,7 +50,7 @@ namespace cppIOUtility {
 
                 if (!fs::exists(base_path)) {
                     try { fs::create_directories(base_path); }
-                    catch (const std::exception& e) { std::cerr << "Error creating directory " << base_path.string() << ": " << e.what() << std::endl; return; }
+                    catch (const std::exception& e) { std::cerr << "Error creating directory " << base_path.string() << ": " << e.what() << "\n"; return; }
                 }
             }
         }
@@ -94,7 +94,7 @@ namespace cppIOUtility {
 
         fs::path dat_file_path = base_path / (base_filename_stem + ".dat");
         if (!fs::exists(dat_file_path)) {
-            std::cerr << "Error: .dat file not found at " << dat_file_path << std::endl;
+            std::cerr << "Error: .dat file not found at " << dat_file_path << "\n";
             return;
         }
 
@@ -140,7 +140,7 @@ namespace cppIOUtility {
     {
         std::ofstream dat_out(dat_file_path);
         if (!dat_out.is_open()) {
-            std::cerr << "Error: Could not open .dat file for writing: " << dat_file_path.string() << std::endl;
+            std::cerr << "Error: Could not open .dat file for writing: " << dat_file_path.string() << "\n";
             return;
         }
 
@@ -186,7 +186,7 @@ namespace cppIOUtility {
         dat_out << "[END_VERT_TYPE_MAP]\n\n";
 
         dat_out.close();
-        std::cout << "SegmentationDataContainer text data dumped to: " << dat_file_path.string() << std::endl;
+        std::cout << "SegmentationDataContainer text data dumped to: " << dat_file_path.string() << "\n";
     }
 
     void SegmentationDataContainer::dump_segments_bin(const fs::path& p)
@@ -215,7 +215,7 @@ namespace cppIOUtility {
 
         std::ifstream dat_in(dat_file_path);
         if (!dat_in.is_open()) {
-            std::cerr << "Error: Could not open .dat for reading: " << dat_file_path << std::endl;
+            std::cerr << "Error: Could not open .dat for reading: " << dat_file_path << "\n";
             return;
         }
 
@@ -295,13 +295,13 @@ namespace cppIOUtility {
             }
         }
 
-        std::cout << "SegmentationDataContainer text data loaded from: " << dat_file_path.string() << std::endl;
+        std::cout << "SegmentationDataContainer text data loaded from: " << dat_file_path.string() << "\n";
     }
     void SegmentationDataContainer::load_segments_bin(const fs::path& p)
     {
         if (load_list_of_3d_arrays_bin<float>(p, segment_container_)) {
             std::cout << "SegmentationDataContainer segments loaded from: "
-                << p.string() << std::endl;
+                << p.string() << "\n";
         }
     }
 
@@ -309,7 +309,7 @@ namespace cppIOUtility {
     {
         if (load_list_of_3d_arrays_bin<int>(p, label_container_)) {
             std::cout << "SegmentationDataContainer labels loaded from: "
-                << p.string() << std::endl;
+                << p.string() << "\n";
         }
     }
 
@@ -317,7 +317,7 @@ namespace cppIOUtility {
     {
         if (load_list_of_3d_arrays_bin<int32_t>(p, prediction_container_)) {
             std::cout << "SegmentationDataContainer predictions loaded from: "
-                << p.string() << std::endl;
+                << p.string() << "\n";
         }
     }
 } // namespace cppIOUtility

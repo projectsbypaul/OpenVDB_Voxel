@@ -246,7 +246,7 @@ namespace Tools {
 
             std::ofstream file(filename, std::ios::binary);
             if (!file) {
-                std::cerr << "Error opening file for writing!" << std::endl;
+                std::cerr << "Error opening file for writing!" << "\n";
                 return;
             }
 
@@ -270,7 +270,7 @@ namespace Tools {
             }
 
             file.close();
-            // std::cout << "Data saved to " << filename << std::endl;
+            // std::cout << "Data saved to " << filename << "\n";
 
         }
 
@@ -278,7 +278,7 @@ namespace Tools {
 
             std::ofstream file(targetdir + "/" + filename, std::ios::binary);
             if (!file) {
-                std::cerr << "Error opening file for writing!" << std::endl;
+                std::cerr << "Error opening file for writing!" << "\n";
                 return;
             }
 
@@ -302,7 +302,7 @@ namespace Tools {
             }
 
             file.close();
-            std::cout << "Data saved to " << filename << std::endl;
+            std::cout << "Data saved to " << filename << "\n";
 
         }
 
@@ -436,7 +436,7 @@ namespace Tools {
                         if (vert_id >= VertexToTypeMap.size()) {
 
                             VertexToTypeMap.resize(vert_id + 1);  // Expand the outer vector to include vert_id
-                            std::cout << "Resized to accommodate vertex: " << vert_id << std::endl;
+                            std::cout << "Resized to accommodate vertex: " << vert_id << "\n";
                         }
                         if (VertexToTypeMap[vert_id].size() == 0) {
                             write_counter++;
@@ -445,14 +445,14 @@ namespace Tools {
                         VertexToTypeMap[vert_id].push_back(surf_type);
                     }
                     else {
-                        std::cout << "current " << surf_type << " contains vert_index = -1, vertex ignored" << std::endl;
+                        std::cout << "current " << surf_type << " contains vert_index = -1, vertex ignored" << "\n";
                     }
 
                     
                 }
 
             }
-            std::cout << "Wrote " << write_counter << " vertices to array" << std::endl;
+            std::cout << "Wrote " << write_counter << " vertices to array" << "\n";
 
             return VertexToTypeMap;
 
@@ -476,7 +476,7 @@ namespace Tools {
                         if (face_id >= FaceToTypeMap.size()) {
 
                             FaceToTypeMap.resize(face_id + 1);  // Expand the outer vector to include face_id
-                            std::cout << "Resized to accommodate face: " << face_id << std::endl;
+                            std::cout << "Resized to accommodate face: " << face_id << "\n";
                         }
 
 
@@ -487,12 +487,12 @@ namespace Tools {
                         FaceToTypeMap[face_id].push_back(surf_type);
                     }
                     else {
-                        std::cout << "current " << surf_type << "contains face_index = -1" << std::endl;
+                        std::cout << "current " << surf_type << "contains face_index = -1" << "\n";
                     }
                     
                 }
             }
-            std::cout << "Wrote " << write_counter << " faces to array" << std::endl;
+            std::cout << "Wrote " << write_counter << " faces to array" << "\n";
 
             return FaceToTypeMap;
 
@@ -660,7 +660,7 @@ namespace Tools {
                 file.open();
             }
             catch (const openvdb::IoError& e) {
-                std::cerr << "Failed to open file: " << e.what() << std::endl;
+                std::cerr << "Failed to open file: " << e.what() << "\n";
                 return false;
             }
 
@@ -673,7 +673,7 @@ namespace Tools {
             }
 
             if (gridCount != 1) {
-                std::cerr << "File does not contain exactly one grid." << std::endl;
+                std::cerr << "File does not contain exactly one grid." << "\n";
                 file.close();
                 return false;
             }
@@ -685,7 +685,7 @@ namespace Tools {
             outGrid = openvdb::gridPtrCast<openvdb::FloatGrid>(baseGrid);
 
             if (!outGrid) {
-                std::cerr << "The only grid in the file is not a FloatGrid." << std::endl;
+                std::cerr << "The only grid in the file is not a FloatGrid." << "\n";
                 file.close();
                 return false;
             }
@@ -804,7 +804,7 @@ namespace Tools {
             float totalExpansion = 2.0f * std::max(exteriorBandWidth, interiorBandWidth);
             float effectiveTargetDim = voxelDim - totalExpansion;
             if (effectiveTargetDim <= 0) {
-                std::cerr << "Error: targetMaxDim is too small for the chosen narrow-band widths!" << std::endl;
+                std::cerr << "Error: targetMaxDim is too small for the chosen narrow-band widths!" << "\n";
                 return nullptr;
             }
 
@@ -935,7 +935,7 @@ namespace Tools {
                     denseArray[x][y][z] = value;
                 }
                 else {
-                    std::cout << "unable to write Activevoxel to Array -> out off bounds" << std::endl;
+                    std::cout << "unable to write Activevoxel to Array -> out off bounds" << "\n";
                 }
 
 
@@ -1111,7 +1111,7 @@ namespace Tools {
 
             // Validate if the target dimensions are large enough
             if (targetDimX < dimX || targetDimY < dimY || targetDimZ < dimZ) {
-                std::cerr << "Error: Target dimensions are too small to fit the uneven grid!" << std::endl;
+                std::cerr << "Error: Target dimensions are too small to fit the uneven grid!" << "\n";
                 return nullptr;
             }
 
@@ -1278,11 +1278,11 @@ namespace Tools {
                 }
 
                 file.close();
-                std::cerr << "No FloatGrid found in file: " << filename << std::endl;
+                std::cerr << "No FloatGrid found in file: " << filename << "\n";
                 return nullptr;
             }
             catch (const openvdb::IoError& e) {
-                std::cerr << "OpenVDB IO error: " << e.what() << std::endl;
+                std::cerr << "OpenVDB IO error: " << e.what() << "\n";
                 return nullptr;
             }
         }

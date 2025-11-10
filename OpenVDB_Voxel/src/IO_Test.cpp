@@ -19,7 +19,7 @@ namespace Test {
         std::ifstream input(obj_name);
 
         if (!input || !CGAL::IO::read_OBJ(input, mesh)) {
-            std::cerr << "Failed to read .obj file!" << std::endl;
+            std::cerr << "Failed to read .obj file!" << "\n";
             return 1;
         }
 
@@ -37,7 +37,7 @@ namespace Test {
 
         auto counts = Tools::util::CountFacesPerSurfaceType(face_type_map);
         for (const auto& [type, count] : counts) {
-            std::cout << "Surface type '" << type << "' has " << count << " faces." << std::endl;
+            std::cout << "Surface type '" << type << "' has " << count << " faces." << "\n";
         }
 
         auto count_bin = target_dir + "/TypeCounts.bin";

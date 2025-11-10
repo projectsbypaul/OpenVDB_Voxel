@@ -53,7 +53,7 @@ namespace DLPP {
             bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
 
             if (!has_Edge or !has_Inside or !has_Outside) {
-                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << "\n";
                 throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
             }
 
@@ -109,7 +109,7 @@ namespace DLPP {
             bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
 
             if (!has_Edge or !has_Inside or !has_Outside) {
-                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << "\n";
                 throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
             }
 
@@ -162,7 +162,7 @@ namespace DLPP {
             bool has_Outside = (class_to_index.find("Outside") != class_to_index.end());
 
             if (!has_Edge or !has_Inside or !has_Outside) {
-                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << std::endl;
+                std::cerr << "Fatal Error: Given LabelTemplate contains missing key for 'Edge'/'Outside'/'Inside'" << "\n";
                 throw std::invalid_argument("Missing key 'Edge'/'Outside'/'Inside'");
             }
 
@@ -544,7 +544,7 @@ namespace DLPP {
 
             
             }
-            std::cout << "done" << std::endl;
+            std::cout << "done" << "\n";
 
             return surface_only_origins;
         }

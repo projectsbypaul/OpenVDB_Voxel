@@ -14,7 +14,7 @@ namespace jobUtilitiy {
 
         void clean_target_dir(const fs::path& dir_path) {
             if (!fs::exists(dir_path) || !fs::is_directory(dir_path)) {
-                std::cerr << "Error: target is not a directory or does not exist" << std::endl;
+                std::cerr << "Error: target is not a directory or does not exist" << "\n";
                 return;
             }
 
@@ -27,7 +27,7 @@ namespace jobUtilitiy {
                 }
             }
             catch (const std::exception& e) {
-                std::cerr << "Exception while cleaning directory: " << e.what() << std::endl;
+                std::cerr << "Exception while cleaning directory: " << e.what() << "\n";
             }
         }
 
@@ -39,7 +39,7 @@ namespace jobUtilitiy {
                 // Handle error: unable to open file
                 // You could throw an exception, return an empty vector,
                 // or print an error message.
-                std::cerr << "Error: Could not open file " << file_path << std::endl;
+                std::cerr << "Error: Could not open file " << file_path << "\n";
                 return job_lines; // Return empty vector on error
             }
 
@@ -55,7 +55,7 @@ namespace jobUtilitiy {
         void write_remaining_jobs(const fs::path& job_dir, const std::vector<std::string>& remaining_jobs) {
             std::ofstream outfile(job_dir, std::ios::trunc);
             if (!outfile.is_open()) {
-                std::cerr << "Error: Could not write to job file: " << job_dir << std::endl;
+                std::cerr << "Error: Could not write to job file: " << job_dir << "\n";
                 return;
             }
             for (const auto& job : remaining_jobs) {
