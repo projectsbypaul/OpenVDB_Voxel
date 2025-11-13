@@ -59,6 +59,8 @@ namespace ProcessingUtility {
         int n_min_kernel_;
         double voxel_size_;
         int segment_limit_;
+        bool apply_random_rotatio_;
+        float rotation_probability_ = 0.5f;
     public:
         /**
          * @brief Constructs a ProcessForDLLDataset object.
@@ -66,9 +68,9 @@ namespace ProcessingUtility {
          * @param sourceDir The path to the main source directory.
          * @param targetDir The path to the main target directory.
          */
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 250);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 250, bool apply_random_rotation = false);
 
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 250);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 250, bool apply_random_rotation = false);
         /**
          * @brief Executes the DLL dataset processing logic for the specified subdirectory.
          *
@@ -76,6 +78,14 @@ namespace ProcessingUtility {
          * @override
          */
         void run(const std::string& subDirName = "") override;
+
+        void set_apply_random_rotation(bool apply_rotation) {
+            apply_random_rotatio_ = apply_rotation;
+        }
+
+        void set_rotation_probability(float probability) {
+            rotation_probability_ = probability;
+        }
     };
 
     /// <summary>

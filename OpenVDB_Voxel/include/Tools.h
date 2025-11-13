@@ -25,10 +25,13 @@ namespace fs = std::filesystem;
 #include <boost/graph/graph_traits.hpp>
 #include <boost/property_map/property_map.hpp>
 #include <CGAL/Polygon_mesh_processing/bbox.h>
+#include <CGAL/Aff_transformation_3.h>
+
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
 typedef Kernel::Point_3 Point;
 typedef CGAL::Surface_mesh<Point> Surface_mesh;
+using Transformation = Kernel::Aff_transformation_3;
 
 #pragma endregion
 
@@ -68,9 +71,11 @@ namespace Tools {
     }
 
     namespace CGALbased {
+       
         using Kernel = CGAL::Exact_predicates_inexact_constructions_kernel;
         using Point = Kernel::Point_3;
         using Surface_mesh = CGAL::Surface_mesh<Point>;
+        Surface_mesh mesh_rotation_random(Surface_mesh& mesh);
 
         std::pair<std::vector<MyVertex>, std::vector<MyFace>> GetVerticesAndFaces(Surface_mesh mesh);
 

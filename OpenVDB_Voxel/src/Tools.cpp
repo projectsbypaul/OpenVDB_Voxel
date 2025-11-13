@@ -4,6 +4,8 @@
 #include "../include/DataContainer.h"
 #include "../include/h5_utility.h"
 
+
+
 #include <H5Cpp.h>
 #include <H5Cpublic.h>    // for hsize_t
 
@@ -521,6 +523,49 @@ namespace Tools {
     }
 
     namespace CGALbased {
+
+        Surface_mesh mesh_rotation_random(Surface_mesh& mesh) {
+
+            Surface_mesh mesh_rot = mesh;
+
+            // Random engine
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_real_distribution<double> dist(0.0, 2.0 * MY_PI);
+
+            // Random Euler angles
+            double alpha = dist(gen); // rotation around Z
+            double beta = dist(gen); // rotation around Y
+            double gamma = dist(gen); // rotation around X
+
+            // Precompute sines/cosines
+            double ca = std::cos(alpha), sa = std::sin(alpha);
+            double cb = std::cos(beta), sb = std::sin(beta);
+            double cg = std::cos(gamma), sg = std::sin(gamma);
+
+            // Combined rotation matrix Rz * Ry * Rx
+            double m00 = ca * cb;
+            double m01 = ca * sb * sg - sa * cg;
+            double m02 = ca * sb * cg + sa * sg;
+
+            double m10 = sa * cb;
+            double m11 = sa * sb * sg + ca * cg;
+            double m12 = sa * sb * cg - ca * sg;
+
+            double m20 = -sb;
+            double m21 = cb * sg;
+            double m22 = cb * cg;
+
+            Transformation rot(m00, m01, m02,
+                m10, m11, m12,
+                m20, m21, m22);
+
+            for (auto v : mesh_rot.vertices()) {
+                mesh_rot.point(v) = rot.transform(mesh_rot.point(v));
+            }
+
+            return mesh_rot;
+        }
 
         std::pair <std::vector<MyVertex>, std::vector<MyFace>> GetVerticesAndFaces(Surface_mesh mesh)
         {

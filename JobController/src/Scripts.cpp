@@ -326,6 +326,78 @@ namespace Scripts {
         return 0;
     }
 
+    int run_subdir_job_zip_vs_rot(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
+
+        std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        //clean traget dir 
+        jobUtilitiy::Functions::clean_target_dir(output_dir);
+
+        std::cout << "Starting VS ZIP job with parameters: kernel=" << kernel_size
+            << ", padding=" << padding << ", bandwidth=" << bandwidth
+            << ", voxel_size=" << voxel_size << "\n";
+
+        fs::path out_archive_name = job_file.stem().string() + "_vs.zip";
+        fs::path out_archive_path = output_dir / out_archive_name;
+        ZIPutil::Functions::zip_create_archive(out_archive_path);
+
+        fs::path temp_dir = output_dir / ("temp_vs_" + out_archive_name.stem().generic_string());
+        fs::path temp_input = temp_dir / "inputs";
+        fs::path temp_output = temp_dir / "outputs";
+
+        if (!fs::exists(temp_input)) {
+            fs::create_directories(temp_input);
+        }
+        if (!fs::exists(temp_output)) {
+            fs::create_directories(temp_output);
+        }
+
+        size_t processed_count = 0;
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
+            ZIPutil::Functions::zip_extract_subfolder(source_zip, temp_input / j, j);
+
+            std::string c0 = process_location.generic_string();
+            std::string c1 = temp_input.generic_string();
+            std::string c2 = temp_output.generic_string();
+            std::string c3 = log_dir.generic_string();
+            std::string c4 = std::to_string(kernel_size);
+            std::string c5 = std::to_string(padding);
+            std::string c6 = std::to_string(bandwidth);
+            std::string c7 = std::to_string(voxel_size);
+
+            std::string cmd = c0 + " vs_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+
+            std::cout << "Running VS ZIP: " << cmd << "\n";
+            int result = std::system(cmd.c_str());
+            if (result == 0) {
+                remaining_jobs.erase(j);
+                ++processed_count;
+
+                if (fs::exists(temp_output / j)) {
+                    ZIPutil::Functions::zip_write_subfolder(out_archive_path, temp_output / j, j);
+                }
+
+                fs::remove_all(temp_input / j);
+                fs::remove_all(temp_output / j);
+            }
+            else {
+                std::cerr << "VS ZIP Subprocess failed for mesh: " << j << "\n";
+            }
+
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_file, remaining_jobs);
+            }
+        }
+        write_job_set(job_file, remaining_jobs);
+        fs::remove_all(temp_dir);
+
+        return 0;
+    }
+
     int run_subdir_job_zip_vs_maxseg(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir, fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size)
     {
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
@@ -442,6 +514,78 @@ namespace Scripts {
             std::string c7 = std::to_string(n_k_min);
 
             std::string cmd = c0 + " nk_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+
+            std::cout << "Running NK ZIP: " << cmd << "\n";
+            int result = std::system(cmd.c_str());
+            if (result == 0) {
+                remaining_jobs.erase(j);
+                ++processed_count;
+
+                if (fs::exists(temp_output / j)) {
+                    ZIPutil::Functions::zip_write_subfolder(out_archive_path, temp_output / j, j);
+                }
+
+                fs::remove_all(temp_input / j);
+                fs::remove_all(temp_output / j);
+            }
+            else {
+                std::cerr << "NK ZIP Subprocess failed for mesh: " << j << "\n";
+            }
+
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_file, remaining_jobs);
+            }
+        }
+        write_job_set(job_file, remaining_jobs);
+        fs::remove_all(temp_dir);
+
+        return 0;
+    }
+
+    int run_subdir_job_zip_nk_rot(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
+
+        std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        //clean traget dir 
+        jobUtilitiy::Functions::clean_target_dir(output_dir);
+
+        std::cout << "Starting NK ZIP job with parameters: kernel=" << kernel_size
+            << ", padding=" << padding << ", bandwidth=" << bandwidth
+            << ", n_k_min=" << n_k_min << "\n";
+
+        fs::path out_archive_name = job_file.stem().string() + "_nk.zip";
+        fs::path out_archive_path = output_dir / out_archive_name;
+        ZIPutil::Functions::zip_create_archive(out_archive_path);
+
+        fs::path temp_dir = output_dir / ("temp_nk_" + out_archive_name.stem().generic_string());
+        fs::path temp_input = temp_dir / "inputs";
+        fs::path temp_output = temp_dir / "outputs";
+
+        if (!fs::exists(temp_input)) {
+            fs::create_directories(temp_input);
+        }
+        if (!fs::exists(temp_output)) {
+            fs::create_directories(temp_output);
+        }
+
+        size_t processed_count = 0;
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
+            ZIPutil::Functions::zip_extract_subfolder(source_zip, temp_input / j, j);
+
+            std::string c0 = process_location.generic_string();
+            std::string c1 = temp_input.generic_string();
+            std::string c2 = temp_output.generic_string();
+            std::string c3 = log_dir.generic_string();
+            std::string c4 = std::to_string(kernel_size);
+            std::string c5 = std::to_string(padding);
+            std::string c6 = std::to_string(bandwidth);
+            std::string c7 = std::to_string(n_k_min);
+
+            std::string cmd = c0 + " nk_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running NK ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());

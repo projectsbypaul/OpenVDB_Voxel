@@ -173,13 +173,13 @@ namespace ProcessingUtility {
      * @param voxel_size Voxel Size used to calculate SDF grid
      * @param n_min_kernel Minimal ammount of cropping kernel required to fit in the smallest dimension if the mesh
      */
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit, bool apply_random_rotation)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit), apply_random_rotatio_(apply_random_rotation) {
         std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit, bool apply_random_rotation)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit), apply_random_rotatio_(apply_random_rotation) {
         std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
     /**s
@@ -215,6 +215,23 @@ namespace ProcessingUtility {
                 std::cerr << "Failed to read .obj file!" << "\n";
                 LOG_FUNC("EXIT" << " subdirName = " << subDirName << "outputDir = " << targetDir_ << " Failed to read .obj file!");
                 return;
+            }
+
+            if (apply_random_rotatio_) {
+
+                std::random_device rd;
+                std::mt19937 gen(rd());
+                std::uniform_real_distribution<float> dist(0.0, 1);
+
+                float rnd = dist(gen);
+
+               
+
+                if (rnd < rotation_probability_) {
+                    std::cout << "applying random rotation to mesh" << "\n";
+                    Surface_mesh rot_mesh = Tools::CGALbased::mesh_rotation_random(mesh);
+                    mesh = rot_mesh;
+                }
             }
 
             //determine definition of voxel_size based on class initialization
