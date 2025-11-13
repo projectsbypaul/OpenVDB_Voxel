@@ -39,6 +39,10 @@ namespace Scripts {
     int run_subdir_job_vs(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size);
 
+    // VS subdir job - processes jobs with voxel size parameters & augmentation by mesh rotation
+    int run_subdir_job_vs_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size);
+
     // VS subdir job with ZIP support
     int run_subdir_job_zip_vs(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size);
@@ -57,11 +61,15 @@ namespace Scripts {
     int run_subdir_job_nk(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
 
+    // NK subdir job - processes jobs with n_k_min parameters & augmentation by mesh rotation
+    int run_subdir_job_nk_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
+
     // NK subdir job with ZIP support
     int run_subdir_job_zip_nk(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
 
-    // NK subdir job with ZIP support & & augmentation by mesh rotation
+    // NK subdir job with ZIP support & augmentation by mesh rotation
     int run_subdir_job_zip_nk_rot(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min);
 

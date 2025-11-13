@@ -22,11 +22,15 @@ void usage(const char* progname) {
     std::cout << "\nVoxel Size (VS) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_default_rot <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_rot <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
 
     std::cout << "\nN_K_Min (NK) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_default_rot <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_rot <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
 
     std::cout << "\nUniversal mode:\n";
@@ -168,6 +172,30 @@ int main(int argc, char* argv[])
         return result;
     }
 
+    else if (mode == "vs_default_rot") {
+        if (argc != 11) {
+            usage(argv[0]);
+        }
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        fs::path job_file = argv[4];
+        fs::path log_dir = argv[5];
+        fs::path process = argv[6];
+        int kernel_size = std::stoi(argv[7]);
+        int padding = std::stoi(argv[8]);
+        int bandwidth = std::stoi(argv[9]);
+        double voxel_size = std::stod(argv[10]);
+
+        std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
+            << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
+
+        int result = Scripts::run_subdir_job_vs_rot(source, target, job_file, log_dir, process,
+            kernel_size, padding, bandwidth, voxel_size);
+        std::cout << "Result: " << result << "\n";
+        return result;
+        }
+
+
     else if (mode == "vs_zip_mode") {
         if (argc != 11) {
             usage(argv[0]);
@@ -260,6 +288,29 @@ int main(int argc, char* argv[])
         std::cout << "Result: " << result << "\n";
         return result;
     }
+
+    else if (mode == "nk_default_rot") {
+        if (argc != 11) {
+            usage(argv[0]);
+        }
+        fs::path source = argv[2];
+        fs::path target = argv[3];
+        fs::path job_file = argv[4];
+        fs::path log_dir = argv[5];
+        fs::path process = argv[6];
+        int kernel_size = std::stoi(argv[7]);
+        int padding = std::stoi(argv[8]);
+        int bandwidth = std::stoi(argv[9]);
+        int n_k_min = std::stoi(argv[10]);
+
+        std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
+
+        int result = Scripts::run_subdir_job_nk_rot(source, target, job_file, log_dir, process,
+            kernel_size, padding, bandwidth, n_k_min);
+        std::cout << "Result: " << result << "\n";
+        return result;
+        }
 
     else if (mode == "nk_zip_mode") {
         if (argc != 11) {

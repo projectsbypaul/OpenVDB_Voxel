@@ -143,6 +143,50 @@ namespace Scripts {
         return 0;
     }
 
+    int run_subdir_job_vs_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
+
+        std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        std::cout << "Starting VS job with parameters: kernel=" << kernel_size
+            << ", padding=" << padding << ", bandwidth=" << bandwidth
+            << ", voxel_size=" << voxel_size << "\n";
+
+        size_t processed_count = 0;
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
+            std::string c0 = process_location.generic_string();
+            std::string c1 = source.generic_string();
+            std::string c2 = target.generic_string();
+            std::string c3 = log_dir.generic_string();
+            std::string c4 = std::to_string(kernel_size);
+            std::string c5 = std::to_string(padding);
+            std::string c6 = std::to_string(bandwidth);
+            std::string c7 = std::to_string(voxel_size);
+
+            std::string cmd = c0 + " vs_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+
+            std::cout << "Running VS: " << cmd << "\n";
+            int result = std::system(cmd.c_str());
+            if (result == 0) {
+                remaining_jobs.erase(j);
+                ++processed_count;
+            }
+            else {
+                std::cerr << "VS Subprocess failed for mesh: " << j << "\n";
+            }
+
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_dir, remaining_jobs);
+            }
+        }
+        write_job_set(job_dir, remaining_jobs);
+        return 0;
+    }
+
+
     // NK variant of run_subdir_job
     int run_subdir_job_nk(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
@@ -168,6 +212,49 @@ namespace Scripts {
             std::string c7 = std::to_string(n_k_min);
 
             std::string cmd = c0 + " nk_subdirJob " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+
+            std::cout << "Running NK: " << cmd << "\n";
+            int result = std::system(cmd.c_str());
+            if (result == 0) {
+                remaining_jobs.erase(j);
+                ++processed_count;
+            }
+            else {
+                std::cerr << "NK Subprocess failed for mesh: " << j << "\n";
+            }
+
+            if (processed_count % 10 == 0 || processed_count == jobs.size()) {
+                write_job_set(job_dir, remaining_jobs);
+            }
+        }
+        write_job_set(job_dir, remaining_jobs);
+        return 0;
+    }
+
+    int run_subdir_job_nk_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+        fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
+
+        std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
+        std::set<std::string> remaining_jobs(jobs.begin(), jobs.end());
+
+        std::cout << "Starting NK job with parameters: kernel=" << kernel_size
+            << ", padding=" << padding << ", bandwidth=" << bandwidth
+            << ", n_k_min=" << n_k_min << "\n";
+
+        size_t processed_count = 0;
+        for (const auto& j : jobs) {
+            if (remaining_jobs.count(j) == 0) continue;
+
+            std::string c0 = process_location.generic_string();
+            std::string c1 = source.generic_string();
+            std::string c2 = target.generic_string();
+            std::string c3 = log_dir.generic_string();
+            std::string c4 = std::to_string(kernel_size);
+            std::string c5 = std::to_string(padding);
+            std::string c6 = std::to_string(bandwidth);
+            std::string c7 = std::to_string(n_k_min);
+
+            std::string cmd = c0 + " nk_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running NK: " << cmd << "\n";
             int result = std::system(cmd.c_str());
