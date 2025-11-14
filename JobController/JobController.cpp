@@ -335,6 +335,29 @@ int main(int argc, char* argv[])
         return result;
     }
 
+    else if (mode == "nk_zip_mode_rot") {
+        if (argc != 11) {
+            usage(argv[0]);
+        }
+        fs::path source_zip = argv[2];
+        fs::path output_dir = argv[3];
+        fs::path job_file = argv[4];
+        fs::path log_dir = argv[5];
+        fs::path process = argv[6];
+        int kernel_size = std::stoi(argv[7]);
+        int padding = std::stoi(argv[8]);
+        int bandwidth = std::stoi(argv[9]);
+        int n_k_min = std::stoi(argv[10]);
+
+        std::cout << "NK ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
+            << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
+
+        int result = Scripts::run_subdir_job_zip_nk_rot(source_zip, output_dir, job_file, log_dir, process,
+            kernel_size, padding, bandwidth, n_k_min);
+        std::cout << "Result: " << result << "\n";
+        return result;
+        }
+
     else if (mode == "nk_zip_mode_maxseg") {
         if (argc != 11) {
             usage(argv[0]);
