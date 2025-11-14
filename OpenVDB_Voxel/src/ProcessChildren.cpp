@@ -217,6 +217,10 @@ namespace ProcessingUtility {
                 return;
             }
 
+            std::vector<Tools::ABC_Surface> surfaces = Tools::util::ParseABCyml(yml_name);
+
+            Tools::ABC_Surface surf = surfaces[0];
+
             if (apply_random_rotatio_) {
 
                 std::random_device rd;
@@ -247,6 +251,7 @@ namespace ProcessingUtility {
 
             //extract verts and faces from CGAL mesh and create SDF Grid in OpenVDB 
             std::tie(my_verts, my_faces) = Tools::CGALbased::GetVerticesAndFaces(mesh);
+            
 
         }
 
@@ -286,6 +291,9 @@ namespace ProcessingUtility {
                 int n_verts = my_verts.size();
                 std::vector<std::vector<std::string>> vert_list = Tools::util::GetVertexToSurfTypeMapYAML(yml_name, n_verts);
                 DumpTruck.setVertTypeMap(vert_list);
+
+                std::vector<int> EdgeFaceIndicies = Tools::util::GetEdgeFacesIndicies(my_faces, vert_list);
+                DumpTruck.setEdgeFaceIndicies(EdgeFaceIndicies);
             }
 
             
@@ -902,8 +910,7 @@ namespace ProcessingUtility {
 
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << "\n";
         }
-    
-     
+                   
         //Selection of class template
         LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
         std::unordered_map<std::string, int> class_to_index = current_template.get_class_to_index();
@@ -913,6 +920,17 @@ namespace ProcessingUtility {
         //Based on the selected template each voxel gets assiged the surface type of the closest face
         std::vector<Tools::Int3DArray> labeled_segements(segment_container.size());
         std::vector<int> global_count(current_template.class_count, 0);
+
+        //add edge face based on EdgeIndicies
+        if (has_Edge) {
+            Tools::MappingTable temp_ftm_edge(face_to_type);
+            std::vector<int> edge_indicies = SegmentData.getEdgeFaceIndicies();
+            for (int element : edge_indicies) {
+                temp_ftm_edge[element] = { "Edge" };
+            }
+            std::cout << "Remapped " << edge_indicies.size() << " faces to surf type 'Edge' based on EdgeIndicies" << "\n";
+            face_to_type = temp_ftm_edge;
+        }
 
         for (int i = 0; i < n_segments; i++) {
 
@@ -974,7 +992,7 @@ namespace ProcessingUtility {
        
         //Add edges to face_type_map
 
-        std::cout << "Remapped faces to surf type 'Edge'" << "\n";
+        std::cout << "Remapped faces to surf type 'Edge' based on neighbourhood" << "\n";
         Tools::MappingTable ftm_edge(face_to_type);
         int edge_face_count = 0;
 

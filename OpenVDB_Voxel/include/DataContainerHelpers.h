@@ -38,7 +38,7 @@ namespace cppIOUtility {
     void write_binary(std::ofstream& out, const T& value) {
         out.write(reinterpret_cast<const char*>(&value), sizeof(T));
     }
-
+    void write_int_vector(std::ofstream& out, const std::vector<int> int_vec);
     void write_text_matrix(std::ofstream& out, const Tools::FloatMatrix& matrix);
     void write_text_mapping_table(std::ofstream& out, const std::unordered_map<std::string, int>& table);
     void write_indexed_vector_as_map(std::ofstream& out, const std::vector<std::vector<std::string>>& indexed_table);
@@ -51,6 +51,7 @@ namespace cppIOUtility {
     }
 
     std::unordered_map<std::string, std::vector<std::string>> read_dat_sections(std::istream& in);
+    bool read_int_vector(std::vector<std::string> lines, std::vector<int>& out);
     bool read_text_matrix(std::vector<std::string> lines, Tools::FloatMatrix& out);
     bool read_text_mapping_table(const std::vector<std::string>& lines, std::unordered_map<std::string, int>& out);
     bool read_indexed_vector_as_map(const std::vector<std::string>& lines, std::vector<std::vector<std::string>>& out);

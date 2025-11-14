@@ -61,6 +61,7 @@ namespace Tools {
         void saveFloat3DGridPythonic(std::string& targetdir, std::string& filename, Float3DArray& array, double& voxelSize, double& background);
         void filterObjFile(const std::string& filePath, const std::string& filter_string);
         void filterObjFile(const std::string& filePath, const std::vector<std::string>& filter_strings);
+        std::vector<int> GetEdgeFacesIndicies(std::vector<Tools::MyFace> faces, std::vector<std::vector<std::string>> vert_type_map);
         std::vector<ABC_Surface> ParseABCyml(std::string& file_name);
         std::vector<std::vector<std::string>> GetVertexToSurfTypeMapYAML(std::string f_name, int n_vertices);
         std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces);

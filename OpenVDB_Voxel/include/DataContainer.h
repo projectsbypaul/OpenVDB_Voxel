@@ -46,6 +46,7 @@ namespace cppIOUtility {
         double voxel_size_;
         double minVal_;
         //containers
+        std::vector<int> EdgeFaceIndicies_;
         std::vector<Tools::Float3DArray> segment_container_;
         Tools::FloatMatrix origin_container_;
         Tools::FloatMatrix FaceToGridIndex_container_;
@@ -81,8 +82,16 @@ namespace cppIOUtility {
         void setMinVal(double minVal) {
             minVal_ = minVal;
         }
+
+        // Getter returning a const reference to avoid copy
+        // For EdgeFaceIndicies
+        const std::vector<int> getEdgeFaceIndicies() const {
+            return EdgeFaceIndicies_;
+        }
+        void setEdgeFaceIndicies(const std::vector<int>& EdgeFaceIndicies){
+            EdgeFaceIndicies_ = EdgeFaceIndicies;
+        }
         // For segment_container_
-        // Getter returning a const reference to avoid copying
         const std::vector<Tools::Float3DArray>& getSegmentContainer() const {
             return segment_container_;
         }

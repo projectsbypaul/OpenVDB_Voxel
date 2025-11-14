@@ -12,7 +12,12 @@
 #include <regex>
 
 namespace cppIOUtility {
-
+    // Text writing helper int vector 
+    void write_int_vector(std::ofstream& out, const std::vector<int> int_vec) {
+        for (const auto& element : int_vec) {
+            out << element << "\n";
+        }
+    }
     // Text writing helper for matrices (remains the same)
     void write_text_matrix(std::ofstream& out, const Tools::FloatMatrix& matrix) {
         // ... (implementation as before) ...
@@ -91,7 +96,13 @@ namespace cppIOUtility {
         }
         return sections;
     }
-
+    // --- read vector<int> written by write_int_vector ---
+    bool read_int_vector(std::vector<std::string> lines, std::vector<int>& out) {
+        for (std::string l : lines) {
+            out.push_back(std::stoi(l));
+        }     
+        return true;
+    }
     // --- read matrix written by write_text_matrix ---
     bool read_text_matrix(std::vector<std::string> lines, Tools::FloatMatrix& out)
     {

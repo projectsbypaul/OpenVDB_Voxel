@@ -2,13 +2,13 @@
 # Bash script to launch JobController multiple times in parallel
 
 # --- Default configuration ---
-GLOB_THREAD_COUNT=14
+GLOB_THREAD_COUNT=16
 EXECUTABLE_PATH="/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/bin/JobController"
 EXECUTABLE_CHILD_PROCESS="/mnt/c/Users/pschuster/source/repos/OpenVDB_Voxel/build/bin/OpenVDB_Voxel"
 MAIN_OUTPUT_DIR="/mnt/h/ws_label_test/logs"
 JOB_TYPE="nk_default"
 KS=16
-NBW=8
+NBW=4
 SWO=0
 RES=3
 CLASS_TEMPLATE="edge"

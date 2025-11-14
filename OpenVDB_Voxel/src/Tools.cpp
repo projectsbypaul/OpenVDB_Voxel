@@ -460,6 +460,61 @@ namespace Tools {
 
         }
 
+        std::vector<int> GetVertFaceMap(std::vector<Tools::MyFace> faces, int n_verticies) {
+            
+            std::vector<int> VertFaceMap(n_verticies, -1);
+
+            int f_index = 0;
+
+            for (MyFace f : faces) {
+
+                VertFaceMap[f.v0] = f_index;
+                VertFaceMap[f.v1] = f_index;
+                VertFaceMap[f.v2] = f_index;
+
+                f_index++;
+            }
+
+            return VertFaceMap;
+        }
+
+        std::vector<int> GetEdgeVertexIndex(std::vector<std::vector<std::string>> vert_type_map) {
+
+            std::vector<int> edge_vertex_indicies;
+
+            for (int i = 0; i < static_cast<int>(vert_type_map.size()); i++) {
+                if (static_cast<int>(vert_type_map[i].size()) > 1) {
+                    edge_vertex_indicies.push_back(i);
+                }
+            }
+
+            return edge_vertex_indicies;
+        }
+
+        std::vector<int> GetEdgeFacesIndicies(std::vector<Tools::MyFace> faces, std::vector<std::vector<std::string>> vert_type_map) {
+
+            int n_verts = static_cast<int>(vert_type_map.size());
+
+            int n_faces = static_cast<int>(faces.size());
+
+            std::vector<int> edge_face_indicies(n_faces, -1);
+
+            std::vector<int> edge_verticies = GetEdgeVertexIndex(vert_type_map);
+
+            std::vector<int> vert_face_map = GetVertFaceMap(faces, n_verts);
+
+            for (int vert : edge_verticies) {
+                int f_index = vert_face_map[vert];
+                if (edge_face_indicies[f_index] == -1) {
+                    edge_face_indicies[f_index] = f_index;
+                }
+            }
+
+            edge_face_indicies.erase(std::remove(edge_face_indicies.begin(),edge_face_indicies.end(),-1), edge_face_indicies.end());
+
+            return edge_face_indicies;
+        }
+
         std::vector<std::vector<std::string>> GetFaceToSurfTypeMapYAML(std::string f_name, int n_faces) {
 
             std::vector<std::vector<std::string>> FaceToTypeMap(n_faces);

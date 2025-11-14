@@ -185,6 +185,10 @@ namespace cppIOUtility {
         write_indexed_vector_as_map(dat_out, VertTypeMap_);
         dat_out << "[END_VERT_TYPE_MAP]\n\n";
 
+        dat_out << "[EDGE_FACE_INDEX]\n";
+        write_int_vector(dat_out, EdgeFaceIndicies_);
+        dat_out << "[END_EDGE_FACE_INDEX]\n\n";
+
         dat_out.close();
         std::cout << "SegmentationDataContainer text data dumped to: " << dat_file_path.string() << "\n";
     }
@@ -272,6 +276,13 @@ namespace cppIOUtility {
         if (sections.count("VERT_TYPE_MAP")) {
             if (!read_indexed_vector_as_map(sections["VERT_TYPE_MAP"], VertTypeMap_)) {
                 std::cerr << "Warning: Failed to parse [VERT_TYPE_MAP].\n";
+            }
+        }
+
+        // ---- vectors ----
+        if (sections.count("EDGE_FACE_INDEX")) {
+            if (!read_int_vector(sections["EDGE_FACE_INDEX"], EdgeFaceIndicies_)) {
+                std::cerr << "Warning: Failed to parse [EDGE_FACE_INDEX].\n";
             }
         }
 
