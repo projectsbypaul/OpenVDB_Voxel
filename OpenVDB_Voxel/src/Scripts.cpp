@@ -167,7 +167,7 @@ namespace Scripts {
 
         ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min, 1500);
         process_dump.set_apply_random_rotation(true);
-        process_dump.set_rotation_probability(1.0f);
+        process_dump.set_rotation_probability(0.5f);
 
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 
