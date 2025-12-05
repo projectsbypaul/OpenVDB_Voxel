@@ -5,6 +5,51 @@ namespace DLPP {
 
     namespace label_func {
 
+        bool valid_uniques_by_template(LabelTemplates::LabelTemplate& label_template, std::vector<std::string> uniques) {
+
+             std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+
+            for (std::string u : uniques) {
+               
+                bool is_valid = (class_to_index.find(u) != class_to_index.end());
+                if (!is_valid) {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        std::vector<std::string> get_invalid_uniques_by_template(LabelTemplates::LabelTemplate& label_template, std::vector<std::string> uniques) {
+            std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();
+            std::vector<std::string> invalid_classes;
+            for (std::string u : uniques) {
+
+                bool is_valid = (class_to_index.find(u) != class_to_index.end());
+                if (!is_valid) {
+                    invalid_classes.push_back(u);
+                }
+
+            }
+            return invalid_classes;
+        }
+
+        std::vector<std::string> getStringMatrixUniques(const Tools::MappingTable&data) {
+            std::vector<std::string> result;
+            std::unordered_set<std::string> seen;
+
+            for (const auto& row : data) {
+                if (!row.empty()) {
+                    const auto& s = row[0];
+                    if (!seen.count(s)) {
+                        result.push_back(s);
+                        seen.insert(s);
+                    }
+                }
+            }
+            return result;
+        }
+
         std::vector<int> pool_neighbourhood_classes(Tools::Int3DArray& labeled_segment, LabelTemplates::LabelTemplate& label_template, int loc_x, int loc_y, int loc_z, int pad = 1) {
 
             std::unordered_map<std::string, int> class_to_index = label_template.get_class_to_index();

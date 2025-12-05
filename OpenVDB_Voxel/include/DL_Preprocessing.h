@@ -16,6 +16,9 @@
 namespace DLPP {
 
 	namespace label_func {
+		bool valid_uniques_by_template(LabelTemplates::LabelTemplate& label_template, std::vector<std::string> uniques);
+		std::vector<std::string> get_invalid_uniques_by_template(LabelTemplates::LabelTemplate& label_template, std::vector<std::string> uniques);
+		std::vector<std::string> getStringMatrixUniques(const Tools::MappingTable& data);
 		std::pair<Tools::Int3DArray, Tools::IntMatrix> add_edges_to_label_index(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);
 		std::pair<Tools::Int3DArray, int> add_edges_to_label_count(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);
 		Tools::Int3DArray add_edges_to_label(Tools::Int3DArray& in_label, LabelTemplates::LabelTemplate& label_template, int min_neighbours = 1);

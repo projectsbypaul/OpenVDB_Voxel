@@ -19,10 +19,41 @@ namespace LabelTemplates {
 		return LabelTemplate(class_list);
 	}
 
+	LabelTemplate get_template_abc_primtive() {
+
+		std::vector<std::string> class_list{
+			"Cone",
+			"Cylinder",
+			"Plane",
+			"Sphere",
+			"Torus",
+			"Inside",
+			"Outside"
+		};
+
+		return LabelTemplate(class_list);
+	}
+
 	LabelTemplate get_template_abc_edge() {
 
 		std::vector<std::string> class_list{
 			"BSpline",
+			"Cone",
+			"Cylinder",
+			"Plane",
+			"Sphere",
+			"Torus",
+			"Edge",
+			"Inside",
+			"Outside"
+		};
+
+		return LabelTemplate(class_list);
+	}
+
+	LabelTemplate get_template_abc_primitive_edge() {
+
+		std::vector<std::string> class_list{
 			"Cone",
 			"Cylinder",
 			"Plane",
@@ -80,6 +111,12 @@ namespace LabelTemplates {
 
 		if (requested_template == "inside_outside") {
 			return get_template_abc_inside_outside();
+		}
+		else if (requested_template == "primitive") {
+			return get_template_abc_primtive();
+		}
+		else if (requested_template == "primitive_edge") {
+			return get_template_abc_primitive_edge();
 		}
 		else if (requested_template == "edge") {
 			return get_template_abc_edge();

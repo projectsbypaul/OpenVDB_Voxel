@@ -889,6 +889,28 @@ namespace ProcessingUtility {
         int kernel_size = segment_container[0].size();
         float r_min_surface = voxel_size / background;
 
+        //Selection of class template
+        LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
+        std::unordered_map<std::string, int> class_to_index = current_template.get_class_to_index();
+        std::unordered_map<int, std::string>  index_to_class = current_template.get_index_to_class();
+        bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
+
+        std::vector<std::string> uniques = DLPP::label_func::getStringMatrixUniques(face_to_type);
+        bool template_is_valid = DLPP::label_func::valid_uniques_by_template(current_template, uniques);
+
+        if (!template_is_valid) {
+            std::vector<std::string> invalid_uniques = DLPP::label_func::get_invalid_uniques_by_template(current_template, uniques);
+            std::string invalid_str;
+            for (std::string u : invalid_uniques){
+                invalid_str += u + ", ";
+               
+            }
+            std::string msg_ivc = "Skipping cause FaceTypeMap has invalid classes: " + invalid_str;
+            std::cout << msg_ivc << "\n";
+            LOG_FUNC("EXIT" << " subdirName = " << subDirName << " " << msg_ivc);
+            return;
+        }
+
        //To speed up neares face computation faces get binned by the segments they are closest to 
         std::cout << "Binning faces by segment origin..." << "\n";
         std::vector<Tools::FaceBin> face_bins = DLPP::util::bin_gridcoord_by_origin(face_to_gird, origin, kernel_size, 4);
@@ -898,24 +920,18 @@ namespace ProcessingUtility {
         int n_segments = segment_container.size();
         std::vector<Tools::Int3DArray> indexed_segements(segment_container.size());
 
+        LOG("Start compute on segment");
         for (int i = 0; i < n_segments; i++) {
             
             Tools::Float3DArray& seg = segment_container[i];
             std::array<float, 3> origin_coord{ origin[i][0], origin[i][1], origin[i][2] };
 
-            LOG("Start compute on segment: " << i);
             //indexed_segements[i] = DLPP::util::get_nearest_face_index(face_to_gird, seg, origin_coord, voxel_size, background, 1.0f * voxel_size);
             indexed_segements[i] = DLPP::util::get_nearest_face_index_binned(face_bins[i].coords, face_bins[i].to_global, seg, origin_coord, voxel_size, background, surface_threshold_ * voxel_size);
-            LOG("Finished compute on segment: " << i);
-
+            
             std::cout << "Computed segments " << (i + 1) << "|" << n_segments << "\n";
         }
-                   
-        //Selection of class template
-        LabelTemplates::LabelTemplate current_template = LabelTemplates::get_template_from_string(label_template_);
-        std::unordered_map<std::string, int> class_to_index = current_template.get_class_to_index();
-        std::unordered_map<int, std::string>  index_to_class = current_template.get_index_to_class();
-        bool has_Edge = (class_to_index.find("Edge") != class_to_index.end());
+        LOG("Finished compute on segment:");
 
         //Based on the selected template each voxel gets assiged the surface type of the closest face
         std::vector<Tools::Int3DArray> labeled_segements(segment_container.size());
@@ -932,10 +948,11 @@ namespace ProcessingUtility {
             face_to_type = temp_ftm_edge;
         }
 
+        LOG("Start labelling on segments");
         for (int i = 0; i < n_segments; i++) {
 
             Tools::Int3DArray& segment = indexed_segements[i];
-            LOG("Start labelling on segment: " << i);
+           
             auto [labeled_segement, local_count] = DLPP::label_func::label_by_template_count(segment, face_to_type, current_template);
             labeled_segements[i] = labeled_segement;
 
@@ -944,9 +961,10 @@ namespace ProcessingUtility {
                 global_count[j] += local_count[j];
             }
 
-            LOG("Finished labelling on segment: " << i);
+           
             std::cout << "Labeled segments " << (i + 1) << "|" << n_segments << "\n";
         }
+        LOG("Finished labelling on segment:");
 
         //Debug Info: Display assigned
         for (int i = 0; i < global_count.size(); i++) {
@@ -968,11 +986,13 @@ namespace ProcessingUtility {
 
         std::vector<Tools::IntMatrix> segmentwise_edge_indicies;
         std::vector<int> segments_with_edge_index;
-    
+        
+        
+        LOG("Start adding edges to segments");
         for (int i = 0; i < n_segments; i++) {
 
             Tools::Int3DArray& segment = labels_with_edge[i];
-            LOG("Start adding edges to segment: " << i);
+           
             auto [segment_with_edge, edge_indicies] = DLPP::label_func::add_edges_to_label_index(segment, current_template);
             labels_with_edge[i] = segment_with_edge;    
 
@@ -982,13 +1002,10 @@ namespace ProcessingUtility {
                 segmentwise_edge_indicies.push_back(edge_indicies);
                 segments_with_edge_index.push_back(i);
             }
-
-           
-
-            LOG("Finished adding edges on segment: " << i);
             std::cout << "Added edges to segments " << (i + 1) << "|" << n_segments << "\n";
         }
         std::cout << "Added " << added_edges << " edge voxels in total" << "\n";
+        LOG("Finished adding edges on segments");
        
         //Add edges to face_type_map
 
