@@ -26,6 +26,7 @@ namespace fs = std::filesystem;
 #include <boost/property_map/property_map.hpp>
 #include <CGAL/Polygon_mesh_processing/bbox.h>
 #include <CGAL/Aff_transformation_3.h>
+#include <CGAL/Polygon_mesh_processing/orientation.h>
 
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
@@ -46,6 +47,7 @@ using Transformation = Kernel::Aff_transformation_3;
 
 namespace Tools {
     
+
 
     namespace util {
         std::array<int, 3> ComputeTopCoord(const Tools::FloatMatrix& origins, int kernel_size);
@@ -76,7 +78,13 @@ namespace Tools {
         using Kernel = CGAL::Exact_predicates_inexact_constructions_kernel;
         using Point = Kernel::Point_3;
         using Surface_mesh = CGAL::Surface_mesh<Point>;
-        Surface_mesh mesh_rotation_random(Surface_mesh& mesh);
+        using Vector = Kernel::Vector_3;
+
+        Vector get_mesh_centroid(Surface_mesh  mesh);
+
+        Surface_mesh mesh_rotation_random(Surface_mesh& mesh, std::mt19937& gen, Vector centroid);
+        Surface_mesh mesh_ramdom_scaling(Surface_mesh& mesh, std::mt19937& gen, Vector centroid, float magnitude);
+        Surface_mesh mesh_ramdom_flip(Surface_mesh& mesh, std::mt19937& gen, Vector centroid, std::array<int,3> flip_axis);
 
         std::pair<std::vector<MyVertex>, std::vector<MyFace>> GetVerticesAndFaces(Surface_mesh mesh);
 
@@ -162,4 +170,10 @@ namespace Tools {
         void export_prediction_vdb(const fs::path& source, const fs::path& out_file);
         void test_grid_vdb(fs::path filename);
     }
+
+    namespace Augmentation {
+        void gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean = 0, float min_val = -1.0f, float max_val = 1.0f);
+        std::array<int, 3> generate_ramdom_offset(int magnitude, std::mt19937& gen);
+        std::array<int, 3> generate_ramdom_flip_axis(std::mt19937& gen);
+    }//Augmentation
 }

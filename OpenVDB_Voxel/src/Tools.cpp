@@ -10,6 +10,7 @@
 #include <H5Cpublic.h>    // for hsize_t
 
 #include <filesystem>
+#include <random>
 
 namespace fs = std::filesystem;
 
@@ -579,13 +580,36 @@ namespace Tools {
 
     namespace CGALbased {
 
-        Surface_mesh mesh_rotation_random(Surface_mesh& mesh) {
+        Vector get_mesh_centroid(Surface_mesh  mesh) {
+            // 2. Compute Center (Centroid)
+            double sum_x = 0, sum_y = 0, sum_z = 0;
+            int count = 0;
+
+            for (auto v : mesh.vertices()) {
+                const Point& p = mesh.point(v);
+                sum_x += CGAL::to_double(p.x());
+                sum_y += CGAL::to_double(p.y());
+                sum_z += CGAL::to_double(p.z());
+                count++;
+            }
+
+            // Safety check for empty mesh
+            if (count == 0) {
+                throw std::runtime_error("Error: Mesh data is empty.");
+            }
+
+            double cx = sum_x / count;
+            double cy = sum_y / count;
+            double cz = sum_z / count;
+
+            return Vector(cx, cy, cz);
+        }
+
+        Surface_mesh mesh_rotation_random(Surface_mesh& mesh, std::mt19937& gen, Vector centroid) {
 
             Surface_mesh mesh_rot = mesh;
 
             // Random engine
-            std::random_device rd;
-            std::mt19937 gen(rd());
             std::uniform_real_distribution<double> dist(0.0, 2.0 * MY_PI);
 
             // Random Euler angles
@@ -615,11 +639,88 @@ namespace Tools {
                 m10, m11, m12,
                 m20, m21, m22);
 
+            //Translation: Move Origin -> (0,0,0)
+            Transformation translate_to_origin(CGAL::TRANSLATION, -centroid);
+
+            //Translation: Move Origin -> original position
+            Transformation translate_back(CGAL::TRANSLATION, centroid);
+
+            //Assemble full transforamtion
+            Transformation final_transform = translate_back * rot * translate_to_origin;
+
             for (auto v : mesh_rot.vertices()) {
-                mesh_rot.point(v) = rot.transform(mesh_rot.point(v));
+                mesh_rot.point(v) = final_transform.transform(mesh_rot.point(v));
             }
 
             return mesh_rot;
+        }
+
+        Surface_mesh mesh_ramdom_scaling(Surface_mesh& mesh, std::mt19937& gen, Vector centroid, float magnitude)
+        {
+            Surface_mesh scaled_mesh = mesh;
+
+            // 1. Generate Random Scale Factor
+            std::uniform_real_distribution<float> gen_scale(1.0f - magnitude, 1.0f + magnitude);
+            float s = gen_scale(gen);
+
+            // Safety clamp (prevent collapse or inversion)
+            if (s <= 0.0001f) s = 0.0001f;
+
+            // 3. Create the 3 Transformations
+            // A: Move Center -> Origin (0,0,0)
+            Transformation translate_to_origin(CGAL::TRANSLATION, -centroid);
+
+            // B: Scale
+            Transformation scale(CGAL::SCALING, s);
+
+            // C: Move Origin -> Center (Put it back)
+            Transformation translate_back(CGAL::TRANSLATION, centroid);
+
+            // 4. Combine them into one Matrix
+            // Order matters! (C * B * A) -> Apply A, then B, then C
+            Transformation final_transform = translate_back * scale * translate_to_origin;
+
+            // 5. Apply to Mesh (Manual Loop)
+            for (auto v : scaled_mesh.vertices()) {
+                scaled_mesh.point(v) = final_transform.transform(scaled_mesh.point(v));
+            }
+
+            return scaled_mesh;
+        }
+
+        Surface_mesh mesh_ramdom_flip(Surface_mesh& mesh, std::mt19937& gen, Vector centroid, std::array<int,3>  flip_axis)
+        {
+            Surface_mesh mesh_flipped = mesh;
+
+            int check_sum = flip_axis[0] * flip_axis[0] + flip_axis[1] * flip_axis[1] + flip_axis[2] * flip_axis[2];
+            if (check_sum > 1) throw std::invalid_argument("Only one axis can be flipped.");
+
+            // 1. Determine Scale factors based on axis
+            // If flip_axis is [1, 0, 0], we scale by [-1, 1, 1]
+            double sx = flip_axis[0] ? -1.0 : 1.0;
+            double sy = flip_axis[1] ? -1.0 : 1.0;
+            double sz = flip_axis[2] ? -1.0 : 1.0;
+
+            // 2. Create Scaling Transformation (Affine 3x3 component)
+            Transformation mirror(sx, 0, 0,
+                0, sy, 0,
+                0, 0, sz);
+
+            Transformation translate_to_origin(CGAL::TRANSLATION, -centroid);
+            Transformation translate_back(CGAL::TRANSLATION, centroid);
+
+            // 3. Combine: Back * Mirror * ToOrigin
+            Transformation final_transform = translate_back * mirror * translate_to_origin;
+
+            for (auto v : mesh_flipped.vertices()) {
+                mesh_flipped.point(v) = final_transform.transform(mesh_flipped.point(v));
+            }
+
+            // IMPORTANT: Mirroring inverts face orientation (normals point inside).
+            // You often need to reverse face orientation after a flip.
+            CGAL::Polygon_mesh_processing::reverse_face_orientations(mesh_flipped);
+
+            return mesh_flipped;
         }
 
         std::pair <std::vector<MyVertex>, std::vector<MyFace>> GetVerticesAndFaces(Surface_mesh mesh)
@@ -1487,6 +1588,60 @@ namespace Tools {
     
     }//namespace Macros
 
+    namespace Augmentation {
+
+        void gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean, float min_val, float max_val) {
+            
+            std::normal_distribution<float> dist(mean, stdv);
+
+            size_t dim_x = grid.size();
+            size_t dim_y = grid[0].size();
+            size_t dim_z = grid[0][0].size();
+
+            for (size_t i = 0; i < dim_x; i++) {
+                for (size_t j = 0; j < dim_y; j++) {
+                    for (size_t k = 0; k < dim_z; k++) {
+                       
+                        float noise = dist(gen);
+                        float new_val = grid[i][j][k] + noise;
+
+                        grid[i][j][k] = std::clamp(new_val, min_val, max_val);
+
+                    }
+                }
+            }
+
+        }
+
+        std::array<int,3> generate_ramdom_offset(int magnitude, std::mt19937& gen) {
+
+            std::uniform_int_distribution<int> dist(-1, 1);
+            
+            return {
+                dist(gen) * magnitude,
+                dist(gen) * magnitude,
+                dist(gen) * magnitude
+            };
+        }
+
+        std::array<int, 3> generate_ramdom_flip_axis(std::mt19937& gen) {
+
+            std::uniform_int_distribution<int> dist_axis(0, 2);
+            std::uniform_int_distribution<int> dist_sign(0, 1);
+
+            std::array<int, 3> flip_axis = {};
+
+            int axis_index = dist_axis(gen);
+            int sign_index = dist_sign(gen);
+    
+            flip_axis[axis_index] = 1 - 2 * sign_index;
+
+            return flip_axis;
+        }
+
+    
+
+    }//namespace Augmentation
    
 }
 

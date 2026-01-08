@@ -173,13 +173,13 @@ namespace ProcessingUtility {
      * @param voxel_size Voxel Size used to calculate SDF grid
      * @param n_min_kernel Minimal ammount of cropping kernel required to fit in the smallest dimension if the mesh
      */
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit, bool apply_random_rotation)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit), apply_random_rotatio_(apply_random_rotation) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(n_min_kernel), voxel_size_(0), segment_limit_(segment_limit){
         std::cout << "Process will run in Mode - " << "adaptive voxel size" << "\n";
     }
 
-    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit, bool apply_random_rotation)
-        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit), apply_random_rotatio_(apply_random_rotation) {
+    ProcessWithDumpTruck::ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit)
+        : GenericDirectoryProcess(sourceDir, targetDir), kernel_size_(kernel_size), padding_(padding), bandwidth_(bandwidth), n_min_kernel_(0), voxel_size_(voxel_size), segment_limit_(segment_limit) {
         std::cout << "Process will run in Mode - " << "fixed voxel size" << "\n";
     }
     /**s
@@ -206,7 +206,14 @@ namespace ProcessingUtility {
         std::vector<Tools::MyVertex> my_verts;
         std::vector<Tools::MyFace> my_faces;
 
-        double voxel_size;
+        //set up random state
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_real_distribution<float> state_dist(0.0, 1);
+
+        float rotation_state = state_dist(gen);
+        float scaling_state = state_dist(gen);
+        float flip_state = state_dist(gen);
 
         {
             Surface_mesh mesh;
@@ -219,43 +226,48 @@ namespace ProcessingUtility {
 
             std::vector<Tools::ABC_Surface> surfaces = Tools::util::ParseABCyml(yml_name);
 
-            Tools::ABC_Surface surf = surfaces[0];
+            Tools::CGALbased::Vector centroid = Tools::CGALbased::get_mesh_centroid(mesh);
+
+            if (apply_random_flip_) {
+                if (flip_state < flip_probability_) {
+                    std::cout << "applying random flip to mesh" << "\n";
+                    std::array<int, 3> flip_axis = Tools::Augmentation::generate_ramdom_flip_axis(gen);
+                    Surface_mesh flipped_mesh = Tools::CGALbased::mesh_ramdom_flip(mesh, gen, centroid, flip_axis);
+                    mesh = flipped_mesh;
+                }
+            }
+
 
             if (apply_random_rotatio_) {
 
-                std::random_device rd;
-                std::mt19937 gen(rd());
-                std::uniform_real_distribution<float> dist(0.0, 1);
-
-                float rnd = dist(gen);
-
-               
-
-                if (rnd < rotation_probability_) {
+                if (rotation_state < rotation_probability_) {
                     std::cout << "applying random rotation to mesh" << "\n";
-                    Surface_mesh rot_mesh = Tools::CGALbased::mesh_rotation_random(mesh);
+                    Surface_mesh rot_mesh = Tools::CGALbased::mesh_rotation_random(mesh, gen, centroid);
                     mesh = rot_mesh;
                 }
             }
 
-            //determine definition of voxel_size based on class initialization
-           
+            if (apply_random_scale_) {
+                if (scaling_state < scale_probability_) {
+                    std::cout << "applying random scaling to mesh" << "\n";
+                    Surface_mesh scaled_mesh = Tools::CGALbased::mesh_ramdom_scaling(mesh, gen, centroid, scaling_magnitude_);
+                    mesh = scaled_mesh;
+                }
+            }
+
 
             if (voxel_size_ == 0) {
                 //dertimine Reccomende voxel size 
-                voxel_size = DLPP::CGALbased::calculateRecommendeVoxelsize(kernel_size_, n_min_kernel_, bandwidth_, padding_, mesh);
+                voxel_size_ = DLPP::CGALbased::calculateRecommendeVoxelsize(kernel_size_, n_min_kernel_, bandwidth_, padding_, mesh);
             }
-            else {
-                voxel_size = voxel_size_;
-            }
+            //determine definition of voxel_size based on class initialization
 
             //extract verts and faces from CGAL mesh and create SDF Grid in OpenVDB 
             std::tie(my_verts, my_faces) = Tools::CGALbased::GetVerticesAndFaces(mesh);
-            
 
         }
 
-        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, (float)voxel_size, (float)bandwidth_, std::numeric_limits<float>::max());
+        openvdb::FloatGrid::Ptr grid = Tools::OpenVDBbased::MeshToFloatGrid(my_verts, my_faces, (float)voxel_size_, (float)bandwidth_, std::numeric_limits<float>::max());
 
         //based on the cropping parameter -> calculate a origin for each cropping segemnent 
         //save origin as binary for reconstruction of labled data a remapping of segmentation resulst 
@@ -265,11 +277,18 @@ namespace ProcessingUtility {
         //setup data container
         cppIOUtility::SegmentationDataContainer DumpTruck;
 
+        if (apply_origin_jitter_) {
+            std::cout << "applying origin jitter" << "\n";
+            for (auto o : crop_list) {
+                std::array<int, 3> offset = Tools::Augmentation::generate_ramdom_offset(jitter_magnitude_, gen);
+                openvdb::Coord vec_offset = { offset[0], offset[1], offset[2]};
+                o = o + vec_offset;
+            }
 
+        }
 
         if (crop_list.size() < segment_limit_) {
 
-         
             {
                 std::vector<std::vector<float>> origin_list = Tools::OpenVDBbased::CoordListToFloatMatrix(crop_list);
                 DumpTruck.setOriginContainer(origin_list);
@@ -296,7 +315,7 @@ namespace ProcessingUtility {
                 DumpTruck.setEdgeFaceIndicies(EdgeFaceIndicies);
             }
 
-            
+
             //Create a Face to Grid centered index map and save it as binary
             {
                 std::vector<Tools::MyVertex> face_centers = Tools::util::CalculateFaceCenters(my_faces, my_verts);
@@ -309,15 +328,15 @@ namespace ProcessingUtility {
                 Tools::FloatMatrix VertexToGridIndex = Tools::OpenVDBbased::TransformWorldPointsToIndexFloatArray(grid, my_verts);
                 DumpTruck.setVertexToGridIndex_container(VertexToGridIndex);
             }
-            
+
             //Set up linear map for normalization
             Tools::LinearSDFMap lmap;
 
             double background = grid->tree().background();
             float minVal = Tools::OpenVDBbased::getGridMinActiceValue(grid);
-            
+
             DumpTruck.setBackground(background);
-            DumpTruck.setVoxelSize(voxel_size);
+            DumpTruck.setVoxelSize(voxel_size_);
             DumpTruck.setMinVal(minVal);
 
             //map for normalization 
@@ -333,7 +352,11 @@ namespace ProcessingUtility {
 
                 //remapping with backgroud clamp values smaller than -background to min_map
                 // compensation for infinite inside bandwidth
-                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background); 
+                Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background);
+
+                if (apply_sdf_noise_) {
+                    Tools::Augmentation::gauss_on_grid(clipped_array, gen, noise_stdv_);
+                }
 
                 DumpTruck.addSegment(clipped_array);
 

@@ -53,14 +53,31 @@ namespace ProcessingUtility {
      */
     class ProcessWithDumpTruck : public GenericDirectoryProcess {
     private:
+        //sdf parameters
         int kernel_size_;
         int padding_;
         int bandwidth_;
         int n_min_kernel_;
         double voxel_size_;
         int segment_limit_;
-        bool apply_random_rotatio_;
+        //augmentations
+        bool apply_random_rotatio_ = false;
         float rotation_probability_ = 0.5f;
+
+        bool apply_random_flip_ = false;
+        float flip_probability_ = 0.5f;
+
+        bool apply_random_scale_ = false;
+        float scale_probability_ = 0.5f;
+        float scaling_magnitude_ = 0.1;
+
+        bool apply_origin_jitter_ = false;
+        float jitter_probability_ = 0.5f;
+        int jitter_magnitude_ = 2; 
+
+        bool apply_sdf_noise_ = false;
+        float noise_stdv_ = 0.025;
+
     public:
         /**
          * @brief Constructs a ProcessForDLLDataset object.
@@ -68,9 +85,9 @@ namespace ProcessingUtility {
          * @param sourceDir The path to the main source directory.
          * @param targetDir The path to the main target directory.
          */
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 250, bool apply_random_rotation = false);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, int n_min_kernel, int segment_limit = 250);
 
-        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 250, bool apply_random_rotation = false);
+        ProcessWithDumpTruck(const fs::path& sourceDir, const fs::path& targetDir, int kernel_size, int padding, int bandwidth, double voxel_size, int segment_limit = 250);
         /**
          * @brief Executes the DLL dataset processing logic for the specified subdirectory.
          *
@@ -79,12 +96,50 @@ namespace ProcessingUtility {
          */
         void run(const std::string& subDirName = "") override;
 
+        //Setter for process parameters
+        void set_voxel_size(double voxel_size) {
+            voxel_size_ = voxel_size;
+        }
+
+        //Setters for augmentation 
         void set_apply_random_rotation(bool apply_rotation) {
             apply_random_rotatio_ = apply_rotation;
         }
 
         void set_rotation_probability(float probability) {
             rotation_probability_ = probability;
+        }
+
+        void set_apply_random_flip(bool apply_flip) {
+            apply_random_flip_ = apply_flip;
+        }
+
+        void set_flip_probability(float probability) {
+            flip_probability_ = probability;
+        }
+
+        void set_apply_random_scale(bool apply_scale) {
+            apply_random_scale_ = apply_scale;
+        }
+
+        void set_scale_probability(float probability) {
+            scale_probability_ = probability;
+        }
+
+        void set_apply_origin_jitter(bool apply_jitter) {
+            apply_origin_jitter_ = apply_jitter;
+        }
+
+        void set_jitter_probability(float probability) {
+            jitter_probability_ = probability;
+        }
+
+        void set_apply_sdf_noise(bool apply_noise) {
+            apply_sdf_noise_ = apply_noise;
+        }
+
+        void set_noise_sdtv(float noise_sdtv) {
+            noise_stdv_ = noise_sdtv;
         }
     };
 
