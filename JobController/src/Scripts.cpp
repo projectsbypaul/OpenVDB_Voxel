@@ -166,7 +166,7 @@ namespace Scripts {
             std::string c6 = std::to_string(bandwidth);
             std::string c7 = std::to_string(voxel_size);
 
-            std::string cmd = c0 + " vs_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+            std::string cmd = c0 + " vs_subdirJob_aug " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running VS: " << cmd << "\n";
             int result = std::system(cmd.c_str());
@@ -254,7 +254,7 @@ namespace Scripts {
             std::string c6 = std::to_string(bandwidth);
             std::string c7 = std::to_string(n_k_min);
 
-            std::string cmd = c0 + " nk_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+            std::string cmd = c0 + " nk_subdirJob_aug " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running NK: " << cmd << "\n";
             int result = std::system(cmd.c_str());
@@ -456,7 +456,7 @@ namespace Scripts {
             std::string c6 = std::to_string(bandwidth);
             std::string c7 = std::to_string(voxel_size);
 
-            std::string cmd = c0 + " vs_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+            std::string cmd = c0 + " vs_subdirJob_aug " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running VS ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
@@ -672,7 +672,7 @@ namespace Scripts {
             std::string c6 = std::to_string(bandwidth);
             std::string c7 = std::to_string(n_k_min);
 
-            std::string cmd = c0 + " nk_subdirJob_rot " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
+            std::string cmd = c0 + " nk_subdirJob_aug " + c1 + " " + c2 + " " + j + " " + c3 + " " + c4 + " " + c5 + " " + c6 + " " + c7;
 
             std::cout << "Running NK ZIP: " << cmd << "\n";
             int result = std::system(cmd.c_str());
