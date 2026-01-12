@@ -157,7 +157,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_to_dataset_rand_rot(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, int n_k_min, int max_threads, int openvdb_threads, int timeout_min) {
+    int run_subdir_to_dataset_rand_aug(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, int n_k_min, int max_threads, int openvdb_threads, int timeout_min) {
 
         // Limit TBB thread count to max_threads
         tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
@@ -167,7 +167,15 @@ namespace Scripts {
 
         ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, n_k_min, 1500);
         process_dump.set_apply_random_rotation(true);
-        process_dump.set_rotation_probability(0.5f);
+        process_dump.set_rotation_probability(1.0);
+        process_dump.set_apply_random_flip(true);
+        process_dump.set_flip_probability(1.0);
+        process_dump.set_apply_random_scale(true);
+        process_dump.set_scale_probability(1.0);
+        process_dump.set_apply_sdf_noise(true);
+        process_dump.set_noise_sdtv(0.025);
+        process_dump.set_apply_origin_jitter(true);
+        process_dump.set_jitter_magnitude(2);
 
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 
@@ -192,7 +200,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_to_dataset_rand_rot(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, double voxel_size, int max_threads, int openvdb_threads, int timeout_min) {
+    int run_subdir_to_dataset_rand_aug(fs::path source, fs::path target, std::string subdir_name, int kernel_size, int padding, int bandwidth, double voxel_size, int max_threads, int openvdb_threads, int timeout_min) {
 
         // Limit TBB thread count to max_threads
         tbb::global_control control(tbb::global_control::max_allowed_parallelism, openvdb_threads);
@@ -202,7 +210,15 @@ namespace Scripts {
 
         ProcessingUtility::ProcessWithDumpTruck process_dump(source, target, kernel_size, padding, bandwidth, voxel_size, 1500);
         process_dump.set_apply_random_rotation(true);
-        process_dump.set_rotation_probability(0.5);
+        process_dump.set_rotation_probability(1.0);
+        process_dump.set_apply_random_flip(true);
+        process_dump.set_flip_probability(1.0);
+        process_dump.set_apply_random_scale(true);
+        process_dump.set_scale_probability(1.0);
+        process_dump.set_apply_sdf_noise(true);
+        process_dump.set_noise_sdtv(0.025);
+        process_dump.set_apply_origin_jitter(true);
+        process_dump.set_jitter_magnitude(2);
 
         processOnSubdirTimed(&process_dump, subdir_name, max_threads, timeout_min);
 

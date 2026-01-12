@@ -172,7 +172,7 @@ namespace Tools {
     }
 
     namespace Augmentation {
-        void gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean = 0, float min_val = -1.0f, float max_val = 1.0f);
+        void faded_gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean = 0, float min_val = -1.0f, float max_val = 1.0f);
         std::array<int, 3> generate_ramdom_offset(int magnitude, std::mt19937& gen);
         std::array<int, 3> generate_ramdom_flip_axis(std::mt19937& gen);
     }//Augmentation

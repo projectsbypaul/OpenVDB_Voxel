@@ -143,7 +143,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_job_vs_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+    int run_subdir_job_vs_aug(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
@@ -231,7 +231,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_job_nk_rot(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
+    int run_subdir_job_nk_aug(fs::path source, fs::path target, fs::path job_dir, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_dir);
@@ -413,7 +413,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_job_zip_vs_rot(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+    int run_subdir_job_zip_vs_aug(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, double voxel_size) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);
@@ -629,7 +629,7 @@ namespace Scripts {
         return 0;
     }
 
-    int run_subdir_job_zip_nk_rot(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
+    int run_subdir_job_zip_nk_aug(fs::path source_zip, fs::path output_dir, fs::path job_file, fs::path log_dir,
         fs::path process_location, int kernel_size, int padding, int bandwidth, int n_k_min) {
 
         std::vector<std::string> jobs = jobUtilitiy::Functions::read_job_file(job_file);

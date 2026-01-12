@@ -209,7 +209,7 @@ namespace ProcessingUtility {
         //set up random state
         std::random_device rd;
         std::mt19937 gen(rd());
-        std::uniform_real_distribution<float> state_dist(0.0, 1);
+        std::uniform_real_distribution<float> state_dist(0.0, 1.0);
 
         float rotation_state = state_dist(gen);
         float scaling_state = state_dist(gen);
@@ -277,9 +277,13 @@ namespace ProcessingUtility {
         //setup data container
         cppIOUtility::SegmentationDataContainer DumpTruck;
 
+        std::vector<openvdb::Coord> crop_list_val_copy = crop_list;
+        std::vector<double> delta;
+        
+
         if (apply_origin_jitter_) {
             std::cout << "applying origin jitter" << "\n";
-            for (auto o : crop_list) {
+            for (auto& o : crop_list) {
                 std::array<int, 3> offset = Tools::Augmentation::generate_ramdom_offset(jitter_magnitude_, gen);
                 openvdb::Coord vec_offset = { offset[0], offset[1], offset[2]};
                 o = o + vec_offset;
@@ -345,6 +349,10 @@ namespace ProcessingUtility {
             //Create a an array that holds cropping results
             Tools::Float3DArray clipped_array;
 
+
+            float delta_sqrt = 0;
+            float delta_sum = 0;
+
             //crop sdf grid and write cropping result into 3D float array
             //save cropped segments into binary file
             for (size_t i = 0; i < crop_list.size(); ++i) {
@@ -354,13 +362,17 @@ namespace ProcessingUtility {
                 // compensation for infinite inside bandwidth
                 Tools::OpenVDBbased::RemapFloat3DArray(clipped_array, lmap, background);
 
+                Tools::Float3DArray clipped_array_copy = clipped_array;
+                
                 if (apply_sdf_noise_) {
-                    Tools::Augmentation::gauss_on_grid(clipped_array, gen, noise_stdv_);
+                    Tools::Augmentation::faded_gauss_on_grid(clipped_array, gen, noise_stdv_);
                 }
 
                 DumpTruck.addSegment(clipped_array);
 
             }
+
+            std::cout << "delta_sqrt: " << delta_sqrt << "\n" << "delta_sum: " << delta_sum << "\n" << "average: " << delta_sum / crop_list.size() << "\n";
 
             DumpTruck.dump(target_dir);
 

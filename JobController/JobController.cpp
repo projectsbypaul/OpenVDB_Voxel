@@ -22,15 +22,15 @@ void usage(const char* progname) {
     std::cout << "\nVoxel Size (VS) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " vs_default_rot <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_rot <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_default_aug <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_aug <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <voxel_size>\n";
 
     std::cout << "\nN_K_Min (NK) modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_default <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " nk_default_rot <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_rot <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_default_aug <source_dir> <target_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_aug <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_zip_mode_maxseg <source_zip> <output_dir> <job_file> <log_dir> <process_exe> <kernel_size> <padding> <bandwidth> <n_k_min>\n";
 
     std::cout << "\nUniversal mode:\n";
@@ -172,7 +172,7 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "vs_default_rot") {
+    else if (mode == "vs_default_aug") {
         if (argc != 11) {
             usage(argv[0]);
         }
@@ -189,7 +189,7 @@ int main(int argc, char* argv[])
         std::cout << "VS Parameters: kernel=" << kernel_size << ", padding=" << padding
             << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
-        int result = Scripts::run_subdir_job_vs_rot(source, target, job_file, log_dir, process,
+        int result = Scripts::run_subdir_job_vs_aug(source, target, job_file, log_dir, process,
             kernel_size, padding, bandwidth, voxel_size);
         std::cout << "Result: " << result << "\n";
         return result;
@@ -219,7 +219,7 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "vs_zip_mode_rot") {
+    else if (mode == "vs_zip_mode_aug") {
         if (argc != 11) {
             usage(argv[0]);
         }
@@ -236,7 +236,7 @@ int main(int argc, char* argv[])
         std::cout << "VS ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
             << ", bandwidth=" << bandwidth << ", voxel_size=" << voxel_size << "\n";
 
-        int result = Scripts::run_subdir_job_zip_vs_rot(source_zip, output_dir, job_file, log_dir, process,
+        int result = Scripts::run_subdir_job_zip_vs_aug(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, voxel_size);
         std::cout << "Result: " << result << "\n";
         return result;
@@ -289,7 +289,7 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "nk_default_rot") {
+    else if (mode == "nk_default_aug") {
         if (argc != 11) {
             usage(argv[0]);
         }
@@ -306,7 +306,7 @@ int main(int argc, char* argv[])
         std::cout << "NK Parameters: kernel=" << kernel_size << ", padding=" << padding
             << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
-        int result = Scripts::run_subdir_job_nk_rot(source, target, job_file, log_dir, process,
+        int result = Scripts::run_subdir_job_nk_aug(source, target, job_file, log_dir, process,
             kernel_size, padding, bandwidth, n_k_min);
         std::cout << "Result: " << result << "\n";
         return result;
@@ -335,7 +335,7 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "nk_zip_mode_rot") {
+    else if (mode == "nk_zip_mode_aug") {
         if (argc != 11) {
             usage(argv[0]);
         }
@@ -352,7 +352,7 @@ int main(int argc, char* argv[])
         std::cout << "NK ZIP Parameters: kernel=" << kernel_size << ", padding=" << padding
             << ", bandwidth=" << bandwidth << ", n_k_min=" << n_k_min << "\n";
 
-        int result = Scripts::run_subdir_job_zip_nk_rot(source_zip, output_dir, job_file, log_dir, process,
+        int result = Scripts::run_subdir_job_zip_nk_aug(source_zip, output_dir, job_file, log_dir, process,
             kernel_size, padding, bandwidth, n_k_min);
         std::cout << "Result: " << result << "\n";
         return result;

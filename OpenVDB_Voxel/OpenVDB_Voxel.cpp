@@ -22,8 +22,8 @@ void usage(const char* progname) {
     std::cout << "\nParameterized processing modes:\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob_rot <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
-    std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob_rot <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob_aug <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
+    std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob_aug <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
     std::cout << "  " << progpath.filename().generic_string() << " vs_subdirJob_maxseg <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <voxelsize>\n";
     std::cout << "  " << progpath.filename().generic_string() << " nk_subdirJob_maxseg <source_dir> <target_dir> <sub_dir_name> <log_dir> <kernelsize> <padding> <bandwidth> <n_k_min>\n";
 
@@ -171,9 +171,9 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "vs_subdirJob_rot") {
+    else if (mode == "vs_subdirJob_aug") {
         if (argc != 10) {
-            std::cerr << "vs_subdirJob_rot mode requires exactly 10 arguments" << "\n";
+            std::cerr << "vs_subdirJob_aug mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_subdir_to_dataset_rand_rot(source, target, subdir, kernel_size, padding, bandwidth, voxel_size);
+        int result = Scripts::run_subdir_to_dataset_rand_aug(source, target, subdir, kernel_size, padding, bandwidth, voxel_size);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");
@@ -255,9 +255,9 @@ int main(int argc, char* argv[])
         return result;
     }
 
-    else if (mode == "nk_subdirJob_rot") {
+    else if (mode == "nk_subdirJob_aug") {
         if (argc != 10) {
-            std::cerr << "nk_subdirJob_rot mode requires exactly 10 arguments" << "\n";
+            std::cerr << "nk_subdirJob_aug mode requires exactly 10 arguments" << "\n";
             usage(argv[0]);
         }
 
@@ -276,7 +276,7 @@ int main(int argc, char* argv[])
         initLogger(log_dir.generic_string());
         LOG_FUNC("ENTER");
 
-        int result = Scripts::run_subdir_to_dataset_rand_rot(source, target, subdir, kernel_size, padding, bandwidth, n_k_min);
+        int result = Scripts::run_subdir_to_dataset_rand_aug(source, target, subdir, kernel_size, padding, bandwidth, n_k_min);
         std::cout << "Result: " << result << std::endl;
 
         LOG_FUNC("EXIT");

@@ -72,7 +72,7 @@ namespace ProcessingUtility {
         float scaling_magnitude_ = 0.1;
 
         bool apply_origin_jitter_ = false;
-        float jitter_probability_ = 0.5f;
+        float jitter_probability_ = 1.0f;
         int jitter_magnitude_ = 2; 
 
         bool apply_sdf_noise_ = false;
@@ -132,6 +132,10 @@ namespace ProcessingUtility {
 
         void set_jitter_probability(float probability) {
             jitter_probability_ = probability;
+        }
+
+        void set_jitter_magnitude(int magnitude) {
+            jitter_magnitude_ = magnitude;
         }
 
         void set_apply_sdf_noise(bool apply_noise) {

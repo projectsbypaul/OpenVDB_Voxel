@@ -1590,7 +1590,7 @@ namespace Tools {
 
     namespace Augmentation {
 
-        void gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean, float min_val, float max_val) {
+        void faded_gauss_on_grid(Tools::Float3DArray& grid, std::mt19937& gen, float stdv, float mean, float min_val, float max_val) {
             
             std::normal_distribution<float> dist(mean, stdv);
 
@@ -1601,12 +1601,22 @@ namespace Tools {
             for (size_t i = 0; i < dim_x; i++) {
                 for (size_t j = 0; j < dim_y; j++) {
                     for (size_t k = 0; k < dim_z; k++) {
-                       
-                        float noise = dist(gen);
-                        float new_val = grid[i][j][k] + noise;
+                        float current_val = grid[i][j][k];
 
-                        grid[i][j][k] = std::clamp(new_val, min_val, max_val);
+                        // 1. Calculate distance to nearest boundary
+                        // generating a fade out of noise closer to narrdow band bounds where values are close to min/mnax
+                        float dist_to_min = current_val - min_val;
+                        float dist_to_max = max_val - current_val;
+                        float max_deviation = std::min(dist_to_min, dist_to_max);
 
+                      
+                        // 2. Clamp the NOISE symmetrically
+                        // This ensures that if +X is possible, -X is also possible.
+                        // The mean of a symmetrically truncated Gaussian is still 0.
+                        float raw_noise = dist(gen);
+                        float faded_noise = std::clamp(raw_noise, -max_deviation, max_deviation);
+
+                        grid[i][j][k] += faded_noise;
                     }
                 }
             }
