@@ -215,6 +215,7 @@ namespace Scripts {
         process_dump.set_flip_probability(1.0);
         process_dump.set_apply_random_scale(true);
         process_dump.set_scale_probability(1.0);
+        process_dump.set_scaling_magnitude(0.1);
         process_dump.set_apply_sdf_noise(true);
         process_dump.set_noise_sdtv(0.025);
         process_dump.set_apply_origin_jitter(true);

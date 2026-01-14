@@ -125,6 +125,10 @@ namespace ProcessingUtility {
         void set_scale_probability(float probability) {
             scale_probability_ = probability;
         }
+        void set_scaling_magnitude(float magnitude) {
+            scaling_magnitude_ = magnitude;
+        }
+
 
         void set_apply_origin_jitter(bool apply_jitter) {
             apply_origin_jitter_ = apply_jitter;
